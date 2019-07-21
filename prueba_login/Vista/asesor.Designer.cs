@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Secretaria));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnorden = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnauti = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnregistro = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btnmaximizar = new System.Windows.Forms.ToolStripButton();
             this.btnnormal = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnorden = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnauti = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnregistro = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.panelContenedor = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
@@ -68,62 +68,6 @@
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::prueba_login.Properties.Resources.Close_Window__2_48px;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 24);
-            this.toolStripButton1.Text = "Salir";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            this.toolStripButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStripButton1_MouseDown);
-            // 
-            // btnmaximizar
-            // 
-            this.btnmaximizar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnmaximizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnmaximizar.Image = global::prueba_login.Properties.Resources.Maximize_Window_2_48px;
-            this.btnmaximizar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnmaximizar.Name = "btnmaximizar";
-            this.btnmaximizar.Size = new System.Drawing.Size(23, 24);
-            this.btnmaximizar.Text = "Maximizar";
-            this.btnmaximizar.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // btnnormal
-            // 
-            this.btnnormal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnnormal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnnormal.Image = global::prueba_login.Properties.Resources.Restore_Window_2_48px;
-            this.btnnormal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnnormal.Name = "btnnormal";
-            this.btnnormal.Size = new System.Drawing.Size(23, 24);
-            this.btnnormal.Text = "Restaurar";
-            this.btnnormal.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::prueba_login.Properties.Resources.Minimize_Window_2_48px;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 24);
-            this.toolStripButton4.Text = "Minimizar";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.ForeColor = System.Drawing.Color.White;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(153, 24);
-            this.toolStripButton2.Text = "YourOwnWorkshop";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gold;
@@ -139,6 +83,56 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(264, 573);
             this.panel2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(41, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 21);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Salir";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(130, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Asesor";
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(264, 573);
+            this.shapeContainer1.TabIndex = 6;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.Enabled = false;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 20;
+            this.lineShape1.X2 = 232;
+            this.lineShape1.Y1 = 160;
+            this.lineShape1.Y2 = 160;
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(264, 27);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(838, 573);
+            this.panelContenedor.TabIndex = 1;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // btnorden
             // 
@@ -210,16 +204,6 @@
             this.btnauti.Textcolor = System.Drawing.Color.Black;
             this.btnauti.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Salir";
-            // 
             // btnsalir
             // 
             this.btnsalir.BackColor = System.Drawing.Color.Transparent;
@@ -256,7 +240,7 @@
             this.btnregistro.IconVisible = true;
             this.btnregistro.IconZoom = 90D;
             this.btnregistro.IsTab = false;
-            this.btnregistro.Location = new System.Drawing.Point(0, 171);
+            this.btnregistro.Location = new System.Drawing.Point(0, 183);
             this.btnregistro.Name = "btnregistro";
             this.btnregistro.Normalcolor = System.Drawing.Color.Gold;
             this.btnregistro.OnHovercolor = System.Drawing.Color.Yellow;
@@ -270,45 +254,61 @@
             this.btnregistro.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistro.Click += new System.EventHandler(this.btnregistro_Click);
             // 
-            // label1
+            // toolStripButton1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Asesor";
+            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::prueba_login.Properties.Resources.Close_Window__2_48px;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 24);
+            this.toolStripButton1.Text = "Salir";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStripButton1_MouseDown);
             // 
-            // shapeContainer1
+            // btnmaximizar
             // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(264, 573);
-            this.shapeContainer1.TabIndex = 6;
-            this.shapeContainer1.TabStop = false;
+            this.btnmaximizar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnmaximizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnmaximizar.Image = global::prueba_login.Properties.Resources.Maximize_Window_2_48px;
+            this.btnmaximizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnmaximizar.Name = "btnmaximizar";
+            this.btnmaximizar.Size = new System.Drawing.Size(23, 24);
+            this.btnmaximizar.Text = "Maximizar";
+            this.btnmaximizar.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
-            // lineShape1
+            // btnnormal
             // 
-            this.lineShape1.Enabled = false;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 20;
-            this.lineShape1.X2 = 232;
-            this.lineShape1.Y1 = 160;
-            this.lineShape1.Y2 = 160;
+            this.btnnormal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnnormal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnnormal.Image = global::prueba_login.Properties.Resources.Restore_Window_2_48px;
+            this.btnnormal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnnormal.Name = "btnnormal";
+            this.btnnormal.Size = new System.Drawing.Size(23, 24);
+            this.btnnormal.Text = "Restaurar";
+            this.btnnormal.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
-            // panelContenedor
+            // toolStripButton4
             // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(264, 27);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(838, 573);
-            this.panelContenedor.TabIndex = 1;
-            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
+            this.toolStripButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = global::prueba_login.Properties.Resources.Minimize_Window_2_48px;
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 24);
+            this.toolStripButton4.Text = "Minimizar";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton2.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(153, 24);
+            this.toolStripButton2.Text = "YourOwnWorkshop";
             // 
             // Secretaria
             // 

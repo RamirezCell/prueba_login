@@ -69,11 +69,23 @@
     <Compile Include="Vista\admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Mecanico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mecanico.Designer.cs">
+      <DependentUpon>Mecanico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\registrocliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\registrocliente.Designer.cs">
       <DependentUpon>registrocliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Supervision de equipamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Supervision de equipamiento.Designer.cs">
+      <DependentUpon>Supervision de equipamiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Trabajador.cs">
       <SubType>Form</SubType>
@@ -113,8 +125,14 @@
     <EmbeddedResource Include="Vista\admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mecanico.resx">
+      <DependentUpon>Mecanico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\registrocliente.resx">
       <DependentUpon>registrocliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Supervision de equipamiento.resx">
+      <DependentUpon>Supervision de equipamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Trabajador.resx">
       <DependentUpon>Trabajador.cs</DependentUpon>
