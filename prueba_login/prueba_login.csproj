@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\conexion.cs" />
+    <Compile Include="Controlador\constructorcliente.cs" />
     <Compile Include="Controlador\constructotlogin.cs" />
     <Compile Include="Modelo\validarlogin.cs" />
     <Compile Include="Vista\bodeguero.cs">
