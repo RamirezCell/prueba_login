@@ -59,6 +59,12 @@
     <Compile Include="Controlador\constructotlogin.cs" />
     <Compile Include="Modelo\funcionescliente.cs" />
     <Compile Include="Modelo\validarlogin.cs" />
+    <Compile Include="registrotrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrotrabajador.Designer.cs">
+      <DependentUpon>registrotrabajador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\bodeguero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +88,6 @@
     </Compile>
     <Compile Include="Vista\registrocliente.Designer.cs">
       <DependentUpon>registrocliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Supervision de equipamiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Supervision de equipamiento.Designer.cs">
-      <DependentUpon>Supervision de equipamiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Trabajador.cs">
       <SubType>Form</SubType>
@@ -121,6 +121,9 @@
     <Compile Include="Vista\recu_contra.Designer.cs">
       <DependentUpon>recu_contra.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="registrotrabajador.resx">
+      <DependentUpon>registrotrabajador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\bodeguero.resx">
       <DependentUpon>bodeguero.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,9 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\registrocliente.resx">
       <DependentUpon>registrocliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Supervision de equipamiento.resx">
-      <DependentUpon>Supervision de equipamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Trabajador.resx">
       <DependentUpon>Trabajador.cs</DependentUpon>
