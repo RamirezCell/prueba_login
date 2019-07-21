@@ -34,7 +34,6 @@
             this.txtnamecliente = new System.Windows.Forms.TextBox();
             this.txtapelliocliente = new System.Windows.Forms.TextBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
-            this.txtnumcliente = new System.Windows.Forms.TextBox();
             this.grpregistro = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,12 +45,13 @@
             this.cmbTipoCliente = new System.Windows.Forms.ComboBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.txtduicliente = new System.Windows.Forms.TextBox();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
             this.btnupdate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtnum = new System.Windows.Forms.MaskedTextBox();
+            this.txtdui = new System.Windows.Forms.MaskedTextBox();
             this.toolStrip1.SuspendLayout();
             this.grpregistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
@@ -127,24 +127,12 @@
             this.txtcorreo.Enter += new System.EventHandler(this.txtcorreo_Enter);
             this.txtcorreo.Leave += new System.EventHandler(this.txtcorreo_Leave);
             // 
-            // txtnumcliente
-            // 
-            this.txtnumcliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtnumcliente.BackColor = System.Drawing.Color.White;
-            this.txtnumcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtnumcliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnumcliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtnumcliente.Location = new System.Drawing.Point(39, 115);
-            this.txtnumcliente.Name = "txtnumcliente";
-            this.txtnumcliente.Size = new System.Drawing.Size(228, 19);
-            this.txtnumcliente.TabIndex = 3;
-            this.txtnumcliente.Enter += new System.EventHandler(this.txtnumcliente_Enter);
-            this.txtnumcliente.Leave += new System.EventHandler(this.txtnumcliente_Leave);
-            // 
             // grpregistro
             // 
             this.grpregistro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpregistro.Controls.Add(this.txtdui);
+            this.grpregistro.Controls.Add(this.txtnum);
             this.grpregistro.Controls.Add(this.label7);
             this.grpregistro.Controls.Add(this.label6);
             this.grpregistro.Controls.Add(this.label5);
@@ -155,8 +143,6 @@
             this.grpregistro.Controls.Add(this.cmbTipoCliente);
             this.grpregistro.Controls.Add(this.txtId);
             this.grpregistro.Controls.Add(this.txtDireccion);
-            this.grpregistro.Controls.Add(this.txtduicliente);
-            this.grpregistro.Controls.Add(this.txtnumcliente);
             this.grpregistro.Controls.Add(this.txtcorreo);
             this.grpregistro.Controls.Add(this.txtapelliocliente);
             this.grpregistro.Controls.Add(this.txtnamecliente);
@@ -261,6 +247,7 @@
             this.cmbTipoCliente.Name = "cmbTipoCliente";
             this.cmbTipoCliente.Size = new System.Drawing.Size(166, 21);
             this.cmbTipoCliente.TabIndex = 7;
+            this.cmbTipoCliente.SelectedIndexChanged += new System.EventHandler(this.cmbTipoCliente_SelectedIndexChanged);
             // 
             // txtId
             // 
@@ -286,21 +273,6 @@
             this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             this.txtDireccion.Enter += new System.EventHandler(this.txtDireccion_Enter);
             this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
-            // 
-            // txtduicliente
-            // 
-            this.txtduicliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtduicliente.BackColor = System.Drawing.Color.White;
-            this.txtduicliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtduicliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtduicliente.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtduicliente.Location = new System.Drawing.Point(311, 113);
-            this.txtduicliente.Name = "txtduicliente";
-            this.txtduicliente.Size = new System.Drawing.Size(228, 19);
-            this.txtduicliente.TabIndex = 4;
-            this.txtduicliente.TextChanged += new System.EventHandler(this.txtduicliente_TextChanged);
-            this.txtduicliente.Enter += new System.EventHandler(this.txtduicliente_Enter);
-            this.txtduicliente.Leave += new System.EventHandler(this.btnduicliente_Leave);
             // 
             // dgvcliente
             // 
@@ -460,6 +432,24 @@
             this.btnregistrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
+            // txtnum
+            // 
+            this.txtnum.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtnum.Location = new System.Drawing.Point(39, 112);
+            this.txtnum.Mask = "0000-0000";
+            this.txtnum.Name = "txtnum";
+            this.txtnum.Size = new System.Drawing.Size(228, 20);
+            this.txtnum.TabIndex = 16;
+            // 
+            // txtdui
+            // 
+            this.txtdui.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtdui.Location = new System.Drawing.Point(311, 113);
+            this.txtdui.Mask = "000000-0";
+            this.txtdui.Name = "txtdui";
+            this.txtdui.Size = new System.Drawing.Size(228, 20);
+            this.txtdui.TabIndex = 17;
+            // 
             // registrocliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -491,10 +481,8 @@
         private System.Windows.Forms.TextBox txtnamecliente;
         private System.Windows.Forms.TextBox txtapelliocliente;
         private System.Windows.Forms.TextBox txtcorreo;
-        private System.Windows.Forms.TextBox txtnumcliente;
         private System.Windows.Forms.GroupBox grpregistro;
         private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.TextBox txtduicliente;
         private System.Windows.Forms.DataGridView dgvcliente;
         private Bunifu.Framework.UI.BunifuFlatButton btnregistrar;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
@@ -510,5 +498,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox txtdui;
+        private System.Windows.Forms.MaskedTextBox txtnum;
     }
 }
