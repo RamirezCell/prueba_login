@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using prueba_login.Controlador;
+using prueba_login.Modelo;
 
 
 
@@ -143,22 +145,42 @@ namespace prueba_login
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-            
-            
-            
-            
-        
-            
-            
-            
-           
-            
-            
+
+
+
+
+
+            enviar();
+
+
+
+
+
+
 
         }
 
 
-
+        void enviar()
+        {
+            if (txtpass.Text.Trim() == "" || txtuser.Text.Trim() == "")
+            {
+                MessageBox.Show("campos vacios", "Llene los campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                constructotlogin login = new constructotlogin(txtuser.Text, txtpass.Text);
+                constructotlogin.usuario = txtuser.Text;
+                login.clave = txtpass.Text;
+                bool datos = validarlogin.acceso(login);
+                if (datos == true)
+                {
+                    Secretaria main = new Secretaria();
+                    main.Show();
+                    this.Hide();
+                }
+            }
+        }
 
         private void btnrecuperar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
