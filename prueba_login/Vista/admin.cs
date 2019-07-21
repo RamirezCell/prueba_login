@@ -115,7 +115,6 @@ namespace prueba_login
 
         private void btnSupervision_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Supervision_de_equipamiento>();
         }
 
         private void btnregistro_Click(object sender, EventArgs e)

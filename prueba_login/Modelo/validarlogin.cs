@@ -3,11 +3,101 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using prueba_login.Controlador;
+using prueba_login.Modelo;
+using MySql.Data.MySqlClient;
+using System.Windows.Forms;
+
 
 namespace prueba_login.Modelo
 {
     class validarlogin
     {
+        public static bool acceso(constructotlogin log)
+        {
+            bool retorno = false;
+            //verificar existencia
+            string query = "SELECT * FROM usuarios WHERE usuario=?user";
+            try
+            {
+                MySqlCommand cmdeselct = new MySqlCommand(query, conexion.obtenerconexion());
+                //envio de parametros a la consulta
+                cmdeselct.Parameters.Add(new MySqlParameter("user", constructotlogin.usuario));
+
+                retorno = Convert.ToBoolean(cmdeselct.ExecuteScalar());
+                //si el usuario existe es true , sino es false
+                if (retorno==true)
+                {
+                 
+                    //verificar datos
+                    int estado = 1;
+                    string query2 = "SELECT * FROM  usuarios WHERE usuario=?user AND clave=?pass AND estado=?state";
+                    MySqlCommand cmdselect2 = new MySqlCommand(query2,conexion.obtenerconexion());
+                    cmdselect2.Parameters.Add(new MySqlParameter("user", constructotlogin.usuario));
+                    cmdselect2.Parameters.Add(new MySqlParameter("pass", log.clave));
+                    cmdselect2.Parameters.Add(new MySqlParameter("state",estado));
+                    retorno = Convert.ToBoolean(cmdselect2.ExecuteScalar());
+                    //actualizar intentos a cero
+                    if (retorno==true)
+                    {
+
+                    }
+                    else
+                    {
+                        //verificar estado contando intentos
+                        MySqlDataReader reader = cmdeselct.ExecuteReader();
+                        while (reader.Read())
+                        {
+                           int intentos = 0;
+                            intentos = reader.GetInt16(11)+1;
+                            if (intentos>5)
+                            {
+                                //bloqueo
+                                int bloqueo = 3;
+                                MySqlCommand cmdlock = new MySqlCommand(string.Format("UPDATE usuarios SET estado='{0}' WHERE usuario='{1}'", bloqueo, constructotlogin.usuario), conexion.obtenerconexion());
+                                int verificacion=Convert.ToInt32(cmdlock.ExecuteNonQuery());
+                                if (verificacion>=1)
+                                {
+                                    MessageBox.Show("usuario bloqueado, contacte al admin", "bloqueado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
+                            else
+                            {
+                                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE usuarios SET intentos='{0}' WHERE usuario='{1}'", intentos, constructotlogin.usuario), conexion.obtenerconexion());
+                                int verificacion = Convert.ToInt32(cmdupdate.ExecuteNonQuery());
+                                if (verificacion >= 1)
+                                {
+                                    MessageBox.Show("la contraseña es incorrecta o el usuario no existe", "campos erroneos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                                }
+                            }
+                          
+                        }
+
+
+                    }
+
+
+
+                }
+                else
+                {
+                    //envio de mensaje de usuario inexistente
+                    MessageBox.Show("usuario inexistente", "error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                return retorno;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("error en la base de datos"+e, "error critico", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return retorno;
+            }
+           
+
+
+
+
+        }
 
     }
 }

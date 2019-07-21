@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using prueba_login.Controlador;
+using prueba_login.Modelo;
 
 namespace prueba_login
 {
@@ -156,6 +158,11 @@ namespace prueba_login
         }
 
         private void btnorden_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             
         }
