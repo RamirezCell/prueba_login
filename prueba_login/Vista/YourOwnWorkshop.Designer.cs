@@ -63,9 +63,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::prueba_login.Properties.Resources.LogoSinFondo;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 59);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 69);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 160);
+            this.pictureBox1.Size = new System.Drawing.Size(149, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;

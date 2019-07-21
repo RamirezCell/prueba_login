@@ -54,6 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\conexion.cs" />
+    <Compile Include="Controlador\constructotlogin.cs" />
+    <Compile Include="Modelo\validarlogin.cs" />
     <Compile Include="Vista\bodeguero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,10 +190,7 @@
   <ItemGroup>
     <None Include="Resources\eye2.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controlador\" />
-    <Folder Include="Modelo\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\004-mobile-phone.png" />
   </ItemGroup>
