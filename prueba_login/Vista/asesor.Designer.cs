@@ -209,6 +209,7 @@
             this.btnauti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnauti.Textcolor = System.Drawing.Color.Black;
             this.btnauti.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnauti.Click += new System.EventHandler(this.btnauti_Click);
             // 
             // label2
             // 

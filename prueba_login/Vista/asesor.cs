@@ -159,5 +159,10 @@ namespace prueba_login
         {
             
         }
+
+        private void btnauti_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<registroauto>();
+        }
     }
 }

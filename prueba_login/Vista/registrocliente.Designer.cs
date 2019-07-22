@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registrocliente));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.txtnamecliente = new System.Windows.Forms.TextBox();
             this.txtapelliocliente = new System.Windows.Forms.TextBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.grpregistro = new System.Windows.Forms.GroupBox();
+            this.txtdui = new System.Windows.Forms.MaskedTextBox();
+            this.txtnum = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,8 +51,7 @@
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtnum = new System.Windows.Forms.MaskedTextBox();
-            this.txtdui = new System.Windows.Forms.MaskedTextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.grpregistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
@@ -71,17 +71,6 @@
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(155, 33);
-            this.toolStripButton1.Text = "Registro de clientes";
             // 
             // txtnamecliente
             // 
@@ -152,6 +141,24 @@
             this.grpregistro.TabIndex = 0;
             this.grpregistro.TabStop = false;
             this.grpregistro.Enter += new System.EventHandler(this.grpregistro_Enter);
+            // 
+            // txtdui
+            // 
+            this.txtdui.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtdui.Location = new System.Drawing.Point(311, 113);
+            this.txtdui.Mask = "000000-0";
+            this.txtdui.Name = "txtdui";
+            this.txtdui.Size = new System.Drawing.Size(228, 20);
+            this.txtdui.TabIndex = 17;
+            // 
+            // txtnum
+            // 
+            this.txtnum.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtnum.Location = new System.Drawing.Point(39, 112);
+            this.txtnum.Mask = "0000-0000";
+            this.txtnum.Name = "txtnum";
+            this.txtnum.Size = new System.Drawing.Size(228, 20);
+            this.txtnum.TabIndex = 16;
             // 
             // label7
             // 
@@ -432,23 +439,16 @@
             this.btnregistrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
-            // txtnum
+            // toolStripButton1
             // 
-            this.txtnum.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtnum.Location = new System.Drawing.Point(39, 112);
-            this.txtnum.Mask = "0000-0000";
-            this.txtnum.Name = "txtnum";
-            this.txtnum.Size = new System.Drawing.Size(228, 20);
-            this.txtnum.TabIndex = 16;
-            // 
-            // txtdui
-            // 
-            this.txtdui.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtdui.Location = new System.Drawing.Point(311, 113);
-            this.txtdui.Mask = "000000-0";
-            this.txtdui.Name = "txtdui";
-            this.txtdui.Size = new System.Drawing.Size(228, 20);
-            this.txtdui.TabIndex = 17;
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(155, 33);
+            this.toolStripButton1.Text = "Registro de clientes";
             // 
             // registrocliente
             // 

@@ -56,9 +56,17 @@
   <ItemGroup>
     <Compile Include="Controlador\conexion.cs" />
     <Compile Include="Controlador\constructorcliente.cs" />
+    <Compile Include="Controlador\constructorvehiculo.cs" />
     <Compile Include="Controlador\constructotlogin.cs" />
     <Compile Include="Modelo\funcionescliente.cs" />
+    <Compile Include="Modelo\funcionesvehiculo.cs" />
     <Compile Include="Modelo\validarlogin.cs" />
+    <Compile Include="registroauto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registroauto.Designer.cs">
+      <DependentUpon>registroauto.cs</DependentUpon>
+    </Compile>
     <Compile Include="registrotrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +129,9 @@
     <Compile Include="Vista\recu_contra.Designer.cs">
       <DependentUpon>recu_contra.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="registroauto.resx">
+      <DependentUpon>registroauto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="registrotrabajador.resx">
       <DependentUpon>registrotrabajador.cs</DependentUpon>
     </EmbeddedResource>
