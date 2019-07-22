@@ -16,6 +16,7 @@ using prueba_login.Modelo;
 
 
 
+
 namespace prueba_login
 {
     public partial class YourOwnWorkshop : Form
@@ -145,7 +146,7 @@ namespace prueba_login
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-
+            
 
 
 
@@ -175,9 +176,18 @@ namespace prueba_login
                 bool datos = validarlogin.acceso(login);
                 if (datos == true)
                 {
-                    Secretaria main = new Secretaria();
-                    main.Show();
-                    this.Hide();
+                    if (constructotlogin.nivel == 1)
+                    {
+                        Form asesor = new Secretaria();
+                        asesor.Show();
+                        this.Hide();
+                    }
+                    else if (constructotlogin.nivel == 2)
+                    {
+                        Form trabajador = new Trabajador();
+                        trabajador.Show();
+                        this.Hide();
+                    }
                 }
             }
         }

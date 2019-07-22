@@ -39,7 +39,20 @@ namespace prueba_login.Modelo
                     //actualizar intentos a cero
                     if (retorno == true)
                     {
-
+                        int intentos = 0;
+                        MySqlCommand cmdset=new MySqlCommand(string.Format("UPDATE usuarios SET intentos='{0}' WHERE usuario='{1}'", intentos, constructotlogin.usuario), conexion.obtenerconexion());
+                        int reset = Convert.ToInt32(cmdset.ExecuteNonQuery());
+                        MySqlDataReader reader = cmdeselct.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            constructotlogin.nombre = reader.GetString(1)+""+reader.GetString(2);
+                            constructotlogin.nivel = reader.GetInt16(10);
+                            if (reset >= 1)
+                            {
+                                MessageBox.Show("Acceso concebido:" +constructotlogin.usuario, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        
                     }
                     else
                     {
@@ -90,6 +103,10 @@ namespace prueba_login.Modelo
 
                 MessageBox.Show("error en la base de datos" + e, "error critico", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return retorno;
+            }
+            finally
+            {
+                conexion.obtenerconexion().Close();
             }
 
 

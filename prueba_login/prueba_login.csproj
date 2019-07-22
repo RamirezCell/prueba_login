@@ -61,6 +61,12 @@
     <Compile Include="Modelo\funcionescliente.cs" />
     <Compile Include="Modelo\funcionesvehiculo.cs" />
     <Compile Include="Modelo\validarlogin.cs" />
+    <Compile Include="primeruso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="primeruso.Designer.cs">
+      <DependentUpon>primeruso.cs</DependentUpon>
+    </Compile>
     <Compile Include="registroauto.cs">
       <SubType>Form</SubType>
     </Compile>
