@@ -18,7 +18,7 @@ namespace prueba_login.Modelo
 
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO clientes(nombre_cliente,apellido_cliente,DUI_cliente,correo_electronico,numero_telefonico,direccion,tipo_cliente)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", add.nombre_cliente, add.apellido_cliente, add.dui, add.correo, add.telefono, add.direccion, add.tipo_cliente),conexion.obtenerconexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO clientes(nombre_cliente,apellido_cliente,DUI_cliente,correo_electronico,numero_telefonico,direccion,id_tipo_cliente)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", add.nombre_cliente, add.apellido_cliente, add.dui, add.correo, add.telefono, add.direccion, add.tipo_cliente),conexion.obtenerconexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                 if (retorno >= 1)
                 {
@@ -81,7 +81,9 @@ namespace prueba_login.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM clientes";
+                string query = "SELECT tc.id_cliente,tc.nombre_cliente,tc.apellido_cliente,tc.DUI_cliente,tc.correo_electronico,tc.numero_telefonico,tc.direccion,CONCAT(tt.tipo_cliente) As tipo_cliente  FROM clientes tc,tipo_clientes " +
+                    "tt WHERE tc.id_tipo_cliente = tt.id_tipo_cliente";
+                   
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query),conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -89,9 +91,9 @@ namespace prueba_login.Modelo
                 adapter.Fill(data);
                 return data;
             }
-            catch (Exception )
+            catch (Exception e )
             {
-
+                MessageBox.Show("Ha ocurrido un problema" + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return data = new DataTable();
             }
 
@@ -101,7 +103,7 @@ namespace prueba_login.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdactualizar = new MySqlCommand(string.Format("UPDATE clientes SET nombre_cliente = '{0}', apellido_cliente = '{1}', DUI_cliente = '{2}', correo_electronico = '{3}', numero_telefonico = '{4}', direccion = '{5}', tipo_cliente = '{6}' WHERE id_cliente='{7}'",upd.nombre_cliente,upd.apellido_cliente,upd.dui,upd.correo,upd.telefono,upd.direccion,upd.tipo_cliente,upd.id_cliente),conexion.obtenerconexion());
+                MySqlCommand cmdactualizar = new MySqlCommand(string.Format("UPDATE clientes SET nombre_cliente = '{0}', apellido_cliente = '{1}', DUI_cliente = '{2}', correo_electronico = '{3}', numero_telefonico = '{4}', direccion = '{5}', id_tipo_cliente = '{6}' WHERE id_cliente='{7}'",upd.nombre_cliente,upd.apellido_cliente,upd.dui,upd.correo,upd.telefono,upd.direccion,upd.tipo_cliente,upd.id_cliente),conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdactualizar.ExecuteNonQuery());
                 if (retorno==true)
                 {

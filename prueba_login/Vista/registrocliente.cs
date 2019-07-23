@@ -27,8 +27,8 @@ namespace prueba_login
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-           
-    }
+
+        }
 
         private void txtDireccion_TextChanged(object sender, EventArgs e)
         {
@@ -47,62 +47,62 @@ namespace prueba_login
 
         private void txtnamecliente_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtnamecliente_Leave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtapelliocliente_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtapelliocliente_Leave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtnumcliente_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtnumcliente_Leave(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnduicliente_Leave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtduicliente_Enter(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtDireccion_Enter(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtDireccion_Leave(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txtcorreo_Enter(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtcorreo_Leave(object sender, EventArgs e)
         {
-           
+
         }
 
         private void txtnamecliente_TextChanged(object sender, EventArgs e)
@@ -119,15 +119,15 @@ namespace prueba_login
         {
 
         }
-        
-       
+
+
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
             agregar();
             mostrar();
             limpiar();
-          
+
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -136,16 +136,28 @@ namespace prueba_login
         }
         constructorcliente add = new constructorcliente();
         public void agregar()
+
+
         {
-            add.nombre_cliente = txtnamecliente.Text;
-            add.apellido_cliente = txtapelliocliente.Text;
-            add.correo = txtcorreo.Text;
-            add.direccion = txtDireccion.Text;
-            add.telefono = txtnum.Text;
-            add.tipo_cliente = Convert.ToInt16(cmbTipoCliente.SelectedValue);
-            add.dui = txtdui.Text;
-            add.direccion = txtDireccion.Text;
-            int datos = funcionescliente.agregar(add);
+
+            if (txtapelliocliente.Text.Trim() == "" || txtnamecliente.Text.Trim() == "" || txtnum.Text.Trim() == ""||txtdui.Text.Trim()==""
+                ||txtDireccion.Text.Trim()==""||txtcorreo.Text.Trim()=="")
+            {
+                MessageBox.Show("Hay campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                add.nombre_cliente = txtnamecliente.Text;
+                add.apellido_cliente = txtapelliocliente.Text;
+                add.correo = txtcorreo.Text;
+                add.direccion = txtDireccion.Text;
+                add.telefono = txtnum.Text;
+                add.tipo_cliente = Convert.ToInt16(cmbTipoCliente.SelectedValue);
+                add.dui = txtdui.Text;
+                add.direccion = txtDireccion.Text;
+                int datos = funcionescliente.agregar(add);
+            }
+           
         }
 
         private void registrocliente_Load(object sender, EventArgs e)
@@ -156,7 +168,7 @@ namespace prueba_login
             dgvcliente.DataSource = funcionescliente.mostrar();
             btneliminar.Enabled = false;
             btnupdate.Enabled = false;
-            this.dgvcliente.Columns[0].Visible = false;
+          
         }
         public void mostrar()
         {
@@ -190,6 +202,7 @@ namespace prueba_login
             actualizar.tipo_cliente = Convert.ToInt32(cmbTipoCliente.SelectedValue);
             actualizar.direccion = txtDireccion.Text;
             funcionescliente.actualizar(actualizar);
+            btnregistrar.Enabled = true;
 
         }
 
@@ -199,6 +212,9 @@ namespace prueba_login
             {
 
                 funcionescliente.eliminar(Convert.ToInt32(txtId.Text));
+                btnregistrar.Enabled = true;
+                btneliminar.Enabled = false;
+
 
             }
         }

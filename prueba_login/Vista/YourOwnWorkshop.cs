@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using prueba_login.Controlador;
 using prueba_login.Modelo;
+using System.Security.Cryptography;
 
 
 
@@ -172,7 +173,9 @@ namespace prueba_login
             {
                 constructotlogin login = new constructotlogin(txtuser.Text, txtpass.Text);
                 constructotlogin.usuario = txtuser.Text;
+
                 login.clave = txtpass.Text;
+
                 bool datos = validarlogin.acceso(login);
                 if (datos == true)
                 {
