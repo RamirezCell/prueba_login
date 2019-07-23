@@ -71,11 +71,15 @@ namespace prueba_login
 
         private void registroauto_Load(object sender, EventArgs e)
         {
-            this.dgvvehiculos.Columns[0].Visible = false;
+           
             btneliminar.Enabled = false;
             btnupdate.Enabled = false;
 
+
             mostrar();
+
+            this.dgvvehiculos.Columns[0].Visible = false;
+
         }
 
         private void btnmostrar_Click(object sender, EventArgs e)

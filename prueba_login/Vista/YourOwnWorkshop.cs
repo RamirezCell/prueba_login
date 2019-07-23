@@ -18,6 +18,7 @@ using System.Security.Cryptography;
 
 
 
+
 namespace prueba_login
 {
     public partial class YourOwnWorkshop : Form
@@ -25,8 +26,6 @@ namespace prueba_login
     {
 
 
-        
-      
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -147,14 +146,12 @@ namespace prueba_login
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-            
 
 
 
+          
 
             enviar();
-
-
 
 
 
@@ -165,6 +162,8 @@ namespace prueba_login
 
         void enviar()
         {
+          
+
             if (txtpass.Text.Trim() == "" || txtuser.Text.Trim() == "")
             {
                 MessageBox.Show("campos vacios", "Llene los campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -175,8 +174,10 @@ namespace prueba_login
                 constructotlogin login = new constructotlogin(txtuser.Text, txtpass.Text);
                 constructotlogin.usuario = txtuser.Text;
                 login.clave = txtpass.Text;
+                
+                
 
-             
+
 
                 bool datos = validarlogin.acceso(login);
                 if (datos == true)
