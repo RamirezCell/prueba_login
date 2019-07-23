@@ -171,14 +171,17 @@ namespace prueba_login
             }
             else
             {
+               
                 constructotlogin login = new constructotlogin(txtuser.Text, txtpass.Text);
                 constructotlogin.usuario = txtuser.Text;
-
                 login.clave = txtpass.Text;
+
+             
 
                 bool datos = validarlogin.acceso(login);
                 if (datos == true)
                 {
+                  
                     if (constructotlogin.nivel == 1)
                     {
                         Form asesor = new Secretaria();
@@ -201,6 +204,13 @@ namespace prueba_login
             form.Show();
             this.Hide();
         }
+       
+
+
+
+
+
+
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {

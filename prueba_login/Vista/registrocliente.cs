@@ -168,7 +168,8 @@ namespace prueba_login
             dgvcliente.DataSource = funcionescliente.mostrar();
             btneliminar.Enabled = false;
             btnupdate.Enabled = false;
-          
+            this.dgvcliente.Columns[0].Visible = false;
+
         }
         public void mostrar()
         {
@@ -202,7 +203,7 @@ namespace prueba_login
             actualizar.tipo_cliente = Convert.ToInt32(cmbTipoCliente.SelectedValue);
             actualizar.direccion = txtDireccion.Text;
             funcionescliente.actualizar(actualizar);
-            btnregistrar.Enabled = true;
+         
 
         }
 
@@ -226,6 +227,7 @@ namespace prueba_login
             limpiar();
             btnupdate.Enabled = false;
             btneliminar.Enabled = false;
+            btnregistrar.Enabled = true;
         }
         public void eliminarcliente()
         {
@@ -255,6 +257,11 @@ namespace prueba_login
         private void cmbTipoCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void dgvcliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     

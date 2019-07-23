@@ -71,6 +71,10 @@ namespace prueba_login
 
         private void registroauto_Load(object sender, EventArgs e)
         {
+            this.dgvvehiculos.Columns[0].Visible = false;
+            btneliminar.Enabled = false;
+            btnupdate.Enabled = false;
+
             mostrar();
         }
 
@@ -100,6 +104,9 @@ namespace prueba_login
             upd();
             mostrar();
            limpiar();
+            btnupdate.Enabled = false;
+            btneliminar.Enabled = false;
+            btnregistrar.Enabled = true;
         }
         public void limpiar()
         {
