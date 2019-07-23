@@ -135,6 +135,9 @@
     <Compile Include="Vista\recu_contra.Designer.cs">
       <DependentUpon>recu_contra.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="primeruso.resx">
+      <DependentUpon>primeruso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="registroauto.resx">
       <DependentUpon>registroauto.cs</DependentUpon>
     </EmbeddedResource>
