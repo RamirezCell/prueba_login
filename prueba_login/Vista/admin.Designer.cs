@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnAdminProductos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAdminEmpleados = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistro = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSupervision = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -74,6 +75,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.btnAdminProductos);
             this.panel1.Controls.Add(this.btnAdminEmpleados);
             this.panel1.Controls.Add(this.btnregistro);
             this.panel1.Controls.Add(this.btnSupervision);
@@ -115,17 +117,51 @@
             this.panelContenedor.Size = new System.Drawing.Size(838, 575);
             this.panelContenedor.TabIndex = 3;
             // 
+            // btnAdminProductos
+            // 
+            this.btnAdminProductos.Activecolor = System.Drawing.Color.DarkGoldenrod;
+            this.btnAdminProductos.BackColor = System.Drawing.Color.Gold;
+            this.btnAdminProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAdminProductos.BorderRadius = 0;
+            this.btnAdminProductos.ButtonText = "   Administracion de productos";
+            this.btnAdminProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdminProductos.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAdminProductos.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAdminProductos.Iconimage = global::prueba_login.Properties.Resources.truck;
+            this.btnAdminProductos.Iconimage_right = null;
+            this.btnAdminProductos.Iconimage_right_Selected = null;
+            this.btnAdminProductos.Iconimage_Selected = null;
+            this.btnAdminProductos.IconMarginLeft = 0;
+            this.btnAdminProductos.IconMarginRight = 0;
+            this.btnAdminProductos.IconRightVisible = true;
+            this.btnAdminProductos.IconRightZoom = 0D;
+            this.btnAdminProductos.IconVisible = true;
+            this.btnAdminProductos.IconZoom = 90D;
+            this.btnAdminProductos.IsTab = false;
+            this.btnAdminProductos.Location = new System.Drawing.Point(0, 481);
+            this.btnAdminProductos.Name = "btnAdminProductos";
+            this.btnAdminProductos.Normalcolor = System.Drawing.Color.Gold;
+            this.btnAdminProductos.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btnAdminProductos.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnAdminProductos.selected = false;
+            this.btnAdminProductos.Size = new System.Drawing.Size(264, 71);
+            this.btnAdminProductos.TabIndex = 7;
+            this.btnAdminProductos.Text = "   Administracion de productos";
+            this.btnAdminProductos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAdminProductos.Textcolor = System.Drawing.Color.Black;
+            this.btnAdminProductos.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // btnAdminEmpleados
             // 
             this.btnAdminEmpleados.Activecolor = System.Drawing.Color.DarkGoldenrod;
-            this.btnAdminEmpleados.BackColor = System.Drawing.Color.Black;
+            this.btnAdminEmpleados.BackColor = System.Drawing.Color.Gold;
             this.btnAdminEmpleados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdminEmpleados.BorderRadius = 0;
             this.btnAdminEmpleados.ButtonText = "   Administracion de empleados";
             this.btnAdminEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdminEmpleados.DisabledColor = System.Drawing.Color.Gray;
             this.btnAdminEmpleados.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAdminEmpleados.Iconimage = global::prueba_login.Properties.Resources.folder;
+            this.btnAdminEmpleados.Iconimage = global::prueba_login.Properties.Resources.office_worker_outline;
             this.btnAdminEmpleados.Iconimage_right = null;
             this.btnAdminEmpleados.Iconimage_right_Selected = null;
             this.btnAdminEmpleados.Iconimage_Selected = null;
@@ -136,31 +172,31 @@
             this.btnAdminEmpleados.IconVisible = true;
             this.btnAdminEmpleados.IconZoom = 90D;
             this.btnAdminEmpleados.IsTab = false;
-            this.btnAdminEmpleados.Location = new System.Drawing.Point(0, 465);
+            this.btnAdminEmpleados.Location = new System.Drawing.Point(0, 385);
             this.btnAdminEmpleados.Name = "btnAdminEmpleados";
-            this.btnAdminEmpleados.Normalcolor = System.Drawing.Color.Black;
-            this.btnAdminEmpleados.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAdminEmpleados.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAdminEmpleados.Normalcolor = System.Drawing.Color.Gold;
+            this.btnAdminEmpleados.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btnAdminEmpleados.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnAdminEmpleados.selected = false;
             this.btnAdminEmpleados.Size = new System.Drawing.Size(264, 71);
             this.btnAdminEmpleados.TabIndex = 6;
             this.btnAdminEmpleados.Text = "   Administracion de empleados";
             this.btnAdminEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAdminEmpleados.Textcolor = System.Drawing.Color.White;
+            this.btnAdminEmpleados.Textcolor = System.Drawing.Color.Black;
             this.btnAdminEmpleados.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdminEmpleados.Click += new System.EventHandler(this.btnAdminEmpleados_Click);
             // 
             // btnregistro
             // 
             this.btnregistro.Activecolor = System.Drawing.Color.DarkGoldenrod;
-            this.btnregistro.BackColor = System.Drawing.Color.Black;
+            this.btnregistro.BackColor = System.Drawing.Color.Gold;
             this.btnregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnregistro.BorderRadius = 0;
             this.btnregistro.ButtonText = "   Configuracion del sistema";
             this.btnregistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnregistro.DisabledColor = System.Drawing.Color.Gray;
             this.btnregistro.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnregistro.Iconimage = global::prueba_login.Properties.Resources.settings;
+            this.btnregistro.Iconimage = global::prueba_login.Properties.Resources.gears;
             this.btnregistro.Iconimage_right = null;
             this.btnregistro.Iconimage_right_Selected = null;
             this.btnregistro.Iconimage_Selected = null;
@@ -171,31 +207,31 @@
             this.btnregistro.IconVisible = true;
             this.btnregistro.IconZoom = 90D;
             this.btnregistro.IsTab = false;
-            this.btnregistro.Location = new System.Drawing.Point(0, 326);
+            this.btnregistro.Location = new System.Drawing.Point(0, 288);
             this.btnregistro.Name = "btnregistro";
-            this.btnregistro.Normalcolor = System.Drawing.Color.Black;
-            this.btnregistro.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnregistro.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnregistro.Normalcolor = System.Drawing.Color.Gold;
+            this.btnregistro.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btnregistro.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnregistro.selected = false;
             this.btnregistro.Size = new System.Drawing.Size(264, 71);
             this.btnregistro.TabIndex = 4;
             this.btnregistro.Text = "   Configuracion del sistema";
             this.btnregistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnregistro.Textcolor = System.Drawing.Color.White;
+            this.btnregistro.Textcolor = System.Drawing.Color.Black;
             this.btnregistro.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistro.Click += new System.EventHandler(this.btnregistro_Click);
             // 
             // btnSupervision
             // 
             this.btnSupervision.Activecolor = System.Drawing.Color.DarkGoldenrod;
-            this.btnSupervision.BackColor = System.Drawing.Color.Black;
+            this.btnSupervision.BackColor = System.Drawing.Color.Gold;
             this.btnSupervision.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSupervision.BorderRadius = 0;
             this.btnSupervision.ButtonText = "   Supervision de equipamiento";
             this.btnSupervision.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSupervision.DisabledColor = System.Drawing.Color.Gray;
             this.btnSupervision.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSupervision.Iconimage = global::prueba_login.Properties.Resources.edit1;
+            this.btnSupervision.Iconimage = global::prueba_login.Properties.Resources.edit;
             this.btnSupervision.Iconimage_right = null;
             this.btnSupervision.Iconimage_right_Selected = null;
             this.btnSupervision.Iconimage_Selected = null;
@@ -208,15 +244,15 @@
             this.btnSupervision.IsTab = false;
             this.btnSupervision.Location = new System.Drawing.Point(0, 175);
             this.btnSupervision.Name = "btnSupervision";
-            this.btnSupervision.Normalcolor = System.Drawing.Color.Black;
-            this.btnSupervision.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSupervision.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSupervision.Normalcolor = System.Drawing.Color.Gold;
+            this.btnSupervision.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btnSupervision.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnSupervision.selected = false;
             this.btnSupervision.Size = new System.Drawing.Size(264, 71);
             this.btnSupervision.TabIndex = 3;
             this.btnSupervision.Text = "   Supervision de equipamiento";
             this.btnSupervision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSupervision.Textcolor = System.Drawing.Color.White;
+            this.btnSupervision.Textcolor = System.Drawing.Color.Black;
             this.btnSupervision.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupervision.Click += new System.EventHandler(this.btnSupervision_Click);
             // 
@@ -314,5 +350,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelContenedor;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAdminProductos;
     }
 }

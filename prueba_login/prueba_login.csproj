@@ -235,6 +235,8 @@
     <None Include="Resources\logoexpo4.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\truck.png" />
+    <None Include="Resources\office-worker-outline.png" />
     <None Include="Resources\list.png" />
     <None Include="Resources\sports-car.png" />
     <None Include="Resources\refresh-button.png" />
@@ -293,6 +295,8 @@
     <None Include="Resources\Businessman_48px2.png" />
     <None Include="Resources\eye1.png" />
     <None Include="Resources\add-user-button.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\gears.png" />
     <Content Include="Resources\Icon1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
