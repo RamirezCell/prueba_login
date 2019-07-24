@@ -135,7 +135,7 @@
             // bunifuFlatButton1
             // 
             this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DarkGoldenrod;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Black;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Gold;
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "  Registro de entrada y   salida de equipamiento";
@@ -155,7 +155,7 @@
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 400);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Gold;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
