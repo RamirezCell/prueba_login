@@ -8,8 +8,12 @@ using prueba_login.Modelo;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
+
 namespace prueba_login.Modelo
 {
+
+
+    
     class validarlogin
     {
         public static bool acceso(constructotlogin log)
