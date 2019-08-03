@@ -59,7 +59,7 @@ namespace prueba_login.Modelo
             catch (Exception e)
             {
 
-                MessageBox.Show("Ha ocurrido un error en la obtencion de datos, consulte con admin", "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error en la obtencion de datos, consulte con admin"+e, "error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return data = new DataTable();
             }
             finally

@@ -35,7 +35,6 @@
             this.btnMinimizar = new System.Windows.Forms.ToolStripButton();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnre = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -120,7 +119,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
-            this.panel1.Controls.Add(this.bunifuFlatButton1);
             this.panel1.Controls.Add(this.btnre);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -132,53 +130,17 @@
             this.panel1.Size = new System.Drawing.Size(264, 575);
             this.panel1.TabIndex = 2;
             // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DarkGoldenrod;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "  Registro de entrada y   salida de equipamiento";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::prueba_login.Properties.Resources.logout;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 400);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(264, 87);
-            this.bunifuFlatButton1.TabIndex = 10;
-            this.bunifuFlatButton1.Text = "  Registro de entrada y   salida de equipamiento";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
             // btnre
             // 
-            this.btnre.Activecolor = System.Drawing.Color.DarkGoldenrod;
+            this.btnre.Activecolor = System.Drawing.Color.Gold;
             this.btnre.BackColor = System.Drawing.Color.Gold;
             this.btnre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnre.BorderRadius = 0;
             this.btnre.ButtonText = "     Control de inventario";
             this.btnre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnre.DisabledColor = System.Drawing.Color.Gray;
+            this.btnre.DisabledColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnre.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnre.Iconimage = global::prueba_login.Properties.Resources.check2;
+            this.btnre.Iconimage = global::prueba_login.Properties.Resources.package_for_delivery;
             this.btnre.Iconimage_right = null;
             this.btnre.Iconimage_right_Selected = null;
             this.btnre.Iconimage_Selected = null;
@@ -192,14 +154,14 @@
             this.btnre.Location = new System.Drawing.Point(0, 245);
             this.btnre.Name = "btnre";
             this.btnre.Normalcolor = System.Drawing.Color.Gold;
-            this.btnre.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnre.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnre.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btnre.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnre.selected = false;
             this.btnre.Size = new System.Drawing.Size(264, 87);
             this.btnre.TabIndex = 4;
             this.btnre.Text = "     Control de inventario";
             this.btnre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnre.Textcolor = System.Drawing.Color.White;
+            this.btnre.Textcolor = System.Drawing.Color.Black;
             this.btnre.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnre.Click += new System.EventHandler(this.btnre_Click);
             // 
@@ -262,6 +224,7 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(838, 575);
             this.panelContenedor.TabIndex = 3;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // bodeguero
             // 
@@ -274,7 +237,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1720, 728);
             this.Name = "bodeguero";
-            this.Opacity = 0.9D;
             this.Text = "bodeguero";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -295,7 +257,6 @@
         private System.Windows.Forms.ToolStripButton btnMinimizar;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton btnre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

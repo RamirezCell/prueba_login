@@ -115,7 +115,7 @@ namespace prueba_login
 
         private void btnSupervision_Click(object sender, EventArgs e)
         {
-          
+            AbrirFormulario<supervisionequipo>();
         }
 
         private void btnregistro_Click(object sender, EventArgs e)
@@ -124,7 +124,27 @@ namespace prueba_login
 
         private void btnAdminEmpleados_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormulario<registrotrabajador>();
+        }
+
+        private void btnAdminProductos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<controlinventario>();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<registrocliente>();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<registroauto>();
         }
     }
 }

@@ -34,16 +34,10 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtcod = new System.Windows.Forms.TextBox();
+            this.lblresult = new System.Windows.Forms.Label();
             this.btnenviar = new System.Windows.Forms.Button();
-            this.txttel = new System.Windows.Forms.TextBox();
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape3 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.btnregresar = new System.Windows.Forms.Button();
-            this.btncontinuar = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -101,29 +95,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
-            this.panel1.Controls.Add(this.txtcod);
+            this.panel1.Controls.Add(this.lblresult);
             this.panel1.Controls.Add(this.btnenviar);
-            this.panel1.Controls.Add(this.txttel);
             this.panel1.Controls.Add(this.txtusuario);
-            this.panel1.Controls.Add(this.shapeContainer1);
             this.panel1.Location = new System.Drawing.Point(34, 52);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(440, 370);
             this.panel1.TabIndex = 1;
             // 
-            // txtcod
+            // lblresult
             // 
-            this.txtcod.BackColor = System.Drawing.Color.Gold;
-            this.txtcod.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtcod.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcod.Location = new System.Drawing.Point(57, 283);
-            this.txtcod.Name = "txtcod";
-            this.txtcod.Size = new System.Drawing.Size(308, 17);
-            this.txtcod.TabIndex = 5;
-            this.txtcod.Text = "CÓDIGO DE VERIFICACIÓN";
-            this.txtcod.TextChanged += new System.EventHandler(this.txtcod_TextChanged);
-            this.txtcod.Enter += new System.EventHandler(this.txtcod_Enter);
-            this.txtcod.Leave += new System.EventHandler(this.txtcod_Leave);
+            this.lblresult.AutoSize = true;
+            this.lblresult.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblresult.Location = new System.Drawing.Point(86, 188);
+            this.lblresult.Name = "lblresult";
+            this.lblresult.Size = new System.Drawing.Size(62, 16);
+            this.lblresult.TabIndex = 5;
+            this.lblresult.Text = "Resultado";
             // 
             // btnenviar
             // 
@@ -134,82 +122,27 @@
             this.btnenviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnenviar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnenviar.ForeColor = System.Drawing.Color.White;
-            this.btnenviar.Location = new System.Drawing.Point(79, 201);
+            this.btnenviar.Location = new System.Drawing.Point(77, 290);
             this.btnenviar.Name = "btnenviar";
             this.btnenviar.Size = new System.Drawing.Size(259, 30);
             this.btnenviar.TabIndex = 4;
             this.btnenviar.Text = "ENVIAR";
             this.btnenviar.UseVisualStyleBackColor = false;
-            // 
-            // txttel
-            // 
-            this.txttel.BackColor = System.Drawing.Color.Gold;
-            this.txttel.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txttel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttel.Location = new System.Drawing.Point(57, 127);
-            this.txttel.Name = "txttel";
-            this.txttel.Size = new System.Drawing.Size(308, 17);
-            this.txttel.TabIndex = 3;
-            this.txttel.Text = "CORREO ELECTRÓNICO";
-            this.txttel.TextChanged += new System.EventHandler(this.txttel_TextChanged);
-            this.txttel.Enter += new System.EventHandler(this.txttel_Enter);
-            this.txttel.Leave += new System.EventHandler(this.txttel_Leave);
+            this.btnenviar.Click += new System.EventHandler(this.btnenviar_Click);
             // 
             // txtusuario
             // 
-            this.txtusuario.BackColor = System.Drawing.Color.Gold;
+            this.txtusuario.BackColor = System.Drawing.Color.Black;
             this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusuario.Location = new System.Drawing.Point(57, 54);
+            this.txtusuario.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtusuario.Location = new System.Drawing.Point(77, 104);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(308, 17);
             this.txtusuario.TabIndex = 2;
-            this.txtusuario.Text = "USUARIO";
             this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
             this.txtusuario.Enter += new System.EventHandler(this.txtusuario_Enter);
             this.txtusuario.Leave += new System.EventHandler(this.txtusuario_Leave);
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape3,
-            this.lineShape2,
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(440, 370);
-            this.shapeContainer1.TabIndex = 1;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape3
-            // 
-            this.lineShape3.Enabled = false;
-            this.lineShape3.Name = "lineShape3";
-            this.lineShape3.X1 = 57;
-            this.lineShape3.X2 = 364;
-            this.lineShape3.Y1 = 300;
-            this.lineShape3.Y2 = 300;
-            this.lineShape3.Click += new System.EventHandler(this.lineShape2_Click);
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.Enabled = false;
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 57;
-            this.lineShape2.X2 = 364;
-            this.lineShape2.Y1 = 149;
-            this.lineShape2.Y2 = 149;
-            this.lineShape2.Click += new System.EventHandler(this.lineShape2_Click);
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Enabled = false;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 57;
-            this.lineShape1.X2 = 364;
-            this.lineShape1.Y1 = 75;
-            this.lineShape1.Y2 = 75;
             // 
             // btnregresar
             // 
@@ -220,7 +153,7 @@
             this.btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnregresar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregresar.ForeColor = System.Drawing.Color.White;
-            this.btnregresar.Location = new System.Drawing.Point(519, 392);
+            this.btnregresar.Location = new System.Drawing.Point(587, 392);
             this.btnregresar.Name = "btnregresar";
             this.btnregresar.Size = new System.Drawing.Size(104, 30);
             this.btnregresar.TabIndex = 6;
@@ -228,30 +161,12 @@
             this.btnregresar.UseVisualStyleBackColor = false;
             this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
             // 
-            // btncontinuar
-            // 
-            this.btncontinuar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btncontinuar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btncontinuar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
-            this.btncontinuar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btncontinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncontinuar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btncontinuar.ForeColor = System.Drawing.Color.White;
-            this.btncontinuar.Location = new System.Drawing.Point(661, 392);
-            this.btncontinuar.Name = "btncontinuar";
-            this.btncontinuar.Size = new System.Drawing.Size(104, 30);
-            this.btncontinuar.TabIndex = 7;
-            this.btncontinuar.Text = "CONTINUAR";
-            this.btncontinuar.UseVisualStyleBackColor = false;
-            this.btncontinuar.Click += new System.EventHandler(this.btncontinuar_Click);
-            // 
             // recu_contra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btncontinuar);
             this.Controls.Add(this.btnregresar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
@@ -277,15 +192,9 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private System.Windows.Forms.TextBox txttel;
         private System.Windows.Forms.TextBox txtusuario;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private System.Windows.Forms.Button btnenviar;
-        private System.Windows.Forms.TextBox txtcod;
-        private Microsoft.VisualBasic.PowerPacks.LineShape lineShape3;
         private System.Windows.Forms.Button btnregresar;
-        private System.Windows.Forms.Button btncontinuar;
+        private System.Windows.Forms.Label lblresult;
     }
 }

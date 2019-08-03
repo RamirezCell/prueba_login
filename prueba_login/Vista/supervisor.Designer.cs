@@ -34,9 +34,9 @@
             this.BtnRestaurar3 = new System.Windows.Forms.ToolStripButton();
             this.BtnMinizar3 = new System.Windows.Forms.ToolStripButton();
             this.panelSecundario = new System.Windows.Forms.Panel();
-            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btningreso = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnorden = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistro = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
@@ -109,9 +109,9 @@
             // panelSecundario
             // 
             this.panelSecundario.BackColor = System.Drawing.Color.Gold;
-            this.panelSecundario.Controls.Add(this.btnsalir);
-            this.panelSecundario.Controls.Add(this.btningreso);
+            this.panelSecundario.Controls.Add(this.btnorden);
             this.panelSecundario.Controls.Add(this.btnregistro);
+            this.panelSecundario.Controls.Add(this.btnsalir);
             this.panelSecundario.Controls.Add(this.label2);
             this.panelSecundario.Controls.Add(this.label1);
             this.panelSecundario.Controls.Add(this.shapeContainer1);
@@ -121,6 +121,77 @@
             this.panelSecundario.Size = new System.Drawing.Size(264, 550);
             this.panelSecundario.TabIndex = 1;
             this.panelSecundario.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnorden
+            // 
+            this.btnorden.Activecolor = System.Drawing.Color.Gold;
+            this.btnorden.BackColor = System.Drawing.Color.Gold;
+            this.btnorden.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnorden.BorderRadius = 0;
+            this.btnorden.ButtonText = "     Creacion de orden";
+            this.btnorden.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnorden.DisabledColor = System.Drawing.Color.Gray;
+            this.btnorden.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnorden.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnorden.Iconimage = global::prueba_login.Properties.Resources.list;
+            this.btnorden.Iconimage_right = null;
+            this.btnorden.Iconimage_right_Selected = null;
+            this.btnorden.Iconimage_Selected = null;
+            this.btnorden.IconMarginLeft = 0;
+            this.btnorden.IconMarginRight = 0;
+            this.btnorden.IconRightVisible = true;
+            this.btnorden.IconRightZoom = 0D;
+            this.btnorden.IconVisible = true;
+            this.btnorden.IconZoom = 90D;
+            this.btnorden.IsTab = false;
+            this.btnorden.Location = new System.Drawing.Point(0, 380);
+            this.btnorden.Name = "btnorden";
+            this.btnorden.Normalcolor = System.Drawing.Color.Gold;
+            this.btnorden.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btnorden.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnorden.selected = false;
+            this.btnorden.Size = new System.Drawing.Size(264, 71);
+            this.btnorden.TabIndex = 16;
+            this.btnorden.Text = "     Creacion de orden";
+            this.btnorden.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnorden.Textcolor = System.Drawing.Color.Black;
+            this.btnorden.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnregistro
+            // 
+            this.btnregistro.Activecolor = System.Drawing.Color.Gold;
+            this.btnregistro.BackColor = System.Drawing.Color.Gold;
+            this.btnregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnregistro.BorderRadius = 0;
+            this.btnregistro.ButtonText = "    Control de calidad";
+            this.btnregistro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnregistro.DisabledColor = System.Drawing.Color.Gray;
+            this.btnregistro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnregistro.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnregistro.Iconimage = global::prueba_login.Properties.Resources._checked;
+            this.btnregistro.Iconimage_right = null;
+            this.btnregistro.Iconimage_right_Selected = null;
+            this.btnregistro.Iconimage_Selected = null;
+            this.btnregistro.IconMarginLeft = 0;
+            this.btnregistro.IconMarginRight = 0;
+            this.btnregistro.IconRightVisible = true;
+            this.btnregistro.IconRightZoom = 0D;
+            this.btnregistro.IconVisible = true;
+            this.btnregistro.IconZoom = 90D;
+            this.btnregistro.IsTab = false;
+            this.btnregistro.Location = new System.Drawing.Point(0, 240);
+            this.btnregistro.Name = "btnregistro";
+            this.btnregistro.Normalcolor = System.Drawing.Color.Gold;
+            this.btnregistro.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btnregistro.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnregistro.selected = false;
+            this.btnregistro.Size = new System.Drawing.Size(264, 71);
+            this.btnregistro.TabIndex = 15;
+            this.btnregistro.Text = "    Control de calidad";
+            this.btnregistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnregistro.Textcolor = System.Drawing.Color.Black;
+            this.btnregistro.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregistro.Click += new System.EventHandler(this.btnregistro_Click_1);
             // 
             // btnsalir
             // 
@@ -135,76 +206,6 @@
             this.btnsalir.TabStop = false;
             this.btnsalir.Zoom = 10;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
-            // 
-            // btningreso
-            // 
-            this.btningreso.Activecolor = System.Drawing.Color.DarkGoldenrod;
-            this.btningreso.BackColor = System.Drawing.Color.Black;
-            this.btningreso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btningreso.BorderRadius = 0;
-            this.btningreso.ButtonText = "Control De Calidad";
-            this.btningreso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btningreso.DisabledColor = System.Drawing.Color.Gray;
-            this.btningreso.Iconcolor = System.Drawing.Color.Transparent;
-            this.btningreso.Iconimage = global::prueba_login.Properties.Resources.check;
-            this.btningreso.Iconimage_right = null;
-            this.btningreso.Iconimage_right_Selected = null;
-            this.btningreso.Iconimage_Selected = null;
-            this.btningreso.IconMarginLeft = 0;
-            this.btningreso.IconMarginRight = 0;
-            this.btningreso.IconRightVisible = true;
-            this.btningreso.IconRightZoom = 0D;
-            this.btningreso.IconVisible = true;
-            this.btningreso.IconZoom = 90D;
-            this.btningreso.IsTab = false;
-            this.btningreso.Location = new System.Drawing.Point(-3, 381);
-            this.btningreso.Name = "btningreso";
-            this.btningreso.Normalcolor = System.Drawing.Color.Black;
-            this.btningreso.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btningreso.OnHoverTextColor = System.Drawing.Color.White;
-            this.btningreso.selected = false;
-            this.btningreso.Size = new System.Drawing.Size(267, 71);
-            this.btningreso.TabIndex = 12;
-            this.btningreso.Text = "Control De Calidad";
-            this.btningreso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btningreso.Textcolor = System.Drawing.Color.White;
-            this.btningreso.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btningreso.Click += new System.EventHandler(this.btningreso_Click);
-            // 
-            // btnregistro
-            // 
-            this.btnregistro.Activecolor = System.Drawing.Color.DarkGoldenrod;
-            this.btnregistro.BackColor = System.Drawing.Color.Black;
-            this.btnregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnregistro.BorderRadius = 0;
-            this.btnregistro.ButtonText = "   Registro De Vehiculos";
-            this.btnregistro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnregistro.DisabledColor = System.Drawing.Color.Gray;
-            this.btnregistro.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnregistro.Iconimage = global::prueba_login.Properties.Resources.carro_compacto;
-            this.btnregistro.Iconimage_right = null;
-            this.btnregistro.Iconimage_right_Selected = null;
-            this.btnregistro.Iconimage_Selected = null;
-            this.btnregistro.IconMarginLeft = 0;
-            this.btnregistro.IconMarginRight = 0;
-            this.btnregistro.IconRightVisible = true;
-            this.btnregistro.IconRightZoom = 0D;
-            this.btnregistro.IconVisible = true;
-            this.btnregistro.IconZoom = 90D;
-            this.btnregistro.IsTab = false;
-            this.btnregistro.Location = new System.Drawing.Point(0, 202);
-            this.btnregistro.Name = "btnregistro";
-            this.btnregistro.Normalcolor = System.Drawing.Color.Black;
-            this.btnregistro.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnregistro.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnregistro.selected = false;
-            this.btnregistro.Size = new System.Drawing.Size(264, 71);
-            this.btnregistro.TabIndex = 11;
-            this.btnregistro.Text = "   Registro De Vehiculos";
-            this.btnregistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnregistro.Textcolor = System.Drawing.Color.White;
-            this.btnregistro.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregistro.Click += new System.EventHandler(this.btnregistro_Click);
             // 
             // label2
             // 
@@ -224,9 +225,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(134, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 21);
+            this.label1.Size = new System.Drawing.Size(88, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Mecanico";
+            this.label1.Text = "Supervisor";
             // 
             // shapeContainer1
             // 
@@ -271,7 +272,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(1720, 728);
             this.Name = "Mecanico";
-            this.Opacity = 0.9D;
             this.Text = "Mecanico";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -292,12 +292,12 @@
         private System.Windows.Forms.Panel panelContenedor2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuFlatButton btnregistro;
-        private Bunifu.Framework.UI.BunifuFlatButton btningreso;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.ToolStripButton BtnRestaurar3;
         private System.Windows.Forms.ToolStripButton BtnMinizar3;
         private Bunifu.Framework.UI.BunifuImageButton btnsalir;
+        private Bunifu.Framework.UI.BunifuFlatButton btnregistro;
+        private Bunifu.Framework.UI.BunifuFlatButton btnorden;
     }
 }

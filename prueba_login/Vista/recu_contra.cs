@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using prueba_login.serviciosemail;
+using prueba_login.Modelo;
 
 namespace prueba_login
 {
@@ -54,7 +56,7 @@ namespace prueba_login
 
         private void txtusuario_Enter(object sender, EventArgs e)
         {
-            if (txtusuario.Text == "USUARIO")
+            if (txtusuario.Text == "USUARIO O CORREO")
             {
                 txtusuario.Text = "";
                 txtusuario.ForeColor = Color.Black;
@@ -67,7 +69,7 @@ namespace prueba_login
         {
             if (txtusuario.Text == "")
             {
-                txtusuario.Text = "USUARIO";
+                txtusuario.Text = "USUARIO O CORREO";
                 txtusuario.ForeColor = Color.Black;
 
 
@@ -76,24 +78,11 @@ namespace prueba_login
 
         private void txttel_Enter(object sender, EventArgs e)
         {
-            if (txttel.Text == "CORREO ELECTRÓNICO")
-            {
-                txttel.Text = "";
-                txttel.ForeColor = Color.Black;
-
-
-            }
         }
 
         private void txttel_Leave(object sender, EventArgs e)
         {
-            if (txttel.Text == "")
-            {
-                txttel.Text = "CORREO ELECTRÓNICO";
-                txttel.ForeColor = Color.Black;
-
-
-            }
+           
         }
 
         private void txtcod_TextChanged(object sender, EventArgs e)
@@ -103,24 +92,12 @@ namespace prueba_login
 
         private void txtcod_Enter(object sender, EventArgs e)
         {
-            if (txtcod.Text == "CÓDIGO DE VERIFICACIÓN")
-            {
-                txtcod.Text = "";
-                txtcod.ForeColor = Color.Black;
-
-
-            }
+            
         }
 
         private void txtcod_Leave(object sender, EventArgs e)
         {
-            if (txtcod.Text == "")
-            {
-                txtcod.Text = "CÓDIGO DE VERIFICACIÓN";
-                txtcod.ForeColor = Color.Black;
-
-
-            }
+            
         }
 
         private void btnregresar_Click(object sender, EventArgs e)
@@ -143,6 +120,13 @@ namespace prueba_login
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void btnenviar_Click(object sender, EventArgs e)
+        {
+            var user = new referenciarecover();
+            var result = user.recovery(txtusuario.Text);
+            lblresult.Text = result;
         }
     }
 }

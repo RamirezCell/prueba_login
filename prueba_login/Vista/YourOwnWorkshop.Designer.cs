@@ -30,8 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YourOwnWorkshop));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnprimer = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtcifrado = new System.Windows.Forms.TextBox();
             this.btnrecuperar = new System.Windows.Forms.LinkLabel();
             this.btningresar = new System.Windows.Forms.Button();
             this.txtpass = new System.Windows.Forms.TextBox();
@@ -52,12 +54,24 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.btnprimer);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(214, 282);
             this.panel1.TabIndex = 2;
+            // 
+            // btnprimer
+            // 
+            this.btnprimer.Location = new System.Drawing.Point(61, 232);
+            this.btnprimer.Name = "btnprimer";
+            this.btnprimer.Size = new System.Drawing.Size(75, 23);
+            this.btnprimer.TabIndex = 5;
+            this.btnprimer.Text = "Primer uso";
+            this.btnprimer.UseVisualStyleBackColor = true;
+            this.btnprimer.Visible = false;
+            this.btnprimer.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -73,6 +87,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.txtcifrado);
             this.panel2.Controls.Add(this.btnrecuperar);
             this.panel2.Controls.Add(this.btningresar);
             this.panel2.Controls.Add(this.txtpass);
@@ -85,6 +100,14 @@
             this.panel2.Size = new System.Drawing.Size(566, 282);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // txtcifrado
+            // 
+            this.txtcifrado.Location = new System.Drawing.Point(454, 3);
+            this.txtcifrado.Name = "txtcifrado";
+            this.txtcifrado.Size = new System.Drawing.Size(100, 20);
+            this.txtcifrado.TabIndex = 4;
+            this.txtcifrado.Visible = false;
             // 
             // btnrecuperar
             // 
@@ -131,6 +154,8 @@
             this.txtpass.Text = "CONTRASEÑA";
             this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
+            this.txtpass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpass_KeyDown);
+            this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             this.txtpass.Leave += new System.EventHandler(this.txtpass_Leave);
             // 
             // txtuser
@@ -146,6 +171,8 @@
             this.txtuser.Text = "USUARIO";
             this.txtuser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtuser.Enter += new System.EventHandler(this.txtuser_Enter);
+            this.txtuser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtuser_KeyDown);
+            this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
             this.txtuser.Leave += new System.EventHandler(this.txtuser_Leave);
             // 
             // shapeContainer1
@@ -276,6 +303,8 @@
         private System.Windows.Forms.ToolStripButton btnsalir;
         private System.Windows.Forms.ToolStripButton btnminimizar;
         private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.Button btnprimer;
+        private System.Windows.Forms.TextBox txtcifrado;
     }
 }
 

@@ -116,12 +116,17 @@ namespace prueba_login
 
         private void btnre_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormulario<controlinventario>();
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     

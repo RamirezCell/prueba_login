@@ -11,6 +11,8 @@ using System.Runtime.InteropServices;
 using prueba_login.Controlador;
 using prueba_login.Modelo;
 using System.Security.Cryptography;
+using MySql.Data.MySqlClient;
+
 
 
 
@@ -24,6 +26,17 @@ namespace prueba_login
     public partial class YourOwnWorkshop : Form
 
     {
+        public string Hash(byte[] val)
+        {
+            using (SHA1Managed sha1 = new SHA1Managed())
+            {
+                var hash = sha1.ComputeHash(val);
+                return Convert.ToBase64String(hash);
+            }
+        }
+
+        
+
 
 
 
@@ -37,12 +50,50 @@ namespace prueba_login
 
         {
             InitializeComponent();
+            txtpass.ContextMenu = new ContextMenu();
+            txtuser.ContextMenu = new ContextMenu();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
+
+            bool retorno = true;
+            string query = "SELECT * FROM usuarios";
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                retorno = Convert.ToBoolean(cmdselect.ExecuteScalar());
+                if (retorno == false)
+                {
+                    btningresar.Enabled = false;
+                    btnprimer.Visible = true;
+                    txtpass.Enabled = false;
+                    txtuser.Enabled = false;
+
+                }
+                else
+                {
+                    btnprimer.Visible = false;
+                    btningresar.Enabled = true;
+                    txtuser.Enabled = true;
+                    txtpass.Enabled = true;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
         }
+
+        
+      
+
+
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
@@ -124,7 +175,8 @@ namespace prueba_login
 
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
-
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtpass.Text.ToString());
+            txtcifrado.Text = Hash(pass);
         }
 
        
@@ -146,7 +198,7 @@ namespace prueba_login
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-
+            
 
 
           
@@ -158,6 +210,7 @@ namespace prueba_login
 
 
         }
+       
 
 
         void enviar()
@@ -173,7 +226,7 @@ namespace prueba_login
                
                 constructotlogin login = new constructotlogin(txtuser.Text, txtpass.Text);
                 constructotlogin.usuario = txtuser.Text;
-                login.clave = txtpass.Text;
+                login.clave = txtcifrado.Text;
                 
                 
 
@@ -195,6 +248,27 @@ namespace prueba_login
                         trabajador.Show();
                         this.Hide();
                     }
+                    else if (constructotlogin.nivel == 3)
+                    {
+                        Form suprevisor = new Mecanico();
+                        suprevisor.Show();
+                        this.Hide();
+                    }
+                    else if (constructotlogin.nivel == 4)
+                    {
+                        Form admin = new admin();
+                        admin.Show();
+                        this.Hide();
+                    }
+                    else if (constructotlogin.nivel == 5)
+                    {
+                        Form bodega = new bodeguero();
+                        bodega.Show();
+                        this.Hide();
+                    }
+                 
+
+
                 }
             }
         }
@@ -216,6 +290,39 @@ namespace prueba_login
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtuser_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+        }
+
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+
+        }
+
+        private void txtpass_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form primero = new primeruso();
+            primero.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

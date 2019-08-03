@@ -3,30 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 using MySql.Data.MySqlClient;
-using System.Windows.Forms;
 using prueba_login.Controlador;
+using System.Windows.Forms;
+using System.Data;
 
 namespace prueba_login.Modelo
 {
-    class funcionesvehiculo
+    class funciones_material
     {
-        public static int agregar(constructorvehiculo add)
+
+        public static int agregar(constructorequip add)
         {
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO vehiculos (marca,modelo,anio,tipo_vehiculo)VALUES('{0}','{1}','{2}','{3}')",add.nombre_vehiculo,add.modelo,add.year,add.tipo_auto),conexion.obtenerconexion());
+                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO materiales (nombre_material,tipo_material,marca,precio,cantidad)VALUES('{0}','{1}','{2}','{3}','{4}')", add.nombre,add.tipo,add.marca,add.precio,add.cantidad), conexion.obtenerconexion());
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
-                if (retorno>=1)
+                if (retorno >= 1)
                 {
-                    MessageBox.Show("Auto ingresado correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Material ingresado correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else
                 {
-                    MessageBox.Show("Auto no ingresado ", " No completado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Material no ingresado ", " No completado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 return retorno;
             }
@@ -42,7 +43,7 @@ namespace prueba_login.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM  vehiculos";
+                string query = "SELECT * FROM  materiales";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -56,12 +57,12 @@ namespace prueba_login.Modelo
                 return data = new DataTable();
             }
         }
-        public  static bool actualizar(constructorvehiculo upd)
+        public static bool actualizar(constructorequip upd)
         {
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE vehiculos SET marca='{0}',modelo='{1}',anio='{2}',tipo_vehiculo='{3}' WHERE id_vehiculo='{4}'",upd.nombre_vehiculo,upd.modelo,upd.year,upd.tipo_auto,upd.id_vehiculo),conexion.obtenerconexion());
+                MySqlCommand cmdupdate = new MySqlCommand(string.Format("UPDATE materiales SET nombre_material='{0}',tipo_material='{1}',marca='{2}',precio='{3}',cantidad='{4}' WHERE id_material='{5}'", upd.nombre, upd.tipo, upd.marca, upd.precio, upd.cantidad,upd.id_material), conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupdate.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -90,7 +91,7 @@ namespace prueba_login.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdeliminar = new MySqlCommand(string.Format("DELETE FROM vehiculos WHERE id_vehiculo = '{0}' ", id), conexion.obtenerconexion());
+                MySqlCommand cmdeliminar = new MySqlCommand(string.Format("DELETE FROM materiales WHERE id_material = '{0}' ", id), conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdeliminar.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -110,6 +111,6 @@ namespace prueba_login.Modelo
                 return retorno;
             }
         }
-    }
- }
 
+    }
+}

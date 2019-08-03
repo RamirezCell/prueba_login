@@ -7,6 +7,8 @@ using prueba_login.Controlador;
 using prueba_login.Modelo;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
+using prueba_login.serviciosemail;
 
 
 namespace prueba_login.Modelo
@@ -16,6 +18,44 @@ namespace prueba_login.Modelo
     
     class validarlogin
     {
+
+        public static string recover(string pedidouser)
+        {
+            string query = "SELECT * FROM usuarios WHERE nombre_user=?user OR correo_electronico=?correo";
+            MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+            cmdselect.Parameters.AddWithValue("user", pedidouser);
+            cmdselect.Parameters.AddWithValue("correo", pedidouser);
+            cmdselect.CommandType = CommandType.Text;
+
+            MySqlDataReader reader = cmdselect.ExecuteReader();
+
+
+            if (reader.Read() == true)
+            {
+                string nombreusuario = reader.GetString(1) + " " + reader.GetString(2);
+                string correo = reader.GetString(12);
+                string pass = reader.GetString(7);
+
+                var serviciosemail = new serviciosemail.emailsistema();
+
+                serviciosemail.sendmail(
+                    subject: "Solictud de recuperacion de contraseña",
+                    body: "Hola," + nombreusuario + "\nhas solicitado recuperar tu contraseña\n" +
+                    "tu contraseña es:\n" + pass + ".le recomendamos no dar la contraseña a terceros",
+                    recipientmail: new List<string> { correo }
+
+
+                    );
+
+
+                return "Hola, has solicitado recuperar tu contraseña";
+
+            }
+            else
+            {
+                return "No tienes una cuenta con estas credenciales";
+            }
+        }
         public static bool acceso(constructotlogin log)
         {
             bool retorno = false;
@@ -119,7 +159,11 @@ namespace prueba_login.Modelo
 
         }
 
+       
+
     }
+
+    
 
 
 

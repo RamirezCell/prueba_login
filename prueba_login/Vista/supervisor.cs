@@ -152,5 +152,10 @@ namespace prueba_login
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnregistro_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormulario<controlcalidad>();
+        }
     }
 }
