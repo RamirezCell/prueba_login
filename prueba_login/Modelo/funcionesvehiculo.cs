@@ -17,16 +17,28 @@ namespace prueba_login.Modelo
             int retorno = 0;
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO vehiculos (marca,modelo,anio,tipo_vehiculo)VALUES('{0}','{1}','{2}','{3}')",add.nombre_vehiculo,add.modelo,add.year,add.tipo_auto),conexion.obtenerconexion());
-                retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
+                string query = "SELECT *FROM vehiculos WHERE anio=?year AND modelo=?model" ;
+                MySqlCommand select = new MySqlCommand(query, conexion.obtenerconexion());
+                select.Parameters.Add(new MySqlParameter("year", add.year));
+                select.Parameters.Add(new MySqlParameter("model", add.modelo));
+                retorno = Convert.ToInt16(select.ExecuteScalar());
                 if (retorno>=1)
                 {
-                    MessageBox.Show("Auto ingresado correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    MessageBox.Show("Existe un perfil con las mismas credenciales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Auto no ingresado ", " No completado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO vehiculos (marca,modelo,anio,tipo_vehiculo)VALUES('{0}','{1}','{2}','{3}')", add.nombre_vehiculo, add.modelo, add.year, add.tipo_auto), conexion.obtenerconexion());
+                    retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
+                    if (retorno >= 1)
+                    {
+                        MessageBox.Show("Auto ingresado correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Auto no ingresado ", " No completado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 return retorno;
             }

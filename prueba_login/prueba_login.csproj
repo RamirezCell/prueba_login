@@ -75,6 +75,12 @@
     <Compile Include="controlinventario.Designer.cs">
       <DependentUpon>controlinventario.cs</DependentUpon>
     </Compile>
+    <Compile Include="ventanafactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ventanafactura.Designer.cs">
+      <DependentUpon>ventanafactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\frmprguntas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controlinventario.resx">
       <DependentUpon>controlinventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ventanafactura.resx">
+      <DependentUpon>ventanafactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmprguntas.resx">
       <DependentUpon>frmprguntas.cs</DependentUpon>

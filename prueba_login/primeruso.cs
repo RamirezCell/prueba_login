@@ -125,6 +125,7 @@ namespace prueba_login
         {
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtpass.Text.ToString());
             txtcifrado.Text = Hash(pass);
+            txtpass.UseSystemPasswordChar = true;
         }
 
         private void cmbgender_SelectedIndexChanged(object sender, EventArgs e)

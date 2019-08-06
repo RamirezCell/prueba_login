@@ -21,7 +21,7 @@ namespace prueba_login.Modelo
 
             try
             {
-                MessageBox.Show(upd.usuario,upd.pass);
+                
                 MySqlCommand val = new MySqlCommand(string.Format("UPDATE usuarios SET clave='{0}' WHERE usuario='{1}'", upd.pass, upd.usuario), conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(val.ExecuteNonQuery());
                 if (retorno == true)

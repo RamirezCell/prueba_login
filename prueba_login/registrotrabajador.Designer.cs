@@ -266,7 +266,7 @@
             // 
             this.txtdui.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtdui.Location = new System.Drawing.Point(230, 112);
-            this.txtdui.Mask = "000000-0";
+            this.txtdui.Mask = "0000000-0";
             this.txtdui.Name = "txtdui";
             this.txtdui.Size = new System.Drawing.Size(172, 20);
             this.txtdui.TabIndex = 17;

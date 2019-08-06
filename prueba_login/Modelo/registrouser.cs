@@ -179,18 +179,29 @@ namespace prueba_login.Modelo
             int retorno = 0;
             try
             {
-                
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`, `pregunta1`, `pregunta2`, `pregunta3`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, add.clave, add.estado, add.genero, add.ocupacion, add.intentos, add.correo,add.pregunta1,add.pregunta2,add.pregunta3), conexion.obtenerconexion());
-                retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
-                if (retorno >= 1)
-                {
-                    MessageBox.Show("Usuario ingresado correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                string query = "SELECT * FROM usuarios WHERE dui_user=?dui";
+                MySqlCommand select = new MySqlCommand(query, conexion.obtenerconexion());
+                select.Parameters.Add(new MySqlParameter("dui", add.dui));
+                retorno = Convert.ToInt16(select.ExecuteScalar());
+                if (retorno>=1)
+                {
+                    MessageBox.Show("Existe un perfil con las mismas credenciales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("Usuario no ingresado ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`, `pregunta1`, `pregunta2`, `pregunta3`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, add.clave, add.estado, add.genero, add.ocupacion, add.intentos, add.correo, add.pregunta1, add.pregunta2, add.pregunta3), conexion.obtenerconexion());
+                    retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
+                    if (retorno >= 1)
+                    {
+                        MessageBox.Show("Usuario ingresado correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario no ingresado ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
                 }
                 return retorno;
             }

@@ -18,17 +18,32 @@ namespace prueba_login.Modelo
 
             try
             {
-                MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO clientes(nombre_cliente,apellido_cliente,DUI_cliente,correo_electronico,numero_telefonico,direccion,id_tipo_cliente)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", add.nombre_cliente, add.apellido_cliente, add.dui, add.correo, add.telefono, add.direccion, add.tipo_cliente),conexion.obtenerconexion());
-                retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
-                if (retorno >= 1)
-                {
 
-                    MessageBox.Show("cliente ingresado correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string query = "SELECT * FROM clientes WHERE DUI_cliente=?dui AND numero_telefonico=?tel";
+                MySqlCommand select = new MySqlCommand(query, conexion.obtenerconexion());
+                select.Parameters.Add(new MySqlParameter("dui", add.dui));
+                select.Parameters.Add(new MySqlParameter("tel", add.telefono));
+                retorno = Convert.ToInt16(select.ExecuteScalar());
+                if (retorno>=1)
+                {
+                    MessageBox.Show("Existe un perfil con las mismas credenciales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
                 else
                 {
-                    MessageBox.Show("cliente no ingresado ", " No completado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO clientes(nombre_cliente,apellido_cliente,DUI_cliente,correo_electronico,numero_telefonico,direccion,id_tipo_cliente)VALUES('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", add.nombre_cliente, add.apellido_cliente, add.dui, add.correo, add.telefono, add.direccion, add.tipo_cliente), conexion.obtenerconexion());
+                    retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
+                    if (retorno >= 1)
+                    {
+
+                        MessageBox.Show("cliente ingresado correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("cliente no ingresado ", " No completado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+                retorno = Convert.ToInt16(select.ExecuteScalar());
                 return retorno;
 
             }

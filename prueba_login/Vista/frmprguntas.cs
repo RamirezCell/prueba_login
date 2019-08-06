@@ -78,6 +78,7 @@ namespace prueba_login
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtpass.Text.ToString());
+            txtpass.UseSystemPasswordChar = true;
             txtcifrado.Text = Hash(pass);
         }
 
@@ -96,6 +97,11 @@ namespace prueba_login
             Form log = new YourOwnWorkshop();
             log.Show();
             this.Hide();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

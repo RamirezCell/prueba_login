@@ -49,43 +49,45 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtuser
             // 
-            this.txtuser.Location = new System.Drawing.Point(56, 125);
+            this.txtuser.Location = new System.Drawing.Point(316, 47);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(100, 20);
             this.txtuser.TabIndex = 0;
             // 
             // txtp1
             // 
-            this.txtp1.Location = new System.Drawing.Point(225, 125);
+            this.txtp1.Location = new System.Drawing.Point(20, 125);
             this.txtp1.Name = "txtp1";
-            this.txtp1.Size = new System.Drawing.Size(100, 20);
+            this.txtp1.Size = new System.Drawing.Size(197, 20);
             this.txtp1.TabIndex = 1;
             // 
             // txtp2
             // 
-            this.txtp2.Location = new System.Drawing.Point(395, 125);
+            this.txtp2.Location = new System.Drawing.Point(257, 125);
             this.txtp2.Name = "txtp2";
-            this.txtp2.Size = new System.Drawing.Size(100, 20);
+            this.txtp2.Size = new System.Drawing.Size(197, 20);
             this.txtp2.TabIndex = 3;
             // 
             // txtp3
             // 
-            this.txtp3.Location = new System.Drawing.Point(562, 125);
+            this.txtp3.Location = new System.Drawing.Point(496, 125);
             this.txtp3.Name = "txtp3";
-            this.txtp3.Size = new System.Drawing.Size(100, 20);
+            this.txtp3.Size = new System.Drawing.Size(212, 20);
             this.txtp3.TabIndex = 4;
             // 
             // btnverificar
             // 
             this.btnverificar.BackColor = System.Drawing.Color.Gold;
             this.btnverificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnverificar.Location = new System.Drawing.Point(324, 191);
+            this.btnverificar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnverificar.Location = new System.Drawing.Point(288, 185);
             this.btnverificar.Name = "btnverificar";
-            this.btnverificar.Size = new System.Drawing.Size(75, 23);
+            this.btnverificar.Size = new System.Drawing.Size(125, 23);
             this.btnverificar.TabIndex = 5;
             this.btnverificar.Text = "verifcar";
             this.btnverificar.UseVisualStyleBackColor = false;
@@ -96,7 +98,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(76, 84);
+            this.label1.Location = new System.Drawing.Point(340, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 6;
@@ -107,33 +109,34 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(204, 84);
+            this.label2.Location = new System.Drawing.Point(38, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 16);
+            this.label2.Size = new System.Drawing.Size(161, 16);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Cual es su animal favorito?";
+            this.label2.Text = "¿Cual es su animal favorito?";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(389, 84);
+            this.label4.Location = new System.Drawing.Point(256, 96);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 16);
+            this.label4.Size = new System.Drawing.Size(207, 16);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Marca de auto favorito";
+            this.label4.Text = "¿Cual es su marca de auto favorito?";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(549, 84);
+            this.label5.Location = new System.Drawing.Point(493, 95);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 16);
+            this.label5.Size = new System.Drawing.Size(215, 16);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Equipo de futbol favorito";
+            this.label5.Text = "¿Cual es su equipo de futbol favorito?";
             // 
             // label3
             // 
@@ -193,22 +196,26 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Gold;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(580, 348);
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button2.Location = new System.Drawing.Point(557, 98);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(161, 23);
             this.button2.TabIndex = 15;
-            this.button2.Text = "Regresar";
+            this.button2.Text = "Regresar al inicio de sesion";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.txtcifrado);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Location = new System.Drawing.Point(35, 283);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(724, 140);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Ingreso de nueva contraseña";
             // 
             // txtcifrado
             // 
@@ -221,11 +228,22 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.txtp3);
+            this.groupBox2.Controls.Add(this.txtp2);
+            this.groupBox2.Controls.Add(this.btnverificar);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.txtuser);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtp1);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox2.Location = new System.Drawing.Point(35, 41);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(724, 236);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Verificacion de usuario";
             // 
             // frmprguntas
             // 
@@ -233,20 +251,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtpass);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnverificar);
-            this.Controls.Add(this.txtp3);
-            this.Controls.Add(this.txtp2);
-            this.Controls.Add(this.txtp1);
-            this.Controls.Add(this.txtuser);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -257,6 +265,8 @@
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
