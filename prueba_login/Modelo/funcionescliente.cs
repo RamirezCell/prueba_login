@@ -119,6 +119,7 @@ namespace prueba_login.Modelo
             try
             {
                 MySqlCommand cmdactualizar = new MySqlCommand(string.Format("UPDATE clientes SET nombre_cliente = '{0}', apellido_cliente = '{1}', DUI_cliente = '{2}', correo_electronico = '{3}', numero_telefonico = '{4}', direccion = '{5}', id_tipo_cliente = '{6}' WHERE id_cliente='{7}'",upd.nombre_cliente,upd.apellido_cliente,upd.dui,upd.correo,upd.telefono,upd.direccion,upd.tipo_cliente,upd.id_cliente),conexion.obtenerconexion());
+
                 retorno = Convert.ToBoolean(cmdactualizar.ExecuteNonQuery());
                 if (retorno==true)
                 {

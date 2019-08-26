@@ -118,7 +118,7 @@ namespace prueba_login
 
         private void btnregistro_Click(object sender, EventArgs e)
         {
-          
+            AbrirFormulario <verordenes>();
         }
 
         private void btnsalir_Click(object sender, EventArgs e)

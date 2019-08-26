@@ -13,7 +13,36 @@ using System.Security.Cryptography;
 namespace prueba_login.Modelo
 {
     class registrouser
+
     {
+        public static bool actualizar(constructoruser upd)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand update = new MySqlCommand(string.Format("UPDATE usuarios SET nombre_user = '{0}' ,apellido_user='{1}',dui_user='{2}',direccion='{3}',tel_user='{4}',usuario,clave='{5}',estado='{6}',genero='{7}',ocupacion='{8}',intentos='{9}',correo_electronico='{10}'", upd.nombre, upd.apellido, upd.dui, upd.telefono, upd.usuario, upd.clave, upd.estado, upd.genero, upd.ocupacion, upd.intentos, upd.correo), conexion.obtenerconexion());
+                retorno = Convert.ToBoolean(update.ExecuteNonQuery());
+                if (retorno == true)
+                {
+                    MessageBox.Show("Datos actualizados correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else
+                {
+                    MessageBox.Show("Datos no actualizados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                return retorno;
+            }
+            catch (Exception e)
+            {
+
+
+                MessageBox.Show("Ha ocurrido un problema" + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return retorno;
+            }
+        }
+
         public static bool eliminar(int id)
         {
             bool retorno = false;
@@ -27,7 +56,7 @@ namespace prueba_login.Modelo
                 }
                 else
                 {
-                    MessageBox.Show("Registro no eliminadO", " No completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Registro no eliminado", " No completado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 return retorno;
             }
@@ -190,7 +219,7 @@ namespace prueba_login.Modelo
                 }
                 else
                 {
-                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`, `pregunta1`, `pregunta2`, `pregunta3`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, add.clave, add.estado, add.genero, add.ocupacion, add.intentos, add.correo, add.pregunta1, add.pregunta2, add.pregunta3), conexion.obtenerconexion());
+                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`,`nacimiento`, `pregunta1`, `pregunta2`, `pregunta3`,`foto`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}','{15}','{16}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, add.clave, add.estado, add.genero, add.ocupacion, add.intentos, add.correo,add.fecha, add.pregunta1, add.pregunta2, add.pregunta3,add.foto), conexion.obtenerconexion());
                     retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                     if (retorno >= 1)
                     {

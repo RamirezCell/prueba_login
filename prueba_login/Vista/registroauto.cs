@@ -17,6 +17,16 @@ namespace prueba_login
         public registroauto()
         {
             InitializeComponent();
+            txtmarca.ContextMenu = new ContextMenu();
+            txtmodelo.ContextMenu = new ContextMenu();
+            txtanio.ContextMenu = new ContextMenu();
+            txttipovehiculo.ContextMenu = new ContextMenu();
+        }
+
+        public void caracter(KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+
         }
         constructorvehiculo add = new constructorvehiculo();
 
@@ -139,6 +149,65 @@ namespace prueba_login
             btneliminar.Enabled = false;
             btnregistrar.Enabled = true;
             btnupdate.Enabled = false;
+        }
+
+        private void txtFiltrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFiltrar.Text != "")
+            {
+                dgvvehiculos.CurrentCell = null;
+                foreach(DataGridViewRow r in dgvvehiculos.Rows)
+                {
+                    r.Visible = false;
+
+                }
+                foreach (DataGridViewRow r in dgvvehiculos.Rows)
+                {
+                    foreach(DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtFiltrar.Text.ToUpper()) == 0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                dgvvehiculos.DataSource = funcionesvehiculo.mostrar();
+            }
+        }
+
+        private void grpregistro_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtmarca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtmodelo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtanio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txttipovehiculo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
         }
     }
 }

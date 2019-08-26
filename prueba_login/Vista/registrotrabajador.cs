@@ -27,6 +27,19 @@ namespace prueba_login
         public registrotrabajador()
         {
             InitializeComponent();
+            txtnombre.ContextMenu = new ContextMenu();
+            txtapellido.ContextMenu = new ContextMenu();
+            txtdui.ContextMenu = new ContextMenu();
+            txtuser.ContextMenu = new ContextMenu();
+            txtcorreo.ContextMenu = new ContextMenu();
+            txtDireccion.ContextMenu = new ContextMenu();
+            txtpass.ContextMenu = new ContextMenu();
+            
+        }
+        public void caracter(KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+
         }
 
         private void grpregistro_Enter(object sender, EventArgs e)
@@ -81,24 +94,24 @@ namespace prueba_login
 
 
         }
-        //constructoruser upd = new constructoruser();
-        //public void update()
-        //{
-           
-        //    upd.nombre = txtnombre.Text;
-        //    upd.apellido = txtapellido.Text;
-        //    upd.direccion = txtDireccion.Text;
-        //    upd.ocupacion = Convert.ToInt32(cmboc.SelectedValue);
-        //    upd.genero = Convert.ToInt32(cmbgender.SelectedValue);
-        //    upd.estado = Convert.ToInt32(cmbestado.SelectedValue);
-            
-        //    upd.telefono = txtnum.Text;
-        //    upd.dui = txtdui.Text;
-        //    upd.correo = txtcorreo.Text;
-        //    upd.id_usuario = Convert.ToInt16(txtId.Text);
-        //    registrouser.(upd);
-            
-        //}
+        constructoruser upd = new constructoruser();
+        public void update()
+        {
+
+            upd.nombre = txtnombre.Text;
+            upd.apellido = txtapellido.Text;
+            upd.direccion = txtDireccion.Text;
+            upd.ocupacion = Convert.ToInt32(cmboc.SelectedValue);
+            upd.genero = Convert.ToInt32(cmbgender.SelectedValue);
+            upd.estado = Convert.ToInt32(cmbestado.SelectedValue);
+
+            upd.telefono = txtnum.Text;
+            upd.dui = txtdui.Text;
+            upd.correo = txtcorreo.Text;
+            upd.id_usuario = Convert.ToInt16(txtId.Text);
+            registrouser.actualizar(upd);
+
+        }
 
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
@@ -163,7 +176,7 @@ namespace prueba_login
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            //update();
+            update();
             limpiar();
             btnregistrar.Enabled = true;
         }
@@ -181,6 +194,74 @@ namespace prueba_login
         private void btneliminar_Click(object sender, EventArgs e)
         {
             eliminarregistro();
+        }
+
+        private void txtfiltrar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtfiltrar.Text != "")
+            {
+                dgvcliente.CurrentCell = null;
+                foreach(DataGridViewRow r in dgvcliente.Rows)
+                {
+                    r.Visible = false;
+                    
+                }
+                foreach(DataGridViewRow r in dgvcliente.Rows)
+                {
+                    foreach(DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtfiltrar.Text.ToUpper()) ==0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                dgvcliente.DataSource = funcionescliente.mostrar();
+            }
+        }
+
+        private void txtnombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtapellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtnum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtdui_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
         }
     }
 }

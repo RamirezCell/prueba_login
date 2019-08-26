@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(controlcalidad));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.txtdes = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.rbsi = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.btnenviar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,17 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.ForeColor = System.Drawing.SystemColors.Control;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(136, 22);
+            this.toolStripButton1.Text = "Control de calidad";
+            // 
             // txtdes
             // 
             this.txtdes.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -66,7 +77,8 @@
             this.txtdes.Multiline = true;
             this.txtdes.Name = "txtdes";
             this.txtdes.Size = new System.Drawing.Size(601, 132);
-            this.txtdes.TabIndex = 7;
+            this.txtdes.TabIndex = 1;
+            this.txtdes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdes_KeyPress);
             // 
             // label1
             // 
@@ -103,7 +115,8 @@
             this.txtdet.Multiline = true;
             this.txtdet.Name = "txtdet";
             this.txtdet.Size = new System.Drawing.Size(601, 132);
-            this.txtdet.TabIndex = 9;
+            this.txtdet.TabIndex = 2;
+            this.txtdet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdet_KeyPress);
             // 
             // rbno
             // 
@@ -171,23 +184,12 @@
             this.btnenviar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnenviar.selected = false;
             this.btnenviar.Size = new System.Drawing.Size(182, 56);
-            this.btnenviar.TabIndex = 14;
+            this.btnenviar.TabIndex = 3;
             this.btnenviar.Text = "      Enviar";
             this.btnenviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnenviar.Textcolor = System.Drawing.Color.Black;
             this.btnenviar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnenviar.Click += new System.EventHandler(this.btnenviar_Click);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(136, 22);
-            this.toolStripButton1.Text = "Control de calidad";
             // 
             // controlcalidad
             // 

@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YourOwnWorkshop));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnprimer = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnprimeruso = new Bunifu.Framework.UI.BunifuTileButton();
             this.txtcifrado = new System.Windows.Forms.TextBox();
             this.btnrecuperar = new System.Windows.Forms.LinkLabel();
             this.btningresar = new System.Windows.Forms.Button();
@@ -41,10 +41,10 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btnsalir = new System.Windows.Forms.ToolStripButton();
             this.btnminimizar = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -54,24 +54,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
-            this.panel1.Controls.Add(this.btnprimer);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(214, 282);
             this.panel1.TabIndex = 2;
-            // 
-            // btnprimer
-            // 
-            this.btnprimer.Location = new System.Drawing.Point(61, 232);
-            this.btnprimer.Name = "btnprimer";
-            this.btnprimer.Size = new System.Drawing.Size(75, 23);
-            this.btnprimer.TabIndex = 5;
-            this.btnprimer.Text = "Primer uso";
-            this.btnprimer.UseVisualStyleBackColor = true;
-            this.btnprimer.Visible = false;
-            this.btnprimer.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -87,6 +75,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.btnprimeruso);
             this.panel2.Controls.Add(this.txtcifrado);
             this.panel2.Controls.Add(this.btnrecuperar);
             this.panel2.Controls.Add(this.btningresar);
@@ -100,6 +89,26 @@
             this.panel2.Size = new System.Drawing.Size(566, 282);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnprimeruso
+            // 
+            this.btnprimeruso.BackColor = System.Drawing.Color.Gold;
+            this.btnprimeruso.color = System.Drawing.Color.Gold;
+            this.btnprimeruso.colorActive = System.Drawing.Color.DimGray;
+            this.btnprimeruso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnprimeruso.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.btnprimeruso.ForeColor = System.Drawing.Color.Black;
+            this.btnprimeruso.Image = global::prueba_login.Properties.Resources.settings1;
+            this.btnprimeruso.ImagePosition = 20;
+            this.btnprimeruso.ImageZoom = 35;
+            this.btnprimeruso.LabelPosition = 41;
+            this.btnprimeruso.LabelText = "Bienvenido al primer uso de sistema";
+            this.btnprimeruso.Location = new System.Drawing.Point(91, 32);
+            this.btnprimeruso.Margin = new System.Windows.Forms.Padding(6);
+            this.btnprimeruso.Name = "btnprimeruso";
+            this.btnprimeruso.Size = new System.Drawing.Size(400, 210);
+            this.btnprimeruso.TabIndex = 5;
+            this.btnprimeruso.Click += new System.EventHandler(this.btnprimeruso_Click);
             // 
             // txtcifrado
             // 
@@ -209,6 +218,24 @@
             this.lineShape1.Y1 = 59;
             this.lineShape1.Y2 = 59;
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Black;
+            this.toolStrip1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.btnsalir,
+            this.btnminimizar});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.toolStrip1.Size = new System.Drawing.Size(780, 25);
+            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
+            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
+            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -243,24 +270,6 @@
             this.btnminimizar.Size = new System.Drawing.Size(23, 22);
             this.btnminimizar.Text = "Minimizar";
             this.btnminimizar.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.BackColor = System.Drawing.Color.Black;
-            this.toolStrip1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.btnsalir,
-            this.btnminimizar});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(780, 25);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
-            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
             // YourOwnWorkshop
             // 
@@ -303,8 +312,8 @@
         private System.Windows.Forms.ToolStripButton btnsalir;
         private System.Windows.Forms.ToolStripButton btnminimizar;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.Button btnprimer;
         private System.Windows.Forms.TextBox txtcifrado;
+        private Bunifu.Framework.UI.BunifuTileButton btnprimeruso;
     }
 }
 

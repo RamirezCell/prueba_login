@@ -58,6 +58,7 @@
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(100, 20);
             this.txtuser.TabIndex = 0;
+            this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
             // 
             // txtp1
             // 
@@ -65,6 +66,7 @@
             this.txtp1.Name = "txtp1";
             this.txtp1.Size = new System.Drawing.Size(197, 20);
             this.txtp1.TabIndex = 1;
+            this.txtp1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtp1_KeyPress);
             // 
             // txtp2
             // 
@@ -72,6 +74,7 @@
             this.txtp2.Name = "txtp2";
             this.txtp2.Size = new System.Drawing.Size(197, 20);
             this.txtp2.TabIndex = 3;
+            this.txtp2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtp2_KeyPress);
             // 
             // txtp3
             // 
@@ -79,6 +82,7 @@
             this.txtp3.Name = "txtp3";
             this.txtp3.Size = new System.Drawing.Size(212, 20);
             this.txtp3.TabIndex = 4;
+            this.txtp3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtp3_KeyPress);
             // 
             // btnverificar
             // 
@@ -158,6 +162,7 @@
             this.txtpass.Size = new System.Drawing.Size(100, 20);
             this.txtpass.TabIndex = 11;
             this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
+            this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             // 
             // button1
             // 
@@ -244,6 +249,7 @@
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Verificacion de usuario";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // frmprguntas
             // 

@@ -56,5 +56,12 @@ namespace prueba_login
             frm.Show();
             this.Hide();
         }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            Form frm = new recu_admin();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

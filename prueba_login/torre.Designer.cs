@@ -1,6 +1,6 @@
 ﻿namespace prueba_login
 {
-    partial class bodeguero
+    partial class torre
     {
         /// <summary>
         /// Required designer variable.
@@ -58,10 +58,9 @@
             this.toolStripTextBox1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1102, 25);
-            this.toolStrip1.TabIndex = 1;
+            this.toolStrip1.Size = new System.Drawing.Size(1386, 25);
+            this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
-            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
             // btnCerrar
             // 
@@ -72,7 +71,6 @@
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(23, 22);
             this.btnCerrar.Text = "Cerrrar";
-            this.btnCerrar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseDown);
             // 
             // btnMaximizar
             // 
@@ -83,7 +81,6 @@
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(23, 22);
             this.btnMaximizar.Text = "Maximizar";
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // btnNormal
             // 
@@ -94,7 +91,6 @@
             this.btnNormal.Name = "btnNormal";
             this.btnNormal.Size = new System.Drawing.Size(23, 22);
             this.btnNormal.Text = "toolStripButton3";
-            this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
             // 
             // btnMinimizar
             // 
@@ -105,7 +101,6 @@
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(23, 22);
             this.btnMinimizar.Text = "toolStripButton4";
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // toolStripTextBox1
             // 
@@ -127,8 +122,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(264, 575);
-            this.panel1.TabIndex = 2;
+            this.panel1.Size = new System.Drawing.Size(264, 703);
+            this.panel1.TabIndex = 3;
             // 
             // btnre
             // 
@@ -136,11 +131,11 @@
             this.btnre.BackColor = System.Drawing.Color.Gold;
             this.btnre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnre.BorderRadius = 0;
-            this.btnre.ButtonText = "     Control de inventario";
+            this.btnre.ButtonText = "     Detalle de factura";
             this.btnre.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnre.DisabledColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnre.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnre.Iconimage = global::prueba_login.Properties.Resources.package_for_delivery;
+            this.btnre.Iconimage = global::prueba_login.Properties.Resources.bill__1_;
             this.btnre.Iconimage_right = null;
             this.btnre.Iconimage_right_Selected = null;
             this.btnre.Iconimage_Selected = null;
@@ -159,11 +154,10 @@
             this.btnre.selected = false;
             this.btnre.Size = new System.Drawing.Size(264, 87);
             this.btnre.TabIndex = 1;
-            this.btnre.Text = "     Control de inventario";
+            this.btnre.Text = "     Detalle de factura";
             this.btnre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnre.Textcolor = System.Drawing.Color.Black;
             this.btnre.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnre.Click += new System.EventHandler(this.btnre_Click);
             // 
             // label2
             // 
@@ -181,9 +175,9 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(140, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 21);
+            this.label1.Size = new System.Drawing.Size(48, 21);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Bodeguero";
+            this.label1.Text = "Torre";
             // 
             // btnSalir
             // 
@@ -194,7 +188,6 @@
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnSalir.TabIndex = 1;
             this.btnSalir.TabStop = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // shapeContainer1
             // 
@@ -203,7 +196,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(264, 575);
+            this.shapeContainer1.Size = new System.Drawing.Size(264, 703);
             this.shapeContainer1.TabIndex = 9;
             this.shapeContainer1.TabStop = false;
             // 
@@ -222,22 +215,20 @@
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(264, 25);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(838, 575);
-            this.panelContenedor.TabIndex = 3;
-            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
+            this.panelContenedor.Size = new System.Drawing.Size(1122, 703);
+            this.panelContenedor.TabIndex = 4;
             // 
-            // bodeguero
+            // torre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 600);
+            this.ClientSize = new System.Drawing.Size(1386, 728);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1720, 728);
-            this.Name = "bodeguero";
-            this.Text = "bodeguero";
+            this.Name = "torre";
+            this.Text = "torre";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);

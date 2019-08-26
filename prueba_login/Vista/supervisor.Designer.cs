@@ -151,7 +151,7 @@
             this.btnorden.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnorden.selected = false;
             this.btnorden.Size = new System.Drawing.Size(264, 71);
-            this.btnorden.TabIndex = 16;
+            this.btnorden.TabIndex = 2;
             this.btnorden.Text = "     Creacion de orden";
             this.btnorden.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnorden.Textcolor = System.Drawing.Color.Black;
@@ -186,7 +186,7 @@
             this.btnregistro.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnregistro.selected = false;
             this.btnregistro.Size = new System.Drawing.Size(264, 71);
-            this.btnregistro.TabIndex = 15;
+            this.btnregistro.TabIndex = 1;
             this.btnregistro.Text = "    Control de calidad";
             this.btnregistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnregistro.Textcolor = System.Drawing.Color.Black;

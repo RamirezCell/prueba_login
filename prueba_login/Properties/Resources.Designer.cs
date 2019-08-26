@@ -153,6 +153,16 @@ namespace prueba_login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bill__1_ {
+            get {
+                object obj = ResourceManager.GetObject("bill (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boton_de_encendido {
             get {
                 object obj = ResourceManager.GetObject("boton-de-encendido", resourceCulture);
@@ -206,6 +216,16 @@ namespace prueba_login.Properties {
         internal static System.Drawing.Bitmap cado1 {
             get {
                 object obj = ResourceManager.GetObject("cado1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancel {
+            get {
+                object obj = ResourceManager.GetObject("cancel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +376,16 @@ namespace prueba_login.Properties {
         internal static System.Drawing.Bitmap Close_Window__2_48px1 {
             get {
                 object obj = ResourceManager.GetObject("Close Window_ 2 48px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_Window__2_48px2 {
+            get {
+                object obj = ResourceManager.GetObject("Close Window_ 2 48px2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -824,6 +854,16 @@ namespace prueba_login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap settings1 {
+            get {
+                object obj = ResourceManager.GetObject("settings1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sports_car {
             get {
                 object obj = ResourceManager.GetObject("sports-car", resourceCulture);
@@ -847,6 +887,16 @@ namespace prueba_login.Properties {
         internal static System.Drawing.Bitmap user_inside_bubble_speech {
             get {
                 object obj = ResourceManager.GetObject("user-inside-bubble-speech", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap users2 {
+            get {
+                object obj = ResourceManager.GetObject("users2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

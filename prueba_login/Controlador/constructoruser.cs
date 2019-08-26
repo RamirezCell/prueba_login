@@ -20,9 +20,11 @@ namespace prueba_login.Controlador
         public int genero { get; set; }
         public int ocupacion { get; set; }
         public int intentos { get; set; }
+        public string fecha { get; set; }
         public string correo { get; set; }
         public string pregunta1 { get; set; }
         public string pregunta2 { get; set; }
+        public string foto { get; set; }
         public string pregunta3 { get; set; }
         public constructoruser()
         {

@@ -17,7 +17,22 @@ namespace prueba_login
     {
         public registrocliente()
         {
+
             InitializeComponent();
+
+
+            txtnamecliente.ContextMenu = new ContextMenu();
+            txtapelliocliente.ContextMenu = new ContextMenu();
+            txtnum.ContextMenu = new ContextMenu();
+            txtdui.ContextMenu = new ContextMenu();
+            txtcorreo.ContextMenu = new ContextMenu();
+            txtDireccion.ContextMenu = new ContextMenu();
+        }
+
+        public void caracter(KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+
         }
 
         private void grpregistro_Enter(object sender, EventArgs e)
@@ -262,6 +277,68 @@ namespace prueba_login
         private void dgvcliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFiltrar.Text != "")
+            {
+                dgvcliente.CurrentCell = null;
+                foreach(DataGridViewRow r in dgvcliente.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach (DataGridViewRow r in dgvcliente.Rows)
+                {
+                    foreach(DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtFiltrar.Text.ToUpper()) ==0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                 dgvcliente.DataSource = funcionescliente.mostrar();
+            }
+        }
+
+        private void txtFiltrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnamecliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtapelliocliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtnum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtdui_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
         }
     }
     

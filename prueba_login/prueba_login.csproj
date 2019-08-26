@@ -62,23 +62,65 @@
     <Compile Include="Controlador\constructorsistema.cs" />
     <Compile Include="Controlador\constructoruser.cs" />
     <Compile Include="Controlador\constructorvehiculo.cs" />
+    <Compile Include="Controlador\constructorverorden.cs" />
+    <Compile Include="Controlador\constructor_recuadmin.cs" />
     <Compile Include="Controlador\constructotlogin.cs" />
-    <Compile Include="controlcalidad.cs">
+    <Compile Include="detalledefactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controlcalidad.Designer.cs">
+    <Compile Include="detalledefactura.Designer.cs">
+      <DependentUpon>detalledefactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\funcionesordendetrabajo.cs" />
+    <Compile Include="torre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="torre.Designer.cs">
+      <DependentUpon>torre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\verordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\verordenes.Designer.cs">
+      <DependentUpon>verordenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\controlcalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\controlcalidad.Designer.cs">
       <DependentUpon>controlcalidad.cs</DependentUpon>
     </Compile>
-    <Compile Include="controlinventario.cs">
+    <Compile Include="Vista\controlinventario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="controlinventario.Designer.cs">
+    <Compile Include="Vista\controlinventario.Designer.cs">
       <DependentUpon>controlinventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="ventanafactura.cs">
+    <Compile Include="Modelo\Funciones_Recu_admin.cs" />
+    <Compile Include="Modelo\registroempresa.cs" />
+    <Compile Include="Modelo\verificar.cs" />
+    <Compile Include="Vista\PrimerUsoSistema.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ventanafactura.Designer.cs">
+    <Compile Include="Vista\PrimerUsoSistema.Designer.cs">
+      <DependentUpon>PrimerUsoSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\primerusouser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\primerusouser.Designer.cs">
+      <DependentUpon>primerusouser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\recu_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\recu_admin.Designer.cs">
+      <DependentUpon>recu_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ventanafactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ventanafactura.Designer.cs">
       <DependentUpon>ventanafactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmprguntas.cs">
@@ -92,41 +134,28 @@
     <Compile Include="Modelo\funcionescliente.cs" />
     <Compile Include="Modelo\funcionesvehiculo.cs" />
     <Compile Include="Modelo\mostrarmaterial.cs" />
-    <Compile Include="Modelo\PrimerUsoSystem.cs" />
     <Compile Include="Modelo\registrouser.cs" />
     <Compile Include="Modelo\validarlogin.cs" />
     <Compile Include="Modelo\validarpreguntas.cs" />
-    <Compile Include="primeruso.cs">
+    <Compile Include="Vista\registroauto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="primeruso.Designer.cs">
-      <DependentUpon>primeruso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="primerusosistema.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="primerusosistema.Designer.cs">
-      <DependentUpon>primerusosistema.cs</DependentUpon>
-    </Compile>
-    <Compile Include="registroauto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="registroauto.Designer.cs">
+    <Compile Include="Vista\registroauto.Designer.cs">
       <DependentUpon>registroauto.cs</DependentUpon>
     </Compile>
-    <Compile Include="registrotrabajador.cs">
+    <Compile Include="Vista\registrotrabajador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registrotrabajador.Designer.cs">
+    <Compile Include="Vista\registrotrabajador.Designer.cs">
       <DependentUpon>registrotrabajador.cs</DependentUpon>
     </Compile>
     <Compile Include="serviciosemail\correoserver.cs" />
     <Compile Include="serviciosemail\emailsistema.cs" />
     <Compile Include="serviciosemail\referenciarecover.cs" />
-    <Compile Include="supervisionequipo.cs">
+    <Compile Include="Vista\supervisionequipo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="supervisionequipo.Designer.cs">
+    <Compile Include="Vista\supervisionequipo.Designer.cs">
       <DependentUpon>supervisionequipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\bodeguero.cs">
@@ -185,31 +214,43 @@
     <Compile Include="Vista\recu_contra.Designer.cs">
       <DependentUpon>recu_contra.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="controlcalidad.resx">
+    <EmbeddedResource Include="detalledefactura.resx">
+      <DependentUpon>detalledefactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="torre.resx">
+      <DependentUpon>torre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\verordenes.resx">
+      <DependentUpon>verordenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\controlcalidad.resx">
       <DependentUpon>controlcalidad.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="controlinventario.resx">
+    <EmbeddedResource Include="Vista\controlinventario.resx">
       <DependentUpon>controlinventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ventanafactura.resx">
+    <EmbeddedResource Include="Vista\PrimerUsoSistema.resx">
+      <DependentUpon>PrimerUsoSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\primerusouser.resx">
+      <DependentUpon>primerusouser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\recu_admin.resx">
+      <DependentUpon>recu_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ventanafactura.resx">
       <DependentUpon>ventanafactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmprguntas.resx">
       <DependentUpon>frmprguntas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="primeruso.resx">
-      <DependentUpon>primeruso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="primerusosistema.resx">
-      <DependentUpon>primerusosistema.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="registroauto.resx">
+    <EmbeddedResource Include="Vista\registroauto.resx">
       <DependentUpon>registroauto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="registrotrabajador.resx">
+    <EmbeddedResource Include="Vista\registrotrabajador.resx">
       <DependentUpon>registrotrabajador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="supervisionequipo.resx">
+    <EmbeddedResource Include="Vista\supervisionequipo.resx">
       <DependentUpon>supervisionequipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\bodeguero.resx">
@@ -303,6 +344,8 @@
     <None Include="Resources\logoexpo4.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\users2.png" />
+    <None Include="Resources\settings1.png" />
     <None Include="Resources\settings-cogwheel-button.png" />
     <None Include="Resources\user-inside-bubble-speech.png" />
     <None Include="Resources\package-for-delivery.png" />
@@ -372,6 +415,9 @@
     <None Include="Resources\checked1.png" />
     <None Include="Resources\exit-to-app-button.png" />
     <None Include="Resources\car-front.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\Close Window_ 2 48px2.png" />
+    <None Include="Resources\bill %281%29.png" />
     <Content Include="Resources\Icon1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

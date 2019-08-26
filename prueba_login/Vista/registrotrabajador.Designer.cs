@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registrotrabajador));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.txtfiltrar = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.grpregistro = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtint = new System.Windows.Forms.TextBox();
@@ -75,7 +78,10 @@
             this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.toolStripSeparator1,
+            this.txtfiltrar,
+            this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -93,6 +99,25 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(193, 33);
             this.toolStripButton1.Text = "Registro de trabajadores";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 36);
+            // 
+            // txtfiltrar
+            // 
+            this.txtfiltrar.Name = "txtfiltrar";
+            this.txtfiltrar.Size = new System.Drawing.Size(100, 36);
+            this.txtfiltrar.TextChanged += new System.EventHandler(this.txtfiltrar_TextChanged);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(42, 33);
+            this.toolStripLabel1.Text = "Flitrar";
             // 
             // grpregistro
             // 
@@ -148,7 +173,7 @@
             // 
             this.txtint.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtint.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtint.Location = new System.Drawing.Point(630, 180);
+            this.txtint.Location = new System.Drawing.Point(594, 207);
             this.txtint.Name = "txtint";
             this.txtint.Size = new System.Drawing.Size(113, 23);
             this.txtint.TabIndex = 28;
@@ -172,7 +197,7 @@
             this.txtcifrado.Location = new System.Drawing.Point(630, 175);
             this.txtcifrado.Name = "txtcifrado";
             this.txtcifrado.Size = new System.Drawing.Size(137, 23);
-            this.txtcifrado.TabIndex = 27;
+            this.txtcifrado.TabIndex = 12;
             this.txtcifrado.Visible = false;
             // 
             // txtpass
@@ -182,8 +207,9 @@
             this.txtpass.Location = new System.Drawing.Point(434, 182);
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(145, 23);
-            this.txtpass.TabIndex = 26;
+            this.txtpass.TabIndex = 11;
             this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
+            this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             // 
             // txtuser
             // 
@@ -192,7 +218,8 @@
             this.txtuser.Location = new System.Drawing.Point(434, 111);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(145, 23);
-            this.txtuser.TabIndex = 25;
+            this.txtuser.TabIndex = 7;
+            this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
             // 
             // label10
             // 
@@ -238,7 +265,7 @@
             this.cmbestado.Location = new System.Drawing.Point(612, 111);
             this.cmbestado.Name = "cmbestado";
             this.cmbestado.Size = new System.Drawing.Size(166, 21);
-            this.cmbestado.TabIndex = 20;
+            this.cmbestado.TabIndex = 8;
             // 
             // label8
             // 
@@ -260,7 +287,7 @@
             this.cmbgender.Location = new System.Drawing.Point(612, 46);
             this.cmbgender.Name = "cmbgender";
             this.cmbgender.Size = new System.Drawing.Size(166, 21);
-            this.cmbgender.TabIndex = 18;
+            this.cmbgender.TabIndex = 4;
             // 
             // txtdui
             // 
@@ -269,7 +296,8 @@
             this.txtdui.Mask = "0000000-0";
             this.txtdui.Name = "txtdui";
             this.txtdui.Size = new System.Drawing.Size(172, 20);
-            this.txtdui.TabIndex = 17;
+            this.txtdui.TabIndex = 6;
+            this.txtdui.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdui_KeyPress);
             // 
             // txtnum
             // 
@@ -278,7 +306,8 @@
             this.txtnum.Mask = "0000-0000";
             this.txtnum.Name = "txtnum";
             this.txtnum.Size = new System.Drawing.Size(180, 20);
-            this.txtnum.TabIndex = 16;
+            this.txtnum.TabIndex = 5;
+            this.txtnum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnum_KeyPress);
             // 
             // label7
             // 
@@ -372,7 +401,7 @@
             this.cmboc.Location = new System.Drawing.Point(432, 46);
             this.cmboc.Name = "cmboc";
             this.cmboc.Size = new System.Drawing.Size(166, 21);
-            this.cmboc.TabIndex = 7;
+            this.cmboc.TabIndex = 3;
             // 
             // txtId
             // 
@@ -394,7 +423,8 @@
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(172, 46);
-            this.txtDireccion.TabIndex = 6;
+            this.txtDireccion.TabIndex = 10;
+            this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
             // txtcorreo
             // 
@@ -406,7 +436,8 @@
             this.txtcorreo.Location = new System.Drawing.Point(12, 183);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(180, 19);
-            this.txtcorreo.TabIndex = 5;
+            this.txtcorreo.TabIndex = 9;
+            this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
             // 
             // txtapellido
             // 
@@ -419,6 +450,7 @@
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(172, 19);
             this.txtapellido.TabIndex = 2;
+            this.txtapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellido_KeyPress);
             // 
             // txtnombre
             // 
@@ -431,9 +463,12 @@
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(180, 19);
             this.txtnombre.TabIndex = 1;
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
             // 
             // dgvcliente
             // 
+            this.dgvcliente.AllowUserToAddRows = false;
+            this.dgvcliente.AllowUserToDeleteRows = false;
             this.dgvcliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -654,5 +689,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtint;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox txtfiltrar;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }

@@ -18,6 +18,16 @@ namespace prueba_login
         public frmprguntas()
         {
             InitializeComponent();
+            txtuser.ContextMenu = new ContextMenu();
+            txtp1.ContextMenu = new ContextMenu();
+            txtp2.ContextMenu = new ContextMenu();
+            txtp3.ContextMenu = new ContextMenu();
+            txtpass.ContextMenu = new ContextMenu();
+        }
+        public void caracter(KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+
         }
         public void update()
         {
@@ -102,6 +112,36 @@ namespace prueba_login
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtuser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtp1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtp2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtp3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
         }
     }
 }

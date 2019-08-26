@@ -17,6 +17,13 @@ namespace prueba_login
         public controlcalidad()
         {
             InitializeComponent();
+            txtdes.ContextMenu = new ContextMenu();
+            txtdet.ContextMenu = new ContextMenu();
+        }
+        public void caracter(KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+
         }
 
         private void controlcalidad_Load(object sender, EventArgs e)
@@ -45,6 +52,16 @@ namespace prueba_login
             add.detallefin = txtdes.Text;
             add.detalleacabado = txtdet.Text;
             int datos = funcioncontrol.agregar(add);
+        }
+
+        private void txtdes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtdet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
         }
     }
 }

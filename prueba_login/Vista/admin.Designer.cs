@@ -164,7 +164,7 @@
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton2.selected = false;
             this.bunifuFlatButton2.Size = new System.Drawing.Size(264, 71);
-            this.bunifuFlatButton2.TabIndex = 9;
+            this.bunifuFlatButton2.TabIndex = 5;
             this.bunifuFlatButton2.Text = "  Administracion de vehiculos";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
@@ -199,7 +199,7 @@
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(264, 71);
-            this.bunifuFlatButton1.TabIndex = 8;
+            this.bunifuFlatButton1.TabIndex = 4;
             this.bunifuFlatButton1.Text = "   Administracion de clientes";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
@@ -234,7 +234,7 @@
             this.btnAdminProductos.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnAdminProductos.selected = false;
             this.btnAdminProductos.Size = new System.Drawing.Size(264, 71);
-            this.btnAdminProductos.TabIndex = 7;
+            this.btnAdminProductos.TabIndex = 3;
             this.btnAdminProductos.Text = "   Administracion de productos";
             this.btnAdminProductos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdminProductos.Textcolor = System.Drawing.Color.Black;
@@ -269,7 +269,7 @@
             this.btnAdminEmpleados.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnAdminEmpleados.selected = false;
             this.btnAdminEmpleados.Size = new System.Drawing.Size(264, 71);
-            this.btnAdminEmpleados.TabIndex = 6;
+            this.btnAdminEmpleados.TabIndex = 2;
             this.btnAdminEmpleados.Text = "   Administracion de empleados";
             this.btnAdminEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAdminEmpleados.Textcolor = System.Drawing.Color.Black;
@@ -304,7 +304,7 @@
             this.btnSupervision.OnHoverTextColor = System.Drawing.Color.Black;
             this.btnSupervision.selected = false;
             this.btnSupervision.Size = new System.Drawing.Size(264, 71);
-            this.btnSupervision.TabIndex = 3;
+            this.btnSupervision.TabIndex = 1;
             this.btnSupervision.Text = "   Supervision de equipamiento";
             this.btnSupervision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSupervision.Textcolor = System.Drawing.Color.Black;

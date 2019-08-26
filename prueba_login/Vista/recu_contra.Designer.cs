@@ -125,7 +125,7 @@
             this.btnenviar.Location = new System.Drawing.Point(77, 290);
             this.btnenviar.Name = "btnenviar";
             this.btnenviar.Size = new System.Drawing.Size(259, 30);
-            this.btnenviar.TabIndex = 4;
+            this.btnenviar.TabIndex = 2;
             this.btnenviar.Text = "ENVIAR";
             this.btnenviar.UseVisualStyleBackColor = false;
             this.btnenviar.Click += new System.EventHandler(this.btnenviar_Click);
@@ -139,9 +139,10 @@
             this.txtusuario.Location = new System.Drawing.Point(77, 104);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(308, 17);
-            this.txtusuario.TabIndex = 2;
+            this.txtusuario.TabIndex = 1;
             this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
             this.txtusuario.Enter += new System.EventHandler(this.txtusuario_Enter);
+            this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             this.txtusuario.Leave += new System.EventHandler(this.txtusuario_Leave);
             // 
             // btnregresar
@@ -156,7 +157,7 @@
             this.btnregresar.Location = new System.Drawing.Point(587, 392);
             this.btnregresar.Name = "btnregresar";
             this.btnregresar.Size = new System.Drawing.Size(104, 30);
-            this.btnregresar.TabIndex = 6;
+            this.btnregresar.TabIndex = 3;
             this.btnregresar.Text = "REGRESAR";
             this.btnregresar.UseVisualStyleBackColor = false;
             this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
@@ -176,6 +177,7 @@
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "recu_contra";
+            this.Load += new System.EventHandler(this.recu_contra_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);

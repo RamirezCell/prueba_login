@@ -17,6 +17,17 @@ namespace prueba_login
         public controlinventario()
         {
             InitializeComponent();
+            txtname.ContextMenu = new ContextMenu();
+            txtprice.ContextMenu = new ContextMenu();
+            txtmarca.ContextMenu = new ContextMenu();
+            txttipo.ContextMenu = new ContextMenu();
+            txtcant.ContextMenu = new ContextMenu();
+
+        }
+        public void caracter(KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+
         }
 
         private void controlinventario_Load(object sender, EventArgs e)
@@ -25,13 +36,13 @@ namespace prueba_login
             mostrar();
             btneliminar.Enabled = false;
             btnupdate.Enabled = false;
-            this.dgvcliente.Columns[0].Visible = false;
+            this.dgvmat.Columns[0].Visible = false;
 
         }
         public void limpiar()
         {
             txttipo.Clear();
-            marca.Clear();
+            txtmarca.Clear();
             txtprice.Clear();
             txtId.Clear();
             txtname.Clear();
@@ -41,7 +52,7 @@ namespace prueba_login
         public void mostrar()
         {
 
-            dgvcliente.DataSource = funciones_material.mostrar();
+            dgvmat.DataSource = funciones_material.mostrar();
         }
 
         private void btnregistrar_Click(object sender, EventArgs e)
@@ -56,7 +67,7 @@ namespace prueba_login
         }
         public void add()
         {
-            if (txtcant.Text.Trim() == "" || txtname.Text.Trim()==""||txtprice.Text.Trim()==""||txttipo.Text.Trim()==""||marca.Text.Trim()=="")
+            if (txtcant.Text.Trim() == "" || txtname.Text.Trim()==""||txtprice.Text.Trim()==""||txttipo.Text.Trim()==""||txtmarca.Text.Trim()=="")
             {
                 MessageBox.Show("campos vacios", "faltan datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -68,7 +79,7 @@ namespace prueba_login
                 {
 
 
-                    add.marca = marca.Text;
+                    add.marca = txtmarca.Text;
                     add.nombre = txtname.Text;
                     add.precio = double.Parse(txtprice.Text);
                     add.tipo = txttipo.Text;
@@ -95,13 +106,13 @@ namespace prueba_login
 
         private void dgvcliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posicion = this.dgvcliente.CurrentRow.Index;
-            txtId.Text = dgvcliente[0, posicion].Value.ToString();
-            txtname.Text = dgvcliente[1, posicion].Value.ToString();
-            txttipo.Text = dgvcliente[2, posicion].Value.ToString();
-            marca.Text = dgvcliente[3, posicion].Value.ToString();
-            txtprice.Text = dgvcliente[4, posicion].Value.ToString();
-            txtcant.Text = dgvcliente[5, posicion].Value.ToString();
+            int posicion = this.dgvmat.CurrentRow.Index;
+            txtId.Text = dgvmat[0, posicion].Value.ToString();
+            txtname.Text = dgvmat[1, posicion].Value.ToString();
+            txttipo.Text = dgvmat[2, posicion].Value.ToString();
+            txtmarca.Text = dgvmat[3, posicion].Value.ToString();
+            txtprice.Text = dgvmat[4, posicion].Value.ToString();
+            txtcant.Text = dgvmat[5, posicion].Value.ToString();
             btnregistrar.Enabled = false;
             btnupdate.Enabled = true;
             btneliminar.Enabled = true;
@@ -114,7 +125,7 @@ namespace prueba_login
             {
                 upd.tipo = txttipo.Text;
                 upd.precio = double.Parse(txtprice.Text);
-                upd.marca = marca.Text;
+                upd.marca = txtmarca.Text;
                 upd.cantidad = Convert.ToInt32(txtcant.Text);
                 upd.id_material = int.Parse(txtId.Text);
                 upd.nombre = txtname.Text;
@@ -152,6 +163,68 @@ namespace prueba_login
         private void txtId_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtfiltrar_TextChanged(object sender, EventArgs e)
+        {
+            if (txtfiltrar.Text !="")
+            {
+                dgvmat.CurrentCell = null;
+                foreach (DataGridViewRow r in dgvmat.Rows)
+                {
+                    r.Visible = false;
+                }
+                foreach(DataGridViewRow r in dgvmat.Rows)
+                {
+                    foreach(DataGridViewCell c in r.Cells)
+                    {
+                        if ((c.Value.ToString().ToUpper()).IndexOf(txtfiltrar.Text.ToUpper())==0)
+                        {
+                            r.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+               dgvmat.DataSource = funciones_material.mostrar();
+            }
+        }
+
+        private void txtfiltrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpregistro_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txttipo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtmarca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtprice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void txtcant_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
         }
     }
 }

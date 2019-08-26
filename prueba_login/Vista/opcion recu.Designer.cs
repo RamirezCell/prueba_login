@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(opcion_recu));
             this.lblopcion = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btncodi = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
@@ -54,13 +55,49 @@
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnlogin.Location = new System.Drawing.Point(12, 266);
+            this.btnlogin.Location = new System.Drawing.Point(12, 326);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(240, 29);
             this.btnlogin.TabIndex = 4;
             this.btnlogin.Text = "Regresar a inicio de sesión";
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
+            // 
+            // bunifuFlatButton2
+            // 
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Goldenrod;
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Gold;
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton2.BorderRadius = 0;
+            this.bunifuFlatButton2.ButtonText = "     Intervencion de admin";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.ForeColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = global::prueba_login.Properties.Resources.users2;
+            this.bunifuFlatButton2.Iconimage_right = null;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 0;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 90D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(12, 253);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Gold;
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(241, 55);
+            this.bunifuFlatButton2.TabIndex = 3;
+            this.bunifuFlatButton2.Text = "     Intervencion de admin";
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -84,14 +121,14 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(11, 169);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(11, 167);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Gold;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(241, 55);
-            this.bunifuFlatButton1.TabIndex = 5;
+            this.bunifuFlatButton1.TabIndex = 2;
             this.bunifuFlatButton1.Text = "     Preguntas de seguridad";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
@@ -127,7 +164,7 @@
             this.btncodi.OnHoverTextColor = System.Drawing.Color.White;
             this.btncodi.selected = false;
             this.btncodi.Size = new System.Drawing.Size(241, 55);
-            this.btncodi.TabIndex = 2;
+            this.btncodi.TabIndex = 1;
             this.btncodi.Text = "     Correo electronico";
             this.btncodi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncodi.Textcolor = System.Drawing.Color.Black;
@@ -139,7 +176,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(264, 332);
+            this.ClientSize = new System.Drawing.Size(264, 398);
+            this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.btncodi);
@@ -163,5 +201,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btncodi;
         private System.Windows.Forms.Button btnlogin;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
     }
 }

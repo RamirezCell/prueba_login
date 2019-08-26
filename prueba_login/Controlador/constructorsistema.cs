@@ -10,11 +10,14 @@ namespace prueba_login.Controlador
     {
         public int idUsuario { get; set; }
         public string nombre { get; set; }
-        public string numero { get; set; }
+        
         public string correo { get; set; }
         public string direccion { get; set; }
         public string NIT { get; set; }
         public int codigo_postal { get; set; }
+        public string foto { get; set; }
+        public string representante { get; set; }
+
         public constructorsistema (){}
     }
 }

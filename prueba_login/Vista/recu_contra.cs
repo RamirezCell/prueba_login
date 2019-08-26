@@ -26,6 +26,12 @@ namespace prueba_login
         public recu_contra()
         {
             InitializeComponent();
+            txtusuario.ContextMenu = new ContextMenu();
+        }
+        public void caracter(KeyPressEventArgs e)
+        {
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+
         }
 
         private void toolStripButton2_MouseDown(object sender, MouseEventArgs e)
@@ -127,6 +133,16 @@ namespace prueba_login
             var user = new referenciarecover();
             var result = user.recovery(txtusuario.Text);
             lblresult.Text = result;
+        }
+
+        private void recu_contra_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
         }
     }
 }

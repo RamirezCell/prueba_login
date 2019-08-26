@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Secretaria));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnauti = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnregistro = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btnmaximizar = new System.Windows.Forms.ToolStripButton();
             this.btnnormal = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnauti = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnregistro = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
@@ -66,157 +66,6 @@
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gold;
-            this.panel2.Controls.Add(this.btnauti);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.btnsalir);
-            this.panel2.Controls.Add(this.btnregistro);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.shapeContainer1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 27);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(264, 573);
-            this.panel2.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Salir";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Asesor";
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(264, 573);
-            this.shapeContainer1.TabIndex = 6;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Enabled = false;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 20;
-            this.lineShape1.X2 = 232;
-            this.lineShape1.Y1 = 160;
-            this.lineShape1.Y2 = 160;
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(264, 27);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(838, 573);
-            this.panelContenedor.TabIndex = 1;
-            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
-            // 
-            // btnauti
-            // 
-            this.btnauti.Activecolor = System.Drawing.Color.Gold;
-            this.btnauti.BackColor = System.Drawing.Color.Gold;
-            this.btnauti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnauti.BorderRadius = 0;
-            this.btnauti.ButtonText = "     Registro de automoviles";
-            this.btnauti.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnauti.DisabledColor = System.Drawing.Color.Gray;
-            this.btnauti.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnauti.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnauti.Iconimage = global::prueba_login.Properties.Resources.sports_car;
-            this.btnauti.Iconimage_right = null;
-            this.btnauti.Iconimage_right_Selected = null;
-            this.btnauti.Iconimage_Selected = null;
-            this.btnauti.IconMarginLeft = 0;
-            this.btnauti.IconMarginRight = 0;
-            this.btnauti.IconRightVisible = true;
-            this.btnauti.IconRightZoom = 0D;
-            this.btnauti.IconVisible = true;
-            this.btnauti.IconZoom = 90D;
-            this.btnauti.IsTab = false;
-            this.btnauti.Location = new System.Drawing.Point(0, 362);
-            this.btnauti.Name = "btnauti";
-            this.btnauti.Normalcolor = System.Drawing.Color.Gold;
-            this.btnauti.OnHovercolor = System.Drawing.Color.Yellow;
-            this.btnauti.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnauti.selected = false;
-            this.btnauti.Size = new System.Drawing.Size(264, 71);
-            this.btnauti.TabIndex = 8;
-            this.btnauti.Text = "     Registro de automoviles";
-            this.btnauti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnauti.Textcolor = System.Drawing.Color.Black;
-            this.btnauti.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnauti.Click += new System.EventHandler(this.btnauti_Click);
-            // 
-            // btnsalir
-            // 
-            this.btnsalir.BackColor = System.Drawing.Color.Transparent;
-            this.btnsalir.Image = global::prueba_login.Properties.Resources.boton_de_encendido;
-            this.btnsalir.ImageActive = null;
-            this.btnsalir.Location = new System.Drawing.Point(20, 28);
-            this.btnsalir.Name = "btnsalir";
-            this.btnsalir.Size = new System.Drawing.Size(83, 83);
-            this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnsalir.TabIndex = 1;
-            this.btnsalir.TabStop = false;
-            this.btnsalir.Zoom = 10;
-            this.btnsalir.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
-            // btnregistro
-            // 
-            this.btnregistro.Activecolor = System.Drawing.Color.Gold;
-            this.btnregistro.BackColor = System.Drawing.Color.Gold;
-            this.btnregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnregistro.BorderRadius = 0;
-            this.btnregistro.ButtonText = "     Registro de clientes";
-            this.btnregistro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnregistro.DisabledColor = System.Drawing.Color.Gray;
-            this.btnregistro.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnregistro.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnregistro.Iconimage = global::prueba_login.Properties.Resources.add_user_button;
-            this.btnregistro.Iconimage_right = null;
-            this.btnregistro.Iconimage_right_Selected = null;
-            this.btnregistro.Iconimage_Selected = null;
-            this.btnregistro.IconMarginLeft = 0;
-            this.btnregistro.IconMarginRight = 0;
-            this.btnregistro.IconRightVisible = true;
-            this.btnregistro.IconRightZoom = 0D;
-            this.btnregistro.IconVisible = true;
-            this.btnregistro.IconZoom = 90D;
-            this.btnregistro.IsTab = false;
-            this.btnregistro.Location = new System.Drawing.Point(0, 183);
-            this.btnregistro.Name = "btnregistro";
-            this.btnregistro.Normalcolor = System.Drawing.Color.Gold;
-            this.btnregistro.OnHovercolor = System.Drawing.Color.Yellow;
-            this.btnregistro.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnregistro.selected = false;
-            this.btnregistro.Size = new System.Drawing.Size(264, 71);
-            this.btnregistro.TabIndex = 3;
-            this.btnregistro.Text = "     Registro de clientes";
-            this.btnregistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnregistro.Textcolor = System.Drawing.Color.Black;
-            this.btnregistro.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregistro.Click += new System.EventHandler(this.btnregistro_Click);
             // 
             // toolStripButton1
             // 
@@ -273,6 +122,157 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(153, 24);
             this.toolStripButton2.Text = "YourOwnWorkshop";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gold;
+            this.panel2.Controls.Add(this.btnauti);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnsalir);
+            this.panel2.Controls.Add(this.btnregistro);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.shapeContainer1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(264, 573);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnauti
+            // 
+            this.btnauti.Activecolor = System.Drawing.Color.Gold;
+            this.btnauti.BackColor = System.Drawing.Color.Gold;
+            this.btnauti.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnauti.BorderRadius = 0;
+            this.btnauti.ButtonText = "     Registro de automoviles";
+            this.btnauti.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnauti.DisabledColor = System.Drawing.Color.Gray;
+            this.btnauti.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnauti.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnauti.Iconimage = global::prueba_login.Properties.Resources.sports_car;
+            this.btnauti.Iconimage_right = null;
+            this.btnauti.Iconimage_right_Selected = null;
+            this.btnauti.Iconimage_Selected = null;
+            this.btnauti.IconMarginLeft = 0;
+            this.btnauti.IconMarginRight = 0;
+            this.btnauti.IconRightVisible = true;
+            this.btnauti.IconRightZoom = 0D;
+            this.btnauti.IconVisible = true;
+            this.btnauti.IconZoom = 90D;
+            this.btnauti.IsTab = false;
+            this.btnauti.Location = new System.Drawing.Point(0, 362);
+            this.btnauti.Name = "btnauti";
+            this.btnauti.Normalcolor = System.Drawing.Color.Gold;
+            this.btnauti.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btnauti.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnauti.selected = false;
+            this.btnauti.Size = new System.Drawing.Size(264, 71);
+            this.btnauti.TabIndex = 2;
+            this.btnauti.Text = "     Registro de automoviles";
+            this.btnauti.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnauti.Textcolor = System.Drawing.Color.Black;
+            this.btnauti.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnauti.Click += new System.EventHandler(this.btnauti_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(41, 126);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 21);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Salir";
+            // 
+            // btnsalir
+            // 
+            this.btnsalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnsalir.Image = global::prueba_login.Properties.Resources.boton_de_encendido;
+            this.btnsalir.ImageActive = null;
+            this.btnsalir.Location = new System.Drawing.Point(20, 28);
+            this.btnsalir.Name = "btnsalir";
+            this.btnsalir.Size = new System.Drawing.Size(83, 83);
+            this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnsalir.TabIndex = 1;
+            this.btnsalir.TabStop = false;
+            this.btnsalir.Zoom = 10;
+            this.btnsalir.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // btnregistro
+            // 
+            this.btnregistro.Activecolor = System.Drawing.Color.Gold;
+            this.btnregistro.BackColor = System.Drawing.Color.Gold;
+            this.btnregistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnregistro.BorderRadius = 0;
+            this.btnregistro.ButtonText = "     Registro de clientes";
+            this.btnregistro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnregistro.DisabledColor = System.Drawing.Color.Gray;
+            this.btnregistro.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnregistro.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnregistro.Iconimage = global::prueba_login.Properties.Resources.add_user_button;
+            this.btnregistro.Iconimage_right = null;
+            this.btnregistro.Iconimage_right_Selected = null;
+            this.btnregistro.Iconimage_Selected = null;
+            this.btnregistro.IconMarginLeft = 0;
+            this.btnregistro.IconMarginRight = 0;
+            this.btnregistro.IconRightVisible = true;
+            this.btnregistro.IconRightZoom = 0D;
+            this.btnregistro.IconVisible = true;
+            this.btnregistro.IconZoom = 90D;
+            this.btnregistro.IsTab = false;
+            this.btnregistro.Location = new System.Drawing.Point(0, 183);
+            this.btnregistro.Name = "btnregistro";
+            this.btnregistro.Normalcolor = System.Drawing.Color.Gold;
+            this.btnregistro.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btnregistro.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btnregistro.selected = false;
+            this.btnregistro.Size = new System.Drawing.Size(264, 71);
+            this.btnregistro.TabIndex = 1;
+            this.btnregistro.Text = "     Registro de clientes";
+            this.btnregistro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnregistro.Textcolor = System.Drawing.Color.Black;
+            this.btnregistro.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregistro.Click += new System.EventHandler(this.btnregistro_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(130, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Asesor";
+            // 
+            // shapeContainer1
+            // 
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(264, 573);
+            this.shapeContainer1.TabIndex = 6;
+            this.shapeContainer1.TabStop = false;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.Enabled = false;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 20;
+            this.lineShape1.X2 = 232;
+            this.lineShape1.Y1 = 160;
+            this.lineShape1.Y2 = 160;
+            // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(264, 27);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(838, 573);
+            this.panelContenedor.TabIndex = 1;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // Secretaria
             // 

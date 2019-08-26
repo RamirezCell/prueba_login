@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(controlinventario));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.txtfiltrar = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dgvcliente = new System.Windows.Forms.DataGridView();
+            this.dgvmat = new System.Windows.Forms.DataGridView();
             this.grpregistro = new System.Windows.Forms.GroupBox();
             this.txtprice = new System.Windows.Forms.TextBox();
-            this.marca = new System.Windows.Forms.TextBox();
+            this.txtmarca = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,7 +51,7 @@
             this.btnupdate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmat)).BeginInit();
             this.grpregistro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +61,9 @@
             this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
+            this.toolStripButton1,
+            this.txtfiltrar,
+            this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -77,6 +81,20 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(225, 33);
             this.toolStripButton1.Text = "Supervision de equipamiento";
+            // 
+            // txtfiltrar
+            // 
+            this.txtfiltrar.Name = "txtfiltrar";
+            this.txtfiltrar.Size = new System.Drawing.Size(100, 36);
+            this.txtfiltrar.Click += new System.EventHandler(this.txtfiltrar_Click);
+            this.txtfiltrar.TextChanged += new System.EventHandler(this.txtfiltrar_TextChanged);
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.ForeColor = System.Drawing.Color.Gold;
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(37, 33);
+            this.toolStripLabel1.Text = "Filtrar";
             // 
             // btnmostrar
             // 
@@ -150,27 +168,29 @@
             this.btnregistrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
-            // dgvcliente
+            // dgvmat
             // 
-            this.dgvcliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvmat.AllowUserToAddRows = false;
+            this.dgvmat.AllowUserToDeleteRows = false;
+            this.dgvmat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvcliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvcliente.Location = new System.Drawing.Point(12, 350);
-            this.dgvcliente.Name = "dgvcliente";
-            this.dgvcliente.ReadOnly = true;
-            this.dgvcliente.Size = new System.Drawing.Size(814, 213);
-            this.dgvcliente.TabIndex = 11;
-            this.dgvcliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellClick);
-            this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick);
+            this.dgvmat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvmat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvmat.Location = new System.Drawing.Point(12, 350);
+            this.dgvmat.Name = "dgvmat";
+            this.dgvmat.ReadOnly = true;
+            this.dgvmat.Size = new System.Drawing.Size(814, 213);
+            this.dgvmat.TabIndex = 11;
+            this.dgvmat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellClick);
+            this.dgvmat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick);
             // 
             // grpregistro
             // 
             this.grpregistro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpregistro.Controls.Add(this.txtprice);
-            this.grpregistro.Controls.Add(this.marca);
+            this.grpregistro.Controls.Add(this.txtmarca);
             this.grpregistro.Controls.Add(this.label6);
             this.grpregistro.Controls.Add(this.label5);
             this.grpregistro.Controls.Add(this.label4);
@@ -185,6 +205,7 @@
             this.grpregistro.Size = new System.Drawing.Size(779, 215);
             this.grpregistro.TabIndex = 10;
             this.grpregistro.TabStop = false;
+            this.grpregistro.Enter += new System.EventHandler(this.grpregistro_Enter);
             // 
             // txtprice
             // 
@@ -197,18 +218,20 @@
             this.txtprice.Name = "txtprice";
             this.txtprice.Size = new System.Drawing.Size(228, 19);
             this.txtprice.TabIndex = 4;
+            this.txtprice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprice_KeyPress);
             // 
-            // marca
+            // txtmarca
             // 
-            this.marca.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.marca.BackColor = System.Drawing.Color.White;
-            this.marca.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.marca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.marca.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.marca.Location = new System.Drawing.Point(132, 109);
-            this.marca.Name = "marca";
-            this.marca.Size = new System.Drawing.Size(228, 19);
-            this.marca.TabIndex = 3;
+            this.txtmarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtmarca.BackColor = System.Drawing.Color.White;
+            this.txtmarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtmarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmarca.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtmarca.Location = new System.Drawing.Point(132, 109);
+            this.txtmarca.Name = "txtmarca";
+            this.txtmarca.Size = new System.Drawing.Size(228, 19);
+            this.txtmarca.TabIndex = 3;
+            this.txtmarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmarca_KeyPress);
             // 
             // label6
             // 
@@ -291,6 +314,7 @@
             this.txtcant.Name = "txtcant";
             this.txtcant.Size = new System.Drawing.Size(225, 19);
             this.txtcant.TabIndex = 5;
+            this.txtcant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcant_KeyPress);
             // 
             // txttipo
             // 
@@ -303,6 +327,7 @@
             this.txttipo.Name = "txttipo";
             this.txttipo.Size = new System.Drawing.Size(228, 19);
             this.txttipo.TabIndex = 2;
+            this.txttipo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttipo_KeyPress);
             // 
             // txtname
             // 
@@ -315,6 +340,7 @@
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(228, 19);
             this.txtname.TabIndex = 1;
+            this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
             // 
             // btnupdate
             // 
@@ -398,7 +424,7 @@
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnmostrar);
             this.Controls.Add(this.btnregistrar);
-            this.Controls.Add(this.dgvcliente);
+            this.Controls.Add(this.dgvmat);
             this.Controls.Add(this.grpregistro);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -407,7 +433,7 @@
             this.Load += new System.EventHandler(this.controlinventario_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvmat)).EndInit();
             this.grpregistro.ResumeLayout(false);
             this.grpregistro.PerformLayout();
             this.ResumeLayout(false);
@@ -420,7 +446,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
         private Bunifu.Framework.UI.BunifuFlatButton btnregistrar;
-        private System.Windows.Forms.DataGridView dgvcliente;
+        private System.Windows.Forms.DataGridView dgvmat;
         private System.Windows.Forms.GroupBox grpregistro;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -432,8 +458,10 @@
         private System.Windows.Forms.TextBox txttipo;
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.TextBox txtprice;
-        private System.Windows.Forms.TextBox marca;
+        private System.Windows.Forms.TextBox txtmarca;
         private Bunifu.Framework.UI.BunifuFlatButton btnupdate;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
+        private System.Windows.Forms.ToolStripTextBox txtfiltrar;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
     }
 }
