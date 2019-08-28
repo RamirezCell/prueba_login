@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.BtnSalir2 = new System.Windows.Forms.ToolStripButton();
+            this.BtnMaximizar2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.BtnRestaurar2 = new System.Windows.Forms.ToolStripButton();
+            this.BtnMinizar2 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnVerOrden = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panelContenedor4 = new System.Windows.Forms.Panel();
-            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnVerOrden = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.BtnSalir2 = new System.Windows.Forms.ToolStripButton();
-            this.BtnMaximizar2 = new System.Windows.Forms.ToolStripButton();
-            this.BtnRestaurar2 = new System.Windows.Forms.ToolStripButton();
-            this.BtnMinizar2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
@@ -65,11 +65,55 @@
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
+            // BtnSalir2
+            // 
+            this.BtnSalir2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnSalir2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnSalir2.Image = global::prueba_login.Properties.Resources.Close_Window__2_48px;
+            this.BtnSalir2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnSalir2.Name = "BtnSalir2";
+            this.BtnSalir2.Size = new System.Drawing.Size(23, 22);
+            this.BtnSalir2.Text = "Salir";
+            this.BtnSalir2.Click += new System.EventHandler(this.BtnSalir2_Click);
+            // 
+            // BtnMaximizar2
+            // 
+            this.BtnMaximizar2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnMaximizar2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnMaximizar2.Image = global::prueba_login.Properties.Resources.Maximize_Window_2_48px;
+            this.BtnMaximizar2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnMaximizar2.Name = "BtnMaximizar2";
+            this.BtnMaximizar2.Size = new System.Drawing.Size(23, 22);
+            this.BtnMaximizar2.Text = "Maximizar";
+            this.BtnMaximizar2.Click += new System.EventHandler(this.BtnMaximizar2_Click);
+            // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(19, 22);
             this.toolStripLabel1.Text = "FF";
+            // 
+            // BtnRestaurar2
+            // 
+            this.BtnRestaurar2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnRestaurar2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnRestaurar2.Image = global::prueba_login.Properties.Resources.Restore_Window_2_48px;
+            this.BtnRestaurar2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnRestaurar2.Name = "BtnRestaurar2";
+            this.BtnRestaurar2.Size = new System.Drawing.Size(23, 22);
+            this.BtnRestaurar2.Text = "Restaurar";
+            this.BtnRestaurar2.Click += new System.EventHandler(this.BtnRestaurar2_Click);
+            // 
+            // BtnMinizar2
+            // 
+            this.BtnMinizar2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.BtnMinizar2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BtnMinizar2.Image = global::prueba_login.Properties.Resources.Minimize_Window_2_48px;
+            this.BtnMinizar2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtnMinizar2.Name = "BtnMinizar2";
+            this.BtnMinizar2.Size = new System.Drawing.Size(23, 22);
+            this.BtnMinizar2.Text = "Minimizar";
+            this.BtnMinizar2.Click += new System.EventHandler(this.BtnMinizar2_Click);
             // 
             // panel1
             // 
@@ -86,55 +130,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(264, 550);
             this.panel1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 147);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Salir";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(123, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Trabajador";
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(264, 550);
-            this.shapeContainer1.TabIndex = 3;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Enabled = false;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 27;
-            this.lineShape1.X2 = 239;
-            this.lineShape1.Y1 = 179;
-            this.lineShape1.Y2 = 179;
-            // 
-            // panelContenedor4
-            // 
-            this.panelContenedor4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panelContenedor4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor4.Location = new System.Drawing.Point(264, 25);
-            this.panelContenedor4.Name = "panelContenedor4";
-            this.panelContenedor4.Size = new System.Drawing.Size(838, 550);
-            this.panelContenedor4.TabIndex = 2;
             // 
             // btnsalir
             // 
@@ -220,49 +215,54 @@
             this.btnVerOrden.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerOrden.Click += new System.EventHandler(this.btnregistro_Click);
             // 
-            // BtnSalir2
+            // label2
             // 
-            this.BtnSalir2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnSalir2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BtnSalir2.Image = global::prueba_login.Properties.Resources.Close_Window__2_48px;
-            this.BtnSalir2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnSalir2.Name = "BtnSalir2";
-            this.BtnSalir2.Size = new System.Drawing.Size(23, 22);
-            this.BtnSalir2.Text = "Salir";
-            this.BtnSalir2.Click += new System.EventHandler(this.BtnSalir2_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(42, 147);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 21);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Salir";
             // 
-            // BtnMaximizar2
+            // label1
             // 
-            this.BtnMaximizar2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnMaximizar2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BtnMaximizar2.Image = global::prueba_login.Properties.Resources.Maximize_Window_2_48px;
-            this.BtnMaximizar2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnMaximizar2.Name = "BtnMaximizar2";
-            this.BtnMaximizar2.Size = new System.Drawing.Size(23, 22);
-            this.BtnMaximizar2.Text = "Maximizar";
-            this.BtnMaximizar2.Click += new System.EventHandler(this.BtnMaximizar2_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(123, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 21);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Trabajador";
             // 
-            // BtnRestaurar2
+            // shapeContainer1
             // 
-            this.BtnRestaurar2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnRestaurar2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BtnRestaurar2.Image = global::prueba_login.Properties.Resources.Restore_Window_2_48px;
-            this.BtnRestaurar2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnRestaurar2.Name = "BtnRestaurar2";
-            this.BtnRestaurar2.Size = new System.Drawing.Size(23, 22);
-            this.BtnRestaurar2.Text = "Restaurar";
-            this.BtnRestaurar2.Click += new System.EventHandler(this.BtnRestaurar2_Click);
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(264, 550);
+            this.shapeContainer1.TabIndex = 3;
+            this.shapeContainer1.TabStop = false;
             // 
-            // BtnMinizar2
+            // lineShape1
             // 
-            this.BtnMinizar2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.BtnMinizar2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BtnMinizar2.Image = global::prueba_login.Properties.Resources.Minimize_Window_2_48px;
-            this.BtnMinizar2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnMinizar2.Name = "BtnMinizar2";
-            this.BtnMinizar2.Size = new System.Drawing.Size(23, 22);
-            this.BtnMinizar2.Text = "Minimizar";
-            this.BtnMinizar2.Click += new System.EventHandler(this.BtnMinizar2_Click);
+            this.lineShape1.Enabled = false;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 27;
+            this.lineShape1.X2 = 239;
+            this.lineShape1.Y1 = 179;
+            this.lineShape1.Y2 = 179;
+            // 
+            // panelContenedor4
+            // 
+            this.panelContenedor4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panelContenedor4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor4.Location = new System.Drawing.Point(264, 25);
+            this.panelContenedor4.Name = "panelContenedor4";
+            this.panelContenedor4.Size = new System.Drawing.Size(838, 550);
+            this.panelContenedor4.TabIndex = 2;
             // 
             // Trabajador
             // 
@@ -273,9 +273,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximumSize = new System.Drawing.Size(1364, 726);
+            this.MaximumSize = new System.Drawing.Size(1366, 726);
             this.Name = "Trabajador";
             this.Opacity = 0.9D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trabajador";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

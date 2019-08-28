@@ -13,11 +13,13 @@ namespace prueba_login.Controlador
         public string clave { get; set; }
         public static string nombre { get; set; }
         public static int nivel { get; set; }
-        
+       
+
         public constructotlogin(string usuario,string clave)
         {
             usuario = constructotlogin.usuario;
             clave = this.clave;
+           
         }
         
     }

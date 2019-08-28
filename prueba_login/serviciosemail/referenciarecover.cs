@@ -10,9 +10,9 @@ namespace prueba_login.serviciosemail
 {
     class referenciarecover
     {
-        public string recovery(string solicitud)
+        public string recovery(string solicitud, string pass)
         {
-            return validarlogin.recover(solicitud);
+            return validarlogin.recover(solicitud,pass);
         }
     }
 }

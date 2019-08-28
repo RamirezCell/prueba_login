@@ -18,12 +18,14 @@ namespace prueba_login.Modelo
     
     class validarlogin
     {
+       
 
         public static bool validarusername(constructotlogin logi)
         {
+           
             bool retorno = false;
             //verificar existencia
-            string query = "SELECT * FROM usuarios WHERE usuario=?user";
+            string query = "SELECT * FROM usuarios WHERE binary usuario=?user";
             try
             {
                 MySqlCommand cmdeselct = new MySqlCommand(query, conexion.obtenerconexion());
@@ -31,13 +33,14 @@ namespace prueba_login.Modelo
                 cmdeselct.Parameters.Add(new MySqlParameter("user", constructotlogin.usuario));
 
                 retorno = Convert.ToBoolean(cmdeselct.ExecuteScalar());
+               
                 //si el usuario existe es true , sino es false
                 if (retorno == true)
                 {
 
                     //verificar datos
                     int estado = 1;
-                    string query2 = "SELECT * FROM  usuarios WHERE usuario=?user AND clave=?pass AND estado=?state";
+                    string query2 = "SELECT * FROM  usuarios WHERE binary usuario=?user AND binary clave=?pass AND estado=?state";
                     MySqlCommand cmdselect2 = new MySqlCommand(query2, conexion.obtenerconexion());
                     cmdselect2.Parameters.Add(new MySqlParameter("user", constructotlogin.usuario));
                     cmdselect2.Parameters.Add(new MySqlParameter("pass", logi.clave));
@@ -126,48 +129,73 @@ namespace prueba_login.Modelo
             }
         }
 
-        public static string recover(string pedidouser)
+        public static string recover(string pedidouser,string pass)
         {
-            string query = "SELECT * FROM usuarios WHERE nombre_user=?user AND correo_electronico=?correo";
+            
+            Random rdn = new Random();
+            int a = rdn.Next(1000, 9000);
+            a.ToString();
+
+            string query = "SELECT * FROM usuarios WHERE binary usuario=?user AND binary clave=?clave";
             MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
             cmdselect.Parameters.AddWithValue("user", pedidouser);
-            cmdselect.Parameters.AddWithValue("correo", pedidouser);
+            cmdselect.Parameters.AddWithValue("clave", pass);
             cmdselect.CommandType = CommandType.Text;
+            
 
             MySqlDataReader reader = cmdselect.ExecuteReader();
 
 
             if (reader.Read() == true)
             {
+
                 string nombreusuario = reader.GetString(1) + " " + reader.GetString(2);
                 string correo = reader.GetString(12);
-                string pass = reader.GetString(7);
+
 
                 var serviciosemail = new serviciosemail.emailsistema();
+                bool datos = false;
 
-                serviciosemail.sendmail(
-                    subject: "Solictud de recuperacion de contraseña",
-                    body: "Hola," + nombreusuario + "\nhas solicitado recuperar tu contraseña\n" +
-                    "tu contraseña es:\n" + pass + ".le recomendamos no dar la contraseña a terceros",
-                    recipientmail: new List<string> { correo }
+                MySqlCommand cod = new MySqlCommand(string.Format("UPDATE usuarios SET cod='{0}' WHERE usuario='{1}'", a, pedidouser), conexion.obtenerconexion());
+                datos = Convert.ToBoolean(cod.ExecuteNonQuery());
+                if (datos==true)
+                {
+
+                    serviciosemail.sendmail(
+                        subject: "Solictud de recuperacion de contraseña",
+                        body: "Hola," + nombreusuario + "\nhas solicitado recuperar tu contraseña\n" +
+                        "tu codigo de seguridad es:\n" + a + "\nPor favor, escriba este codigo en el cuadro de verificacion ",
+                        recipientmail: new List<string> { correo }
 
 
-                    );
+                        );
+                }
 
 
-                return "Hola, has solicitado recuperar tu contraseña";
+
+
+
+
+
+                return "Hola, se ha enviado un mensaje a tu correo electronico"
+                      ;
+
 
             }
             else
             {
                 return "No tienes una cuenta con estas credenciales";
             }
+
+
         }
+
+
         public static bool acceso(constructotlogin log)
         {
             bool retorno = false;
             //verificar existencia
-            string query = "SELECT * FROM usuarios WHERE usuario=?user";
+            string query = "SELECT * FROM usuarios WHERE binary usuario=?user";
             try
             {
                 MySqlCommand cmdeselct = new MySqlCommand(query, conexion.obtenerconexion());
@@ -181,7 +209,7 @@ namespace prueba_login.Modelo
 
                     //verificar datos
                     int estado = 1;
-                    string query2 = "SELECT * FROM  usuarios WHERE usuario=?user AND clave=?pass AND estado=?state";
+                    string query2 = "SELECT * FROM  usuarios WHERE binary usuario=?user AND binary clave=?pass AND estado=?state";
                     MySqlCommand cmdselect2 = new MySqlCommand(query2, conexion.obtenerconexion());
                     cmdselect2.Parameters.Add(new MySqlParameter("user", constructotlogin.usuario));
                     cmdselect2.Parameters.Add(new MySqlParameter("pass", log.clave));

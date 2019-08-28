@@ -95,23 +95,23 @@ namespace prueba_login
 
         }
         constructoruser upd = new constructoruser();
-        public void update()
-        {
+        //public void update()
+        //{
 
-            upd.nombre = txtnombre.Text;
-            upd.apellido = txtapellido.Text;
-            upd.direccion = txtDireccion.Text;
-            upd.ocupacion = Convert.ToInt32(cmboc.SelectedValue);
-            upd.genero = Convert.ToInt32(cmbgender.SelectedValue);
-            upd.estado = Convert.ToInt32(cmbestado.SelectedValue);
+        //    upd.nombre = txtnombre.Text;
+        //    upd.apellido = txtapellido.Text;
+        //    upd.direccion = txtDireccion.Text;
+        //    upd.ocupacion = Convert.ToInt32(cmboc.SelectedValue);
+        //    upd.genero = Convert.ToInt32(cmbgender.SelectedValue);
+        //    upd.estado = Convert.ToInt32(cmbestado.SelectedValue);
 
-            upd.telefono = txtnum.Text;
-            upd.dui = txtdui.Text;
-            upd.correo = txtcorreo.Text;
-            upd.id_usuario = Convert.ToInt16(txtId.Text);
-            registrouser.actualizar(upd);
+        //    upd.telefono = txtnum.Text;
+        //    upd.dui = txtdui.Text;
+        //    upd.correo = txtcorreo.Text;
+        //    upd.id_usuario = Convert.ToInt16(txtId.Text);
+        //    registrouser.actualizar(upd);
 
-        }
+        //}
 
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
@@ -176,7 +176,7 @@ namespace prueba_login
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            update();
+            //update();
             limpiar();
             btnregistrar.Enabled = true;
         }
@@ -262,6 +262,18 @@ namespace prueba_login
         private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
         {
             caracter(e);
+        }
+
+        private void txtdui_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form user = new primerusouser();
+            user.Show();
+            this.Hide();
         }
     }
 }

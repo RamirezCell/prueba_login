@@ -340,6 +340,11 @@ namespace prueba_login
         {
             caracter(e);
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

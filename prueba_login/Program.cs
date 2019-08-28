@@ -16,7 +16,7 @@ namespace prueba_login
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new YourOwnWorkshop());
+            Application.Run(new splash());
         }
     }
 }

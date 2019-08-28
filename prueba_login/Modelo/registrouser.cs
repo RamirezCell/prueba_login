@@ -15,33 +15,64 @@ namespace prueba_login.Modelo
     class registrouser
 
     {
-        public static bool actualizar(constructoruser upd)
+
+        public static bool validarcod(constructoruser cod)
         {
             bool retorno = false;
+            string query = "SELECT * FROM usuarios WHERE binary cod=?cod";
             try
             {
-                MySqlCommand update = new MySqlCommand(string.Format("UPDATE usuarios SET nombre_user = '{0}' ,apellido_user='{1}',dui_user='{2}',direccion='{3}',tel_user='{4}',usuario,clave='{5}',estado='{6}',genero='{7}',ocupacion='{8}',intentos='{9}',correo_electronico='{10}'", upd.nombre, upd.apellido, upd.dui, upd.telefono, upd.usuario, upd.clave, upd.estado, upd.genero, upd.ocupacion, upd.intentos, upd.correo), conexion.obtenerconexion());
-                retorno = Convert.ToBoolean(update.ExecuteNonQuery());
+                MySqlCommand cmdeselct = new MySqlCommand(query, conexion.obtenerconexion());
+                //envio de parametros a la consulta
+                cmdeselct.Parameters.Add(new MySqlParameter("cod", cod.cod));
+                retorno = Convert.ToBoolean(cmdeselct.ExecuteScalar());
                 if (retorno == true)
                 {
-                    MessageBox.Show("Datos actualizados correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    MessageBox.Show("Acceso concebido", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Datos no actualizados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El codigo no concuerda con lo enviado en el correo electronico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 return retorno;
             }
             catch (Exception e)
             {
+                MessageBox.Show("error en la base de datos" + e, "error critico", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-
-                MessageBox.Show("Ha ocurrido un problema" + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return retorno;
+
             }
         }
+        //public static bool actualizar(constructoruser upd)
+        //{
+        //    bool retorno = false;
+        //    try
+        //    {
+        //        MySqlCommand update = new MySqlCommand(string.Format());
+        //        retorno = Convert.ToBoolean(update.ExecuteNonQuery());
+        //        if (retorno == true)
+        //        {
+        //            MessageBox.Show("Datos actualizados correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Datos no actualizados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        //        }
+        //        return retorno;
+        //    }
+        //    catch (Exception e)
+        //    {
+
+
+        //        MessageBox.Show("Ha ocurrido un problema" + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        return retorno;
+        //    }
+        //}
+
 
         public static bool eliminar(int id)
         {

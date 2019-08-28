@@ -86,19 +86,26 @@ namespace prueba_login
             Form f = new YourOwnWorkshop();
             f.Show();
         }
-
+        int lx, ly, sw, sh;
         private void BtnMaximizar2_Click(object sender, EventArgs e)
         {
             BtnMaximizar2.Visible = false;
             BtnRestaurar2.Visible = true;
-            this.WindowState = FormWindowState.Maximized;
+            lx = this.Location.X;
+
+            ly = this.Location.Y;
+            sw = this.Size.Width;
+            sh = this.Size.Height;
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
 
         private void BtnRestaurar2_Click(object sender, EventArgs e)
         {
             BtnMaximizar2.Visible = true;
             BtnRestaurar2.Visible = false;
-            this.WindowState = FormWindowState.Normal;
+            this.Size = new Size(sw, sh);
+            this.Location = new Point(lx, ly);
         }
 
         private void BtnMinizar2_Click(object sender, EventArgs e)

@@ -264,6 +264,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmprguntas";
             this.Text = "frmprguntas";
             this.Load += new System.EventHandler(this.frmprguntas_Load);

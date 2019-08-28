@@ -8,5 +8,6 @@ namespace prueba_login.Controlador
 {
     class constructorrecuadmin
     {
+        public int MyProperty { get; set; }
     }
 }

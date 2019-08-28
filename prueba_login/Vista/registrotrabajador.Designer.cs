@@ -67,6 +67,7 @@
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.grpregistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
@@ -198,7 +199,6 @@
             this.txtcifrado.Name = "txtcifrado";
             this.txtcifrado.Size = new System.Drawing.Size(137, 23);
             this.txtcifrado.TabIndex = 12;
-            this.txtcifrado.Visible = false;
             // 
             // txtpass
             // 
@@ -297,6 +297,7 @@
             this.txtdui.Name = "txtdui";
             this.txtdui.Size = new System.Drawing.Size(172, 20);
             this.txtdui.TabIndex = 6;
+            this.txtdui.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtdui_MaskInputRejected);
             this.txtdui.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdui_KeyPress);
             // 
             // txtnum
@@ -626,12 +627,25 @@
             this.btnregistrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(642, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(186, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "configurar primer uso de usuario";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // registrotrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(838, 573);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvcliente);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnmostrar);
@@ -692,5 +706,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox txtfiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -32,8 +32,8 @@
             this.txtfiltrar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
-            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             ((System.ComponentModel.ISupportInitialize)(this.dgvorden)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,6 +41,9 @@
             // 
             this.dgvorden.AllowUserToAddRows = false;
             this.dgvorden.AllowUserToDeleteRows = false;
+            this.dgvorden.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvorden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvorden.Location = new System.Drawing.Point(60, 89);
             this.dgvorden.Name = "dgvorden";
@@ -50,6 +53,7 @@
             // 
             // txtfiltrar
             // 
+            this.txtfiltrar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtfiltrar.BackColor = System.Drawing.Color.White;
             this.txtfiltrar.Location = new System.Drawing.Point(251, 43);
             this.txtfiltrar.Multiline = true;
@@ -60,6 +64,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Goldenrod;
@@ -81,23 +86,25 @@
             this.shapeContainer1.TabIndex = 3;
             this.shapeContainer1.TabStop = false;
             // 
-            // lineShape1
-            // 
-            this.lineShape1.BorderColor = System.Drawing.Color.White;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 3;
-            this.lineShape1.X2 = 869;
-            this.lineShape1.Y1 = 27;
-            this.lineShape1.Y2 = 27;
-            // 
             // lineShape2
             // 
+            this.lineShape2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lineShape2.BorderColor = System.Drawing.Color.White;
             this.lineShape2.Name = "lineShape2";
             this.lineShape2.X1 = 0;
             this.lineShape2.X2 = 873;
             this.lineShape2.Y1 = 475;
             this.lineShape2.Y2 = 475;
+            // 
+            // lineShape1
+            // 
+            this.lineShape1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lineShape1.BorderColor = System.Drawing.Color.White;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 3;
+            this.lineShape1.X2 = 869;
+            this.lineShape1.Y1 = 27;
+            this.lineShape1.Y2 = 27;
             // 
             // verordenes
             // 

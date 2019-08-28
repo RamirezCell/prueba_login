@@ -151,5 +151,12 @@ namespace prueba_login
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form yow = new YourOwnWorkshop();
+            yow.Show();
+            this.Hide();
+        }
     }
 }

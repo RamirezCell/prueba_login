@@ -22,7 +22,7 @@ namespace prueba_login.Modelo
             try
             {
                 
-                MySqlCommand val = new MySqlCommand(string.Format("UPDATE usuarios SET clave='{0}' WHERE usuario='{1}'", upd.pass, upd.usuario), conexion.obtenerconexion());
+                MySqlCommand val = new MySqlCommand(string.Format("UPDATE usuarios SET binary clave='{0}' WHERE binary usuario='{1}'", upd.pass, upd.usuario), conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(val.ExecuteNonQuery());
                 if (retorno == true)
                 {
@@ -43,7 +43,7 @@ namespace prueba_login.Modelo
 
             try
             {
-                MySqlCommand val = new MySqlCommand(string.Format("SELECT * FROM usuarios WHERE pregunta1 = '{0}'AND pregunta2= '{1}'AND pregunta3='{2}' AND usuario='{3}'", add.pregunta1, add.pregunta2, add.pregunta3,add.usuario), conexion.obtenerconexion());
+                MySqlCommand val = new MySqlCommand(string.Format("SELECT * FROM usuarios WHERE binary pregunta1 = '{0}'AND binary pregunta2= '{1}'AND binary pregunta3='{2}' AND usuario='{3}'", add.pregunta1, add.pregunta2, add.pregunta3,add.usuario), conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(val.ExecuteScalar());
                 if (retorno == true)
                 {

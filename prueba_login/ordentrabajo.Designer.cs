@@ -1,6 +1,6 @@
 ﻿namespace prueba_login
 {
-    partial class ventanafactura
+    partial class ordentrabajo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // ventanafactura
+            // ordentrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 476);
+            this.ClientSize = new System.Drawing.Size(879, 494);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ventanafactura";
-            this.Text = "ventanafactura";
+            this.Name = "ordentrabajo";
+            this.Text = "ordentrabajo";
             this.ResumeLayout(false);
 
         }

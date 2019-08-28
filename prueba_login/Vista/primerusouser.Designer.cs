@@ -250,6 +250,7 @@
             this.txtpass.Size = new System.Drawing.Size(182, 21);
             this.txtpass.TabIndex = 8;
             this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
+            this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
             this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             // 
             // cmbestado
@@ -546,6 +547,7 @@
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "primerusouser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "primerusouser";
             this.Load += new System.EventHandler(this.primerusouser_Load);
             this.toolStrip1.ResumeLayout(false);

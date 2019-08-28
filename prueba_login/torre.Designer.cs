@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(torre));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnCerrar = new System.Windows.Forms.ToolStripButton();
             this.btnMaximizar = new System.Windows.Forms.ToolStripButton();
@@ -227,6 +228,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "torre";
             this.Text = "torre";
             this.toolStrip1.ResumeLayout(false);

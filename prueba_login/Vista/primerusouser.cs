@@ -165,5 +165,10 @@ namespace prueba_login
         {
             caracter(e);
         }
+
+        private void txtpass_Enter(object sender, EventArgs e)
+        {
+            txtpass.UseSystemPasswordChar = true;
+        }
     }
 }

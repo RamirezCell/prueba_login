@@ -34,10 +34,17 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnregresar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtcifrado = new System.Windows.Forms.TextBox();
+            this.txtveri = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtpass = new System.Windows.Forms.TextBox();
             this.lblresult = new System.Windows.Forms.Label();
             this.btnenviar = new System.Windows.Forms.Button();
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.btnregresar = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +59,7 @@
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(636, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -95,23 +102,131 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.btnregresar);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtcifrado);
+            this.panel1.Controls.Add(this.txtveri);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtpass);
             this.panel1.Controls.Add(this.lblresult);
             this.panel1.Controls.Add(this.btnenviar);
             this.panel1.Controls.Add(this.txtusuario);
             this.panel1.Location = new System.Drawing.Point(34, 52);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(440, 370);
+            this.panel1.Size = new System.Drawing.Size(571, 370);
             this.panel1.TabIndex = 1;
+            // 
+            // btnregresar
+            // 
+            this.btnregresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnregresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnregresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.btnregresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregresar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnregresar.ForeColor = System.Drawing.Color.White;
+            this.btnregresar.Location = new System.Drawing.Point(451, 323);
+            this.btnregresar.Name = "btnregresar";
+            this.btnregresar.Size = new System.Drawing.Size(104, 30);
+            this.btnregresar.TabIndex = 3;
+            this.btnregresar.Text = "REGRESAR";
+            this.btnregresar.UseVisualStyleBackColor = false;
+            this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(229, 323);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 30);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Verificar codigo";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(144, 255);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(132, 16);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Codigo de verificacion";
+            // 
+            // txtcifrado
+            // 
+            this.txtcifrado.Location = new System.Drawing.Point(3, 333);
+            this.txtcifrado.Name = "txtcifrado";
+            this.txtcifrado.Size = new System.Drawing.Size(100, 20);
+            this.txtcifrado.TabIndex = 4;
+            this.txtcifrado.Visible = false;
+            this.txtcifrado.TextChanged += new System.EventHandler(this.txtcifrado_TextChanged);
+            // 
+            // txtveri
+            // 
+            this.txtveri.BackColor = System.Drawing.Color.Black;
+            this.txtveri.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtveri.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtveri.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtveri.Location = new System.Drawing.Point(147, 281);
+            this.txtveri.Name = "txtveri";
+            this.txtveri.Size = new System.Drawing.Size(308, 17);
+            this.txtveri.TabIndex = 10;
+            this.txtveri.Visible = false;
+            this.txtveri.TextChanged += new System.EventHandler(this.txtveri_TextChanged_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(144, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 16);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Contraseña";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(144, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Usuario";
+            // 
+            // txtpass
+            // 
+            this.txtpass.BackColor = System.Drawing.Color.Black;
+            this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtpass.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtpass.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtpass.Location = new System.Drawing.Point(147, 109);
+            this.txtpass.Name = "txtpass";
+            this.txtpass.Size = new System.Drawing.Size(308, 17);
+            this.txtpass.TabIndex = 6;
+            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
+            this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
             // 
             // lblresult
             // 
             this.lblresult.AutoSize = true;
             this.lblresult.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblresult.Location = new System.Drawing.Point(86, 188);
+            this.lblresult.Location = new System.Drawing.Point(122, 208);
             this.lblresult.Name = "lblresult";
             this.lblresult.Size = new System.Drawing.Size(62, 16);
             this.lblresult.TabIndex = 5;
             this.lblresult.Text = "Resultado";
+            this.lblresult.Click += new System.EventHandler(this.lblresult_Click);
             // 
             // btnenviar
             // 
@@ -122,7 +237,7 @@
             this.btnenviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnenviar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnenviar.ForeColor = System.Drawing.Color.White;
-            this.btnenviar.Location = new System.Drawing.Point(77, 290);
+            this.btnenviar.Location = new System.Drawing.Point(173, 149);
             this.btnenviar.Name = "btnenviar";
             this.btnenviar.Size = new System.Drawing.Size(259, 30);
             this.btnenviar.TabIndex = 2;
@@ -136,7 +251,7 @@
             this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuario.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtusuario.Location = new System.Drawing.Point(77, 104);
+            this.txtusuario.Location = new System.Drawing.Point(147, 50);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(308, 17);
             this.txtusuario.TabIndex = 1;
@@ -145,30 +260,12 @@
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             this.txtusuario.Leave += new System.EventHandler(this.txtusuario_Leave);
             // 
-            // btnregresar
-            // 
-            this.btnregresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnregresar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.btnregresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
-            this.btnregresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnregresar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnregresar.ForeColor = System.Drawing.Color.White;
-            this.btnregresar.Location = new System.Drawing.Point(587, 392);
-            this.btnregresar.Name = "btnregresar";
-            this.btnregresar.Size = new System.Drawing.Size(104, 30);
-            this.btnregresar.TabIndex = 3;
-            this.btnregresar.Text = "REGRESAR";
-            this.btnregresar.UseVisualStyleBackColor = false;
-            this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
-            // 
             // recu_contra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnregresar);
+            this.ClientSize = new System.Drawing.Size(636, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -198,5 +295,12 @@
         private System.Windows.Forms.Button btnenviar;
         private System.Windows.Forms.Button btnregresar;
         private System.Windows.Forms.Label lblresult;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtpass;
+        private System.Windows.Forms.TextBox txtcifrado;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtveri;
+        private System.Windows.Forms.Button button1;
     }
 }

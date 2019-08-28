@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="contranueva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="contranueva.Designer.cs">
+      <DependentUpon>contranueva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controlador\conexion.cs" />
     <Compile Include="Controlador\constructorcliente.cs" />
     <Compile Include="Controlador\constructordetalle.cs" />
@@ -65,13 +71,19 @@
     <Compile Include="Controlador\constructorverorden.cs" />
     <Compile Include="Controlador\constructor_recuadmin.cs" />
     <Compile Include="Controlador\constructotlogin.cs" />
-    <Compile Include="detalledefactura.cs">
+    <Compile Include="Modelo\funcionesordendetrabajo.cs" />
+    <Compile Include="ordentrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="detalledefactura.Designer.cs">
-      <DependentUpon>detalledefactura.cs</DependentUpon>
+    <Compile Include="ordentrabajo.Designer.cs">
+      <DependentUpon>ordentrabajo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modelo\funcionesordendetrabajo.cs" />
+    <Compile Include="splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
     <Compile Include="torre.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,12 +128,6 @@
     </Compile>
     <Compile Include="Vista\recu_admin.Designer.cs">
       <DependentUpon>recu_admin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\ventanafactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\ventanafactura.Designer.cs">
-      <DependentUpon>ventanafactura.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\frmprguntas.cs">
       <SubType>Form</SubType>
@@ -214,8 +220,14 @@
     <Compile Include="Vista\recu_contra.Designer.cs">
       <DependentUpon>recu_contra.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="detalledefactura.resx">
-      <DependentUpon>detalledefactura.cs</DependentUpon>
+    <EmbeddedResource Include="contranueva.resx">
+      <DependentUpon>contranueva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ordentrabajo.resx">
+      <DependentUpon>ordentrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="torre.resx">
       <DependentUpon>torre.cs</DependentUpon>
@@ -237,9 +249,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\recu_admin.resx">
       <DependentUpon>recu_admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\ventanafactura.resx">
-      <DependentUpon>ventanafactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmprguntas.resx">
       <DependentUpon>frmprguntas.cs</DependentUpon>
@@ -344,6 +353,12 @@
     <None Include="Resources\logoexpo4.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\splsh.jpg-11.png" />
+    <None Include="Resources\splsh.jpg-1.png" />
+    <None Include="Resources\splsh.jpg.png" />
+    <None Include="Resources\splsh.jpg" />
+    <None Include="Resources\splash2.jpg" />
+    <None Include="Resources\splash.jpg" />
     <None Include="Resources\users2.png" />
     <None Include="Resources\settings1.png" />
     <None Include="Resources\settings-cogwheel-button.png" />

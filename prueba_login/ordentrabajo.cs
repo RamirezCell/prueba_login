@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace prueba_login
 {
-    public partial class ventanafactura : Form
+    public partial class ordentrabajo : Form
     {
-        public ventanafactura()
+        public ordentrabajo()
         {
             InitializeComponent();
         }

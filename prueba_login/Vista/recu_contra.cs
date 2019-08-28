@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using prueba_login.serviciosemail;
 using prueba_login.Modelo;
+using System.Security.Cryptography;
+using prueba_login.Controlador;
 
 namespace prueba_login
 {
@@ -17,6 +19,7 @@ namespace prueba_login
 
 
     {
+       
 
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -117,6 +120,14 @@ namespace prueba_login
         {
 
         }
+        public string Hash(byte[] val)
+        {
+            using (SHA1Managed sha1 = new SHA1Managed())
+            {
+                var hash = sha1.ComputeHash(val);
+                return Convert.ToBase64String(hash);
+            }
+        }
 
         private void btncontinuar_Click(object sender, EventArgs e)
         {
@@ -130,9 +141,23 @@ namespace prueba_login
 
         private void btnenviar_Click(object sender, EventArgs e)
         {
-            var user = new referenciarecover();
-            var result = user.recovery(txtusuario.Text);
-            lblresult.Text = result;
+            if (txtpass.Text.Trim() == "" || txtusuario.Text.Trim() == "")
+            {
+                MessageBox.Show("campos vacios", "Llene los campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                
+                var user = new referenciarecover();
+                var result = user.recovery(txtusuario.Text, txtcifrado.Text);
+                lblresult.Text = result;
+                txtveri.Visible = true;
+              
+
+
+
+            }
+           
         }
 
         private void recu_contra_Load(object sender, EventArgs e)
@@ -142,7 +167,60 @@ namespace prueba_login
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            caracter(e);
+           
+        }
+
+
+        private void lblresult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtveri_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void txtpass_TextChanged(object sender, EventArgs e)
+        {
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtpass.Text.ToString());
+            txtcifrado.Text = Hash(pass);
+        }
+
+        private void txtcifrado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpass_Enter(object sender, EventArgs e)
+        {
+            txtpass.UseSystemPasswordChar = true;
+        }
+
+        private void txtveri_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtveri.Text.Trim() == "")
+            {
+                MessageBox.Show("campos vacios", "Llene los campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                constructoruser codigo = new constructoruser();
+                codigo.cod = txtveri.Text;
+                bool datos = registrouser.validarcod(codigo);
+                if (datos==true)
+                {
+                    txtveri.Clear();
+                    Form f = new contranueva();
+                    f.Show();
+                    this.Hide();
+                }
+            }
         }
     }
 }
