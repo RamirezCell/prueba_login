@@ -67,7 +67,7 @@
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnrecuperacion = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.grpregistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
@@ -627,17 +627,17 @@
             this.btnregistrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
-            // button1
+            // btnrecuperacion
             // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(642, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(186, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "configurar primer uso de usuario";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnrecuperacion.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnrecuperacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnrecuperacion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnrecuperacion.Location = new System.Drawing.Point(628, 2);
+            this.btnrecuperacion.Name = "btnrecuperacion";
+            this.btnrecuperacion.Size = new System.Drawing.Size(198, 31);
+            this.btnrecuperacion.TabIndex = 18;
+            this.btnrecuperacion.Text = "Recuperacion de contraseña";
+            this.btnrecuperacion.UseVisualStyleBackColor = false;
             // 
             // registrotrabajador
             // 
@@ -645,7 +645,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(838, 573);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnrecuperacion);
             this.Controls.Add(this.dgvcliente);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnmostrar);
@@ -706,6 +706,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox txtfiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnrecuperacion;
     }
 }

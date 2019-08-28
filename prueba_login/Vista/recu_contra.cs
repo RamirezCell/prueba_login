@@ -141,7 +141,7 @@ namespace prueba_login
 
         private void btnenviar_Click(object sender, EventArgs e)
         {
-            if (txtpass.Text.Trim() == "" || txtusuario.Text.Trim() == "")
+            if ( txtusuario.Text.Trim() == "")
             {
                 MessageBox.Show("campos vacios", "Llene los campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -149,7 +149,7 @@ namespace prueba_login
             {
                 
                 var user = new referenciarecover();
-                var result = user.recovery(txtusuario.Text, txtcifrado.Text);
+                var result = user.recovery(txtusuario.Text);
                 lblresult.Text = result;
                 txtveri.Visible = true;
               
@@ -183,8 +183,7 @@ namespace prueba_login
 
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
-            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtpass.Text.ToString());
-            txtcifrado.Text = Hash(pass);
+           
         }
 
         private void txtcifrado_TextChanged(object sender, EventArgs e)
@@ -194,7 +193,6 @@ namespace prueba_login
 
         private void txtpass_Enter(object sender, EventArgs e)
         {
-            txtpass.UseSystemPasswordChar = true;
         }
 
         private void txtveri_TextChanged_1(object sender, EventArgs e)
@@ -215,12 +213,46 @@ namespace prueba_login
                 bool datos = registrouser.validarcod(codigo);
                 if (datos==true)
                 {
-                    txtveri.Clear();
-                    Form f = new contranueva();
-                    f.Show();
-                    this.Hide();
+                    panel2.Enabled = true;
                 }
             }
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            txpass.UseSystemPasswordChar = true;
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txpass.Text.ToString());
+            txpass.UseSystemPasswordChar = true;
+            txtcifrado.Text = Hash(pass);
+        }
+
+        private void textBox2_Enter(object sender, EventArgs e)
+        {
+            
+           
+        }
+
+        private void lblver_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            constructorpass upd = new constructorpass();
+            upd.pass = txtcifrado.Text;
+            upd.usuario = txtusuario.Text;
+            passcorreo.cambiar(upd);
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

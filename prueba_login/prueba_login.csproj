@@ -64,6 +64,7 @@
     <Compile Include="Controlador\constructorcliente.cs" />
     <Compile Include="Controlador\constructordetalle.cs" />
     <Compile Include="Controlador\constructorequip.cs" />
+    <Compile Include="Controlador\constructorpass.cs" />
     <Compile Include="Controlador\constructorpreguntas.cs" />
     <Compile Include="Controlador\constructorsistema.cs" />
     <Compile Include="Controlador\constructoruser.cs" />
@@ -72,11 +73,18 @@
     <Compile Include="Controlador\constructor_recuadmin.cs" />
     <Compile Include="Controlador\constructotlogin.cs" />
     <Compile Include="Modelo\funcionesordendetrabajo.cs" />
+    <Compile Include="Modelo\passcorreo.cs" />
     <Compile Include="ordentrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ordentrabajo.Designer.cs">
       <DependentUpon>ordentrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recu.Designer.cs">
+      <DependentUpon>Recu.cs</DependentUpon>
     </Compile>
     <Compile Include="splash.cs">
       <SubType>Form</SubType>

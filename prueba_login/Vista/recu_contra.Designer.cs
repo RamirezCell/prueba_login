@@ -39,14 +39,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtcifrado = new System.Windows.Forms.TextBox();
             this.txtveri = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtpass = new System.Windows.Forms.TextBox();
             this.lblresult = new System.Windows.Forms.Label();
             this.btnenviar = new System.Windows.Forms.Button();
             this.txtusuario = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txpass = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -59,7 +62,7 @@
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(636, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(949, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -107,9 +110,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtcifrado);
             this.panel1.Controls.Add(this.txtveri);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtpass);
             this.panel1.Controls.Add(this.lblresult);
             this.panel1.Controls.Add(this.btnenviar);
             this.panel1.Controls.Add(this.txtusuario);
@@ -144,11 +145,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(229, 323);
+            this.button1.Location = new System.Drawing.Point(222, 323);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 30);
+            this.button1.Size = new System.Drawing.Size(156, 30);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Verificar codigo";
+            this.button1.Text = "VERIFICAR CODIGO";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -164,7 +165,7 @@
             // 
             // txtcifrado
             // 
-            this.txtcifrado.Location = new System.Drawing.Point(3, 333);
+            this.txtcifrado.Location = new System.Drawing.Point(31, 329);
             this.txtcifrado.Name = "txtcifrado";
             this.txtcifrado.Size = new System.Drawing.Size(100, 20);
             this.txtcifrado.TabIndex = 4;
@@ -181,18 +182,7 @@
             this.txtveri.Name = "txtveri";
             this.txtveri.Size = new System.Drawing.Size(308, 17);
             this.txtveri.TabIndex = 10;
-            this.txtveri.Visible = false;
             this.txtveri.TextChanged += new System.EventHandler(this.txtveri_TextChanged_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(144, 87);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 16);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Contraseña";
             // 
             // label1
             // 
@@ -203,19 +193,6 @@
             this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Usuario";
-            // 
-            // txtpass
-            // 
-            this.txtpass.BackColor = System.Drawing.Color.Black;
-            this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtpass.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpass.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtpass.Location = new System.Drawing.Point(147, 109);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(308, 17);
-            this.txtpass.TabIndex = 6;
-            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
-            this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
             // 
             // lblresult
             // 
@@ -237,7 +214,7 @@
             this.btnenviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnenviar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnenviar.ForeColor = System.Drawing.Color.White;
-            this.btnenviar.Location = new System.Drawing.Point(173, 149);
+            this.btnenviar.Location = new System.Drawing.Point(173, 131);
             this.btnenviar.Name = "btnenviar";
             this.btnenviar.Size = new System.Drawing.Size(259, 30);
             this.btnenviar.TabIndex = 2;
@@ -260,12 +237,65 @@
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             this.txtusuario.Leave += new System.EventHandler(this.txtusuario_Leave);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gold;
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.txpass);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Enabled = false;
+            this.panel2.Location = new System.Drawing.Point(628, 52);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(299, 370);
+            this.panel2.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(101, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 16);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Nueva contraseña";
+            // 
+            // txpass
+            // 
+            this.txpass.BackColor = System.Drawing.Color.Black;
+            this.txpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txpass.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txpass.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txpass.Location = new System.Drawing.Point(22, 158);
+            this.txpass.Name = "txpass";
+            this.txpass.Size = new System.Drawing.Size(263, 17);
+            this.txpass.TabIndex = 12;
+            this.txpass.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txpass.Enter += new System.EventHandler(this.textBox1_Enter);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(104, 295);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 30);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "ACTUALIZAR";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // recu_contra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(636, 450);
+            this.ClientSize = new System.Drawing.Size(949, 450);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -279,6 +309,8 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,12 +327,14 @@
         private System.Windows.Forms.Button btnenviar;
         private System.Windows.Forms.Button btnregresar;
         private System.Windows.Forms.Label lblresult;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.TextBox txtcifrado;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtveri;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txpass;
+        private System.Windows.Forms.Label label3;
     }
 }

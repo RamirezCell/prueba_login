@@ -271,9 +271,7 @@ namespace prueba_login
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form user = new primerusouser();
-            user.Show();
-            this.Hide();
+           
         }
     }
 }

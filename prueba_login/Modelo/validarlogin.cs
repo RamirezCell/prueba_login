@@ -129,17 +129,17 @@ namespace prueba_login.Modelo
             }
         }
 
-        public static string recover(string pedidouser,string pass)
+        public static string recover(string pedidouser)
         {
             
             Random rdn = new Random();
             int a = rdn.Next(1000, 9000);
             a.ToString();
 
-            string query = "SELECT * FROM usuarios WHERE binary usuario=?user AND binary clave=?clave";
+            string query = "SELECT * FROM usuarios WHERE binary usuario=?user";
             MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
             cmdselect.Parameters.AddWithValue("user", pedidouser);
-            cmdselect.Parameters.AddWithValue("clave", pass);
+       
             cmdselect.CommandType = CommandType.Text;
             
 
