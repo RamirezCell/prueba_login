@@ -157,5 +157,10 @@ namespace prueba_login
         {
             AbrirFormulario<controlcalidad>();
         }
+
+        private void btnorden_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<ordentrabajo>();
+        }
     }
 }

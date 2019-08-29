@@ -118,7 +118,7 @@
             this.panelSecundario.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSecundario.Location = new System.Drawing.Point(0, 25);
             this.panelSecundario.Name = "panelSecundario";
-            this.panelSecundario.Size = new System.Drawing.Size(264, 550);
+            this.panelSecundario.Size = new System.Drawing.Size(264, 675);
             this.panelSecundario.TabIndex = 1;
             this.panelSecundario.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -156,6 +156,7 @@
             this.btnorden.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnorden.Textcolor = System.Drawing.Color.Black;
             this.btnorden.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnorden.Click += new System.EventHandler(this.btnorden_Click);
             // 
             // btnregistro
             // 
@@ -236,7 +237,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(264, 550);
+            this.shapeContainer1.Size = new System.Drawing.Size(264, 675);
             this.shapeContainer1.TabIndex = 13;
             this.shapeContainer1.TabStop = false;
             // 
@@ -256,7 +257,7 @@
             this.panelContenedor2.ForeColor = System.Drawing.Color.Transparent;
             this.panelContenedor2.Location = new System.Drawing.Point(264, 25);
             this.panelContenedor2.Name = "panelContenedor2";
-            this.panelContenedor2.Size = new System.Drawing.Size(838, 550);
+            this.panelContenedor2.Size = new System.Drawing.Size(838, 675);
             this.panelContenedor2.TabIndex = 2;
             this.panelContenedor2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor2_Paint);
             // 
@@ -264,7 +265,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 575);
+            this.ClientSize = new System.Drawing.Size(1102, 700);
             this.Controls.Add(this.panelContenedor2);
             this.Controls.Add(this.panelSecundario);
             this.Controls.Add(this.toolStrip1);

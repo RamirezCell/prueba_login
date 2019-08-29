@@ -16,5 +16,25 @@ namespace prueba_login
         {
             InitializeComponent();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ordentrabajo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

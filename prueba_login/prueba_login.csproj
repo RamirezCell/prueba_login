@@ -54,12 +54,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="contranueva.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="contranueva.Designer.cs">
-      <DependentUpon>contranueva.cs</DependentUpon>
-    </Compile>
     <Compile Include="Controlador\conexion.cs" />
     <Compile Include="Controlador\constructorcliente.cs" />
     <Compile Include="Controlador\constructordetalle.cs" />
@@ -70,10 +64,12 @@
     <Compile Include="Controlador\constructoruser.cs" />
     <Compile Include="Controlador\constructorvehiculo.cs" />
     <Compile Include="Controlador\constructorverorden.cs" />
+    <Compile Include="Controlador\constructor_ordentrabajo.cs" />
     <Compile Include="Controlador\constructor_recuadmin.cs" />
     <Compile Include="Controlador\constructor_recuinterno.cs" />
     <Compile Include="Controlador\constructotlogin.cs" />
     <Compile Include="Modelo\funcionesordendetrabajo.cs" />
+    <Compile Include="Modelo\funciones_ordendetrabajo.cs" />
     <Compile Include="Modelo\funciones_recu_interno.cs" />
     <Compile Include="Modelo\passcorreo.cs" />
     <Compile Include="ordentrabajo.cs">
@@ -82,10 +78,16 @@
     <Compile Include="ordentrabajo.Designer.cs">
       <DependentUpon>ordentrabajo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Recu.cs">
+    <Compile Include="primerusocualquiera.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recu.Designer.cs">
+    <Compile Include="primerusocualquiera.Designer.cs">
+      <DependentUpon>primerusocualquiera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Recu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Recu.Designer.cs">
       <DependentUpon>Recu.cs</DependentUpon>
     </Compile>
     <Compile Include="splash.cs">
@@ -94,10 +96,10 @@
     <Compile Include="splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
-    <Compile Include="torre.cs">
+    <Compile Include="Vista\torre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="torre.Designer.cs">
+    <Compile Include="Vista\torre.Designer.cs">
       <DependentUpon>torre.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\verordenes.cs">
@@ -230,19 +232,19 @@
     <Compile Include="Vista\recu_contra.Designer.cs">
       <DependentUpon>recu_contra.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="contranueva.resx">
-      <DependentUpon>contranueva.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ordentrabajo.resx">
       <DependentUpon>ordentrabajo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Recu.resx">
+    <EmbeddedResource Include="primerusocualquiera.resx">
+      <DependentUpon>primerusocualquiera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Recu.resx">
       <DependentUpon>Recu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="torre.resx">
+    <EmbeddedResource Include="Vista\torre.resx">
       <DependentUpon>torre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\verordenes.resx">
