@@ -273,5 +273,12 @@ namespace prueba_login
         {
            
         }
+
+        private void btnrecuperacion_Click(object sender, EventArgs e)
+        {
+            Form frm = new Recu();
+            frm.Show();
+           
+        }
     }
 }

@@ -71,8 +71,10 @@
     <Compile Include="Controlador\constructorvehiculo.cs" />
     <Compile Include="Controlador\constructorverorden.cs" />
     <Compile Include="Controlador\constructor_recuadmin.cs" />
+    <Compile Include="Controlador\constructor_recuinterno.cs" />
     <Compile Include="Controlador\constructotlogin.cs" />
     <Compile Include="Modelo\funcionesordendetrabajo.cs" />
+    <Compile Include="Modelo\funciones_recu_interno.cs" />
     <Compile Include="Modelo\passcorreo.cs" />
     <Compile Include="ordentrabajo.cs">
       <SubType>Form</SubType>
@@ -233,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ordentrabajo.resx">
       <DependentUpon>ordentrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recu.resx">
+      <DependentUpon>Recu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="splash.resx">
       <DependentUpon>splash.cs</DependentUpon>

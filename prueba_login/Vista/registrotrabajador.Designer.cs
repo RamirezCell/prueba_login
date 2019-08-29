@@ -638,6 +638,7 @@
             this.btnrecuperacion.TabIndex = 18;
             this.btnrecuperacion.Text = "Recuperacion de contraseña";
             this.btnrecuperacion.UseVisualStyleBackColor = false;
+            this.btnrecuperacion.Click += new System.EventHandler(this.btnrecuperacion_Click);
             // 
             // registrotrabajador
             // 
