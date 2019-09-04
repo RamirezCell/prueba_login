@@ -95,11 +95,13 @@ namespace prueba_login
                 byte[] abyte = ms.ToArray();
                 string encoded = Convert.ToBase64String(abyte);
                 add.foto = encoded;
-                if (registrouser.registrar(add) >= 1)
+                if (registrouser.registraradmin(add) >= 1)
                 {
                     Form user = new YourOwnWorkshop();
                     user.Show();
                     this.Hide();
+
+                   
                     
                 }
 
@@ -163,12 +165,17 @@ namespace prueba_login
 
         private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            caracter(e);
+            
         }
 
         private void txtpass_Enter(object sender, EventArgs e)
         {
             txtpass.UseSystemPasswordChar = true;
+        }
+
+        private void txtcorreo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

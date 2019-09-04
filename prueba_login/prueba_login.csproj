@@ -54,7 +54,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aseguradora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aseguradora.Designer.cs">
+      <DependentUpon>Aseguradora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controlador\conexion.cs" />
+    <Compile Include="Controlador\constructoraseguradora.cs" />
     <Compile Include="Controlador\constructorcliente.cs" />
     <Compile Include="Controlador\constructordetalle.cs" />
     <Compile Include="Controlador\constructorequip.cs" />
@@ -68,6 +75,7 @@
     <Compile Include="Controlador\constructor_recuadmin.cs" />
     <Compile Include="Controlador\constructor_recuinterno.cs" />
     <Compile Include="Controlador\constructotlogin.cs" />
+    <Compile Include="Modelo\funcionesaseguradora.cs" />
     <Compile Include="Modelo\funcionesordendetrabajo.cs" />
     <Compile Include="Modelo\funciones_ordendetrabajo.cs" />
     <Compile Include="Modelo\funciones_recu_interno.cs" />
@@ -77,12 +85,6 @@
     </Compile>
     <Compile Include="ordentrabajo.Designer.cs">
       <DependentUpon>ordentrabajo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="primerusocualquiera.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="primerusocualquiera.Designer.cs">
-      <DependentUpon>primerusocualquiera.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Recu.cs">
       <SubType>Form</SubType>
@@ -232,11 +234,11 @@
     <Compile Include="Vista\recu_contra.Designer.cs">
       <DependentUpon>recu_contra.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Aseguradora.resx">
+      <DependentUpon>Aseguradora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ordentrabajo.resx">
       <DependentUpon>ordentrabajo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="primerusocualquiera.resx">
-      <DependentUpon>primerusocualquiera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Recu.resx">
       <DependentUpon>Recu.cs</DependentUpon>
@@ -345,7 +347,12 @@
   <ItemGroup>
     <None Include="Resources\eye2.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Sistema de facturacion YOW\Sistema de facturacion YOW\Sistema de facturacion YOW.csproj">
+      <Project>{ce574879-6688-4dba-8762-0e5e674e930a}</Project>
+      <Name>Sistema de facturacion YOW</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\004-mobile-phone.png" />
   </ItemGroup>

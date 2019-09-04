@@ -17,10 +17,7 @@ namespace prueba_login
         public registroauto()
         {
             InitializeComponent();
-            txtmarca.ContextMenu = new ContextMenu();
-            txtmodelo.ContextMenu = new ContextMenu();
-            txtanio.ContextMenu = new ContextMenu();
-            txttipovehiculo.ContextMenu = new ContextMenu();
+            
         }
 
         public void caracter(KeyPressEventArgs e)
@@ -32,24 +29,14 @@ namespace prueba_login
 
         public void agregar()
         {
-            add.nombre_vehiculo = txtmarca.Text;
-            add.modelo = txtmodelo.Text;
-            add.tipo_auto = txttipovehiculo.Text;
-            add.year = Convert.ToInt32(txtanio.Text);
-            int datos = funcionesvehiculo.agregar(add);
+            
             
         }
 
         constructorvehiculo actualizar = new constructorvehiculo();
         private void upd()
         {
-            actualizar.id_vehiculo = int.Parse(txtIdvehiculo.Text);
-            actualizar.nombre_vehiculo = txtmarca.Text;
-            actualizar.modelo = txtmodelo.Text;
-            actualizar.year = int.Parse(    txtanio.Text);
-            actualizar.tipo_auto = txttipovehiculo.Text;
-            funcionesvehiculo.actualizar(actualizar);
-
+           
 
         }
 
@@ -68,6 +55,8 @@ namespace prueba_login
         {
 
         }
+
+
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -102,11 +91,11 @@ namespace prueba_login
             int posicion;
             posicion = this.dgvvehiculos.CurrentRow.Index;
           
-            txtIdvehiculo.Text = dgvvehiculos[0, posicion].Value.ToString();
-            txtmarca.Text = dgvvehiculos[1, posicion].Value.ToString();
-            txtmodelo.Text = dgvvehiculos[2, posicion].Value.ToString();
-            txtanio.Text = dgvvehiculos[3, posicion].Value.ToString();
-            txttipovehiculo.Text = dgvvehiculos[4, posicion].Value.ToString();
+            //txtIdvehiculo.Text = dgvvehiculos[0, posicion].Value.ToString();
+            //txtmarca.Text = dgvvehiculos[1, posicion].Value.ToString();
+            //txtmodelo.Text = dgvvehiculos[2, posicion].Value.ToString();
+            //txtanio.Text = dgvvehiculos[3, posicion].Value.ToString();
+            //txttipovehiculo.Text = dgvvehiculos[4, posicion].Value.ToString();
           
             btnregistrar.Enabled = false;
             btnupdate.Enabled = true;
@@ -124,10 +113,7 @@ namespace prueba_login
         }
         public void limpiar()
         {
-            txttipovehiculo.Clear();
-            txtmodelo.Clear();
-            txtmarca.Clear();
-            txtanio.Clear();
+           
             txtIdvehiculo.Clear();
 
         }

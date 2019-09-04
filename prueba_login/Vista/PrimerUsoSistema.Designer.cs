@@ -34,7 +34,6 @@
             this.txtname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtit = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtreplegal = new System.Windows.Forms.TextBox();
             this.pctlogo = new System.Windows.Forms.PictureBox();
@@ -50,6 +49,7 @@
             this.btnex = new System.Windows.Forms.Button();
             this.btnguadar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtit = new System.Windows.Forms.MaskedTextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).BeginInit();
             this.SuspendLayout();
@@ -107,15 +107,6 @@
             this.label2.Size = new System.Drawing.Size(218, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Numero de Identificacion Tributaria";
-            // 
-            // txtit
-            // 
-            this.txtit.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtit.Location = new System.Drawing.Point(93, 205);
-            this.txtit.Name = "txtit";
-            this.txtit.Size = new System.Drawing.Size(237, 22);
-            this.txtit.TabIndex = 2;
-            this.txtit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtit_KeyPress);
             // 
             // label3
             // 
@@ -271,12 +262,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // txtit
+            // 
+            this.txtit.Location = new System.Drawing.Point(93, 207);
+            this.txtit.Mask = "0000-00000000-000-0";
+            this.txtit.Name = "txtit";
+            this.txtit.Size = new System.Drawing.Size(237, 20);
+            this.txtit.TabIndex = 17;
+            // 
             // PrimerUsoSistema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(899, 480);
+            this.Controls.Add(this.txtit);
             this.Controls.Add(this.btnguadar);
             this.Controls.Add(this.btnex);
             this.Controls.Add(this.label9);
@@ -291,7 +291,6 @@
             this.Controls.Add(this.pctlogo);
             this.Controls.Add(this.txtreplegal);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtname);
@@ -317,7 +316,6 @@
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtreplegal;
         private System.Windows.Forms.PictureBox pctlogo;
@@ -333,5 +331,6 @@
         private System.Windows.Forms.Button btnex;
         private System.Windows.Forms.Button btnguadar;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.MaskedTextBox txtit;
     }
 }

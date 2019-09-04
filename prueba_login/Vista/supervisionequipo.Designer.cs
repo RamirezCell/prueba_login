@@ -43,7 +43,7 @@
             this.dgtmaterial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgtmaterial.Location = new System.Drawing.Point(50, 107);
             this.dgtmaterial.Name = "dgtmaterial";
-            this.dgtmaterial.Size = new System.Drawing.Size(734, 428);
+            this.dgtmaterial.Size = new System.Drawing.Size(912, 546);
             this.dgtmaterial.TabIndex = 0;
             // 
             // btnenviar
@@ -68,7 +68,7 @@
             this.btnenviar.IconVisible = true;
             this.btnenviar.IconZoom = 90D;
             this.btnenviar.IsTab = false;
-            this.btnenviar.Location = new System.Drawing.Point(337, 34);
+            this.btnenviar.Location = new System.Drawing.Point(426, 34);
             this.btnenviar.Name = "btnenviar";
             this.btnenviar.Normalcolor = System.Drawing.Color.Gold;
             this.btnenviar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -87,7 +87,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(838, 575);
+            this.ClientSize = new System.Drawing.Size(1016, 693);
             this.Controls.Add(this.btnenviar);
             this.Controls.Add(this.dgtmaterial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

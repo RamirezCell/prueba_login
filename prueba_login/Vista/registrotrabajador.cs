@@ -87,31 +87,33 @@ namespace prueba_login
 
             cmbestado.ValueMember = "id_estado";
             cmbestado.DisplayMember = "estado";
-            dgvcliente.DataSource = registrouser.usuarios();
+            dgvuser.DataSource = registrouser.usuarios();
             cmboc.ValueMember = "id_ocupacion";
             cmboc.DisplayMember = "ocupacion";
-            this.dgvcliente.Columns[0].Visible = false;
+            this.dgvuser.Columns[0].Visible = false;
+            btneliminar.Enabled = false;
+            btnupdate.Enabled = true;
 
 
         }
         constructoruser upd = new constructoruser();
-        //public void update()
-        //{
+        public void update()
+        {
 
-        //    upd.nombre = txtnombre.Text;
-        //    upd.apellido = txtapellido.Text;
-        //    upd.direccion = txtDireccion.Text;
-        //    upd.ocupacion = Convert.ToInt32(cmboc.SelectedValue);
-        //    upd.genero = Convert.ToInt32(cmbgender.SelectedValue);
-        //    upd.estado = Convert.ToInt32(cmbestado.SelectedValue);
+            upd.nombre = txtnombre.Text;
+            upd.apellido = txtapellido.Text;
+            upd.direccion = txtDireccion.Text;
+            upd.ocupacion = Convert.ToInt32(cmboc.SelectedValue);
+            upd.genero = Convert.ToInt32(cmbgender.SelectedValue);
+            upd.estado = Convert.ToInt32(cmbestado.SelectedValue);
 
-        //    upd.telefono = txtnum.Text;
-        //    upd.dui = txtdui.Text;
-        //    upd.correo = txtcorreo.Text;
-        //    upd.id_usuario = Convert.ToInt16(txtId.Text);
-        //    registrouser.actualizar(upd);
+            upd.telefono = txtnum.Text;
+            upd.dui = txtdui.Text;
+            upd.correo = txtcorreo.Text;
+            upd.id_usuario = Convert.ToInt16(txtId.Text);
+            registrouser.actualizar(upd);
 
-        //}
+        }
 
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
@@ -145,38 +147,39 @@ namespace prueba_login
 
         private void btnmostrar_Click(object sender, EventArgs e)
         {
-            dgvcliente.DataSource = registrouser.usuarios();
+            dgvuser.DataSource = registrouser.usuarios();
         }
 
         private void dgvcliente_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int posicion = this.dgvcliente.CurrentRow.Index;
-            txtnombre.Text = dgvcliente[1, posicion].Value.ToString();
-            txtId.Text = dgvcliente[0, posicion].Value.ToString();
-            txtapellido.Text = dgvcliente[2, posicion].Value.ToString();
-            txtdui.Text = dgvcliente[3, posicion].Value.ToString();
-            txtDireccion.Text = dgvcliente[4, posicion].Value.ToString();
-            txtnum.Text = dgvcliente[5, posicion].Value.ToString();
-            txtuser.Text = dgvcliente[6, posicion].Value.ToString();
-            txtpass.Text = dgvcliente[7, posicion].Value.ToString();
-            cmbestado.Text = dgvcliente[8, posicion].Value.ToString();
-            cmbgender.Text = dgvcliente[9, posicion].Value.ToString();
-            cmboc.Text = dgvcliente[10, posicion].Value.ToString();
+            int posicion = this.dgvuser.CurrentRow.Index;
+            txtnombre.Text = dgvuser[1, posicion].Value.ToString();
+            txtId.Text = dgvuser[0, posicion].Value.ToString();
+            txtapellido.Text = dgvuser[2, posicion].Value.ToString();
+            txtdui.Text = dgvuser[3, posicion].Value.ToString();
+            txtDireccion.Text = dgvuser[4, posicion].Value.ToString();
+            txtnum.Text = dgvuser[5, posicion].Value.ToString();
+            txtuser.Text = dgvuser[6, posicion].Value.ToString();
+            txtpass.Text = dgvuser[7, posicion].Value.ToString();
+            cmbestado.Text = dgvuser[8, posicion].Value.ToString();
+            cmbgender.Text = dgvuser[9, posicion].Value.ToString();
+            cmboc.Text = dgvuser[10, posicion].Value.ToString();
 
        
-            txtint.Text = dgvcliente[11, posicion].Value.ToString();
-            txtcorreo.Text = dgvcliente[12, posicion].Value.ToString();
+            txtint.Text = dgvuser[11, posicion].Value.ToString();
+            txtcorreo.Text = dgvuser[12, posicion].Value.ToString();
 
             txtpass.Enabled = false;
             txtuser.Enabled = false;
             btnupdate.Enabled = true;
             btneliminar.Enabled = true;
+            btnregistrar.Enabled = false;
             txtint.Enabled = false;
         }
 
         private void btnupdate_Click(object sender, EventArgs e)
         {
-            //update();
+            update();
             limpiar();
             btnregistrar.Enabled = true;
         }
@@ -200,13 +203,13 @@ namespace prueba_login
         {
             if (txtfiltrar.Text != "")
             {
-                dgvcliente.CurrentCell = null;
-                foreach(DataGridViewRow r in dgvcliente.Rows)
+                dgvuser.CurrentCell = null;
+                foreach(DataGridViewRow r in dgvuser.Rows)
                 {
                     r.Visible = false;
                     
                 }
-                foreach(DataGridViewRow r in dgvcliente.Rows)
+                foreach(DataGridViewRow r in dgvuser.Rows)
                 {
                     foreach(DataGridViewCell c in r.Cells)
                     {
@@ -220,7 +223,7 @@ namespace prueba_login
             }
             else
             {
-                dgvcliente.DataSource = funcionescliente.mostrar();
+                dgvuser.DataSource = registrouser.usuarios();
             }
         }
 
@@ -251,7 +254,7 @@ namespace prueba_login
 
         private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            caracter(e);
+            
         }
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
@@ -279,6 +282,16 @@ namespace prueba_login
             Form frm = new Recu();
             frm.Show();
            
+        }
+
+        private void txtfiltrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcorreo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,6 +15,48 @@ namespace prueba_login.Modelo
     class registrouser
 
     {
+        public static int registraradmin(constructoruser add)
+        {
+            int retorno = 0;
+            try
+            {
+                
+
+
+                string query = "SELECT * FROM usuarios WHERE dui_user=?dui";
+                MySqlCommand select = new MySqlCommand(query, conexion.obtenerconexion());
+                select.Parameters.Add(new MySqlParameter("dui", add.dui));
+                retorno = Convert.ToInt16(select.ExecuteScalar());
+                if (retorno >= 1)
+                {
+                    MessageBox.Show("Existe un perfil con las mismas credenciales", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`,`nacimiento`, `pregunta1`, `pregunta2`, `pregunta3`,`foto`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}','{15}','{16}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, add.clave, add.estado, add.genero, add.ocupacion, add.intentos, add.correo, add.fecha, add.pregunta1, add.pregunta2, add.pregunta3, add.foto), conexion.obtenerconexion());
+                    retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
+                    if (retorno >= 1)
+                    {
+                        MessageBox.Show("Usuario ingresado correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario no ingresado ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                }
+                return retorno;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error en la base de datos" + e, "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            return retorno;
+
+
+        }
 
         public static bool validarcod(constructoruser cod)
         {
@@ -28,7 +70,7 @@ namespace prueba_login.Modelo
                 retorno = Convert.ToBoolean(cmdeselct.ExecuteScalar());
                 if (retorno == true)
                 {
-                    MessageBox.Show("Acceso concebido", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Acceso permitido", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -45,33 +87,33 @@ namespace prueba_login.Modelo
 
             }
         }
-        //public static bool actualizar(constructoruser upd)
-        //{
-        //    bool retorno = false;
-        //    try
-        //    {
-        //        MySqlCommand update = new MySqlCommand(string.Format());
-        //        retorno = Convert.ToBoolean(update.ExecuteNonQuery());
-        //        if (retorno == true)
-        //        {
-        //            MessageBox.Show("Datos actualizados correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        public static bool actualizar(constructoruser upd)
+        {
+            bool retorno = false;
+            try
+            {
+                MySqlCommand update = new MySqlCommand(string.Format("UPDATE `usuarios` SET `nombre_user` = '{0}', `apellido_user` = '{1}', `dui_user` = '{2}', `direccion` = '{3}', `tel_user` = '{4}', `genero` = '{5}', `ocupacion` = '{6}', `intentos` = '{7}', `correo_electronico` = '{8}', `nacimiento` = '{9}'WHERE `usuarios`.`id_usuario` = '{10}'",upd.nombre,upd.apellido,upd.dui,upd.direccion,upd.telefono,upd.genero,upd.ocupacion,upd.intentos,upd.correo,upd.fecha,upd.id_usuario),conexion.obtenerconexion());
+                retorno = Convert.ToBoolean(update.ExecuteNonQuery());
+                if (retorno == true)
+                {
+                    MessageBox.Show("Datos actualizados correctamente", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Datos no actualizados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Datos no actualizados", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-        //        }
-        //        return retorno;
-        //    }
-        //    catch (Exception e)
-        //    {
+                }
+                return retorno;
+            }
+            catch (Exception e)
+            {
 
 
-        //        MessageBox.Show("Ha ocurrido un problema" + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        return retorno;
-        //    }
-        //}
+                MessageBox.Show("Ha ocurrido un problema" + e, "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return retorno;
+            }
+        }
 
 
         public static bool eliminar(int id)
@@ -239,6 +281,7 @@ namespace prueba_login.Modelo
             int retorno = 0;
             try
             {
+              int primeruso= 0;
 
                 string query = "SELECT * FROM usuarios WHERE dui_user=?dui";
                 MySqlCommand select = new MySqlCommand(query, conexion.obtenerconexion());
@@ -250,7 +293,7 @@ namespace prueba_login.Modelo
                 }
                 else
                 {
-                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`,`nacimiento`, `pregunta1`, `pregunta2`, `pregunta3`,`foto`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}','{15}','{16}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, add.clave, add.estado, add.genero, add.ocupacion, add.intentos, add.correo,add.fecha, add.pregunta1, add.pregunta2, add.pregunta3,add.foto), conexion.obtenerconexion());
+                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`,`nacimiento`, `pregunta1`, `pregunta2`, `pregunta3`,`foto`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}','{15}','{16}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, add.clave, add.estado, add.genero, add.ocupacion, add.intentos, add.correo,add.fecha, add.pregunta1, add.pregunta2, add.pregunta3,add.foto,primeruso), conexion.obtenerconexion());
                     retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                     if (retorno >= 1)
                     {
@@ -272,7 +315,7 @@ namespace prueba_login.Modelo
             }return retorno;
             
           
-        }
+            }
 
 
     }

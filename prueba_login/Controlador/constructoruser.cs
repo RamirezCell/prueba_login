@@ -27,6 +27,7 @@ namespace prueba_login.Controlador
         public string foto { get; set; }
         public string cod { get; set; }
         public string pregunta3 { get; set; }
+        public int primeruso { get; set; }
         
         public constructoruser()
         {

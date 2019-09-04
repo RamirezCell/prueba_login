@@ -146,5 +146,10 @@ namespace prueba_login
         {
             AbrirFormulario<registroauto>();
         }
+
+        private void panelContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

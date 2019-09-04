@@ -233,6 +233,7 @@ namespace prueba_login
                 login.clave = txtcifrado.Text;
                 
                 
+                
 
 
 
@@ -245,12 +246,14 @@ namespace prueba_login
                         Form asesor = new Secretaria();
                         asesor.Show();
                         this.Hide();
+
                     }
                     else if (constructotlogin.nivel == 2)
                     {
                         Form trabajador = new Trabajador();
                         trabajador.Show();
                         this.Hide();
+
                     }
                     else if (constructotlogin.nivel == 3)
                     {
@@ -278,7 +281,12 @@ namespace prueba_login
                     }
 
 
-                    
+
+
+
+
+
+
                 }
             }
         }

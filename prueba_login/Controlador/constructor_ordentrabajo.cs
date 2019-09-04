@@ -12,17 +12,17 @@ namespace prueba_login.Controlador
         public int cliente { get; set; }
         public int usuario { get; set; }
         public string Fecha  { get; set; }
-        public string Placa { get; set; }
-        public string chasis { get; set; }
-        public string motor { get; set; }
-        public string kilometraje { get; set; }
-        public string objetos { get; set; }
+        public int Placa { get; set; }
+        public int chasis { get; set; }
+        public int motor { get; set; }
+        public double kilometraje { get; set; }
+        public int tipo_carro { get; set; }
         public string detalles { get; set; }
-        public string partefrontal { get; set; }
-        public string partetrasera { get; set; }
-        public string parteizquierda { get; set; }
-        public string partederecha { get; set; }
-        public string partearriba { get; set; }
+        public string foto1 { get; set; }
+        public string foto2 { get; set; }
+        public string foto3 { get; set; }
+        public string foto4 { get; set; }
+        public string foto5 { get; set; }
         public constructor_ordentrabajo() { }
     }
 }

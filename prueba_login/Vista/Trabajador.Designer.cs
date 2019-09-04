@@ -59,7 +59,7 @@
             this.BtnMinizar2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1102, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1280, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -128,7 +128,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.MaximumSize = new System.Drawing.Size(1720, 728);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(264, 550);
+            this.panel1.Size = new System.Drawing.Size(264, 695);
             this.panel1.TabIndex = 1;
             // 
             // btnsalir
@@ -242,7 +242,7 @@
             this.shapeContainer1.Name = "shapeContainer1";
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(264, 550);
+            this.shapeContainer1.Size = new System.Drawing.Size(264, 695);
             this.shapeContainer1.TabIndex = 3;
             this.shapeContainer1.TabStop = false;
             // 
@@ -261,14 +261,14 @@
             this.panelContenedor4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor4.Location = new System.Drawing.Point(264, 25);
             this.panelContenedor4.Name = "panelContenedor4";
-            this.panelContenedor4.Size = new System.Drawing.Size(838, 550);
+            this.panelContenedor4.Size = new System.Drawing.Size(1016, 695);
             this.panelContenedor4.TabIndex = 2;
             // 
             // Trabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1102, 575);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panelContenedor4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);

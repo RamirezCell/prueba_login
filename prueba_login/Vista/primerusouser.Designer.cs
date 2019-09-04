@@ -84,7 +84,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(899, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1016, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -164,7 +164,7 @@
             // txtdui
             // 
             this.txtdui.Location = new System.Drawing.Point(36, 210);
-            this.txtdui.Mask = "000000-0";
+            this.txtdui.Mask = "0000000-0";
             this.txtdui.Name = "txtdui";
             this.txtdui.Size = new System.Drawing.Size(182, 20);
             this.txtdui.TabIndex = 3;
@@ -331,6 +331,7 @@
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(182, 21);
             this.txtcorreo.TabIndex = 10;
+            this.txtcorreo.TextChanged += new System.EventHandler(this.txtcorreo_TextChanged);
             this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
             // 
             // dateTimePicker1
@@ -512,7 +513,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(899, 647);
+            this.ClientSize = new System.Drawing.Size(1016, 693);
             this.Controls.Add(this.txtxcifrado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label14);

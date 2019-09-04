@@ -333,7 +333,7 @@ namespace prueba_login
 
         private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
-            caracter(e);
+           
         }
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
@@ -342,6 +342,11 @@ namespace prueba_login
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcorreo_TextChanged(object sender, EventArgs e)
         {
 
         }

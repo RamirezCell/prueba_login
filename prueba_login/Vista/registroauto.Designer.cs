@@ -30,15 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registroauto));
             this.grpregistro = new System.Windows.Forms.GroupBox();
-            this.txttipovehiculo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label = new System.Windows.Forms.Label();
             this.txtIdvehiculo = new System.Windows.Forms.TextBox();
-            this.txtanio = new System.Windows.Forms.TextBox();
-            this.txtmodelo = new System.Windows.Forms.TextBox();
-            this.txtmarca = new System.Windows.Forms.TextBox();
             this.btnupdate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -49,6 +45,10 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.txtFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.grpregistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvehiculos)).BeginInit();
             this.toolStrip2.SuspendLayout();
@@ -58,54 +58,39 @@
             // 
             this.grpregistro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpregistro.Controls.Add(this.txttipovehiculo);
+            this.grpregistro.Controls.Add(this.comboBox4);
+            this.grpregistro.Controls.Add(this.comboBox3);
+            this.grpregistro.Controls.Add(this.comboBox2);
+            this.grpregistro.Controls.Add(this.comboBox1);
             this.grpregistro.Controls.Add(this.label6);
             this.grpregistro.Controls.Add(this.label5);
             this.grpregistro.Controls.Add(this.label3);
             this.grpregistro.Controls.Add(this.label);
             this.grpregistro.Controls.Add(this.txtIdvehiculo);
-            this.grpregistro.Controls.Add(this.txtanio);
-            this.grpregistro.Controls.Add(this.txtmodelo);
-            this.grpregistro.Controls.Add(this.txtmarca);
             this.grpregistro.Location = new System.Drawing.Point(21, 49);
             this.grpregistro.Name = "grpregistro";
-            this.grpregistro.Size = new System.Drawing.Size(779, 220);
+            this.grpregistro.Size = new System.Drawing.Size(973, 220);
             this.grpregistro.TabIndex = 1;
             this.grpregistro.TabStop = false;
             this.grpregistro.Enter += new System.EventHandler(this.grpregistro_Enter);
             // 
-            // txttipovehiculo
-            // 
-            this.txttipovehiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txttipovehiculo.BackColor = System.Drawing.Color.White;
-            this.txttipovehiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txttipovehiculo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttipovehiculo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txttipovehiculo.Location = new System.Drawing.Point(428, 162);
-            this.txttipovehiculo.Name = "txttipovehiculo";
-            this.txttipovehiculo.Size = new System.Drawing.Size(225, 19);
-            this.txttipovehiculo.TabIndex = 4;
-            this.txttipovehiculo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttipovehiculo_KeyPress);
-            // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(207, 126);
+            this.label6.Location = new System.Drawing.Point(47, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 20);
+            this.label6.Size = new System.Drawing.Size(134, 20);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Año";
+            this.label6.Text = "Año del vehiculo";
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(483, 126);
+            this.label5.Location = new System.Drawing.Point(301, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 20);
             this.label5.TabIndex = 13;
@@ -113,76 +98,34 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(504, 32);
+            this.label3.Location = new System.Drawing.Point(301, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 20);
+            this.label3.Size = new System.Drawing.Size(159, 20);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Modelo";
+            this.label3.Text = "Modelo de vehiculo";
             // 
             // label
             // 
-            this.label.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label.Location = new System.Drawing.Point(198, 32);
+            this.label.Location = new System.Drawing.Point(47, 52);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(59, 20);
+            this.label.Size = new System.Drawing.Size(151, 20);
             this.label.TabIndex = 10;
-            this.label.Text = "Marca";
+            this.label.Text = "Marca de vehiculo";
             this.label.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtIdvehiculo
             // 
-            this.txtIdvehiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtIdvehiculo.Location = new System.Drawing.Point(657, 109);
+            this.txtIdvehiculo.Location = new System.Drawing.Point(51, 29);
             this.txtIdvehiculo.Name = "txtIdvehiculo";
             this.txtIdvehiculo.Size = new System.Drawing.Size(100, 20);
             this.txtIdvehiculo.TabIndex = 8;
             this.txtIdvehiculo.Visible = false;
-            // 
-            // txtanio
-            // 
-            this.txtanio.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtanio.BackColor = System.Drawing.Color.White;
-            this.txtanio.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtanio.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtanio.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtanio.Location = new System.Drawing.Point(122, 162);
-            this.txtanio.Name = "txtanio";
-            this.txtanio.Size = new System.Drawing.Size(225, 19);
-            this.txtanio.TabIndex = 3;
-            this.txtanio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtanio_KeyPress);
-            // 
-            // txtmodelo
-            // 
-            this.txtmodelo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtmodelo.BackColor = System.Drawing.Color.White;
-            this.txtmodelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtmodelo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmodelo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtmodelo.Location = new System.Drawing.Point(428, 64);
-            this.txtmodelo.Name = "txtmodelo";
-            this.txtmodelo.Size = new System.Drawing.Size(228, 19);
-            this.txtmodelo.TabIndex = 2;
-            this.txtmodelo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmodelo_KeyPress);
-            // 
-            // txtmarca
-            // 
-            this.txtmarca.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtmarca.BackColor = System.Drawing.Color.White;
-            this.txtmarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtmarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmarca.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtmarca.Location = new System.Drawing.Point(119, 64);
-            this.txtmarca.Name = "txtmarca";
-            this.txtmarca.Size = new System.Drawing.Size(228, 19);
-            this.txtmarca.TabIndex = 1;
-            this.txtmarca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmarca_KeyPress);
             // 
             // btnupdate
             // 
@@ -206,7 +149,7 @@
             this.btnupdate.IconVisible = true;
             this.btnupdate.IconZoom = 90D;
             this.btnupdate.IsTab = false;
-            this.btnupdate.Location = new System.Drawing.Point(419, 285);
+            this.btnupdate.Location = new System.Drawing.Point(516, 285);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Normalcolor = System.Drawing.Color.Gold;
             this.btnupdate.OnHovercolor = System.Drawing.Color.DimGray;
@@ -242,7 +185,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(220, 285);
+            this.btnmostrar.Location = new System.Drawing.Point(317, 285);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Gold;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -278,7 +221,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(618, 285);
+            this.btneliminar.Location = new System.Drawing.Point(715, 285);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Gold;
             this.btneliminar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -314,7 +257,7 @@
             this.btnregistrar.IconVisible = true;
             this.btnregistrar.IconZoom = 90D;
             this.btnregistrar.IsTab = false;
-            this.btnregistrar.Location = new System.Drawing.Point(21, 285);
+            this.btnregistrar.Location = new System.Drawing.Point(118, 285);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Normalcolor = System.Drawing.Color.Gold;
             this.btnregistrar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -340,7 +283,7 @@
             this.dgvvehiculos.Location = new System.Drawing.Point(8, 347);
             this.dgvvehiculos.Name = "dgvvehiculos";
             this.dgvvehiculos.ReadOnly = true;
-            this.dgvvehiculos.Size = new System.Drawing.Size(802, 181);
+            this.dgvvehiculos.Size = new System.Drawing.Size(996, 342);
             this.dgvvehiculos.TabIndex = 15;
             this.dgvvehiculos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvvehiculos_CellClick);
             // 
@@ -357,7 +300,7 @@
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip2.Size = new System.Drawing.Size(822, 36);
+            this.toolStrip2.Size = new System.Drawing.Size(1016, 36);
             this.toolStrip2.TabIndex = 16;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -393,12 +336,52 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(41, 33);
             this.toolStripLabel1.Text = "Filtrar";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(51, 76);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(204, 24);
+            this.comboBox1.TabIndex = 15;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(305, 75);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(211, 24);
+            this.comboBox2.TabIndex = 16;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(51, 148);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(204, 24);
+            this.comboBox3.TabIndex = 17;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(305, 148);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(211, 24);
+            this.comboBox4.TabIndex = 18;
+            // 
             // registroauto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(822, 534);
+            this.ClientSize = new System.Drawing.Size(1016, 695);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.dgvvehiculos);
             this.Controls.Add(this.btnupdate);
@@ -427,10 +410,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.TextBox txtIdvehiculo;
-        private System.Windows.Forms.TextBox txtanio;
-        private System.Windows.Forms.TextBox txtmodelo;
-        private System.Windows.Forms.TextBox txtmarca;
-        private System.Windows.Forms.TextBox txttipovehiculo;
         private Bunifu.Framework.UI.BunifuFlatButton btnupdate;
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
@@ -441,5 +420,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox txtFiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -169,5 +169,10 @@ namespace prueba_login
         {
 
         }
+
+        private void Secretaria_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

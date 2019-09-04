@@ -51,7 +51,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(838, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1016, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -73,7 +73,7 @@
             this.txtdes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtdes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtdes.Location = new System.Drawing.Point(121, 75);
+            this.txtdes.Location = new System.Drawing.Point(210, 75);
             this.txtdes.Multiline = true;
             this.txtdes.Name = "txtdes";
             this.txtdes.Size = new System.Drawing.Size(601, 132);
@@ -86,7 +86,7 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(131, 45);
+            this.label1.Location = new System.Drawing.Point(225, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(151, 16);
             this.label1.TabIndex = 8;
@@ -98,7 +98,7 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(131, 259);
+            this.label2.Location = new System.Drawing.Point(240, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 16);
             this.label2.TabIndex = 10;
@@ -111,7 +111,7 @@
             this.txtdet.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtdet.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdet.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtdet.Location = new System.Drawing.Point(121, 289);
+            this.txtdet.Location = new System.Drawing.Point(210, 289);
             this.txtdet.Multiline = true;
             this.txtdet.Name = "txtdet";
             this.txtdet.Size = new System.Drawing.Size(601, 132);
@@ -177,7 +177,7 @@
             this.btnenviar.IconVisible = true;
             this.btnenviar.IconZoom = 90D;
             this.btnenviar.IsTab = false;
-            this.btnenviar.Location = new System.Drawing.Point(540, 457);
+            this.btnenviar.Location = new System.Drawing.Point(629, 457);
             this.btnenviar.Name = "btnenviar";
             this.btnenviar.Normalcolor = System.Drawing.Color.Gold;
             this.btnenviar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -196,7 +196,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(838, 550);
+            this.ClientSize = new System.Drawing.Size(1016, 693);
             this.Controls.Add(this.btnenviar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.rbsi);

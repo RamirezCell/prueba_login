@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.705
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prueba_login", "prueba_login\prueba_login.csproj", "{33067920-F053-436B-9BD1-D5F5D5370CF1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema de facturacion YOW", "..\..\Sistema de facturacion YOW\Sistema de facturacion YOW\Sistema de facturacion YOW.csproj", "{CE574879-6688-4DBA-8762-0E5E674E930A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{33067920-F053-436B-9BD1-D5F5D5370CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33067920-F053-436B-9BD1-D5F5D5370CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33067920-F053-436B-9BD1-D5F5D5370CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE574879-6688-4DBA-8762-0E5E674E930A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE574879-6688-4DBA-8762-0E5E674E930A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE574879-6688-4DBA-8762-0E5E674E930A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE574879-6688-4DBA-8762-0E5E674E930A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
