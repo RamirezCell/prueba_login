@@ -86,6 +86,12 @@
     <Compile Include="ordentrabajo.Designer.cs">
       <DependentUpon>ordentrabajo.cs</DependentUpon>
     </Compile>
+    <Compile Include="primerusocualquiera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="primerusocualquiera.Designer.cs">
+      <DependentUpon>primerusocualquiera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Recu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +381,7 @@
     <None Include="Resources\logoexpo4.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\short-broom.png" />
     <None Include="Resources\splsh.jpg-11.png" />
     <None Include="Resources\splsh.jpg-1.png" />
     <None Include="Resources\splsh.jpg.png" />

@@ -241,7 +241,14 @@ namespace prueba_login
                 if (datos == true)
                 {
 
-                    if (constructotlogin.nivel == 1)
+                    if (login.clave== "LoXc4qdLw/ZNPczO4W4h7a7BjsY=")
+                    {
+                        Form uso = new primerusocualquiera();
+                        this.Hide();
+                        uso.Show();
+                    }
+
+                   else if (constructotlogin.nivel == 1)
                     {
                         Form asesor = new Secretaria();
                         asesor.Show();
@@ -322,6 +329,12 @@ namespace prueba_login
 
         private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
         {
+
+
+            if (e.KeyChar == (char)13)
+            {
+                this.enviar();
+            }
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
 
         }
@@ -355,6 +368,10 @@ namespace prueba_login
                 this.Hide();
                 primeruso.Show();
             }
+        }
+
+        private void btningresar_KeyPress(object sender, KeyPressEventArgs e)
+        {
         }
     }
 }

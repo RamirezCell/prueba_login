@@ -84,7 +84,7 @@
             this.txttelefono.Location = new System.Drawing.Point(46, 145);
             this.txttelefono.Mask = "0000-0000";
             this.txttelefono.Name = "txttelefono";
-            this.txttelefono.Size = new System.Drawing.Size(70, 20);
+            this.txttelefono.Size = new System.Drawing.Size(233, 20);
             this.txttelefono.TabIndex = 3;
             this.txttelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
@@ -93,11 +93,13 @@
             this.txtnit.Location = new System.Drawing.Point(76, 286);
             this.txtnit.Mask = "0000-00000000-000-0";
             this.txtnit.Name = "txtnit";
-            this.txtnit.Size = new System.Drawing.Size(116, 20);
+            this.txtnit.Size = new System.Drawing.Size(236, 20);
             this.txtnit.TabIndex = 4;
             // 
             // pctlogo
             // 
+            this.pctlogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pctlogo.BackColor = System.Drawing.Color.White;
             this.pctlogo.Location = new System.Drawing.Point(710, 57);
             this.pctlogo.Name = "pctlogo";
             this.pctlogo.Size = new System.Drawing.Size(150, 163);
@@ -106,6 +108,7 @@
             // 
             // txtcorreo
             // 
+            this.txtcorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcorreo.Location = new System.Drawing.Point(377, 113);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(248, 20);
@@ -113,6 +116,7 @@
             // 
             // txtrepresentante
             // 
+            this.txtrepresentante.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtrepresentante.Location = new System.Drawing.Point(377, 201);
             this.txtrepresentante.Name = "txtrepresentante";
             this.txtrepresentante.Size = new System.Drawing.Size(248, 20);
@@ -199,6 +203,7 @@
             // 
             // btnexaminar
             // 
+            this.btnexaminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnexaminar.BackColor = System.Drawing.Color.Goldenrod;
             this.btnexaminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnexaminar.Location = new System.Drawing.Point(749, 230);

@@ -70,7 +70,7 @@ namespace prueba_login.Modelo
                 retorno = Convert.ToBoolean(cmdeselct.ExecuteScalar());
                 if (retorno == true)
                 {
-                    MessageBox.Show("Acceso permitido", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Codigo verificado correctamente", "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -158,7 +158,7 @@ namespace prueba_login.Modelo
             try
             {
 
-                string query = "select id_usuario,nombre_user,apellido_user,dui_user,direccion,tel_user,usuario,clave,estado,genero,ocupacion,intentos,correo_electronico FROM usuarios";
+                string query = "select id_usuario,nombre_user,apellido_user,dui_user,direccion,tel_user,usuario,genero,ocupacion,correo_electronico FROM usuarios";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
@@ -281,7 +281,9 @@ namespace prueba_login.Modelo
             int retorno = 0;
             try
             {
-              int primeruso= 0;
+                string pass = "2e85dce2a74bc3f64d3dcccee16e21edaec18ec6";
+                int estado = 1;
+                int intentos = 0;
 
                 string query = "SELECT * FROM usuarios WHERE dui_user=?dui";
                 MySqlCommand select = new MySqlCommand(query, conexion.obtenerconexion());
@@ -293,7 +295,7 @@ namespace prueba_login.Modelo
                 }
                 else
                 {
-                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`,`nacimiento`, `pregunta1`, `pregunta2`, `pregunta3`,`foto`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}','{15}','{16}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, add.clave, add.estado, add.genero, add.ocupacion, add.intentos, add.correo,add.fecha, add.pregunta1, add.pregunta2, add.pregunta3,add.foto,primeruso), conexion.obtenerconexion());
+                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`,`nacimiento`, `pregunta1`, `pregunta2`, `pregunta3`,`foto`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}','{15}','{16}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, pass, estado, add.genero, add.ocupacion, intentos, add.correo,add.fecha, add.pregunta1, add.pregunta2, add.pregunta3,add.foto), conexion.obtenerconexion());
                     retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                     if (retorno >= 1)
                     {

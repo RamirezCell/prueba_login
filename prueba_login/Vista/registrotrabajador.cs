@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using prueba_login.Controlador;
 using prueba_login.Modelo;
 using System.Security.Cryptography;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace prueba_login
 {
@@ -33,7 +35,6 @@ namespace prueba_login
             txtuser.ContextMenu = new ContextMenu();
             txtcorreo.ContextMenu = new ContextMenu();
             txtDireccion.ContextMenu = new ContextMenu();
-            txtpass.ContextMenu = new ContextMenu();
             
         }
         public void caracter(KeyPressEventArgs e)
@@ -49,8 +50,8 @@ namespace prueba_login
         constructoruser add = new constructoruser();
         public void agregar()
         {
-            if (txtapellido.Text.Trim() == "" || txtdui.Text.Trim() == "" || txtint.Text.Trim() == "" || txtnombre.Text.Trim() == "" ||
-                txtnum.Text.Trim() == "" || txtuser.Text.Trim() == "" || txtpass.Text.Trim() == "" || txtDireccion.Text.Trim() == "" || txtcorreo.Text.Trim() == "")
+            if (txtapellido.Text.Trim() == "" || txtdui.Text.Trim() == ""  || txtnombre.Text.Trim() == "" ||
+                txtnum.Text.Trim() == "" || txtuser.Text.Trim() == "" || txtDireccion.Text.Trim() == "" || txtcorreo.Text.Trim() == "")
             {
                 MessageBox.Show("Hay campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -64,14 +65,18 @@ namespace prueba_login
                 add.correo = txtcorreo.Text;
                 add.genero = Convert.ToInt32(cmbgender.SelectedValue);
                 add.ocupacion = Convert.ToInt32(cmboc.SelectedValue);
-                add.intentos = Convert.ToInt32(txtint.Text);
-                add.estado = Convert.ToInt32(cmbestado.SelectedValue);
+             
                 add.usuario = txtuser.Text;
                 add.direccion = txtDireccion.Text;
                 add.dui = txtdui.Text;
                 add.nombre = txtnombre.Text;
                 add.apellido = txtapellido.Text;
                 add.telefono = txtnum.Text;
+                MemoryStream ms = new MemoryStream();
+                pctlogo.Image.Save(ms, ImageFormat.Jpeg);
+                byte[] abyte = ms.ToArray();
+                string encoded = Convert.ToBase64String(abyte);
+                add.foto = encoded;
                 int datos = registrouser.registrar(add);
             }
         }
@@ -79,14 +84,11 @@ namespace prueba_login
         private void registrotrabajador_Load(object sender, EventArgs e)
         {
             cmboc.DataSource = registrouser.obtenerocupacion();
-            cmbestado.DataSource = registrouser.obtenerestado();
             cmbgender.DataSource = registrouser.generos();
 
             cmbgender.ValueMember = "id_genero";
             cmbgender.DisplayMember = "genero";
 
-            cmbestado.ValueMember = "id_estado";
-            cmbestado.DisplayMember = "estado";
             dgvuser.DataSource = registrouser.usuarios();
             cmboc.ValueMember = "id_ocupacion";
             cmboc.DisplayMember = "ocupacion";
@@ -105,8 +107,7 @@ namespace prueba_login
             upd.direccion = txtDireccion.Text;
             upd.ocupacion = Convert.ToInt32(cmboc.SelectedValue);
             upd.genero = Convert.ToInt32(cmbgender.SelectedValue);
-            upd.estado = Convert.ToInt32(cmbestado.SelectedValue);
-
+        
             upd.telefono = txtnum.Text;
             upd.dui = txtdui.Text;
             upd.correo = txtcorreo.Text;
@@ -117,8 +118,7 @@ namespace prueba_login
 
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
-            byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtpass.Text.ToString());
-            txtcifrado.Text = Hash(pass);
+           
         }
 
         private void btnregistrar_Click(object sender, EventArgs e)
@@ -133,9 +133,9 @@ namespace prueba_login
             txtcorreo.Clear();
             txtDireccion.Clear();
             txtdui.Clear();
-            txtint.Clear();
+            
             txtnombre.Clear();
-            txtpass.Clear();
+            
             txtnum.Clear();
             txtuser.Clear();
         }
@@ -160,21 +160,20 @@ namespace prueba_login
             txtDireccion.Text = dgvuser[4, posicion].Value.ToString();
             txtnum.Text = dgvuser[5, posicion].Value.ToString();
             txtuser.Text = dgvuser[6, posicion].Value.ToString();
-            txtpass.Text = dgvuser[7, posicion].Value.ToString();
-            cmbestado.Text = dgvuser[8, posicion].Value.ToString();
-            cmbgender.Text = dgvuser[9, posicion].Value.ToString();
-            cmboc.Text = dgvuser[10, posicion].Value.ToString();
+         
+         
+           cmbgender.Text = dgvuser[7, posicion].Value.ToString();
+            cmboc.Text = dgvuser[8, posicion].Value.ToString();
 
        
-            txtint.Text = dgvuser[11, posicion].Value.ToString();
-            txtcorreo.Text = dgvuser[12, posicion].Value.ToString();
+            txtcorreo.Text = dgvuser[9, posicion].Value.ToString();
 
-            txtpass.Enabled = false;
+         
             txtuser.Enabled = false;
             btnupdate.Enabled = true;
             btneliminar.Enabled = true;
             btnregistrar.Enabled = false;
-            txtint.Enabled = false;
+           
         }
 
         private void btnupdate_Click(object sender, EventArgs e)
@@ -292,6 +291,21 @@ namespace prueba_login
         private void txtcorreo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnexaminar_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
+            DialogResult resultado = openFileDialog1.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                pctlogo.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+        }
+
+        private void btnlimp_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }
