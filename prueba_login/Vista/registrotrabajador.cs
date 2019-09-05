@@ -83,6 +83,8 @@ namespace prueba_login
 
         private void registrotrabajador_Load(object sender, EventArgs e)
         {
+            dgvuser.DataSource = registrouser.usuarios();
+
             cmboc.DataSource = registrouser.obtenerocupacion();
             cmbgender.DataSource = registrouser.generos();
 
@@ -123,6 +125,7 @@ namespace prueba_login
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
+            limpiar();
             agregar();
         }
 
@@ -196,6 +199,8 @@ namespace prueba_login
         private void btneliminar_Click(object sender, EventArgs e)
         {
             eliminarregistro();
+            limpiar();
+            btnregistrar.Enabled = true;
         }
 
         private void txtfiltrar_TextChanged(object sender, EventArgs e)
@@ -258,7 +263,7 @@ namespace prueba_login
 
         private void txtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            caracter(e);
+           
         }
 
         private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
@@ -306,6 +311,11 @@ namespace prueba_login
         private void btnlimp_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

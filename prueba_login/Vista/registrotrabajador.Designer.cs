@@ -186,6 +186,7 @@
             this.pctlogo.Location = new System.Drawing.Point(775, 39);
             this.pctlogo.Name = "pctlogo";
             this.pctlogo.Size = new System.Drawing.Size(138, 150);
+            this.pctlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctlogo.TabIndex = 28;
             this.pctlogo.TabStop = false;
             // 
@@ -368,6 +369,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(172, 46);
             this.txtDireccion.TabIndex = 10;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
             // txtcorreo

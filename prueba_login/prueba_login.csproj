@@ -66,6 +66,7 @@
     <Compile Include="Controlador\constructordetalle.cs" />
     <Compile Include="Controlador\constructorequip.cs" />
     <Compile Include="Controlador\constructorpass.cs" />
+    <Compile Include="Controlador\constructorpasspregunta.cs" />
     <Compile Include="Controlador\constructorpreguntas.cs" />
     <Compile Include="Controlador\constructorsistema.cs" />
     <Compile Include="Controlador\constructoruser.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Modelo\funcionesordendetrabajo.cs" />
     <Compile Include="Modelo\funciones_ordendetrabajo.cs" />
     <Compile Include="Modelo\funciones_recu_interno.cs" />
+    <Compile Include="Modelo\funcionprimeruso.cs" />
     <Compile Include="Modelo\passcorreo.cs" />
     <Compile Include="ordentrabajo.cs">
       <SubType>Form</SubType>
@@ -245,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ordentrabajo.resx">
       <DependentUpon>ordentrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="primerusocualquiera.resx">
+      <DependentUpon>primerusocualquiera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Recu.resx">
       <DependentUpon>Recu.cs</DependentUpon>
@@ -462,6 +467,7 @@
     <None Include="Resources\cancel.png" />
     <None Include="Resources\Close Window_ 2 48px2.png" />
     <None Include="Resources\bill %281%29.png" />
+    <None Include="Resources\add.png" />
     <Content Include="Resources\Icon1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

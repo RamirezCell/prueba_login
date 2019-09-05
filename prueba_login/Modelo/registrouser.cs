@@ -281,7 +281,7 @@ namespace prueba_login.Modelo
             int retorno = 0;
             try
             {
-                string pass = "2e85dce2a74bc3f64d3dcccee16e21edaec18ec6";
+                string pass = "LoXc4qdLw/ZNPczO4W4h7a7BjsY=";
                 int estado = 1;
                 int intentos = 0;
 
