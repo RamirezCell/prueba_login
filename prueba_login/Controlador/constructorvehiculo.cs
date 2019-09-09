@@ -13,10 +13,13 @@ namespace prueba_login.Controlador
         public string modelo { get; set; }
         public int year { get; set; }
         public string tipo_auto { get; set; }
+        public int marca { get; set; }
+        
+       
 
         public constructorvehiculo()
         {
-
+           
         }
 
     }

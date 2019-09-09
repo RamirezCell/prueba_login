@@ -34,9 +34,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtcifrado = new System.Windows.Forms.TextBox();
             this.btnverificarusu = new System.Windows.Forms.Button();
-            this.btnconfirmar = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtnuevacontra = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -52,7 +49,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(543, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(536, 25);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -73,16 +70,14 @@
             // 
             this.groupBox2.Controls.Add(this.txtcifrado);
             this.groupBox2.Controls.Add(this.btnverificarusu);
-            this.groupBox2.Controls.Add(this.btnconfirmar);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.txtnuevacontra);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtusuario);
             this.groupBox2.Location = new System.Drawing.Point(46, 45);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(457, 344);
+            this.groupBox2.Size = new System.Drawing.Size(457, 177);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtcifrado
             // 
@@ -103,39 +98,6 @@
             this.btnverificarusu.Text = "Verificar";
             this.btnverificarusu.UseVisualStyleBackColor = false;
             this.btnverificarusu.Click += new System.EventHandler(this.btnverificarusu_Click);
-            // 
-            // btnconfirmar
-            // 
-            this.btnconfirmar.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnconfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnconfirmar.Location = new System.Drawing.Point(175, 256);
-            this.btnconfirmar.Name = "btnconfirmar";
-            this.btnconfirmar.Size = new System.Drawing.Size(81, 26);
-            this.btnconfirmar.TabIndex = 4;
-            this.btnconfirmar.Text = "Confirmar";
-            this.btnconfirmar.UseVisualStyleBackColor = false;
-            this.btnconfirmar.Click += new System.EventHandler(this.btnconfirmar_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(149, 180);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Nueva contraseña";
-            // 
-            // txtnuevacontra
-            // 
-            this.txtnuevacontra.Enabled = false;
-            this.txtnuevacontra.Location = new System.Drawing.Point(106, 212);
-            this.txtnuevacontra.Name = "txtnuevacontra";
-            this.txtnuevacontra.Size = new System.Drawing.Size(215, 20);
-            this.txtnuevacontra.TabIndex = 4;
-            this.txtnuevacontra.TextChanged += new System.EventHandler(this.txtnuevacontra_TextChanged);
             // 
             // label4
             // 
@@ -161,7 +123,7 @@
             // 
             this.btnregresar.BackColor = System.Drawing.Color.Goldenrod;
             this.btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnregresar.Location = new System.Drawing.Point(171, 403);
+            this.btnregresar.Location = new System.Drawing.Point(171, 249);
             this.btnregresar.Name = "btnregresar";
             this.btnregresar.Size = new System.Drawing.Size(198, 38);
             this.btnregresar.TabIndex = 7;
@@ -174,7 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(543, 460);
+            this.ClientSize = new System.Drawing.Size(536, 323);
             this.Controls.Add(this.btnregresar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.toolStrip1);
@@ -199,9 +161,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtcifrado;
         private System.Windows.Forms.Button btnverificarusu;
-        private System.Windows.Forms.Button btnconfirmar;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtnuevacontra;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtusuario;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;

@@ -51,7 +51,7 @@ namespace prueba_login
         public void agregar()
         {
             if (txtapellido.Text.Trim() == "" || txtdui.Text.Trim() == ""  || txtnombre.Text.Trim() == "" ||
-                txtnum.Text.Trim() == "" || txtuser.Text.Trim() == "" || txtDireccion.Text.Trim() == "" || txtcorreo.Text.Trim() == "")
+                txtnum.Text.Trim() == "" || txtuser.Text.Trim() == "" || txtDireccion.Text.Trim() == "" || txtcorreo.Text.Trim() == ""||pctlogo==null)
             {
                 MessageBox.Show("Hay campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -83,7 +83,7 @@ namespace prueba_login
 
         private void registrotrabajador_Load(object sender, EventArgs e)
         {
-            dgvuser.DataSource = registrouser.usuarios();
+            
 
             cmboc.DataSource = registrouser.obtenerocupacion();
             cmbgender.DataSource = registrouser.generos();
@@ -125,8 +125,11 @@ namespace prueba_login
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
-            limpiar();
+           
             agregar();
+            dgvuser.DataSource = registrouser.usuarios();
+
+            limpiar();
         }
 
         public void limpiar()
@@ -183,6 +186,8 @@ namespace prueba_login
         {
             update();
             limpiar();
+            dgvuser.DataSource = registrouser.usuarios();
+
             btnregistrar.Enabled = true;
         }
         public void eliminarregistro()
@@ -200,6 +205,8 @@ namespace prueba_login
         {
             eliminarregistro();
             limpiar();
+            dgvuser.DataSource = registrouser.usuarios();
+
             btnregistrar.Enabled = true;
         }
 
@@ -311,6 +318,8 @@ namespace prueba_login
         private void btnlimp_Click(object sender, EventArgs e)
         {
             limpiar();
+            txtuser.Enabled = true;
+            btnregistrar.Enabled = true;
         }
 
         private void txtDireccion_TextChanged(object sender, EventArgs e)

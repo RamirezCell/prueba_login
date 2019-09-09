@@ -61,7 +61,8 @@
             this.groupBox1.Controls.Add(this.txtcontra);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtadmin);
-            this.groupBox1.Location = new System.Drawing.Point(36, 41);
+            this.groupBox1.Enabled = false;
+            this.groupBox1.Location = new System.Drawing.Point(475, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(429, 312);
             this.groupBox1.TabIndex = 0;
@@ -139,7 +140,7 @@
             this.groupBox2.Controls.Add(this.txtnuevacontra);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtusuario);
-            this.groupBox2.Location = new System.Drawing.Point(504, 44);
+            this.groupBox2.Location = new System.Drawing.Point(11, 58);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(429, 309);
             this.groupBox2.TabIndex = 5;
@@ -157,7 +158,6 @@
             // btnverificarusu
             // 
             this.btnverificarusu.BackColor = System.Drawing.Color.Goldenrod;
-            this.btnverificarusu.Enabled = false;
             this.btnverificarusu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnverificarusu.Location = new System.Drawing.Point(175, 124);
             this.btnverificarusu.Name = "btnverificarusu";
@@ -216,7 +216,6 @@
             // 
             // txtusuario
             // 
-            this.txtusuario.Enabled = false;
             this.txtusuario.Location = new System.Drawing.Point(108, 81);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(215, 20);

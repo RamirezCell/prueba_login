@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prueba_login.Controlador;
 using prueba_login.Modelo;
+using MySql.Data.MySqlClient;
 
 namespace prueba_login
 {
@@ -19,7 +20,7 @@ namespace prueba_login
             InitializeComponent();
             
         }
-
+        
         public void caracter(KeyPressEventArgs e)
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
@@ -67,10 +68,30 @@ namespace prueba_login
             dgvvehiculos.DataSource = funcionesvehiculo.mostrar();
 
         }
+    
+        public void cargarmarcas()
+        {
+            cmbMarca_vehiculo.DataSource = funcionesvehiculo.obtenermarcas();
+            cmbMarca_vehiculo.DisplayMember = "marca";
+            cmbMarca_vehiculo.ValueMember = "id_marca";
+        }
 
         private void registroauto_Load(object sender, EventArgs e)
         {
-           
+            mostrar();
+
+
+
+
+            cargarmarcas();
+            cargarmodelos();
+
+
+            
+            
+
+
+
             btneliminar.Enabled = false;
             btnupdate.Enabled = false;
 
@@ -79,6 +100,16 @@ namespace prueba_login
 
             this.dgvvehiculos.Columns[0].Visible = false;
 
+        }
+
+      
+
+        public void cargarmodelos()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.modelos();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+           
         }
 
         private void btnmostrar_Click(object sender, EventArgs e)
@@ -91,11 +122,7 @@ namespace prueba_login
             int posicion;
             posicion = this.dgvvehiculos.CurrentRow.Index;
           
-            //txtIdvehiculo.Text = dgvvehiculos[0, posicion].Value.ToString();
-            //txtmarca.Text = dgvvehiculos[1, posicion].Value.ToString();
-            //txtmodelo.Text = dgvvehiculos[2, posicion].Value.ToString();
-            //txtanio.Text = dgvvehiculos[3, posicion].Value.ToString();
-            //txttipovehiculo.Text = dgvvehiculos[4, posicion].Value.ToString();
+           
           
             btnregistrar.Enabled = false;
             btnupdate.Enabled = true;
@@ -194,6 +221,28 @@ namespace prueba_login
         private void txttipovehiculo_KeyPress(object sender, KeyPressEventArgs e)
         {
             caracter(e);
+        }
+        public void limpiarcampos()
+        {
+            txtplaca.Clear();
+            txtchasis.Clear();
+            txtmotor.Clear();
+           
+        }
+
+        private void btnlimp_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbMarca_vehiculo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (cmbMarca_vehiculo.SelectedValue.ToString()!=null)
+            {
+                string marca = cmbMarca_vehiculo.SelectedValue.ToString();
+                cargarmodelos();
+            }
         }
     }
 }

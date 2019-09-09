@@ -54,10 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aseguradora.cs">
+    <Compile Include="Vista\Aseguradora.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aseguradora.Designer.cs">
+    <Compile Include="Vista\Aseguradora.Designer.cs">
       <DependentUpon>Aseguradora.cs</DependentUpon>
     </Compile>
     <Compile Include="Controlador\conexion.cs" />
@@ -82,16 +82,16 @@
     <Compile Include="Modelo\funciones_recu_interno.cs" />
     <Compile Include="Modelo\funcionprimeruso.cs" />
     <Compile Include="Modelo\passcorreo.cs" />
-    <Compile Include="ordentrabajo.cs">
+    <Compile Include="Vista\ordentrabajo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ordentrabajo.Designer.cs">
+    <Compile Include="Vista\ordentrabajo.Designer.cs">
       <DependentUpon>ordentrabajo.cs</DependentUpon>
     </Compile>
-    <Compile Include="primerusocualquiera.cs">
+    <Compile Include="Vista\primerusocualquiera.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="primerusocualquiera.Designer.cs">
+    <Compile Include="Vista\primerusocualquiera.Designer.cs">
       <DependentUpon>primerusocualquiera.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Recu.cs">
@@ -100,10 +100,10 @@
     <Compile Include="Vista\Recu.Designer.cs">
       <DependentUpon>Recu.cs</DependentUpon>
     </Compile>
-    <Compile Include="splash.cs">
+    <Compile Include="Vista\splash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="splash.Designer.cs">
+    <Compile Include="Vista\splash.Designer.cs">
       <DependentUpon>splash.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\torre.cs">
@@ -242,19 +242,19 @@
     <Compile Include="Vista\recu_contra.Designer.cs">
       <DependentUpon>recu_contra.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Aseguradora.resx">
+    <EmbeddedResource Include="Vista\Aseguradora.resx">
       <DependentUpon>Aseguradora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ordentrabajo.resx">
+    <EmbeddedResource Include="Vista\ordentrabajo.resx">
       <DependentUpon>ordentrabajo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="primerusocualquiera.resx">
+    <EmbeddedResource Include="Vista\primerusocualquiera.resx">
       <DependentUpon>primerusocualquiera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Recu.resx">
       <DependentUpon>Recu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="splash.resx">
+    <EmbeddedResource Include="Vista\splash.resx">
       <DependentUpon>splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\torre.resx">

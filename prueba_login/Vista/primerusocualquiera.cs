@@ -41,10 +41,7 @@ namespace prueba_login
             {
                 MessageBox.Show("Campos vacios", "Por favor llene los campos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            else if (txtpass.Text!=txtpassveri.Text)
-            {
-                lblpass.Visible = true;
-            }
+           
             else
             {
                 upd.pass = txtxcifrado.Text;
@@ -64,17 +61,23 @@ namespace prueba_login
         
         private void txtpassveri_TextChanged(object sender, EventArgs e)
         {
+            if (txtpassveri.Text != txtpass.Text)
+            {
+                lblpass.Visible = true;
+            }
+         
+            else if (txtpassveri.Text == txtpass.Text)
+            {
+                lblpass.Visible = false;
 
+            }
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txtpassveri.Text.ToString());
             txtxcifrado.Text = Hash(pass);
         }
 
         private void txtpass_TextChanged(object sender, EventArgs e)
         {
-            if (txtpass.Text!=txtpassveri.Text)
-            {
-                lblpass.Visible = true;
-            }
+            
         }
 
         private void txtpass_Enter(object sender, EventArgs e)
@@ -85,6 +88,11 @@ namespace prueba_login
         private void txtpassveri_Enter(object sender, EventArgs e)
         {
             txtpassveri.UseSystemPasswordChar = true;
+        }
+
+        private void lblpass_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

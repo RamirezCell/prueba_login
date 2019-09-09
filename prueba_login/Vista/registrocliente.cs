@@ -350,6 +350,11 @@ namespace prueba_login
         {
 
         }
+
+        private void btnlimp_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
     }
     
 }

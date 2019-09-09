@@ -147,7 +147,8 @@ namespace prueba_login.Modelo
 
 
         public static DataTable usuarios()
-        {
+        { 
+                 
 
 
 
@@ -158,7 +159,7 @@ namespace prueba_login.Modelo
             try
             {
 
-                string query = "select id_usuario,nombre_user,apellido_user,dui_user,direccion,tel_user,usuario,genero,ocupacion,correo_electronico FROM usuarios";
+                string query = "select tu.id_usuario,tu.nombre_user,tu.apellido_user,tu.dui_user,tu.direccion,tu.tel_user,tu.usuario,CONCAT(tg.genero) As Genero,CONCAT(o.ocupacion)As ocupacion, tu.correo_electronico FROM usuarios tu,generos tg,ocupaciones o WHERE tu.genero=tg.id_genero AND tu.ocupacion=o.id_ocupacion";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();

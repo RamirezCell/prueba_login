@@ -55,6 +55,7 @@
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnlimp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1.SuspendLayout();
             this.grpregistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
@@ -365,7 +366,7 @@
             this.btnupdate.IconVisible = true;
             this.btnupdate.IconZoom = 90D;
             this.btnupdate.IsTab = false;
-            this.btnupdate.Location = new System.Drawing.Point(517, 299);
+            this.btnupdate.Location = new System.Drawing.Point(422, 299);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Normalcolor = System.Drawing.Color.Gold;
             this.btnupdate.OnHovercolor = System.Drawing.Color.DimGray;
@@ -401,7 +402,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(318, 299);
+            this.btnmostrar.Location = new System.Drawing.Point(223, 299);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Gold;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -437,7 +438,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(716, 299);
+            this.btneliminar.Location = new System.Drawing.Point(621, 299);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Gold;
             this.btneliminar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -473,7 +474,7 @@
             this.btnregistrar.IconVisible = true;
             this.btnregistrar.IconZoom = 90D;
             this.btnregistrar.IsTab = false;
-            this.btnregistrar.Location = new System.Drawing.Point(119, 299);
+            this.btnregistrar.Location = new System.Drawing.Point(24, 299);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Normalcolor = System.Drawing.Color.Gold;
             this.btnregistrar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -487,12 +488,49 @@
             this.btnregistrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
+            // btnlimp
+            // 
+            this.btnlimp.Activecolor = System.Drawing.Color.Gold;
+            this.btnlimp.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnlimp.BackColor = System.Drawing.Color.Gold;
+            this.btnlimp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimp.BorderRadius = 0;
+            this.btnlimp.ButtonText = "  Limpiar campos";
+            this.btnlimp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimp.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimp.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimp.Iconimage = global::prueba_login.Properties.Resources.short_broom;
+            this.btnlimp.Iconimage_right = null;
+            this.btnlimp.Iconimage_right_Selected = null;
+            this.btnlimp.Iconimage_Selected = null;
+            this.btnlimp.IconMarginLeft = 0;
+            this.btnlimp.IconMarginRight = 0;
+            this.btnlimp.IconRightVisible = true;
+            this.btnlimp.IconRightZoom = 0D;
+            this.btnlimp.IconVisible = true;
+            this.btnlimp.IconZoom = 90D;
+            this.btnlimp.IsTab = false;
+            this.btnlimp.Location = new System.Drawing.Point(816, 299);
+            this.btnlimp.Name = "btnlimp";
+            this.btnlimp.Normalcolor = System.Drawing.Color.Gold;
+            this.btnlimp.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnlimp.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimp.selected = false;
+            this.btnlimp.Size = new System.Drawing.Size(182, 56);
+            this.btnlimp.TabIndex = 20;
+            this.btnlimp.Text = "  Limpiar campos";
+            this.btnlimp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlimp.Textcolor = System.Drawing.Color.Black;
+            this.btnlimp.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimp.Click += new System.EventHandler(this.btnlimp_Click);
+            // 
             // registrocliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1016, 693);
+            this.Controls.Add(this.btnlimp);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnmostrar);
             this.Controls.Add(this.btneliminar);
@@ -540,5 +578,6 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox txtFiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimp;
     }
 }

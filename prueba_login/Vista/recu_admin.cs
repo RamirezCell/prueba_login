@@ -46,8 +46,8 @@ namespace prueba_login
             bool datos =validarlogin.validarusername(validar);
             if (datos == true)
             {
-                txtusuario.Enabled = true;
-                btnverificarusu.Enabled = true;
+                txtnuevacontra.Enabled = true;
+                btnconfirmar.Enabled = true;
             }
            
 
@@ -79,9 +79,8 @@ namespace prueba_login
             bool datos = Funciones_Recu_admin.validaruser(usuario);
             if (datos == true)
             {
-             
-                txtnuevacontra.Enabled = true;
-                btnconfirmar.Enabled = true;
+
+                groupBox1.Enabled = true;
             }
           
         }

@@ -74,6 +74,7 @@
             this.txtp2.Name = "txtp2";
             this.txtp2.Size = new System.Drawing.Size(197, 20);
             this.txtp2.TabIndex = 3;
+            this.txtp2.TextChanged += new System.EventHandler(this.txtp2_TextChanged);
             this.txtp2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtp2_KeyPress);
             // 
             // txtp3

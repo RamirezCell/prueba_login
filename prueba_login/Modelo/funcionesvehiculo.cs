@@ -49,6 +49,8 @@ namespace prueba_login.Modelo
                 return retorno;
             }
         }
+
+
         public static DataTable mostrar()
         {
             DataTable data;
@@ -122,6 +124,58 @@ namespace prueba_login.Modelo
                 return retorno;
             }
         }
+
+      public static  DataTable modelos()
+        {
+            DataTable data;
+            try
+            {
+                
+                MySqlCommand cmdselect = new MySqlCommand(string.Format("SELECT id_modelo,modelo from modelos WHERE id_marca"), conexion.obtenerconexion());
+                
+               
+                //envio de parametros a la consulta
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ha ocurrido un problema", "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return data = new DataTable();
+            }
+        }
+    public static    DataTable obtenermarcas()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  marcas";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+
+
+
     }
  }
 

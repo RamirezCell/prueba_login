@@ -116,6 +116,7 @@
             this.txtcifrado.Name = "txtcifrado";
             this.txtcifrado.Size = new System.Drawing.Size(100, 20);
             this.txtcifrado.TabIndex = 4;
+            this.txtcifrado.Visible = false;
             // 
             // btnrecuperar
             // 

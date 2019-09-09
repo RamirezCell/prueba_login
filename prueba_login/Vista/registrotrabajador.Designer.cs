@@ -162,14 +162,14 @@
             this.btnexaminar.Location = new System.Drawing.Point(810, 197);
             this.btnexaminar.Name = "btnexaminar";
             this.btnexaminar.Size = new System.Drawing.Size(75, 23);
-            this.btnexaminar.TabIndex = 30;
+            this.btnexaminar.TabIndex = 7;
             this.btnexaminar.Text = "Examinar";
             this.btnexaminar.UseVisualStyleBackColor = false;
             this.btnexaminar.Click += new System.EventHandler(this.btnexaminar_Click);
             // 
             // label13
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
@@ -209,7 +209,7 @@
             this.txtuser.Location = new System.Drawing.Point(536, 111);
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(164, 23);
-            this.txtuser.TabIndex = 7;
+            this.txtuser.TabIndex = 6;
             this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
             // 
             // label11
@@ -241,10 +241,11 @@
             this.cmbgender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbgender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbgender.FormattingEnabled = true;
+            this.cmbgender.ItemHeight = 13;
             this.cmbgender.Location = new System.Drawing.Point(534, 175);
             this.cmbgender.Name = "cmbgender";
             this.cmbgender.Size = new System.Drawing.Size(166, 21);
-            this.cmbgender.TabIndex = 4;
+            this.cmbgender.TabIndex = 10;
             // 
             // txtdui
             // 
@@ -253,7 +254,7 @@
             this.txtdui.Mask = "0000000-0";
             this.txtdui.Name = "txtdui";
             this.txtdui.Size = new System.Drawing.Size(172, 20);
-            this.txtdui.TabIndex = 6;
+            this.txtdui.TabIndex = 5;
             this.txtdui.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtdui_MaskInputRejected);
             this.txtdui.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdui_KeyPress);
             // 
@@ -263,7 +264,7 @@
             this.txtnum.Mask = "0000-0000";
             this.txtnum.Name = "txtnum";
             this.txtnum.Size = new System.Drawing.Size(180, 20);
-            this.txtnum.TabIndex = 5;
+            this.txtnum.TabIndex = 4;
             this.txtnum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnum_KeyPress);
             // 
             // label7
@@ -368,7 +369,7 @@
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(172, 46);
-            this.txtDireccion.TabIndex = 10;
+            this.txtDireccion.TabIndex = 9;
             this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             this.txtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDireccion_KeyPress);
             // 
@@ -381,7 +382,7 @@
             this.txtcorreo.Location = new System.Drawing.Point(58, 183);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(180, 19);
-            this.txtcorreo.TabIndex = 9;
+            this.txtcorreo.TabIndex = 8;
             this.txtcorreo.TextChanged += new System.EventHandler(this.txtcorreo_TextChanged);
             this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
             // 

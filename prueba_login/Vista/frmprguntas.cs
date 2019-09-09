@@ -143,5 +143,10 @@ namespace prueba_login
         {
             caracter(e);
         }
+
+        private void txtp2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

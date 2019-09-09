@@ -209,6 +209,7 @@
             this.lblpass.TabIndex = 29;
             this.lblpass.Text = "Las contraseñas no coiciden";
             this.lblpass.Visible = false;
+            this.lblpass.Click += new System.EventHandler(this.lblpass_Click);
             // 
             // txtxcifrado
             // 
@@ -216,6 +217,7 @@
             this.txtxcifrado.Name = "txtxcifrado";
             this.txtxcifrado.Size = new System.Drawing.Size(100, 20);
             this.txtxcifrado.TabIndex = 36;
+            this.txtxcifrado.Visible = false;
             // 
             // primerusocualquiera
             // 

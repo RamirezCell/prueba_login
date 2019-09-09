@@ -78,5 +78,10 @@ namespace prueba_login
         {
             Application.Exit();
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Aseguradora>();
+        }
     }
 }

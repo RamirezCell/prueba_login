@@ -21,7 +21,7 @@ namespace prueba_login.Modelo
 
             try
             {
-                MySqlCommand val = new MySqlCommand(string.Format("SELECT * FROM usuarios WHERE usuario = '{0}'AND clave= '{1}'", add.admin, add.contraseña), conexion.obtenerconexion());
+                MySqlCommand val = new MySqlCommand(string.Format("SELECT * FROM usuarios WHERE binary usuario = '{0}'AND binary clave= '{1}'", add.admin, add.contraseña), conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(val.ExecuteScalar ());
                 if (retorno == true)
                 {
@@ -63,7 +63,7 @@ namespace prueba_login.Modelo
 
             try
             {
-                MySqlCommand val = new MySqlCommand(string.Format("SELECT * FROM usuarios WHERE usuario='{0}'", select.usuario), conexion.obtenerconexion());
+                MySqlCommand val = new MySqlCommand(string.Format("SELECT * FROM usuarios WHERE binary usuario='{0}'", select.usuario), conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(val.ExecuteScalar());
                 if (retorno == true)
                 {

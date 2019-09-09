@@ -43,12 +43,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.btnexaminar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnregistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnupdate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnlimp = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -77,7 +80,9 @@
             this.txtnombre.Location = new System.Drawing.Point(76, 113);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(236, 20);
-            this.txtnombre.TabIndex = 2;
+            this.txtnombre.TabIndex = 1;
+            this.txtnombre.TextChanged += new System.EventHandler(this.txtnombre_TextChanged);
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
             // 
             // txttelefono
             // 
@@ -85,8 +90,9 @@
             this.txttelefono.Mask = "0000-0000";
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(233, 20);
-            this.txttelefono.TabIndex = 3;
+            this.txttelefono.TabIndex = 4;
             this.txttelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.txttelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttelefono_KeyPress);
             // 
             // txtnit
             // 
@@ -94,7 +100,8 @@
             this.txtnit.Mask = "0000-00000000-000-0";
             this.txtnit.Name = "txtnit";
             this.txtnit.Size = new System.Drawing.Size(236, 20);
-            this.txtnit.TabIndex = 4;
+            this.txtnit.TabIndex = 5;
+            this.txtnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnit_KeyPress);
             // 
             // pctlogo
             // 
@@ -103,6 +110,7 @@
             this.pctlogo.Location = new System.Drawing.Point(710, 57);
             this.pctlogo.Name = "pctlogo";
             this.pctlogo.Size = new System.Drawing.Size(150, 163);
+            this.pctlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctlogo.TabIndex = 5;
             this.pctlogo.TabStop = false;
             // 
@@ -112,7 +120,7 @@
             this.txtcorreo.Location = new System.Drawing.Point(377, 113);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(248, 20);
-            this.txtcorreo.TabIndex = 6;
+            this.txtcorreo.TabIndex = 2;
             // 
             // txtrepresentante
             // 
@@ -120,7 +128,9 @@
             this.txtrepresentante.Location = new System.Drawing.Point(377, 201);
             this.txtrepresentante.Name = "txtrepresentante";
             this.txtrepresentante.Size = new System.Drawing.Size(248, 20);
-            this.txtrepresentante.TabIndex = 7;
+            this.txtrepresentante.TabIndex = 3;
+            this.txtrepresentante.TextChanged += new System.EventHandler(this.txtrepresentante_TextChanged);
+            this.txtrepresentante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrepresentante_KeyPress);
             // 
             // label1
             // 
@@ -191,6 +201,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.btnexaminar);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txttelefono);
@@ -201,6 +212,14 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(344, 171);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(89, 20);
+            this.txtId.TabIndex = 0;
+            this.txtId.Visible = false;
+            // 
             // btnexaminar
             // 
             this.btnexaminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -209,17 +228,23 @@
             this.btnexaminar.Location = new System.Drawing.Point(749, 230);
             this.btnexaminar.Name = "btnexaminar";
             this.btnexaminar.Size = new System.Drawing.Size(75, 23);
-            this.btnexaminar.TabIndex = 14;
+            this.btnexaminar.TabIndex = 6;
             this.btnexaminar.Text = "Examinar";
             this.btnexaminar.UseVisualStyleBackColor = false;
+            this.btnexaminar.Click += new System.EventHandler(this.btnexaminar_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(33, 416);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(952, 265);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnregistrar
             // 
@@ -243,7 +268,7 @@
             this.btnregistrar.IconVisible = true;
             this.btnregistrar.IconZoom = 90D;
             this.btnregistrar.IsTab = false;
-            this.btnregistrar.Location = new System.Drawing.Point(93, 346);
+            this.btnregistrar.Location = new System.Drawing.Point(27, 346);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Normalcolor = System.Drawing.Color.Gold;
             this.btnregistrar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -279,7 +304,7 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(322, 346);
+            this.btnmostrar.Location = new System.Drawing.Point(226, 346);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Gold;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -291,6 +316,7 @@
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmostrar.Textcolor = System.Drawing.Color.Black;
             this.btnmostrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmostrar.Click += new System.EventHandler(this.btnmostrar_Click);
             // 
             // btnupdate
             // 
@@ -314,7 +340,7 @@
             this.btnupdate.IconVisible = true;
             this.btnupdate.IconZoom = 90D;
             this.btnupdate.IsTab = false;
-            this.btnupdate.Location = new System.Drawing.Point(545, 346);
+            this.btnupdate.Location = new System.Drawing.Point(421, 346);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Normalcolor = System.Drawing.Color.Gold;
             this.btnupdate.OnHovercolor = System.Drawing.Color.DimGray;
@@ -326,6 +352,7 @@
             this.btnupdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.Textcolor = System.Drawing.Color.Black;
             this.btnupdate.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnupdate.Click += new System.EventHandler(this.btnupdate_Click);
             // 
             // btneliminar
             // 
@@ -349,7 +376,7 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(771, 346);
+            this.btneliminar.Location = new System.Drawing.Point(616, 346);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Gold;
             this.btneliminar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -361,6 +388,47 @@
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneliminar.Textcolor = System.Drawing.Color.Black;
             this.btneliminar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // btnlimp
+            // 
+            this.btnlimp.Activecolor = System.Drawing.Color.Gold;
+            this.btnlimp.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnlimp.BackColor = System.Drawing.Color.Gold;
+            this.btnlimp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimp.BorderRadius = 0;
+            this.btnlimp.ButtonText = "  Limpiar campos";
+            this.btnlimp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimp.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimp.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimp.Iconimage = global::prueba_login.Properties.Resources.short_broom;
+            this.btnlimp.Iconimage_right = null;
+            this.btnlimp.Iconimage_right_Selected = null;
+            this.btnlimp.Iconimage_Selected = null;
+            this.btnlimp.IconMarginLeft = 0;
+            this.btnlimp.IconMarginRight = 0;
+            this.btnlimp.IconRightVisible = true;
+            this.btnlimp.IconRightZoom = 0D;
+            this.btnlimp.IconVisible = true;
+            this.btnlimp.IconZoom = 90D;
+            this.btnlimp.IsTab = false;
+            this.btnlimp.Location = new System.Drawing.Point(813, 346);
+            this.btnlimp.Name = "btnlimp";
+            this.btnlimp.Normalcolor = System.Drawing.Color.Gold;
+            this.btnlimp.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnlimp.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimp.selected = false;
+            this.btnlimp.Size = new System.Drawing.Size(182, 56);
+            this.btnlimp.TabIndex = 21;
+            this.btnlimp.Text = "  Limpiar campos";
+            this.btnlimp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlimp.Textcolor = System.Drawing.Color.Black;
+            this.btnlimp.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimp.Click += new System.EventHandler(this.btnlimp_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Aseguradora
             // 
@@ -368,6 +436,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1016, 693);
+            this.Controls.Add(this.btnlimp);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnmostrar);
@@ -387,6 +456,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Aseguradora";
             this.Text = "Aseguradora";
+            this.Load += new System.EventHandler(this.Aseguradora_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).EndInit();
@@ -421,5 +491,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnmostrar;
         private Bunifu.Framework.UI.BunifuFlatButton btnupdate;
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimp;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txtId;
     }
 }
