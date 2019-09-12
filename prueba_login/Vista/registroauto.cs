@@ -69,11 +69,98 @@ namespace prueba_login
 
         }
     
-        public void cargarmarcas()
+        public void marcas()
         {
             cmbMarca_vehiculo.DataSource = funcionesvehiculo.obtenermarcas();
             cmbMarca_vehiculo.DisplayMember = "marca";
             cmbMarca_vehiculo.ValueMember = "id_marca";
+        }
+        public void mazda()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.mazda();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+        public void toyota()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.toyota();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+        public void nissan()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.nissan();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+        public void jeep()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.jeep();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+        public void ford()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.ford();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+        public void kia()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.kia();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+        public void hyundai()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.hyundai();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+        public void bmw()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.bmw();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+
+        public void honda()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.honda();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+        public void isuzu()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.isuzu();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+        public void menche()
+        {
+            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.mercedes();
+            cmbModelo_Vehiculo.DisplayMember = "modelo";
+            cmbModelo_Vehiculo.ValueMember = "id_modelo";
+        }
+        public void mazda3()
+        {
+            cmbLinea.DataSource = funcionesvehiculo.edicionmazda3();
+            cmbLinea.DisplayMember = "linea";
+            cmbLinea.ValueMember = "id_linea";
+        }
+
+        public void mazda6()
+        {
+            cmbLinea.DataSource = funcionesvehiculo.edicionmazda6();
+            cmbLinea.DisplayMember = "linea";
+            cmbLinea.ValueMember = "id_linea";
+        }
+
+        public void mazda323()
+        {
+            cmbLinea.DataSource = funcionesvehiculo.edicionmazda323();
+            cmbLinea.DisplayMember = "linea";
+            cmbLinea.ValueMember = "id_linea";
         }
 
         private void registroauto_Load(object sender, EventArgs e)
@@ -81,14 +168,16 @@ namespace prueba_login
             mostrar();
 
 
-
-
-            cargarmarcas();
-            cargarmodelos();
-
+            marcas();
 
             
+           
             
+
+
+
+
+
 
 
 
@@ -104,13 +193,7 @@ namespace prueba_login
 
       
 
-        public void cargarmodelos()
-        {
-            cmbModelo_Vehiculo.DataSource = funcionesvehiculo.modelos();
-            cmbModelo_Vehiculo.DisplayMember = "modelo";
-            cmbModelo_Vehiculo.ValueMember = "id_modelo";
-           
-        }
+    
 
         private void btnmostrar_Click(object sender, EventArgs e)
         {
@@ -234,15 +317,82 @@ namespace prueba_login
         {
             
         }
+        public void clasimarcas()
+        {
+            string marca = cmbMarca_vehiculo.Text;
+            if (marca=="Mazda")
+            {
+                mazda();
+            }
+            else if (marca=="Toyota")
+            {
+                toyota();
+            }
+            else if (marca == "Nissan")
+            {
+                nissan();
+            }
+            else if (marca == "Jeep")
+            {
+                jeep();
+            }
+            else if (marca == "Ford")
+            {
+                ford();
+            }
+            else if (marca == "Kia")
+            {
+                kia();
+            }
+            else if (marca == "Hyundai")
+            {
+                hyundai();
+            }
+            else if (marca == "BMW")
+            {
+                bmw();
+            }
+            else if (marca == "Honda")
+            {
+                honda();
+            }
+            else if (marca == "Isuzu")
+            {
+                isuzu();
+            }
+            else if (marca == "Mercedes-Benz")
+            {
+                menche();
+            }
+          
+
+
+        }
 
         private void cmbMarca_vehiculo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            if (cmbMarca_vehiculo.SelectedValue.ToString()!=null)
+            clasimarcas();
+          
+        }
+        public void ediciones()
+        {
+            string modelo = cmbModelo_Vehiculo.Text;
+            if (modelo=="3")
             {
-                string marca = cmbMarca_vehiculo.SelectedValue.ToString();
-                cargarmodelos();
+                mazda3();
             }
+            else if (modelo=="6")
+            {
+                mazda6();
+            }
+            else if (modelo == "323")
+            {
+                mazda323();
+            }
+        }
+        private void cmbModelo_Vehiculo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ediciones();
         }
     }
 }

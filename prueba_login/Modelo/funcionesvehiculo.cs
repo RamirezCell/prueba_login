@@ -125,31 +125,8 @@ namespace prueba_login.Modelo
             }
         }
 
-      public static  DataTable modelos()
-        {
-            DataTable data;
-            try
-            {
-                
-                MySqlCommand cmdselect = new MySqlCommand(string.Format("SELECT id_modelo,modelo from modelos WHERE id_marca"), conexion.obtenerconexion());
-                
-               
-                //envio de parametros a la consulta
 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
-                data = new DataTable();
-
-                adapter.Fill(data);
-                return data;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ha ocurrido un problema", "Error critico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                return data = new DataTable();
-            }
-        }
-    public static    DataTable obtenermarcas()
+        public static    DataTable obtenermarcas()
         {
 
             DataTable data;
@@ -164,6 +141,349 @@ namespace prueba_login.Modelo
                 return data;
             }
             catch (Exception)
+
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+
+
+        public static DataTable mazda()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='16'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+
+        public static DataTable toyota()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='17'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+        public static DataTable nissan()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='18'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+
+        public static DataTable jeep()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='19'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+
+        public static DataTable ford()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='20'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+        public static DataTable kia()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='21'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+        public static DataTable hyundai()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='22'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+        public static DataTable bmw()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='25'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+        public static DataTable honda()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='26'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+        public static DataTable isuzu()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='27'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+        public static DataTable mercedes()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  modelos where id_marca='28'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+
+        public static DataTable edicionmazda3()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  lineas where id_modelo='29'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+        public static DataTable edicionmazda6()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  lineas where id_modelo='30'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
+            {
+
+                return data = new DataTable();
+
+            }
+
+
+        }
+
+        public static DataTable edicionmazda323()
+        {
+
+            DataTable data;
+            try
+            {
+                string query = "SELECT * FROM  lineas where id_modelo='26'";
+                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                data = new DataTable();
+
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception e)
             {
 
                 return data = new DataTable();
@@ -176,6 +496,12 @@ namespace prueba_login.Modelo
 
 
 
+
+
+
+
+
+
     }
- }
+}
 

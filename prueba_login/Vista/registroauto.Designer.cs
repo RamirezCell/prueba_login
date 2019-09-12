@@ -243,6 +243,7 @@
             this.cmbModelo_Vehiculo.Name = "cmbModelo_Vehiculo";
             this.cmbModelo_Vehiculo.Size = new System.Drawing.Size(211, 24);
             this.cmbModelo_Vehiculo.TabIndex = 2;
+            this.cmbModelo_Vehiculo.SelectedIndexChanged += new System.EventHandler(this.cmbModelo_Vehiculo_SelectedIndexChanged);
             // 
             // cmbMarca_vehiculo
             // 

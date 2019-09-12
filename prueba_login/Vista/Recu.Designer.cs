@@ -49,7 +49,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(536, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(525, 25);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -68,20 +68,19 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtcifrado);
             this.groupBox2.Controls.Add(this.btnverificarusu);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtusuario);
             this.groupBox2.Location = new System.Drawing.Point(46, 45);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(457, 177);
+            this.groupBox2.Size = new System.Drawing.Size(437, 177);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // txtcifrado
             // 
-            this.txtcifrado.Location = new System.Drawing.Point(310, 36);
+            this.txtcifrado.Location = new System.Drawing.Point(403, 291);
             this.txtcifrado.Name = "txtcifrado";
             this.txtcifrado.Size = new System.Drawing.Size(100, 20);
             this.txtcifrado.TabIndex = 6;
@@ -136,7 +135,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(536, 323);
+            this.ClientSize = new System.Drawing.Size(525, 323);
+            this.Controls.Add(this.txtcifrado);
             this.Controls.Add(this.btnregresar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.toolStrip1);
