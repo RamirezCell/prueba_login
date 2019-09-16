@@ -36,6 +36,7 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAdminProductos = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -43,11 +44,10 @@
             this.btnSupervision = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -121,6 +121,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.bunifuImageButton1);
             this.panel1.Controls.Add(this.bunifuFlatButton2);
             this.panel1.Controls.Add(this.bunifuFlatButton1);
             this.panel1.Controls.Add(this.btnAdminProductos);
@@ -128,13 +129,26 @@
             this.panel1.Controls.Add(this.btnSupervision);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(264, 695);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Image = global::prueba_login.Properties.Resources.boton_de_encendido;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(24, 22);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(83, 83);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 6;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
             // bunifuFlatButton2
             // 
@@ -315,11 +329,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(45, 119);
+            this.label2.Location = new System.Drawing.Point(10, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 21);
+            this.label2.Size = new System.Drawing.Size(110, 21);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Salir";
+            this.label2.Text = "Cerrar Sesion";
             // 
             // label1
             // 
@@ -330,17 +344,6 @@
             this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Admin";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::prueba_login.Properties.Resources.boton_de_encendido;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 83);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panelContenedor
             // 
@@ -370,7 +373,7 @@
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,10 +392,10 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnSupervision;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelContenedor;
         private Bunifu.Framework.UI.BunifuFlatButton btnAdminProductos;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

@@ -50,7 +50,7 @@ namespace prueba_login.Modelo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error inesperado! Ocurrió un error al momento de cargar a los asesores, por favor consulte con el administrador " + ex.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error inesperado! Ocurrió un error al momento de cargar los clientes, por favor consulte con el administrador " + ex.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return data;
             }
         }

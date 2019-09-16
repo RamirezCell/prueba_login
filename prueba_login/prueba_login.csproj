@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="recuinterno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recuinterno.Designer.cs">
+      <DependentUpon>recuinterno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Aseguradora.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +248,9 @@
     <Compile Include="Vista\recu_contra.Designer.cs">
       <DependentUpon>recu_contra.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="recuinterno.resx">
+      <DependentUpon>recuinterno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Aseguradora.resx">
       <DependentUpon>Aseguradora.cs</DependentUpon>
     </EmbeddedResource>

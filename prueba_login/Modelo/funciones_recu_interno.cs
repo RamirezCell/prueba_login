@@ -27,7 +27,7 @@ namespace prueba_login.Modelo
                 if (retorno == true)
                 {
                    
-                    string pass = "LoXc4qdLw/ZNPczO4W4h7a7BjsY=";
+                    string pass = "ke8MFgiyDJxb2eADu7YAIpwN/rE=";
                    
                         MySqlCommand val2 = new MySqlCommand(string.Format("UPDATE usuarios SET clave='{0}' WHERE usuario='{1}'", pass, select.usuario), conexion.obtenerconexion());
                     int reset = Convert.ToInt32(val2.ExecuteNonQuery());

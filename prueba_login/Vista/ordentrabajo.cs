@@ -200,5 +200,10 @@ namespace prueba_login
         {
             caracter(e);
         }
+
+        private void cmbcliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

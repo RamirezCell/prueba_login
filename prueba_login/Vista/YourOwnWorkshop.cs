@@ -247,6 +247,12 @@ namespace prueba_login
                         this.Hide();
                         uso.Show();
                     }
+                    else if (login.clave== "ke8MFgiyDJxb2eADu7YAIpwN/rE=")
+                    {
+                        Form recu = new recuinterno();
+                        recu.Show();
+                        this.Hide();
+                    }
 
                    else if (constructotlogin.nivel == 1)
                     {

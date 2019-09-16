@@ -178,18 +178,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 126);
+            this.label2.Location = new System.Drawing.Point(10, 126);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 21);
+            this.label2.Size = new System.Drawing.Size(110, 21);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Salir";
+            this.label2.Text = "Cerrar Sesion";
             // 
             // btnsalir
             // 
             this.btnsalir.BackColor = System.Drawing.Color.Transparent;
             this.btnsalir.Image = global::prueba_login.Properties.Resources.boton_de_encendido;
             this.btnsalir.ImageActive = null;
-            this.btnsalir.Location = new System.Drawing.Point(20, 28);
+            this.btnsalir.Location = new System.Drawing.Point(26, 28);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(83, 83);
             this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

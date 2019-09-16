@@ -289,6 +289,7 @@
             this.cmbcliente.Name = "cmbcliente";
             this.cmbcliente.Size = new System.Drawing.Size(217, 21);
             this.cmbcliente.TabIndex = 2;
+            this.cmbcliente.SelectedIndexChanged += new System.EventHandler(this.cmbcliente_SelectedIndexChanged);
             // 
             // cmbusuario
             // 

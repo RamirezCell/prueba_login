@@ -9,11 +9,18 @@ namespace prueba_login.Controlador
     class constructorvehiculo
     {
         public int id_vehiculo { get; set; }
-        public string nombre_vehiculo { get; set; }
-        public string modelo { get; set; }
-        public int year { get; set; }
-        public string tipo_auto { get; set; }
         public int marca { get; set; }
+        public int modelo { get; set; }
+        public int linea { get; set; }
+        public int linea_vehiculo { get; set; }
+        public int tipo_vehiculo { get; set; }
+        public int estado_vehiculo { get; set; }
+        public int tipo_placa { get; set; }
+        public int id_cliente { get; set; }
+        public string numero_motor { get; set; }
+        public int numplaca { get; set; }
+        public string numero_chasis { get; set; }
+       
         
        
 
