@@ -477,6 +477,8 @@
     <None Include="Resources\Close Window_ 2 48px2.png" />
     <None Include="Resources\bill %281%29.png" />
     <None Include="Resources\add.png" />
+    <None Include="Resources\check21.png" />
+    <None Include="Resources\check22.png" />
     <Content Include="Resources\Icon1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

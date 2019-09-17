@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(registrotrabajador));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -35,6 +36,7 @@
             this.txtfiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.grpregistro = new System.Windows.Forms.GroupBox();
+            this.validar = new System.Windows.Forms.PictureBox();
             this.btnexaminar = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.pctlogo = new System.Windows.Forms.PictureBox();
@@ -61,16 +63,19 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.dgvuser = new System.Windows.Forms.DataGridView();
             this.btnrecuperacion = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.error1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnlimp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnupdate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1.SuspendLayout();
             this.grpregistro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.validar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -125,6 +130,7 @@
             // 
             this.grpregistro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpregistro.Controls.Add(this.validar);
             this.grpregistro.Controls.Add(this.btnexaminar);
             this.grpregistro.Controls.Add(this.label13);
             this.grpregistro.Controls.Add(this.pctlogo);
@@ -153,6 +159,17 @@
             this.grpregistro.TabIndex = 3;
             this.grpregistro.TabStop = false;
             this.grpregistro.Enter += new System.EventHandler(this.grpregistro_Enter);
+            // 
+            // validar
+            // 
+            this.validar.Image = global::prueba_login.Properties.Resources.check22;
+            this.validar.Location = new System.Drawing.Point(244, 185);
+            this.validar.Name = "validar";
+            this.validar.Size = new System.Drawing.Size(24, 18);
+            this.validar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.validar.TabIndex = 30;
+            this.validar.TabStop = false;
+            this.validar.Visible = false;
             // 
             // btnexaminar
             // 
@@ -207,6 +224,7 @@
             this.txtuser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtuser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.Location = new System.Drawing.Point(536, 111);
+            this.txtuser.MaxLength = 20;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(164, 23);
             this.txtuser.TabIndex = 6;
@@ -366,6 +384,7 @@
             this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDireccion.Location = new System.Drawing.Point(301, 178);
+            this.txtDireccion.MaxLength = 250;
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(172, 46);
@@ -380,6 +399,7 @@
             this.txtcorreo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcorreo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtcorreo.Location = new System.Drawing.Point(58, 183);
+            this.txtcorreo.MaxLength = 76;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(180, 19);
             this.txtcorreo.TabIndex = 8;
@@ -394,6 +414,7 @@
             this.txtapellido.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtapellido.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtapellido.Location = new System.Drawing.Point(301, 48);
+            this.txtapellido.MaxLength = 25;
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(172, 19);
             this.txtapellido.TabIndex = 2;
@@ -406,6 +427,7 @@
             this.txtnombre.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnombre.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtnombre.Location = new System.Drawing.Point(58, 48);
+            this.txtnombre.MaxLength = 25;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(180, 19);
             this.txtnombre.TabIndex = 1;
@@ -452,13 +474,21 @@
             this.btnrecuperacion.BackColor = System.Drawing.Color.Goldenrod;
             this.btnrecuperacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnrecuperacion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnrecuperacion.Location = new System.Drawing.Point(628, 2);
+            this.btnrecuperacion.Location = new System.Drawing.Point(802, 0);
             this.btnrecuperacion.Name = "btnrecuperacion";
             this.btnrecuperacion.Size = new System.Drawing.Size(198, 31);
             this.btnrecuperacion.TabIndex = 18;
             this.btnrecuperacion.Text = "Recuperacion de contraseña";
             this.btnrecuperacion.UseVisualStyleBackColor = false;
             this.btnrecuperacion.Click += new System.EventHandler(this.btnrecuperacion_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // error1
+            // 
+            this.error1.ContainerControl = this;
             // 
             // btnlimp
             // 
@@ -640,10 +670,6 @@
             this.btnregistrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // registrotrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -669,8 +695,10 @@
             this.toolStrip1.PerformLayout();
             this.grpregistro.ResumeLayout(false);
             this.grpregistro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.validar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvuser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -716,5 +744,7 @@
         private System.Windows.Forms.PictureBox pctlogo;
         private Bunifu.Framework.UI.BunifuFlatButton btnlimp;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ErrorProvider error1;
+        private System.Windows.Forms.PictureBox validar;
     }
 }

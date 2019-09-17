@@ -146,17 +146,22 @@
             // 
             this.txtchasis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtchasis.Location = new System.Drawing.Point(773, 101);
+            this.txtchasis.MaxLength = 17;
             this.txtchasis.Name = "txtchasis";
             this.txtchasis.Size = new System.Drawing.Size(173, 20);
             this.txtchasis.TabIndex = 9;
+            this.txtchasis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txtchasis_KeyPress);
             // 
             // txtmotor
             // 
             this.txtmotor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtmotor.Location = new System.Drawing.Point(773, 42);
+            this.txtmotor.MaxLength = 17;
             this.txtmotor.Name = "txtmotor";
             this.txtmotor.Size = new System.Drawing.Size(173, 20);
             this.txtmotor.TabIndex = 4;
+            this.txtmotor.TextChanged += new System.EventHandler(this.Txtmotor_TextChanged);
+            this.txtmotor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txtmotor_KeyPress);
             // 
             // label2
             // 
@@ -185,9 +190,12 @@
             // 
             this.txtplaca.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtplaca.Location = new System.Drawing.Point(620, 106);
+            this.txtplaca.MaxLength = 6;
             this.txtplaca.Name = "txtplaca";
             this.txtplaca.Size = new System.Drawing.Size(122, 20);
             this.txtplaca.TabIndex = 8;
+            this.txtplaca.TextChanged += new System.EventHandler(this.Txtplaca_TextChanged);
+            this.txtplaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txtplaca_KeyPress);
             // 
             // cmbLinea
             // 
@@ -470,6 +478,7 @@
             this.dgvvehiculos.Size = new System.Drawing.Size(996, 342);
             this.dgvvehiculos.TabIndex = 15;
             this.dgvvehiculos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvvehiculos_CellClick);
+            this.dgvvehiculos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgvvehiculos_CellContentClick);
             // 
             // toolStrip2
             // 
@@ -507,6 +516,7 @@
             // 
             // txtFiltrar
             // 
+            this.txtFiltrar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(100, 36);
             this.txtFiltrar.Click += new System.EventHandler(this.txtFiltrar_Click);

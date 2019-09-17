@@ -12,6 +12,8 @@ using prueba_login.Modelo;
 using System.Security.Cryptography;
 using System.IO;
 using System.Drawing.Imaging;
+using System.Text.RegularExpressions;
+
 
 namespace prueba_login
 {
@@ -125,10 +127,22 @@ namespace prueba_login
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
-           
-            agregar();
+            if (Email_Valido(txtcorreo.Text) == false)// llamado del metodo Email_Valido
+            {
+                error1.SetError(txtcorreo, " Ingrese un Email Válido");
+                txtcorreo.Focus();
+               
+                return;
+            }
+            else
+            {
+                error1.Clear();
+                validar.Visible = true;
+                agregar();
+            }
+            
             dgvuser.DataSource = registrouser.usuarios();
-
+            validar.Visible = false;
             limpiar();
         }
 
@@ -262,6 +276,7 @@ namespace prueba_login
         {
             caracter(e);
         }
+       
 
         private void txtcorreo_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -299,7 +314,29 @@ namespace prueba_login
         {
 
         }
+        public static bool Email_Valido(String email) // Método para validar el Email ingresado
+        {
+            String validando;
+            validando = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
+            if (Regex.IsMatch(email, validando))
+            {
+                if (Regex.Replace(email, validando, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
 
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+        }
         private void txtcorreo_TextChanged(object sender, EventArgs e)
         {
 
@@ -307,12 +344,21 @@ namespace prueba_login
 
         private void btnexaminar_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
-            DialogResult resultado = openFileDialog1.ShowDialog();
-            if (resultado == DialogResult.OK)
+            try
             {
-                pctlogo.Image = Image.FromFile(openFileDialog1.FileName);
+                openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
+                DialogResult resultado = openFileDialog1.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    pctlogo.Image = Image.FromFile(openFileDialog1.FileName);
+                }
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("El peso de la imagen es mayor al soportado","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+           
         }
 
         private void btnlimp_Click(object sender, EventArgs e)

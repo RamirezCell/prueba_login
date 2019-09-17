@@ -9,24 +9,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prueba_login.Controlador;
 using prueba_login.Modelo;
+using System.Text.RegularExpressions;
+
 using MySql.Data.MySqlClient;
 
 namespace prueba_login
 {
     public partial class registroauto : Form
     {
+
         public registroauto()
         {
             InitializeComponent();
             
         }
-        
+       
+
         public void caracter(KeyPressEventArgs e)
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
 
         }
         constructorvehiculo add = new constructorvehiculo();
+       
 
         public void agregar()
         {
@@ -55,7 +60,18 @@ namespace prueba_login
         constructorvehiculo actualizar = new constructorvehiculo();
         private void upd()
         {
-           
+            actualizar.estado_vehiculo = Convert.ToInt32(cmbEstado_Vehiculo.SelectedValue);
+            actualizar.id_cliente = Convert.ToInt32(cmbPropietario.SelectedValue);
+            actualizar.id_vehiculo = Convert.ToInt32(txtIdvehiculo.Text);
+            actualizar.linea = Convert.ToInt32(cmbLinea.SelectedValue);
+            actualizar.marca = Convert.ToInt32(cmbMarca_vehiculo.SelectedValue);
+            actualizar.modelo = Convert.ToInt32(cmbModelo_Vehiculo.SelectedValue);
+            actualizar.tipo_placa = Convert.ToInt32(cmbplaca.SelectedValue);
+            actualizar.tipo_vehiculo = Convert.ToInt32(cmbTipo_Vehiculo.SelectedValue);
+            actualizar.numero_chasis = txtchasis.Text;
+            actualizar.numero_motor = txtmotor.Text;
+            actualizar.numplaca = Convert.ToInt32(txtplaca.Text);
+            funcionesvehiculo.actualizar(actualizar);
 
         }
 
@@ -689,8 +705,7 @@ namespace prueba_login
             this.dgvvehiculos.Columns[0].Visible = false;
 
 
-            dgvvehiculos.DataSource = funcionesvehiculo.mostrar();
-
+            mostrar();
             
 
         }
@@ -706,7 +721,18 @@ namespace prueba_login
 
         private void dgvvehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            int posicion = this.dgvvehiculos.CurrentRow.Index;
+            txtIdvehiculo.Text = dgvvehiculos[0, posicion].Value.ToString();
+            cmbMarca_vehiculo.Text = dgvvehiculos[1, posicion].Value.ToString();
+            cmbModelo_Vehiculo.Text = dgvvehiculos[2, posicion].Value.ToString();
+            cmbLinea.Text = dgvvehiculos[3, posicion].Value.ToString();
+            cmbTipo_Vehiculo.Text = dgvvehiculos[4, posicion].Value.ToString();
+            cmbEstado_Vehiculo.Text = dgvvehiculos[5, posicion].Value.ToString();
+            cmbplaca.Text = dgvvehiculos[6, posicion].Value.ToString();
+            cmbPropietario.Text = dgvvehiculos[7, posicion].Value.ToString();
+            txtmotor.Text = dgvvehiculos[8, posicion].Value.ToString();
+            txtplaca.Text = dgvvehiculos[9, posicion].Value.ToString();
+            txtchasis.Text = dgvvehiculos[10, posicion].Value.ToString();
             
           
            
@@ -823,7 +849,7 @@ namespace prueba_login
 
         private void btnlimp_Click(object sender, EventArgs e)
         {
-            
+            limpiarcampos();
         }
         public void clasimarcas()
         {
@@ -1174,6 +1200,51 @@ namespace prueba_login
         private void cmbModelo_Vehiculo_SelectedIndexChanged(object sender, EventArgs e)
         {
             ediciones();
+        }
+
+        private void Dgvvehiculos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Txtplaca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txtplaca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Txtmotor_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Txtmotor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
+        }
+
+        private void Txtchasis_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            caracter(e);
         }
     }
 }

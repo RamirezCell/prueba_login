@@ -12,7 +12,7 @@ namespace prueba_login.Controlador
         public int marca { get; set; }
         public int modelo { get; set; }
         public int linea { get; set; }
-        public int linea_vehiculo { get; set; }
+       
         public int tipo_vehiculo { get; set; }
         public int estado_vehiculo { get; set; }
         public int tipo_placa { get; set; }
