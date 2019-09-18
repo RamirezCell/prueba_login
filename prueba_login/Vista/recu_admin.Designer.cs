@@ -104,6 +104,7 @@
             // txtcontra
             // 
             this.txtcontra.Location = new System.Drawing.Point(108, 185);
+            this.txtcontra.MaxLength = 20;
             this.txtcontra.Name = "txtcontra";
             this.txtcontra.Size = new System.Drawing.Size(215, 20);
             this.txtcontra.TabIndex = 2;
@@ -125,6 +126,7 @@
             // txtadmin
             // 
             this.txtadmin.Location = new System.Drawing.Point(108, 81);
+            this.txtadmin.MaxLength = 20;
             this.txtadmin.Name = "txtadmin";
             this.txtadmin.Size = new System.Drawing.Size(215, 20);
             this.txtadmin.TabIndex = 1;
@@ -196,6 +198,7 @@
             // 
             this.txtnuevacontra.Enabled = false;
             this.txtnuevacontra.Location = new System.Drawing.Point(106, 212);
+            this.txtnuevacontra.MaxLength = 20;
             this.txtnuevacontra.Name = "txtnuevacontra";
             this.txtnuevacontra.Size = new System.Drawing.Size(215, 20);
             this.txtnuevacontra.TabIndex = 4;
@@ -217,6 +220,7 @@
             // txtusuario
             // 
             this.txtusuario.Location = new System.Drawing.Point(108, 81);
+            this.txtusuario.MaxLength = 20;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(215, 20);
             this.txtusuario.TabIndex = 3;
@@ -261,9 +265,10 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Goldenrod;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(423, 390);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(345, 390);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 48);
+            this.button1.Size = new System.Drawing.Size(252, 35);
             this.button1.TabIndex = 6;
             this.button1.Text = "Volver a opciones";
             this.button1.UseVisualStyleBackColor = false;

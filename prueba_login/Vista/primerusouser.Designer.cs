@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(primerusouser));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -71,9 +72,13 @@
             this.txtp1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtxcifrado = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.validar = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validar)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -114,6 +119,7 @@
             // 
             this.txtname.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.Location = new System.Drawing.Point(36, 64);
+            this.txtname.MaxLength = 25;
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(182, 21);
             this.txtname.TabIndex = 1;
@@ -145,6 +151,7 @@
             // 
             this.txtapellido.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtapellido.Location = new System.Drawing.Point(36, 132);
+            this.txtapellido.MaxLength = 25;
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(182, 21);
             this.txtapellido.TabIndex = 2;
@@ -226,6 +233,7 @@
             // 
             this.txtuser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.Location = new System.Drawing.Point(246, 283);
+            this.txtuser.MaxLength = 20;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(182, 21);
             this.txtuser.TabIndex = 7;
@@ -246,6 +254,7 @@
             // 
             this.txtpass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.Location = new System.Drawing.Point(461, 77);
+            this.txtpass.MaxLength = 20;
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(182, 21);
             this.txtpass.TabIndex = 8;
@@ -328,6 +337,7 @@
             // 
             this.txtcorreo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcorreo.Location = new System.Drawing.Point(463, 205);
+            this.txtcorreo.MaxLength = 76;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(182, 21);
             this.txtcorreo.TabIndex = 10;
@@ -339,9 +349,13 @@
             this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(461, 284);
+            this.dateTimePicker1.MaxDate = new System.DateTime(1999, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1940, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(184, 20);
             this.dateTimePicker1.TabIndex = 11;
+            this.dateTimePicker1.Value = new System.DateTime(1999, 12, 31, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label11
             // 
@@ -467,6 +481,7 @@
             // txtp3
             // 
             this.txtp3.Location = new System.Drawing.Point(252, 161);
+            this.txtp3.MaxLength = 20;
             this.txtp3.Name = "txtp3";
             this.txtp3.Size = new System.Drawing.Size(544, 21);
             this.txtp3.TabIndex = 15;
@@ -474,6 +489,7 @@
             // txtp2
             // 
             this.txtp2.Location = new System.Drawing.Point(252, 110);
+            this.txtp2.MaxLength = 20;
             this.txtp2.Name = "txtp2";
             this.txtp2.Size = new System.Drawing.Size(544, 21);
             this.txtp2.TabIndex = 14;
@@ -492,6 +508,7 @@
             // txtp1
             // 
             this.txtp1.Location = new System.Drawing.Point(200, 58);
+            this.txtp1.MaxLength = 20;
             this.txtp1.Name = "txtp1";
             this.txtp1.Size = new System.Drawing.Size(596, 21);
             this.txtp1.TabIndex = 13;
@@ -508,12 +525,28 @@
             this.txtxcifrado.TabIndex = 31;
             this.txtxcifrado.Visible = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // validar
+            // 
+            this.validar.Image = global::prueba_login.Properties.Resources.check22;
+            this.validar.Location = new System.Drawing.Point(652, 208);
+            this.validar.Name = "validar";
+            this.validar.Size = new System.Drawing.Size(24, 18);
+            this.validar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.validar.TabIndex = 32;
+            this.validar.TabStop = false;
+            this.validar.Visible = false;
+            // 
             // primerusouser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(914, 693);
+            this.Controls.Add(this.validar);
             this.Controls.Add(this.txtxcifrado);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label14);
@@ -557,6 +590,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -606,5 +641,7 @@
         private System.Windows.Forms.Button btnguadar;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtxcifrado;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.PictureBox validar;
     }
 }

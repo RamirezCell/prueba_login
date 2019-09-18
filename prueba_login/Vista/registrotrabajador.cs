@@ -67,7 +67,7 @@ namespace prueba_login
                 add.correo = txtcorreo.Text;
                 add.genero = Convert.ToInt32(cmbgender.SelectedValue);
                 add.ocupacion = Convert.ToInt32(cmboc.SelectedValue);
-             
+                add.fecha = dateTimePicker1.Text;
                 add.usuario = txtuser.Text;
                 add.direccion = txtDireccion.Text;
                 add.dui = txtdui.Text;
@@ -111,7 +111,7 @@ namespace prueba_login
             upd.direccion = txtDireccion.Text;
             upd.ocupacion = Convert.ToInt32(cmboc.SelectedValue);
             upd.genero = Convert.ToInt32(cmbgender.SelectedValue);
-        
+            upd.fecha = dateTimePicker1.Text;
             upd.telefono = txtnum.Text;
             upd.dui = txtdui.Text;
             upd.correo = txtcorreo.Text;
@@ -293,6 +293,7 @@ namespace prueba_login
             caracter(e);
         }
 
+
         private void txtdui_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
@@ -369,6 +370,11 @@ namespace prueba_login
         }
 
         private void txtDireccion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

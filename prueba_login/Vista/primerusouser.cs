@@ -12,6 +12,8 @@ using System.Drawing.Imaging;
 using prueba_login.Modelo;
 using prueba_login.Controlador;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
+
 
 
 namespace prueba_login
@@ -33,6 +35,29 @@ namespace prueba_login
         public void caracter(KeyPressEventArgs e)
         {
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+
+        }
+        public static bool Email_Valido(String email) // Método para validar el Email ingresado
+        {
+            String validando;
+            validando = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
+            if (Regex.IsMatch(email, validando))
+            {
+                if (Regex.Replace(email, validando, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+
+                }
+            }
+            else
+            {
+                return false;
+            }
 
         }
         public string Hash(byte[] val)
@@ -71,6 +96,13 @@ namespace prueba_login
                 MessageBox.Show("Existen campos vacios", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
+            else if (Email_Valido(txtcorreo.Text) == false)
+            {
+                errorProvider1.SetError(txtcorreo, " Ingrese un Email Válido");
+                txtcorreo.Focus();
+
+                return;
+            }
             else
             {
                 constructoruser add = new constructoruser();
@@ -95,6 +127,8 @@ namespace prueba_login
                 byte[] abyte = ms.ToArray();
                 string encoded = Convert.ToBase64String(abyte);
                 add.foto = encoded;
+                errorProvider1.Clear();
+                validar.Visible = true;
                 if (registrouser.registraradmin(add) >= 1)
                 {
                     Form user = new YourOwnWorkshop();
@@ -174,6 +208,11 @@ namespace prueba_login
         }
 
         private void txtcorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

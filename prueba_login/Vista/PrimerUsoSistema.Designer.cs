@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrimerUsoSistema));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -50,8 +51,12 @@
             this.btnguadar = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtit = new System.Windows.Forms.MaskedTextBox();
+            this.validar = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -80,6 +85,7 @@
             // 
             this.txtname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.Location = new System.Drawing.Point(93, 106);
+            this.txtname.MaxLength = 25;
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(237, 22);
             this.txtname.TabIndex = 1;
@@ -123,6 +129,7 @@
             // 
             this.txtreplegal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtreplegal.Location = new System.Drawing.Point(93, 304);
+            this.txtreplegal.MaxLength = 25;
             this.txtreplegal.Name = "txtreplegal";
             this.txtreplegal.Size = new System.Drawing.Size(237, 22);
             this.txtreplegal.TabIndex = 3;
@@ -134,6 +141,7 @@
             this.pctlogo.Location = new System.Drawing.Point(696, 139);
             this.pctlogo.Name = "pctlogo";
             this.pctlogo.Size = new System.Drawing.Size(137, 167);
+            this.pctlogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctlogo.TabIndex = 7;
             this.pctlogo.TabStop = false;
             // 
@@ -152,6 +160,7 @@
             // 
             this.txtcod.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcod.Location = new System.Drawing.Point(93, 403);
+            this.txtcod.MaxLength = 5;
             this.txtcod.Name = "txtcod";
             this.txtcod.Size = new System.Drawing.Size(237, 22);
             this.txtcod.TabIndex = 4;
@@ -173,6 +182,7 @@
             // 
             this.txtcorreo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcorreo.Location = new System.Drawing.Point(400, 106);
+            this.txtcorreo.MaxLength = 25;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(237, 22);
             this.txtcorreo.TabIndex = 5;
@@ -193,6 +203,7 @@
             // 
             this.txtdireccion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtdireccion.Location = new System.Drawing.Point(400, 205);
+            this.txtdireccion.MaxLength = 500;
             this.txtdireccion.Multiline = true;
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(237, 130);
@@ -240,7 +251,7 @@
             this.btnex.Location = new System.Drawing.Point(696, 322);
             this.btnex.Name = "btnex";
             this.btnex.Size = new System.Drawing.Size(137, 29);
-            this.btnex.TabIndex = 8;
+            this.btnex.TabIndex = 7;
             this.btnex.Text = "Examinar";
             this.btnex.UseVisualStyleBackColor = false;
             this.btnex.Click += new System.EventHandler(this.btnex_Click);
@@ -253,7 +264,7 @@
             this.btnguadar.Location = new System.Drawing.Point(696, 371);
             this.btnguadar.Name = "btnguadar";
             this.btnguadar.Size = new System.Drawing.Size(137, 29);
-            this.btnguadar.TabIndex = 9;
+            this.btnguadar.TabIndex = 8;
             this.btnguadar.Text = "Guardar y continuar";
             this.btnguadar.UseVisualStyleBackColor = false;
             this.btnguadar.Click += new System.EventHandler(this.btnguadar_Click);
@@ -268,7 +279,22 @@
             this.txtit.Mask = "0000-00000000-000-0";
             this.txtit.Name = "txtit";
             this.txtit.Size = new System.Drawing.Size(237, 20);
-            this.txtit.TabIndex = 17;
+            this.txtit.TabIndex = 2;
+            // 
+            // validar
+            // 
+            this.validar.Image = global::prueba_login.Properties.Resources.check22;
+            this.validar.Location = new System.Drawing.Point(643, 110);
+            this.validar.Name = "validar";
+            this.validar.Size = new System.Drawing.Size(24, 18);
+            this.validar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.validar.TabIndex = 31;
+            this.validar.TabStop = false;
+            this.validar.Visible = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // PrimerUsoSistema
             // 
@@ -276,6 +302,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(899, 480);
+            this.Controls.Add(this.validar);
             this.Controls.Add(this.txtit);
             this.Controls.Add(this.btnguadar);
             this.Controls.Add(this.btnex);
@@ -304,6 +331,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +361,7 @@
         private System.Windows.Forms.Button btnguadar;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.MaskedTextBox txtit;
+        private System.Windows.Forms.PictureBox validar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -54,6 +54,7 @@
             this.txtpassveri.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtpassveri.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassveri.Location = new System.Drawing.Point(413, 76);
+            this.txtpassveri.MaxLength = 20;
             this.txtpassveri.Name = "txtpassveri";
             this.txtpassveri.Size = new System.Drawing.Size(231, 23);
             this.txtpassveri.TabIndex = 32;
@@ -77,6 +78,7 @@
             this.txtpass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtpass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.Location = new System.Drawing.Point(62, 76);
+            this.txtpass.MaxLength = 20;
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(231, 23);
             this.txtpass.TabIndex = 30;

@@ -11,6 +11,8 @@ using System.Drawing.Imaging;
 using prueba_login.Modelo;
 using prueba_login.Controlador;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+
 
 namespace prueba_login
 {
@@ -27,7 +29,29 @@ namespace prueba_login
             txtcorreo.ContextMenu = new ContextMenu();
             txtdireccion.ContextMenu = new ContextMenu();
         }
+        public static bool Email_Valido(String email) // Método para validar el Email ingresado
+        {
+            String validando;
+            validando = @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$";
+            if (Regex.IsMatch(email, validando))
+            {
+                if (Regex.Replace(email, validando, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
 
+                }
+            }
+            else
+            {
+                return false;
+            }
+
+        }
 
         public void caracter(KeyPressEventArgs e)
         {
@@ -51,12 +75,22 @@ namespace prueba_login
 
         private void btnex_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
-            DialogResult resultado = openFileDialog1.ShowDialog();
-            if (resultado == DialogResult.OK)
+            try
             {
-                pctlogo.Image = Image.FromFile(openFileDialog1.FileName);
+                openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
+                DialogResult resultado = openFileDialog1.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    pctlogo.Image = Image.FromFile(openFileDialog1.FileName);
+                }
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("El peso de la imagen es mayor al soportado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
 
         private void btnguadar_Click(object sender, EventArgs e)
@@ -64,6 +98,13 @@ namespace prueba_login
             if (txtname.Text.Trim() == "" || txtit.Text.Trim() == "" || txtreplegal.Text.Trim() == "" || txtdireccion.Text.Trim() == ""|| txtcod.Text.Trim()== "" || pctlogo.Image == null)
             {
                 MessageBox.Show("Existen campos vacios", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (Email_Valido(txtcorreo.Text) == false)
+            {
+                errorProvider1.SetError(txtcorreo, " Ingrese un Email Válido");
+                txtcorreo.Focus();
+
+                return;
             }
             else
             {
@@ -80,10 +121,11 @@ namespace prueba_login
                 byte[] abyte = ms.ToArray();
                 string encoded = Convert.ToBase64String(abyte);
                 add.foto = encoded;
-
+                errorProvider1.Clear();
+                validar.Visible = true;
                 if (registroempresa.empresa(add) >= 1)
                 {
-                    Form user = new primerusouser();
+                    Form user = new YourOwnWorkshop();
                     user.Show();
                     this.Hide();
                 }

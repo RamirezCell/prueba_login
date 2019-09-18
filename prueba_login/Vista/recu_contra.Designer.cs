@@ -44,9 +44,9 @@
             this.btnenviar = new System.Windows.Forms.Button();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txpass = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.txpass = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -179,6 +179,7 @@
             this.txtveri.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtveri.ForeColor = System.Drawing.SystemColors.Menu;
             this.txtveri.Location = new System.Drawing.Point(147, 281);
+            this.txtveri.MaxLength = 4;
             this.txtveri.Name = "txtveri";
             this.txtveri.Size = new System.Drawing.Size(308, 17);
             this.txtveri.TabIndex = 10;
@@ -229,6 +230,7 @@
             this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuario.ForeColor = System.Drawing.SystemColors.Menu;
             this.txtusuario.Location = new System.Drawing.Point(147, 50);
+            this.txtusuario.MaxLength = 20;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(308, 17);
             this.txtusuario.TabIndex = 1;
@@ -249,29 +251,6 @@
             this.panel2.Size = new System.Drawing.Size(299, 370);
             this.panel2.TabIndex = 2;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(101, 120);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Nueva contraseña";
-            // 
-            // txpass
-            // 
-            this.txpass.BackColor = System.Drawing.Color.Black;
-            this.txpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txpass.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txpass.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txpass.Location = new System.Drawing.Point(22, 158);
-            this.txpass.Name = "txpass";
-            this.txpass.Size = new System.Drawing.Size(263, 17);
-            this.txpass.TabIndex = 12;
-            this.txpass.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.txpass.Enter += new System.EventHandler(this.textBox1_Enter);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -288,6 +267,30 @@
             this.button2.Text = "ACTUALIZAR";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txpass
+            // 
+            this.txpass.BackColor = System.Drawing.Color.Black;
+            this.txpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txpass.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txpass.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txpass.Location = new System.Drawing.Point(22, 158);
+            this.txpass.MaxLength = 20;
+            this.txpass.Name = "txpass";
+            this.txpass.Size = new System.Drawing.Size(263, 17);
+            this.txpass.TabIndex = 12;
+            this.txpass.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txpass.Enter += new System.EventHandler(this.textBox1_Enter);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(101, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(111, 16);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Nueva contraseña";
             // 
             // recu_contra
             // 
