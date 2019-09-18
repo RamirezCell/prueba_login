@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using prueba_login.Controlador;
+using prueba_login.reportes;
 using prueba_login.Modelo;
 
 
@@ -354,6 +355,12 @@ namespace prueba_login
         private void btnlimp_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            reporteclientes repo = new reporteclientes();
+            repo.Show();
         }
     }
     
