@@ -202,12 +202,13 @@
             // lblpass
             // 
             this.lblpass.AutoSize = true;
+            this.lblpass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpass.ForeColor = System.Drawing.Color.Gold;
             this.lblpass.Location = new System.Drawing.Point(440, 120);
             this.lblpass.Name = "lblpass";
-            this.lblpass.Size = new System.Drawing.Size(143, 13);
+            this.lblpass.Size = new System.Drawing.Size(168, 16);
             this.lblpass.TabIndex = 29;
-            this.lblpass.Text = "Las contraseñas no coiciden";
+            this.lblpass.Text = "Las contraseñas no coinciden";
             this.lblpass.Visible = false;
             this.lblpass.Click += new System.EventHandler(this.lblpass_Click);
             // 

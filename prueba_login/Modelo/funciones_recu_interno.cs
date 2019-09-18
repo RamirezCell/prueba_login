@@ -12,7 +12,36 @@ namespace prueba_login.Modelo
 {
     class funciones_recu_interno
     {
-       
+        public static bool pass(constructorrecuinterno upd)
+        {
+            bool retorno = false;
+
+            string query = "SELECT * FROM usuarios WHERE binary usuario=?user";
+            try
+            {
+                MySqlCommand cmdeselct = new MySqlCommand(query, conexion.obtenerconexion());
+                //envio de parametros a la consulta
+                cmdeselct.Parameters.Add(new MySqlParameter("user", constructotlogin.usuario));
+                retorno = Convert.ToBoolean(cmdeselct.ExecuteScalar());
+                if (retorno == true)
+                {
+                    MySqlCommand val = new MySqlCommand(string.Format("UPDATE usuarios SET clave='{0}' WHERE usuario='{1}'", upd.pass, constructotlogin.usuario), conexion.obtenerconexion());
+                    retorno = Convert.ToBoolean(val.ExecuteNonQuery());
+                    if (retorno == true)
+                    {
+                        MessageBox.Show("Datos ingresados correctamente", "Bienvenido al sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+                return retorno;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("peto" + e, "alv", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return retorno;
+
+            }
+        }
 
         public static bool validar(constructor_recuinterno select)
         {
