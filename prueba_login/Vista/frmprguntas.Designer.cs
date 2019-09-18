@@ -267,6 +267,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmprguntas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmprguntas";
             this.Load += new System.EventHandler(this.frmprguntas_Load);
             this.toolStrip1.ResumeLayout(false);

@@ -30,6 +30,9 @@ namespace prueba_login
         {
             InitializeComponent();
             txtusuario.ContextMenu = new ContextMenu();
+            txtt.ContextMenu = new ContextMenu();
+            txpass.ContextMenu = new ContextMenu();
+            txtveri.ContextMenu = new ContextMenu();
         }
         public void caracter(KeyPressEventArgs e)
         {
@@ -157,6 +160,7 @@ namespace prueba_login
 
 
             }
+            txtusuario.Clear();
            
         }
 
@@ -215,7 +219,9 @@ namespace prueba_login
                 {
                     panel2.Enabled = true;
                 }
+
             }
+            txtveri.Clear();
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
@@ -226,6 +232,16 @@ namespace prueba_login
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            if (txpass.Text != txtt.Text)
+            {
+                lblpass.Visible = true;
+            }
+
+            else if (txpass.Text == txtt.Text)
+            {
+                lblpass.Visible = false;
+
+            }
             byte[] pass = System.Text.Encoding.UTF8.GetBytes(txpass.Text.ToString());
             txpass.UseSystemPasswordChar = true;
             txtcifrado.Text = Hash(pass);
@@ -252,6 +268,12 @@ namespace prueba_login
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            txtt.UseSystemPasswordChar = true;
 
         }
     }

@@ -367,6 +367,8 @@ namespace prueba_login
             limpiar();
             txtuser.Enabled = true;
             btnregistrar.Enabled = true;
+            btneliminar.Enabled = false;
+            btnupdate.Enabled = false;
         }
 
         private void txtDireccion_TextChanged(object sender, EventArgs e)

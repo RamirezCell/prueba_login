@@ -82,6 +82,7 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(231, 23);
             this.txtpass.TabIndex = 30;
+            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
             // 
             // label11

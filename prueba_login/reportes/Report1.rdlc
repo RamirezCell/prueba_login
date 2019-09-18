@@ -6,25 +6,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.32143in</Width>
+              <Width>1.31396in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32143in</Width>
+              <Width>1.31396in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32143in</Width>
+              <Width>1.31396in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.57143in</Width>
+              <Width>1.56396in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.51935in</Width>
+              <Width>1.51188in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32143in</Width>
+              <Width>1.31396in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.32143in</Width>
+              <Width>1.31396in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -538,9 +538,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetclientes</DataSetName>
-        <Top>0.04167in</Top>
         <Height>0.5in</Height>
-        <Width>9.69792in</Width>
+        <Width>9.64567in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -548,10 +547,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>8.81063cm</Height>
+    <Height>6.21771cm</Height>
     <Style />
   </Body>
-  <Width>24.63271cm</Width>
+  <Width>24.51585cm</Width>
   <Page>
     <PageHeader>
       <Height>2.62912cm</Height>
@@ -565,10 +564,10 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de clientes</Value>
+                  <Value>YourOwnWorkshop</Value>
                   <Style>
                     <FontFamily>Yu Gothic</FontFamily>
-                    <FontSize>30pt</FontSize>
+                    <FontSize>15pt</FontSize>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -577,9 +576,56 @@
           </Paragraphs>
           <rd:DefaultName>Textbox15</rd:DefaultName>
           <Top>0.59903cm</Top>
-          <Left>7.98506cm</Left>
-          <Height>1.59949cm</Height>
-          <Width>9.93479cm</Width>
+          <Left>10.41923cm</Left>
+          <Height>0.75282cm</Height>
+          <Width>4.89229cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Rectangle Name="Rectangle1">
+          <KeepTogether>true</KeepTogether>
+          <Top>0cm</Top>
+          <Left>0cm</Left>
+          <Height>0.2775cm</Height>
+          <Width>24.5cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <BackgroundColor>Black</BackgroundColor>
+          </Style>
+        </Rectangle>
+        <Textbox Name="Textbox17">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Reporte de datos de clientes</Value>
+                  <Style>
+                    <FontFamily>Yu Gothic</FontFamily>
+                    <FontSize>15pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox15</rd:DefaultName>
+          <Top>1.52824cm</Top>
+          <Left>9.1455cm</Left>
+          <Height>0.75282cm</Height>
+          <Width>7.16771cm</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -593,32 +639,18 @@
         <Image Name="Image1">
           <Source>Embedded</Source>
           <Value>logoexpo4</Value>
-          <Sizing>FitProportional</Sizing>
+          <Sizing>Fit</Sizing>
           <Top>0.59903cm</Top>
-          <Left>21.87787cm</Left>
-          <Height>1.5cm</Height>
-          <Width>1.39417cm</Width>
-          <ZIndex>1</ZIndex>
+          <Left>21.61328cm</Left>
+          <Height>1.8537cm</Height>
+          <Width>2.08208cm</Width>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
             </Border>
           </Style>
         </Image>
-        <Rectangle Name="Rectangle1">
-          <KeepTogether>true</KeepTogether>
-          <Top>0cm</Top>
-          <Left>0.60537cm</Left>
-          <Height>0.2775cm</Height>
-          <Width>24.02734cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <BackgroundColor>Black</BackgroundColor>
-          </Style>
-        </Rectangle>
       </ReportItems>
       <Style>
         <Border>
@@ -627,7 +659,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>2.54cm</Height>
+      <Height>1.83063cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -646,10 +678,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox16</rd:DefaultName>
-          <Top>1.23063cm</Top>
+          <Top>0.675cm</Top>
           <Left>8.6487cm</Left>
           <Height>0.6cm</Height>
-          <Width>7.60646cm</Width>
+          <Width>8.37375cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -669,10 +701,10 @@
     </PageFooter>
     <PageHeight>21.59cm</PageHeight>
     <PageWidth>27.94cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
+    <LeftMargin>1.8cm</LeftMargin>
     <RightMargin>1cm</RightMargin>
-    <TopMargin>1cm</TopMargin>
-    <BottomMargin>1cm</BottomMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
     <ColumnSpacing>1.27cm</ColumnSpacing>
     <Style />
   </Page>

@@ -80,6 +80,11 @@ namespace prueba_login
                 frm.Show();
             }
         }
+
+        private void txtpass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
