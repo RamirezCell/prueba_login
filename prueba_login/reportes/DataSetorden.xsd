@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetorden" targetNamespace="http://tempuri.org/DataSetorden.xsd" xmlns:mstns="http://tempuri.org/DataSetorden.xsd" xmlns="http://tempuri.org/DataSetorden.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.prueba_login.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTableTableAdapter" GeneratorDataComponentClassName="DataTableTableAdapter" Name="DataTable" UserDataComponentName="DataTableTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT * FROM `orden_trabajo`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_orden" DataSetColumn="id_orden" />
+              <Mapping SourceColumn="detalles" DataSetColumn="detalles" />
+              <Mapping SourceColumn="id_vehiculo" DataSetColumn="id_vehiculo" />
+              <Mapping SourceColumn="id_cliente" DataSetColumn="id_cliente" />
+              <Mapping SourceColumn="id_usuario" DataSetColumn="id_usuario" />
+              <Mapping SourceColumn="foto1" DataSetColumn="foto1" />
+              <Mapping SourceColumn="foto2" DataSetColumn="foto2" />
+              <Mapping SourceColumn="foto3" DataSetColumn="foto3" />
+              <Mapping SourceColumn="foto4" DataSetColumn="foto4" />
+              <Mapping SourceColumn="foto5" DataSetColumn="foto5" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetorden" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetorden" msprop:Generator_UserDSName="DataSetorden">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable" msprop:Generator_TableClassName="DataTableDataTable" msprop:Generator_TableVarName="tableDataTable" msprop:Generator_TablePropName="DataTable" msprop:Generator_RowDeletingName="DataTableRowDeleting" msprop:Generator_RowChangingName="DataTableRowChanging" msprop:Generator_RowEvHandlerName="DataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTableRowDeleted" msprop:Generator_UserTableName="DataTable" msprop:Generator_RowChangedName="DataTableRowChanged" msprop:Generator_RowEvArgName="DataTableRowChangeEvent" msprop:Generator_RowClassName="DataTableRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_orden" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_orden" msprop:Generator_ColumnPropNameInRow="id_orden" msprop:Generator_ColumnPropNameInTable="id_ordenColumn" msprop:Generator_UserColumnName="id_orden" type="xs:int" minOccurs="0" />
+              <xs:element name="detalles" msprop:Generator_ColumnVarNameInTable="columndetalles" msprop:Generator_ColumnPropNameInRow="detalles" msprop:Generator_ColumnPropNameInTable="detallesColumn" msprop:Generator_UserColumnName="detalles">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_vehiculo" msprop:Generator_ColumnVarNameInTable="columnid_vehiculo" msprop:Generator_ColumnPropNameInRow="id_vehiculo" msprop:Generator_ColumnPropNameInTable="id_vehiculoColumn" msprop:Generator_UserColumnName="id_vehiculo" type="xs:int" />
+              <xs:element name="id_cliente" msprop:Generator_ColumnVarNameInTable="columnid_cliente" msprop:Generator_ColumnPropNameInRow="id_cliente" msprop:Generator_ColumnPropNameInTable="id_clienteColumn" msprop:Generator_UserColumnName="id_cliente" type="xs:int" />
+              <xs:element name="id_usuario" msprop:Generator_ColumnVarNameInTable="columnid_usuario" msprop:Generator_ColumnPropNameInRow="id_usuario" msprop:Generator_ColumnPropNameInTable="id_usuarioColumn" msprop:Generator_UserColumnName="id_usuario" type="xs:int" />
+              <xs:element name="foto1" msprop:Generator_ColumnVarNameInTable="columnfoto1" msprop:Generator_ColumnPropNameInRow="foto1" msprop:Generator_ColumnPropNameInTable="foto1Column" msprop:Generator_UserColumnName="foto1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="foto2" msprop:Generator_ColumnVarNameInTable="columnfoto2" msprop:Generator_ColumnPropNameInRow="foto2" msprop:Generator_ColumnPropNameInTable="foto2Column" msprop:Generator_UserColumnName="foto2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="foto3" msprop:Generator_ColumnVarNameInTable="columnfoto3" msprop:Generator_ColumnPropNameInRow="foto3" msprop:Generator_ColumnPropNameInTable="foto3Column" msprop:Generator_UserColumnName="foto3">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="foto4" msprop:Generator_ColumnVarNameInTable="columnfoto4" msprop:Generator_ColumnPropNameInRow="foto4" msprop:Generator_ColumnPropNameInTable="foto4Column" msprop:Generator_UserColumnName="foto4">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="foto5" msprop:Generator_ColumnVarNameInTable="columnfoto5" msprop:Generator_ColumnPropNameInRow="foto5" msprop:Generator_ColumnPropNameInTable="foto5Column" msprop:Generator_UserColumnName="foto5">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:DataTable" />
+      <xs:field xpath="mstns:id_orden" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

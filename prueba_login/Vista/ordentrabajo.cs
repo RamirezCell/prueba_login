@@ -19,10 +19,7 @@ namespace prueba_login
         public ordentrabajo()
         {
             InitializeComponent();
-            txtplaca.ContextMenu = new ContextMenu();
-            txtchasis.ContextMenu = new ContextMenu();
-            txtkilometraje.ContextMenu = new ContextMenu();
-            txtmotor.ContextMenu = new ContextMenu();
+            
             txtdetalles.ContextMenu = new ContextMenu();
         }
         public void caracter(KeyPressEventArgs e)
@@ -42,7 +39,7 @@ namespace prueba_login
         }
         private void enviar()
         {
-            if (txtchasis.Text.Trim()==""||txtdetalles.Text.Trim()==""||txtkilometraje.Text.Trim()==""||txtmotor.Text.Trim()==""||txtplaca.Text.Trim()==""||pctarriba==null||pctderecha==null||pctfrontal==null||pctizquierda==null||pcttrasera==null)
+            if (txtdetalles.Text.Trim()==""||pctarriba==null||pctderecha==null||pctfrontal==null||pctizquierda==null||pcttrasera==null)
 
             {
                 MessageBox.Show("Existen campos vacios", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -51,13 +48,8 @@ namespace prueba_login
             else
             {
                 constructor_ordentrabajo add = new constructor_ordentrabajo();
-                add.chasis = Convert.ToInt16(txtchasis.Text);
-                add.kilometraje = Convert.ToDouble(txtkilometraje.Text);
-                add.motor = Convert.ToInt32(txtmotor.Text);
-                add.Placa = Convert.ToInt32(txtplaca.Text);
-                add.Fecha = dtpFechaCreacion.Text;
+               
                 add.cliente = Convert.ToInt16 (cmbcliente.SelectedValue);
-                add.tipo_carro = Convert.ToInt16(cmbtipocarro.SelectedValue);
                 add.usuario = Convert.ToInt16(cmbusuario.SelectedValue);
                 add.vehiculo = Convert.ToInt16(cmbvehiculo.SelectedValue);
                 add.detalles = txtdetalles.Text;
@@ -111,9 +103,7 @@ namespace prueba_login
             cmbvehiculo.DisplayMember = "vehiculo";
 
 
-            cmbtipocarro.DataSource = funciones_ordendetrabajo.tipovehiculos();
-            cmbtipocarro.ValueMember = "id_tipo_vehiculo";
-            cmbtipocarro.DisplayMember = "tipo_vehiculo";
+           
         }
 
         private void label13_Click(object sender, EventArgs e)
@@ -174,11 +164,9 @@ namespace prueba_login
         private void btnregistrar_Click(object sender, EventArgs e)
         {
             enviar();
-            txtchasis.Clear();
+         
             txtdetalles.Clear();
-            txtkilometraje.Clear();
-            txtmotor.Clear();
-            txtplaca.Clear();
+           
         }
 
         private void txtplaca_KeyPress(object sender, KeyPressEventArgs e)
@@ -202,6 +190,11 @@ namespace prueba_login
         }
 
         private void cmbcliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbtipocarro_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

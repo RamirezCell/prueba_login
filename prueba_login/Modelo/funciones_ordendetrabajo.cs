@@ -58,7 +58,7 @@ namespace prueba_login.Modelo
         {
             DataTable data = new DataTable();
 
-            string query = "SELECT id_vehiculo, CONCAT(marca,' ', modelo,' ',anio) As vehiculo FROM vehiculos"
+            string query = "SELECT tv.id_vehiculo, CONCAT(tm.marca,' ', tmo.modelo,' ',tl.linea) As vehiculo FROM vehiculos tv,marcas tm,modelos tmo,lineas tl where tv.marca=tm.id_marca and tv.modelo=tmo.id_modelo and tv.linea=tl.id_linea"
                 ;
             try
             {
@@ -70,35 +70,16 @@ namespace prueba_login.Modelo
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error inesperado! Ocurrió un error al momento de cargar a los asesores, por favor consulte con el administrador " + ex.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error inesperado! Ocurrió un error al momento de cargar a los autos, por favor consulte con el administrador " + ex.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return data;
             }
         }
-        public static DataTable tipovehiculos()
-        {
-            DataTable data = new DataTable();
-
-            string query = "SELECT *FROM tipo_vehiculo"
-                ;
-            try
-            {
-                MySqlCommand cmdselect = new MySqlCommand(query, conexion.obtenerconexion());
-
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
-                adapter.Fill(data);
-                return data;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error inesperado! Ocurrió un error al momento de cargar a los asesores, por favor consulte con el administrador " + ex.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return data;
-            }
-        }
+        
 
         public static int agregarorden(constructor_ordentrabajo add)
         {
             int retorno = 0;
-            MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `orden_trabajo` (`id_orden`, `fecha_creacion`, `kilometraje`, `num_placa`, `num_chasis`, `num_motor`,  `detalles`, `id_vehiculo`, `id_cliente`, `id_usuario`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`, `tipo_vehiculo`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}','{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}')",add.Fecha,add.kilometraje,add.Placa,add.chasis,add.motor,add.detalles,add.vehiculo,add.cliente,add.usuario,add.foto1,add.foto2,add.foto3,add.foto4,add.foto5,add.tipo_carro),conexion.obtenerconexion());
+            MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `orden_trabajo` (`id_orden`, `detalles`, `id_vehiculo`, `id_cliente`, `id_usuario`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')", add.detalles, add.vehiculo, add.cliente, add.usuario, add.foto1, add.foto2, add.foto3, add.foto4, add.foto5), conexion.obtenerconexion());
             try
             {
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());

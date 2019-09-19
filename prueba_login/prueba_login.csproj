@@ -70,6 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetcliente.xsd</DependentUpon>
     </Compile>
+    <Compile Include="reportes\DataSetorden.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetorden.xsd</DependentUpon>
+    </Compile>
     <Compile Include="reportes\DataSetusuarios.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,6 +90,12 @@
     </Compile>
     <Compile Include="reportes\reporteclientes.Designer.cs">
       <DependentUpon>reporteclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\reporteordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\reporteordenes.Designer.cs">
+      <DependentUpon>reporteordenes.cs</DependentUpon>
     </Compile>
     <Compile Include="reportes\reporteusers.cs">
       <SubType>Form</SubType>
@@ -410,6 +421,17 @@
     </None>
     <None Include="reportes\DataSetcliente.xss">
       <DependentUpon>DataSetcliente.xsd</DependentUpon>
+    </None>
+    <None Include="reportes\DataSetorden.xsc">
+      <DependentUpon>DataSetorden.xsd</DependentUpon>
+    </None>
+    <None Include="reportes\DataSetorden.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetorden.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="reportes\DataSetorden.xss">
+      <DependentUpon>DataSetorden.xsd</DependentUpon>
     </None>
     <None Include="reportes\DataSetusuarios.xsc">
       <DependentUpon>DataSetusuarios.xsd</DependentUpon>

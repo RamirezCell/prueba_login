@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ordentrabajo));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,11 +43,6 @@
             this.cmbcliente = new System.Windows.Forms.ComboBox();
             this.cmbusuario = new System.Windows.Forms.ComboBox();
             this.cmbvehiculo = new System.Windows.Forms.ComboBox();
-            this.dtpFechaCreacion = new System.Windows.Forms.DateTimePicker();
-            this.txtplaca = new System.Windows.Forms.TextBox();
-            this.txtchasis = new System.Windows.Forms.TextBox();
-            this.txtmotor = new System.Windows.Forms.TextBox();
-            this.txtkilometraje = new System.Windows.Forms.TextBox();
             this.txtdetalles = new System.Windows.Forms.TextBox();
             this.pctfrontal = new System.Windows.Forms.PictureBox();
             this.pctderecha = new System.Windows.Forms.PictureBox();
@@ -67,7 +56,6 @@
             this.btnexaminar3 = new System.Windows.Forms.Button();
             this.btnexaminar4 = new System.Windows.Forms.Button();
             this.btnexaminar5 = new System.Windows.Forms.Button();
-            this.cmbtipocarro = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctfrontal)).BeginInit();
@@ -96,80 +84,6 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(190, 22);
             this.toolStripButton1.Text = "Creacion de orden de trabajo";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(189, 130);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Fecha de creacion";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(491, 229);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Kilometraje";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(464, 130);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Numero de placa";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(718, 130);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Numero de chasis";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(189, 229);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 16);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Numero de motor";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(718, 229);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 16);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Tipo de vehiculo";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -311,57 +225,6 @@
             this.cmbvehiculo.Name = "cmbvehiculo";
             this.cmbvehiculo.Size = new System.Drawing.Size(237, 21);
             this.cmbvehiculo.TabIndex = 1;
-            // 
-            // dtpFechaCreacion
-            // 
-            this.dtpFechaCreacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dtpFechaCreacion.Location = new System.Drawing.Point(128, 162);
-            this.dtpFechaCreacion.Name = "dtpFechaCreacion";
-            this.dtpFechaCreacion.Size = new System.Drawing.Size(237, 20);
-            this.dtpFechaCreacion.TabIndex = 4;
-            // 
-            // txtplaca
-            // 
-            this.txtplaca.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtplaca.BackColor = System.Drawing.Color.Black;
-            this.txtplaca.ForeColor = System.Drawing.Color.White;
-            this.txtplaca.Location = new System.Drawing.Point(406, 162);
-            this.txtplaca.Name = "txtplaca";
-            this.txtplaca.Size = new System.Drawing.Size(217, 20);
-            this.txtplaca.TabIndex = 5;
-            this.txtplaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtplaca_KeyPress);
-            // 
-            // txtchasis
-            // 
-            this.txtchasis.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtchasis.BackColor = System.Drawing.Color.Black;
-            this.txtchasis.ForeColor = System.Drawing.Color.White;
-            this.txtchasis.Location = new System.Drawing.Point(653, 161);
-            this.txtchasis.Name = "txtchasis";
-            this.txtchasis.Size = new System.Drawing.Size(217, 20);
-            this.txtchasis.TabIndex = 6;
-            this.txtchasis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtchasis_KeyPress);
-            // 
-            // txtmotor
-            // 
-            this.txtmotor.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtmotor.BackColor = System.Drawing.Color.Black;
-            this.txtmotor.ForeColor = System.Drawing.Color.White;
-            this.txtmotor.Location = new System.Drawing.Point(128, 268);
-            this.txtmotor.Name = "txtmotor";
-            this.txtmotor.Size = new System.Drawing.Size(237, 20);
-            this.txtmotor.TabIndex = 7;
-            this.txtmotor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmotor_KeyPress);
-            // 
-            // txtkilometraje
-            // 
-            this.txtkilometraje.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtkilometraje.BackColor = System.Drawing.Color.Black;
-            this.txtkilometraje.ForeColor = System.Drawing.Color.White;
-            this.txtkilometraje.Location = new System.Drawing.Point(406, 268);
-            this.txtkilometraje.Name = "txtkilometraje";
-            this.txtkilometraje.Size = new System.Drawing.Size(217, 20);
-            this.txtkilometraje.TabIndex = 8;
             // 
             // txtdetalles
             // 
@@ -539,16 +402,6 @@
             this.btnexaminar5.UseVisualStyleBackColor = false;
             this.btnexaminar5.Click += new System.EventHandler(this.btnexaminar5_Click);
             // 
-            // cmbtipocarro
-            // 
-            this.cmbtipocarro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmbtipocarro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbtipocarro.FormattingEnabled = true;
-            this.cmbtipocarro.Location = new System.Drawing.Point(653, 267);
-            this.cmbtipocarro.Name = "cmbtipocarro";
-            this.cmbtipocarro.Size = new System.Drawing.Size(217, 21);
-            this.cmbtipocarro.TabIndex = 38;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -558,7 +411,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 693);
-            this.Controls.Add(this.cmbtipocarro);
             this.Controls.Add(this.btnexaminar5);
             this.Controls.Add(this.btnexaminar4);
             this.Controls.Add(this.btnexaminar3);
@@ -572,11 +424,6 @@
             this.Controls.Add(this.pctderecha);
             this.Controls.Add(this.pctfrontal);
             this.Controls.Add(this.txtdetalles);
-            this.Controls.Add(this.txtkilometraje);
-            this.Controls.Add(this.txtmotor);
-            this.Controls.Add(this.txtchasis);
-            this.Controls.Add(this.txtplaca);
-            this.Controls.Add(this.dtpFechaCreacion);
             this.Controls.Add(this.cmbvehiculo);
             this.Controls.Add(this.cmbusuario);
             this.Controls.Add(this.cmbcliente);
@@ -589,12 +436,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ordentrabajo";
@@ -616,12 +457,6 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -634,11 +469,6 @@
         private System.Windows.Forms.ComboBox cmbcliente;
         private System.Windows.Forms.ComboBox cmbusuario;
         private System.Windows.Forms.ComboBox cmbvehiculo;
-        private System.Windows.Forms.DateTimePicker dtpFechaCreacion;
-        private System.Windows.Forms.TextBox txtplaca;
-        private System.Windows.Forms.TextBox txtchasis;
-        private System.Windows.Forms.TextBox txtmotor;
-        private System.Windows.Forms.TextBox txtkilometraje;
         private System.Windows.Forms.TextBox txtdetalles;
         private System.Windows.Forms.PictureBox pctfrontal;
         private System.Windows.Forms.PictureBox pctderecha;
@@ -652,7 +482,6 @@
         private System.Windows.Forms.Button btnexaminar3;
         private System.Windows.Forms.Button btnexaminar4;
         private System.Windows.Forms.Button btnexaminar5;
-        private System.Windows.Forms.ComboBox cmbtipocarro;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
