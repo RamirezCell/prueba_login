@@ -49,7 +49,15 @@ namespace prueba_login.reportes
 
         private void btnfiltrar_Click(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'DataSetcliente.tbclientes' table. You can move, or remove it, as needed.
+            this.tbclientesTableAdapter.consultaparam(this.DataSetcliente.tbclientes,Convert.ToInt16(cmbtipocliente.SelectedValue));
 
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void btntodo_Click(object sender, EventArgs e)
+        {
+            cargar();
         }
     }
 }

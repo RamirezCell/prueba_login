@@ -70,6 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetcliente.xsd</DependentUpon>
     </Compile>
+    <Compile Include="reportes\DataSetvehiculo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetvehiculo.xsd</DependentUpon>
+    </Compile>
     <Compile Include="reportes\reporteclientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +279,7 @@
       <DependentUpon>recuinterno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\Report1.rdlc" />
+    <EmbeddedResource Include="reportes\Report2.rdlc" />
     <EmbeddedResource Include="reportes\reporteclientes.resx">
       <DependentUpon>reporteclientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,6 +395,17 @@
     </None>
     <None Include="reportes\DataSetcliente.xss">
       <DependentUpon>DataSetcliente.xsd</DependentUpon>
+    </None>
+    <None Include="reportes\DataSetvehiculo.xsc">
+      <DependentUpon>DataSetvehiculo.xsd</DependentUpon>
+    </None>
+    <None Include="reportes\DataSetvehiculo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetvehiculo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="reportes\DataSetvehiculo.xss">
+      <DependentUpon>DataSetvehiculo.xsd</DependentUpon>
     </None>
     <None Include="Resources\logo.jpg" />
   </ItemGroup>

@@ -61,6 +61,7 @@
             this.txtFiltrar = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.btnlimp = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.grpregistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvehiculos)).BeginInit();
             this.toolStrip2.SuspendLayout();
@@ -516,7 +517,6 @@
             // 
             // txtFiltrar
             // 
-            this.txtFiltrar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(100, 36);
             this.txtFiltrar.Click += new System.EventHandler(this.txtFiltrar_Click);
@@ -566,12 +566,26 @@
             this.btnlimp.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlimp.Click += new System.EventHandler(this.btnlimp_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(762, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(247, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Generar reporte";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // registroauto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1016, 695);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnlimp);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.dgvvehiculos);
@@ -629,5 +643,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnlimp;
         private System.Windows.Forms.ComboBox cmbPropietario;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
     }
 }

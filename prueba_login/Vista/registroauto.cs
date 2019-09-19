@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prueba_login.reportes;
 using prueba_login.Controlador;
 using prueba_login.Modelo;
 using System.Text.RegularExpressions;
@@ -1245,6 +1246,12 @@ namespace prueba_login
         private void Txtchasis_KeyPress(object sender, KeyPressEventArgs e)
         {
             caracter(e);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            reportevehiculos repo = new reportevehiculos();
+            repo.Show();
         }
     }
 }

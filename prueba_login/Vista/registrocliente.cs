@@ -355,6 +355,9 @@ namespace prueba_login
         private void btnlimp_Click(object sender, EventArgs e)
         {
             limpiar();
+            btneliminar.Enabled = false;
+            btnupdate.Enabled = false;
+            btnregistrar.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
