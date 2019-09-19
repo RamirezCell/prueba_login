@@ -174,5 +174,15 @@ namespace prueba_login
         {
 
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<graficasautos>();
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<graficasclientes>();
+        }
     }
 }

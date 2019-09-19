@@ -24,7 +24,7 @@ namespace prueba_login.reportes {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSetorden : global::System.Data.DataSet {
         
-        private DataTableDataTable tableDataTable;
+        private tbordenDataTable tabletborden;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace prueba_login.reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DataTable"] != null)) {
-                    base.Tables.Add(new DataTableDataTable(ds.Tables["DataTable"]));
+                if ((ds.Tables["tborden"] != null)) {
+                    base.Tables.Add(new tbordenDataTable(ds.Tables["tborden"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace prueba_login.reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataTableDataTable DataTable {
+        public tbordenDataTable tborden {
             get {
-                return this.tableDataTable;
+                return this.tabletborden;
             }
         }
         
@@ -152,8 +152,8 @@ namespace prueba_login.reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DataTable"] != null)) {
-                    base.Tables.Add(new DataTableDataTable(ds.Tables["DataTable"]));
+                if ((ds.Tables["tborden"] != null)) {
+                    base.Tables.Add(new tbordenDataTable(ds.Tables["tborden"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace prueba_login.reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDataTable = ((DataTableDataTable)(base.Tables["DataTable"]));
+            this.tabletborden = ((tbordenDataTable)(base.Tables["tborden"]));
             if ((initTable == true)) {
-                if ((this.tableDataTable != null)) {
-                    this.tableDataTable.InitVars();
+                if ((this.tabletborden != null)) {
+                    this.tabletborden.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace prueba_login.reportes {
             this.Namespace = "http://tempuri.org/DataSetorden.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDataTable = new DataTableDataTable();
-            base.Tables.Add(this.tableDataTable);
+            this.tabletborden = new tbordenDataTable();
+            base.Tables.Add(this.tabletborden);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeDataTable() {
+        private bool ShouldSerializetborden() {
             return false;
         }
         
@@ -270,39 +270,27 @@ namespace prueba_login.reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void DataTableRowChangeEventHandler(object sender, DataTableRowChangeEvent e);
+        public delegate void tbordenRowChangeEventHandler(object sender, tbordenRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataTableDataTable : global::System.Data.TypedTableBase<DataTableRow> {
-            
-            private global::System.Data.DataColumn columnid_orden;
+        public partial class tbordenDataTable : global::System.Data.TypedTableBase<tbordenRow> {
             
             private global::System.Data.DataColumn columndetalles;
             
-            private global::System.Data.DataColumn columnid_vehiculo;
+            private global::System.Data.DataColumn columnExpr1;
             
-            private global::System.Data.DataColumn columnid_cliente;
+            private global::System.Data.DataColumn columnauto;
             
-            private global::System.Data.DataColumn columnid_usuario;
-            
-            private global::System.Data.DataColumn columnfoto1;
-            
-            private global::System.Data.DataColumn columnfoto2;
-            
-            private global::System.Data.DataColumn columnfoto3;
-            
-            private global::System.Data.DataColumn columnfoto4;
-            
-            private global::System.Data.DataColumn columnfoto5;
+            private global::System.Data.DataColumn columnExpr2;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableDataTable() {
-                this.TableName = "DataTable";
+            public tbordenDataTable() {
+                this.TableName = "tborden";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -310,7 +298,7 @@ namespace prueba_login.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DataTableDataTable(global::System.Data.DataTable table) {
+            internal tbordenDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -327,17 +315,9 @@ namespace prueba_login.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected DataTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected tbordenDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_ordenColumn {
-                get {
-                    return this.columnid_orden;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -350,65 +330,25 @@ namespace prueba_login.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_vehiculoColumn {
+            public global::System.Data.DataColumn Expr1Column {
                 get {
-                    return this.columnid_vehiculo;
+                    return this.columnExpr1;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_clienteColumn {
+            public global::System.Data.DataColumn autoColumn {
                 get {
-                    return this.columnid_cliente;
+                    return this.columnauto;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn id_usuarioColumn {
+            public global::System.Data.DataColumn Expr2Column {
                 get {
-                    return this.columnid_usuario;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn foto1Column {
-                get {
-                    return this.columnfoto1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn foto2Column {
-                get {
-                    return this.columnfoto2;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn foto3Column {
-                get {
-                    return this.columnfoto3;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn foto4Column {
-                get {
-                    return this.columnfoto4;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn foto5Column {
-                get {
-                    return this.columnfoto5;
+                    return this.columnExpr2;
                 }
             }
             
@@ -423,54 +363,48 @@ namespace prueba_login.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow this[int index] {
+            public tbordenRow this[int index] {
                 get {
-                    return ((DataTableRow)(this.Rows[index]));
+                    return ((tbordenRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DataTableRowChangeEventHandler DataTableRowChanging;
+            public event tbordenRowChangeEventHandler tbordenRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DataTableRowChangeEventHandler DataTableRowChanged;
+            public event tbordenRowChangeEventHandler tbordenRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DataTableRowChangeEventHandler DataTableRowDeleting;
+            public event tbordenRowChangeEventHandler tbordenRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event DataTableRowChangeEventHandler DataTableRowDeleted;
+            public event tbordenRowChangeEventHandler tbordenRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddDataTableRow(DataTableRow row) {
+            public void AddtbordenRow(tbordenRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow AddDataTableRow(string detalles, int id_vehiculo, int id_cliente, int id_usuario, string foto1, string foto2, string foto3, string foto4, string foto5) {
-                DataTableRow rowDataTableRow = ((DataTableRow)(this.NewRow()));
+            public tbordenRow AddtbordenRow(string detalles, string Expr1, string auto, string Expr2) {
+                tbordenRow rowtbordenRow = ((tbordenRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         detalles,
-                        id_vehiculo,
-                        id_cliente,
-                        id_usuario,
-                        foto1,
-                        foto2,
-                        foto3,
-                        foto4,
-                        foto5};
-                rowDataTableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataTableRow);
-                return rowDataTableRow;
+                        Expr1,
+                        auto,
+                        Expr2};
+                rowtbordenRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtbordenRow);
+                return rowtbordenRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataTableDataTable cln = ((DataTableDataTable)(base.Clone()));
+                tbordenDataTable cln = ((tbordenDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -478,93 +412,63 @@ namespace prueba_login.reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataTableDataTable();
+                return new tbordenDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnid_orden = base.Columns["id_orden"];
                 this.columndetalles = base.Columns["detalles"];
-                this.columnid_vehiculo = base.Columns["id_vehiculo"];
-                this.columnid_cliente = base.Columns["id_cliente"];
-                this.columnid_usuario = base.Columns["id_usuario"];
-                this.columnfoto1 = base.Columns["foto1"];
-                this.columnfoto2 = base.Columns["foto2"];
-                this.columnfoto3 = base.Columns["foto3"];
-                this.columnfoto4 = base.Columns["foto4"];
-                this.columnfoto5 = base.Columns["foto5"];
+                this.columnExpr1 = base.Columns["Expr1"];
+                this.columnauto = base.Columns["auto"];
+                this.columnExpr2 = base.Columns["Expr2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnid_orden = new global::System.Data.DataColumn("id_orden", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_orden);
                 this.columndetalles = new global::System.Data.DataColumn("detalles", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndetalles);
-                this.columnid_vehiculo = new global::System.Data.DataColumn("id_vehiculo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_vehiculo);
-                this.columnid_cliente = new global::System.Data.DataColumn("id_cliente", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_cliente);
-                this.columnid_usuario = new global::System.Data.DataColumn("id_usuario", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_usuario);
-                this.columnfoto1 = new global::System.Data.DataColumn("foto1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfoto1);
-                this.columnfoto2 = new global::System.Data.DataColumn("foto2", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfoto2);
-                this.columnfoto3 = new global::System.Data.DataColumn("foto3", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfoto3);
-                this.columnfoto4 = new global::System.Data.DataColumn("foto4", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfoto4);
-                this.columnfoto5 = new global::System.Data.DataColumn("foto5", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfoto5);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_orden}, false));
-                this.columnid_orden.AutoIncrement = true;
-                this.columnid_orden.AutoIncrementSeed = -1;
-                this.columnid_orden.AutoIncrementStep = -1;
-                this.columnid_orden.Unique = true;
+                this.columnExpr1 = new global::System.Data.DataColumn("Expr1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr1);
+                this.columnauto = new global::System.Data.DataColumn("auto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnauto);
+                this.columnExpr2 = new global::System.Data.DataColumn("Expr2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnExpr2);
                 this.columndetalles.AllowDBNull = false;
                 this.columndetalles.MaxLength = 65535;
-                this.columnid_vehiculo.AllowDBNull = false;
-                this.columnid_cliente.AllowDBNull = false;
-                this.columnid_usuario.AllowDBNull = false;
-                this.columnfoto1.MaxLength = 2147483647;
-                this.columnfoto2.AllowDBNull = false;
-                this.columnfoto2.MaxLength = 2147483647;
-                this.columnfoto3.AllowDBNull = false;
-                this.columnfoto3.MaxLength = 2147483647;
-                this.columnfoto4.AllowDBNull = false;
-                this.columnfoto4.MaxLength = 2147483647;
-                this.columnfoto5.AllowDBNull = false;
-                this.columnfoto5.MaxLength = 2147483647;
+                this.columnExpr1.ReadOnly = true;
+                this.columnExpr1.MaxLength = 51;
+                this.columnauto.ReadOnly = true;
+                this.columnauto.MaxLength = 34;
+                this.columnExpr2.ReadOnly = true;
+                this.columnExpr2.MaxLength = 51;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow NewDataTableRow() {
-                return ((DataTableRow)(this.NewRow()));
+            public tbordenRow NewtbordenRow() {
+                return ((tbordenRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataTableRow(builder);
+                return new tbordenRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataTableRow);
+                return typeof(tbordenRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataTableRowChanged != null)) {
-                    this.DataTableRowChanged(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
+                if ((this.tbordenRowChanged != null)) {
+                    this.tbordenRowChanged(this, new tbordenRowChangeEvent(((tbordenRow)(e.Row)), e.Action));
                 }
             }
             
@@ -572,8 +476,8 @@ namespace prueba_login.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataTableRowChanging != null)) {
-                    this.DataTableRowChanging(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
+                if ((this.tbordenRowChanging != null)) {
+                    this.tbordenRowChanging(this, new tbordenRowChangeEvent(((tbordenRow)(e.Row)), e.Action));
                 }
             }
             
@@ -581,8 +485,8 @@ namespace prueba_login.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataTableRowDeleted != null)) {
-                    this.DataTableRowDeleted(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
+                if ((this.tbordenRowDeleted != null)) {
+                    this.tbordenRowDeleted(this, new tbordenRowChangeEvent(((tbordenRow)(e.Row)), e.Action));
                 }
             }
             
@@ -590,14 +494,14 @@ namespace prueba_login.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataTableRowDeleting != null)) {
-                    this.DataTableRowDeleting(this, new DataTableRowChangeEvent(((DataTableRow)(e.Row)), e.Action));
+                if ((this.tbordenRowDeleting != null)) {
+                    this.tbordenRowDeleting(this, new tbordenRowChangeEvent(((tbordenRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveDataTableRow(DataTableRow row) {
+            public void RemovetbordenRow(tbordenRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -624,7 +528,7 @@ namespace prueba_login.reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataTableDataTable";
+                attribute2.FixedValue = "tbordenDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -668,159 +572,110 @@ namespace prueba_login.reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataTableRow : global::System.Data.DataRow {
+        public partial class tbordenRow : global::System.Data.DataRow {
             
-            private DataTableDataTable tableDataTable;
+            private tbordenDataTable tabletborden;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal DataTableRow(global::System.Data.DataRowBuilder rb) : 
+            internal tbordenRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataTable = ((DataTableDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id_orden {
-                get {
-                    try {
-                        return ((int)(this[this.tableDataTable.id_ordenColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'id_orden\' in table \'DataTable\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable.id_ordenColumn] = value;
-                }
+                this.tabletborden = ((tbordenDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string detalles {
                 get {
-                    return ((string)(this[this.tableDataTable.detallesColumn]));
+                    return ((string)(this[this.tabletborden.detallesColumn]));
                 }
                 set {
-                    this[this.tableDataTable.detallesColumn] = value;
+                    this[this.tabletborden.detallesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id_vehiculo {
-                get {
-                    return ((int)(this[this.tableDataTable.id_vehiculoColumn]));
-                }
-                set {
-                    this[this.tableDataTable.id_vehiculoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id_cliente {
-                get {
-                    return ((int)(this[this.tableDataTable.id_clienteColumn]));
-                }
-                set {
-                    this[this.tableDataTable.id_clienteColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int id_usuario {
-                get {
-                    return ((int)(this[this.tableDataTable.id_usuarioColumn]));
-                }
-                set {
-                    this[this.tableDataTable.id_usuarioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string foto1 {
+            public string Expr1 {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable.foto1Column]));
+                        return ((string)(this[this.tabletborden.Expr1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'foto1\' in table \'DataTable\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expr1\' in table \'tborden\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable.foto1Column] = value;
+                    this[this.tabletborden.Expr1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string foto2 {
+            public string auto {
                 get {
-                    return ((string)(this[this.tableDataTable.foto2Column]));
+                    try {
+                        return ((string)(this[this.tabletborden.autoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'auto\' in table \'tborden\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableDataTable.foto2Column] = value;
+                    this[this.tabletborden.autoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string foto3 {
+            public string Expr2 {
                 get {
-                    return ((string)(this[this.tableDataTable.foto3Column]));
+                    try {
+                        return ((string)(this[this.tabletborden.Expr2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Expr2\' in table \'tborden\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableDataTable.foto3Column] = value;
+                    this[this.tabletborden.Expr2Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string foto4 {
-                get {
-                    return ((string)(this[this.tableDataTable.foto4Column]));
-                }
-                set {
-                    this[this.tableDataTable.foto4Column] = value;
-                }
+            public bool IsExpr1Null() {
+                return this.IsNull(this.tabletborden.Expr1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string foto5 {
-                get {
-                    return ((string)(this[this.tableDataTable.foto5Column]));
-                }
-                set {
-                    this[this.tableDataTable.foto5Column] = value;
-                }
+            public void SetExpr1Null() {
+                this[this.tabletborden.Expr1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isid_ordenNull() {
-                return this.IsNull(this.tableDataTable.id_ordenColumn);
+            public bool IsautoNull() {
+                return this.IsNull(this.tabletborden.autoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setid_ordenNull() {
-                this[this.tableDataTable.id_ordenColumn] = global::System.Convert.DBNull;
+            public void SetautoNull() {
+                this[this.tabletborden.autoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Isfoto1Null() {
-                return this.IsNull(this.tableDataTable.foto1Column);
+            public bool IsExpr2Null() {
+                return this.IsNull(this.tabletborden.Expr2Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Setfoto1Null() {
-                this[this.tableDataTable.foto1Column] = global::System.Convert.DBNull;
+            public void SetExpr2Null() {
+                this[this.tabletborden.Expr2Column] = global::System.Convert.DBNull;
             }
         }
         
@@ -828,22 +683,22 @@ namespace prueba_login.reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class DataTableRowChangeEvent : global::System.EventArgs {
+        public class tbordenRowChangeEvent : global::System.EventArgs {
             
-            private DataTableRow eventRow;
+            private tbordenRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRowChangeEvent(DataTableRow row, global::System.Data.DataRowAction action) {
+            public tbordenRowChangeEvent(tbordenRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTableRow Row {
+            public tbordenRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -871,7 +726,7 @@ namespace prueba_login.reportes.DataSetordenTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataTableTableAdapter : global::System.ComponentModel.Component {
+    public partial class tbordenTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.Odbc.OdbcDataAdapter _adapter;
         
@@ -885,7 +740,7 @@ namespace prueba_login.reportes.DataSetordenTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public DataTableTableAdapter() {
+        public tbordenTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -982,17 +837,11 @@ namespace prueba_login.reportes.DataSetordenTableAdapters {
             this._adapter = new global::System.Data.Odbc.OdbcDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataTable";
-            tableMapping.ColumnMappings.Add("id_orden", "id_orden");
+            tableMapping.DataSetTable = "tborden";
             tableMapping.ColumnMappings.Add("detalles", "detalles");
-            tableMapping.ColumnMappings.Add("id_vehiculo", "id_vehiculo");
-            tableMapping.ColumnMappings.Add("id_cliente", "id_cliente");
-            tableMapping.ColumnMappings.Add("id_usuario", "id_usuario");
-            tableMapping.ColumnMappings.Add("foto1", "foto1");
-            tableMapping.ColumnMappings.Add("foto2", "foto2");
-            tableMapping.ColumnMappings.Add("foto3", "foto3");
-            tableMapping.ColumnMappings.Add("foto4", "foto4");
-            tableMapping.ColumnMappings.Add("foto5", "foto5");
+            tableMapping.ColumnMappings.Add("Expr1", "Expr1");
+            tableMapping.ColumnMappings.Add("auto", "auto");
+            tableMapping.ColumnMappings.Add("Expr2", "Expr2");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1009,7 +858,9 @@ namespace prueba_login.reportes.DataSetordenTableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM `orden_trabajo`";
+            this._commandCollection[0].CommandText = @"SELECT        tor.detalles, CONCAT(tv.marca, ' ', tv.modelo) AS auto, CONCAT(tc.nombre_cliente, ' ', tc.apellido_cliente) AS Expr1, CONCAT(tu.nombre_user, ' ', tu.apellido_user) AS Expr2
+FROM            orden_trabajo tor, clientes tc, vehiculos tv, usuarios tu
+WHERE        tor.id_cliente = tc.id_cliente AND tor.id_vehiculo = tv.id_vehiculo AND tor.id_usuario = tu.id_usuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1017,7 +868,7 @@ namespace prueba_login.reportes.DataSetordenTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetorden.DataTableDataTable dataTable) {
+        public virtual int llenardatosorden(DataSetorden.tbordenDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1030,9 +881,9 @@ namespace prueba_login.reportes.DataSetordenTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetorden.DataTableDataTable GetData() {
+        public virtual DataSetorden.tbordenDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetorden.DataTableDataTable dataTable = new DataSetorden.DataTableDataTable();
+            DataSetorden.tbordenDataTable dataTable = new DataSetorden.tbordenDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

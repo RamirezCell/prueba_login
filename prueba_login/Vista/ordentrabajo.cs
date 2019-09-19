@@ -113,52 +113,97 @@ namespace prueba_login
 
         private void btnexaminar1_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
-            DialogResult resultado = openFileDialog1.ShowDialog();
-            if (resultado == DialogResult.OK)
+            try
             {
-                pctfrontal.Image = Image.FromFile(openFileDialog1.FileName);
+                openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
+                DialogResult resultado = openFileDialog1.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    pctfrontal.Image = Image.FromFile(openFileDialog1.FileName);
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
 
         private void btnexaminar2_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
-            DialogResult resultado = openFileDialog1.ShowDialog();
-            if (resultado == DialogResult.OK)
+            try
             {
-                pctderecha.Image = Image.FromFile(openFileDialog1.FileName);
+                openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
+                DialogResult resultado = openFileDialog1.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    pctderecha.Image = Image.FromFile(openFileDialog1.FileName);
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
 
         private void btnexaminar3_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
-            DialogResult resultado = openFileDialog1.ShowDialog();
-            if (resultado == DialogResult.OK)
+            try
             {
-                pctarriba.Image = Image.FromFile(openFileDialog1.FileName);
+                openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
+                DialogResult resultado = openFileDialog1.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    pctarriba.Image = Image.FromFile(openFileDialog1.FileName);
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
 
         private void btnexaminar4_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
-            DialogResult resultado = openFileDialog1.ShowDialog();
-            if (resultado == DialogResult.OK)
+            try
             {
-                pcttrasera.Image = Image.FromFile(openFileDialog1.FileName);
+                openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
+                DialogResult resultado = openFileDialog1.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    pcttrasera.Image = Image.FromFile(openFileDialog1.FileName);
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
         }
 
         private void btnexaminar5_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
-            DialogResult resultado = openFileDialog1.ShowDialog();
-            if (resultado == DialogResult.OK)
+            try
             {
-                pctizquierda.Image = Image.FromFile(openFileDialog1.FileName);
+                openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
+                DialogResult resultado = openFileDialog1.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    pctizquierda.Image = Image.FromFile(openFileDialog1.FileName);
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+          
         }
 
         private void btnregistrar_Click(object sender, EventArgs e)

@@ -16,5 +16,13 @@ namespace prueba_login.reportes
         {
             InitializeComponent();
         }
+
+        private void reporteordenes_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'DataSetorden.tborden' table. You can move, or remove it, as needed.
+            this.tbordenTableAdapter.llenardatosorden(this.DataSetorden.tborden);
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

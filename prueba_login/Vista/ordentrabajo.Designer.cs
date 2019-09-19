@@ -91,7 +91,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(218, 312);
+            this.label7.Location = new System.Drawing.Point(90, 110);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 16);
             this.label7.TabIndex = 7;
@@ -139,7 +139,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(441, 312);
+            this.label11.Location = new System.Drawing.Point(372, 125);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(74, 16);
             this.label11.TabIndex = 11;
@@ -151,7 +151,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(788, 312);
+            this.label12.Location = new System.Drawing.Point(125, 410);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 16);
             this.label12.TabIndex = 12;
@@ -163,7 +163,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(437, 473);
+            this.label13.Location = new System.Drawing.Point(426, 419);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(87, 16);
             this.label13.TabIndex = 13;
@@ -176,7 +176,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(788, 464);
+            this.label14.Location = new System.Drawing.Point(780, 419);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(90, 16);
             this.label14.TabIndex = 14;
@@ -188,7 +188,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(603, 346);
+            this.label15.Location = new System.Drawing.Point(711, 125);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(105, 16);
             this.label15.TabIndex = 15;
@@ -231,7 +231,7 @@
             this.txtdetalles.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtdetalles.BackColor = System.Drawing.Color.Black;
             this.txtdetalles.ForeColor = System.Drawing.Color.White;
-            this.txtdetalles.Location = new System.Drawing.Point(128, 346);
+            this.txtdetalles.Location = new System.Drawing.Point(14, 147);
             this.txtdetalles.Multiline = true;
             this.txtdetalles.Name = "txtdetalles";
             this.txtdetalles.Size = new System.Drawing.Size(237, 230);
@@ -242,9 +242,9 @@
             // 
             this.pctfrontal.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pctfrontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.pctfrontal.Location = new System.Drawing.Point(417, 331);
+            this.pctfrontal.Location = new System.Drawing.Point(290, 151);
             this.pctfrontal.Name = "pctfrontal";
-            this.pctfrontal.Size = new System.Drawing.Size(120, 105);
+            this.pctfrontal.Size = new System.Drawing.Size(291, 177);
             this.pctfrontal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctfrontal.TabIndex = 26;
             this.pctfrontal.TabStop = false;
@@ -253,9 +253,9 @@
             // 
             this.pctderecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pctderecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.pctderecha.Location = new System.Drawing.Point(417, 492);
+            this.pctderecha.Location = new System.Drawing.Point(391, 438);
             this.pctderecha.Name = "pctderecha";
-            this.pctderecha.Size = new System.Drawing.Size(120, 113);
+            this.pctderecha.Size = new System.Drawing.Size(285, 162);
             this.pctderecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctderecha.TabIndex = 27;
             this.pctderecha.TabStop = false;
@@ -264,9 +264,9 @@
             // 
             this.pctarriba.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pctarriba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.pctarriba.Location = new System.Drawing.Point(593, 376);
+            this.pctarriba.Location = new System.Drawing.Point(610, 151);
             this.pctarriba.Name = "pctarriba";
-            this.pctarriba.Size = new System.Drawing.Size(127, 127);
+            this.pctarriba.Size = new System.Drawing.Size(322, 177);
             this.pctarriba.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctarriba.TabIndex = 28;
             this.pctarriba.TabStop = false;
@@ -275,9 +275,9 @@
             // 
             this.pcttrasera.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pcttrasera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.pcttrasera.Location = new System.Drawing.Point(767, 331);
+            this.pcttrasera.Location = new System.Drawing.Point(39, 438);
             this.pcttrasera.Name = "pcttrasera";
-            this.pcttrasera.Size = new System.Drawing.Size(124, 105);
+            this.pcttrasera.Size = new System.Drawing.Size(299, 162);
             this.pcttrasera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcttrasera.TabIndex = 29;
             this.pcttrasera.TabStop = false;
@@ -286,9 +286,9 @@
             // 
             this.pctizquierda.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pctizquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.pctizquierda.Location = new System.Drawing.Point(767, 483);
+            this.pctizquierda.Location = new System.Drawing.Point(729, 438);
             this.pctizquierda.Name = "pctizquierda";
-            this.pctizquierda.Size = new System.Drawing.Size(124, 122);
+            this.pctizquierda.Size = new System.Drawing.Size(270, 167);
             this.pctizquierda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctizquierda.TabIndex = 30;
             this.pctizquierda.TabStop = false;
@@ -315,7 +315,7 @@
             this.btnregistrar.IconVisible = true;
             this.btnregistrar.IconZoom = 90D;
             this.btnregistrar.IsTab = false;
-            this.btnregistrar.Location = new System.Drawing.Point(417, 640);
+            this.btnregistrar.Location = new System.Drawing.Point(595, 625);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Normalcolor = System.Drawing.Color.Gold;
             this.btnregistrar.OnHovercolor = System.Drawing.Color.DimGray;
@@ -332,7 +332,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(492, 544);
+            this.label16.Location = new System.Drawing.Point(481, 490);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(0, 13);
             this.label16.TabIndex = 32;
@@ -342,7 +342,7 @@
             this.btnexaminar1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnexaminar1.BackColor = System.Drawing.Color.Goldenrod;
             this.btnexaminar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexaminar1.Location = new System.Drawing.Point(440, 442);
+            this.btnexaminar1.Location = new System.Drawing.Point(406, 342);
             this.btnexaminar1.Name = "btnexaminar1";
             this.btnexaminar1.Size = new System.Drawing.Size(75, 23);
             this.btnexaminar1.TabIndex = 33;
@@ -355,7 +355,7 @@
             this.btnexaminar2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnexaminar2.BackColor = System.Drawing.Color.Goldenrod;
             this.btnexaminar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexaminar2.Location = new System.Drawing.Point(440, 611);
+            this.btnexaminar2.Location = new System.Drawing.Point(484, 629);
             this.btnexaminar2.Name = "btnexaminar2";
             this.btnexaminar2.Size = new System.Drawing.Size(75, 23);
             this.btnexaminar2.TabIndex = 34;
@@ -368,7 +368,7 @@
             this.btnexaminar3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnexaminar3.BackColor = System.Drawing.Color.Goldenrod;
             this.btnexaminar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexaminar3.Location = new System.Drawing.Point(622, 509);
+            this.btnexaminar3.Location = new System.Drawing.Point(724, 342);
             this.btnexaminar3.Name = "btnexaminar3";
             this.btnexaminar3.Size = new System.Drawing.Size(75, 23);
             this.btnexaminar3.TabIndex = 35;
@@ -381,7 +381,7 @@
             this.btnexaminar4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnexaminar4.BackColor = System.Drawing.Color.Goldenrod;
             this.btnexaminar4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexaminar4.Location = new System.Drawing.Point(791, 442);
+            this.btnexaminar4.Location = new System.Drawing.Point(144, 629);
             this.btnexaminar4.Name = "btnexaminar4";
             this.btnexaminar4.Size = new System.Drawing.Size(75, 23);
             this.btnexaminar4.TabIndex = 36;
@@ -394,7 +394,7 @@
             this.btnexaminar5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnexaminar5.BackColor = System.Drawing.Color.Goldenrod;
             this.btnexaminar5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnexaminar5.Location = new System.Drawing.Point(791, 611);
+            this.btnexaminar5.Location = new System.Drawing.Point(837, 611);
             this.btnexaminar5.Name = "btnexaminar5";
             this.btnexaminar5.Size = new System.Drawing.Size(75, 23);
             this.btnexaminar5.TabIndex = 37;
