@@ -70,6 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetcliente.xsd</DependentUpon>
     </Compile>
+    <Compile Include="reportes\DataSetusuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetusuarios.xsd</DependentUpon>
+    </Compile>
     <Compile Include="reportes\DataSetvehiculo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +85,12 @@
     </Compile>
     <Compile Include="reportes\reporteclientes.Designer.cs">
       <DependentUpon>reporteclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\reporteusers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\reporteusers.Designer.cs">
+      <DependentUpon>reporteusers.cs</DependentUpon>
     </Compile>
     <Compile Include="reportes\reportevehiculos.cs">
       <SubType>Form</SubType>
@@ -280,8 +291,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\Report1.rdlc" />
     <EmbeddedResource Include="reportes\Report2.rdlc" />
+    <EmbeddedResource Include="reportes\Report3.rdlc" />
     <EmbeddedResource Include="reportes\reporteclientes.resx">
       <DependentUpon>reporteclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporteusers.resx">
+      <DependentUpon>reporteusers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\reportevehiculos.resx">
       <DependentUpon>reportevehiculos.cs</DependentUpon>
@@ -395,6 +410,17 @@
     </None>
     <None Include="reportes\DataSetcliente.xss">
       <DependentUpon>DataSetcliente.xsd</DependentUpon>
+    </None>
+    <None Include="reportes\DataSetusuarios.xsc">
+      <DependentUpon>DataSetusuarios.xsd</DependentUpon>
+    </None>
+    <None Include="reportes\DataSetusuarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetusuarios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="reportes\DataSetusuarios.xss">
+      <DependentUpon>DataSetusuarios.xsd</DependentUpon>
     </None>
     <None Include="reportes\DataSetvehiculo.xsc">
       <DependentUpon>DataSetvehiculo.xsd</DependentUpon>

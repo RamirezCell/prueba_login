@@ -13,6 +13,7 @@ using System.Security.Cryptography;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Text.RegularExpressions;
+using prueba_login.reportes;
 
 
 namespace prueba_login
@@ -379,6 +380,12 @@ namespace prueba_login
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            reporteusers repo = new reporteusers();
+            repo.Show();
         }
     }
 }

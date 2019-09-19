@@ -72,6 +72,7 @@
             this.btnmostrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.grpregistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.validar)).BeginInit();
@@ -467,7 +468,7 @@
             // 
             this.txtcifrado.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcifrado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcifrado.Location = new System.Drawing.Point(429, 6);
+            this.txtcifrado.Location = new System.Drawing.Point(355, 8);
             this.txtcifrado.Name = "txtcifrado";
             this.txtcifrado.Size = new System.Drawing.Size(137, 23);
             this.txtcifrado.TabIndex = 12;
@@ -700,12 +701,26 @@
             this.btnregistrar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Goldenrod;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(524, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(246, 31);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Generar reporte";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // registrotrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1016, 693);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnlimp);
             this.Controls.Add(this.btnrecuperacion);
             this.Controls.Add(this.dgvuser);
@@ -778,5 +793,6 @@
         private System.Windows.Forms.PictureBox validar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button1;
     }
 }
