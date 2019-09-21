@@ -65,6 +65,7 @@
             this.graficademarcas.Size = new System.Drawing.Size(731, 436);
             this.graficademarcas.TabIndex = 2;
             this.graficademarcas.Text = "chart1";
+            this.graficademarcas.Click += new System.EventHandler(this.graficademarcas_Click);
             // 
             // btngrafica
             // 

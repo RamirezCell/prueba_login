@@ -106,6 +106,7 @@
             this.cmbtipocliente.Name = "cmbtipocliente";
             this.cmbtipocliente.Size = new System.Drawing.Size(121, 21);
             this.cmbtipocliente.TabIndex = 3;
+            this.cmbtipocliente.SelectedIndexChanged += new System.EventHandler(this.cmbtipocliente_SelectedIndexChanged);
             // 
             // btnfiltrar
             // 

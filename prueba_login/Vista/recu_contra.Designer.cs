@@ -44,12 +44,12 @@
             this.btnenviar = new System.Windows.Forms.Button();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblpass = new System.Windows.Forms.Label();
+            this.txtt = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.txpass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtt = new System.Windows.Forms.TextBox();
-            this.lblpass = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -134,7 +134,7 @@
             this.btnregresar.Location = new System.Drawing.Point(451, 323);
             this.btnregresar.Name = "btnregresar";
             this.btnregresar.Size = new System.Drawing.Size(104, 30);
-            this.btnregresar.TabIndex = 3;
+            this.btnregresar.TabIndex = 8;
             this.btnregresar.Text = "REGRESAR";
             this.btnregresar.UseVisualStyleBackColor = false;
             this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
@@ -151,7 +151,7 @@
             this.button1.Location = new System.Drawing.Point(222, 323);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(156, 30);
-            this.button1.TabIndex = 5;
+            this.button1.TabIndex = 4;
             this.button1.Text = "VERIFICAR CODIGO";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -185,7 +185,7 @@
             this.txtveri.MaxLength = 4;
             this.txtveri.Name = "txtveri";
             this.txtveri.Size = new System.Drawing.Size(308, 17);
-            this.txtveri.TabIndex = 10;
+            this.txtveri.TabIndex = 3;
             this.txtveri.TextChanged += new System.EventHandler(this.txtveri_TextChanged_1);
             // 
             // label1
@@ -257,6 +257,41 @@
             this.panel2.Size = new System.Drawing.Size(299, 370);
             this.panel2.TabIndex = 2;
             // 
+            // lblpass
+            // 
+            this.lblpass.AutoSize = true;
+            this.lblpass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpass.ForeColor = System.Drawing.Color.Black;
+            this.lblpass.Location = new System.Drawing.Point(117, 217);
+            this.lblpass.Name = "lblpass";
+            this.lblpass.Size = new System.Drawing.Size(168, 16);
+            this.lblpass.TabIndex = 35;
+            this.lblpass.Text = "Las contraseñas no coinciden";
+            this.lblpass.Visible = false;
+            // 
+            // txtt
+            // 
+            this.txtt.BackColor = System.Drawing.Color.Black;
+            this.txtt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtt.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtt.ForeColor = System.Drawing.SystemColors.Menu;
+            this.txtt.Location = new System.Drawing.Point(22, 108);
+            this.txtt.MaxLength = 20;
+            this.txtt.Name = "txtt";
+            this.txtt.Size = new System.Drawing.Size(263, 17);
+            this.txtt.TabIndex = 5;
+            this.txtt.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(97, 167);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 16);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Verificar contraseña";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -269,7 +304,7 @@
             this.button2.Location = new System.Drawing.Point(104, 295);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 30);
-            this.button2.TabIndex = 8;
+            this.button2.TabIndex = 7;
             this.button2.Text = "ACTUALIZAR";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -284,7 +319,7 @@
             this.txpass.MaxLength = 20;
             this.txpass.Name = "txpass";
             this.txpass.Size = new System.Drawing.Size(263, 17);
-            this.txpass.TabIndex = 7;
+            this.txpass.TabIndex = 6;
             this.txpass.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txpass.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
@@ -297,41 +332,6 @@
             this.label3.Size = new System.Drawing.Size(111, 16);
             this.label3.TabIndex = 12;
             this.label3.Text = "Nueva contraseña";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(97, 167);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 16);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Verificar contraseña";
-            // 
-            // txtt
-            // 
-            this.txtt.BackColor = System.Drawing.Color.Black;
-            this.txtt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtt.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtt.ForeColor = System.Drawing.SystemColors.Menu;
-            this.txtt.Location = new System.Drawing.Point(22, 108);
-            this.txtt.MaxLength = 20;
-            this.txtt.Name = "txtt";
-            this.txtt.Size = new System.Drawing.Size(263, 17);
-            this.txtt.TabIndex = 6;
-            this.txtt.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
-            // lblpass
-            // 
-            this.lblpass.AutoSize = true;
-            this.lblpass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpass.ForeColor = System.Drawing.Color.Black;
-            this.lblpass.Location = new System.Drawing.Point(117, 217);
-            this.lblpass.Name = "lblpass";
-            this.lblpass.Size = new System.Drawing.Size(168, 16);
-            this.lblpass.TabIndex = 35;
-            this.lblpass.Text = "Las contraseñas no coinciden";
-            this.lblpass.Visible = false;
             // 
             // recu_contra
             // 

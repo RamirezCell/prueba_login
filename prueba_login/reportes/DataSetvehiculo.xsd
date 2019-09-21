@@ -14,7 +14,8 @@
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        tma.marca, tm.modelo, tl.linea, tp.tipo_placa, tv.numero_motor, tv.numplaca, tv.numero_chasis, tvp.tipo_vehiculo, ev.estado
 FROM            vehiculos tv, marcas tma, modelos tm, lineas tl, tipo_placas tp, tipo_vehiculo tvp, estado_vehiculo ev
-WHERE        tv.marca = tma.id_marca AND tv.modelo = tm.id_modelo AND tv.linea = tl.id_linea AND tv.tipo_placa = tp.id_placa AND tv.tipo_vehiculo = tvp.id_tipo_vehiculo AND tv.estado_vehiculo = ev.id_estado_vehiculo</CommandText>
+WHERE        tv.marca = tma.id_marca AND tv.modelo = tm.id_modelo AND tv.linea = tl.id_linea AND tv.tipo_placa = tp.id_placa AND tv.tipo_vehiculo = tvp.id_tipo_vehiculo AND tv.estado_vehiculo = ev.id_estado_vehiculo
+                         </CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -41,7 +42,7 @@ WHERE        tv.marca = tma.id_marca AND tv.modelo = tm.id_modelo AND tv.linea =
   <xs:element name="DataSetvehiculo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetvehiculo" msprop:Generator_UserDSName="DataSetvehiculo">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="tbvehiculos" msprop:Generator_TableClassName="tbvehiculosDataTable" msprop:Generator_TableVarName="tabletbvehiculos" msprop:Generator_TablePropName="tbvehiculos" msprop:Generator_RowDeletingName="tbvehiculosRowDeleting" msprop:Generator_RowChangingName="tbvehiculosRowChanging" msprop:Generator_RowEvHandlerName="tbvehiculosRowChangeEventHandler" msprop:Generator_RowDeletedName="tbvehiculosRowDeleted" msprop:Generator_UserTableName="tbvehiculos" msprop:Generator_RowChangedName="tbvehiculosRowChanged" msprop:Generator_RowEvArgName="tbvehiculosRowChangeEvent" msprop:Generator_RowClassName="tbvehiculosRow">
+        <xs:element name="tbvehiculos" msprop:Generator_TableClassName="tbvehiculosDataTable" msprop:Generator_TableVarName="tabletbvehiculos" msprop:Generator_RowChangedName="tbvehiculosRowChanged" msprop:Generator_TablePropName="tbvehiculos" msprop:Generator_RowDeletingName="tbvehiculosRowDeleting" msprop:Generator_RowChangingName="tbvehiculosRowChanging" msprop:Generator_RowEvHandlerName="tbvehiculosRowChangeEventHandler" msprop:Generator_RowDeletedName="tbvehiculosRowDeleted" msprop:Generator_RowClassName="tbvehiculosRow" msprop:Generator_UserTableName="tbvehiculos" msprop:Generator_RowEvArgName="tbvehiculosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="numero_motor" msprop:Generator_ColumnVarNameInTable="columnnumero_motor" msprop:Generator_ColumnPropNameInRow="numero_motor" msprop:Generator_ColumnPropNameInTable="numero_motorColumn" msprop:Generator_UserColumnName="numero_motor">

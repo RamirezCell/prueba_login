@@ -126,7 +126,7 @@
             this.rbno.Location = new System.Drawing.Point(121, 502);
             this.rbno.Name = "rbno";
             this.rbno.Size = new System.Drawing.Size(39, 17);
-            this.rbno.TabIndex = 11;
+            this.rbno.TabIndex = 4;
             this.rbno.TabStop = true;
             this.rbno.Text = "No";
             this.rbno.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
             this.rbsi.Location = new System.Drawing.Point(121, 479);
             this.rbsi.Name = "rbsi";
             this.rbsi.Size = new System.Drawing.Size(34, 17);
-            this.rbsi.TabIndex = 12;
+            this.rbsi.TabIndex = 3;
             this.rbsi.TabStop = true;
             this.rbsi.Text = "Si";
             this.rbsi.UseVisualStyleBackColor = true;
@@ -184,7 +184,7 @@
             this.btnenviar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnenviar.selected = false;
             this.btnenviar.Size = new System.Drawing.Size(182, 56);
-            this.btnenviar.TabIndex = 3;
+            this.btnenviar.TabIndex = 5;
             this.btnenviar.Text = "      Enviar";
             this.btnenviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnenviar.Textcolor = System.Drawing.Color.Black;

@@ -63,7 +63,7 @@ namespace prueba_login
         {
             actualizar.estado_vehiculo = Convert.ToInt32(cmbEstado_Vehiculo.SelectedValue);
             actualizar.id_cliente = Convert.ToInt32(cmbPropietario.SelectedValue);
-            actualizar.id_vehiculo = Convert.ToInt32(txtIdvehiculo.Text);
+            constructorvehiculo.id_vehiculo = Convert.ToInt32(txtIdvehiculo.Text);
             actualizar.linea = Convert.ToInt32(cmbLinea.SelectedValue);
             actualizar.marca = Convert.ToInt32(cmbMarca_vehiculo.SelectedValue);
             actualizar.modelo = Convert.ToInt32(cmbModelo_Vehiculo.SelectedValue);
@@ -1250,6 +1250,7 @@ namespace prueba_login
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             reportevehiculos repo = new reportevehiculos();
             repo.Show();
         }

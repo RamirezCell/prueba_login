@@ -55,22 +55,25 @@
             // txtuser
             // 
             this.txtuser.Location = new System.Drawing.Point(316, 47);
+            this.txtuser.MaxLength = 20;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(100, 20);
-            this.txtuser.TabIndex = 0;
+            this.txtuser.TabIndex = 1;
             this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
             // 
             // txtp1
             // 
             this.txtp1.Location = new System.Drawing.Point(20, 125);
+            this.txtp1.MaxLength = 25;
             this.txtp1.Name = "txtp1";
             this.txtp1.Size = new System.Drawing.Size(197, 20);
-            this.txtp1.TabIndex = 1;
+            this.txtp1.TabIndex = 2;
             this.txtp1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtp1_KeyPress);
             // 
             // txtp2
             // 
-            this.txtp2.Location = new System.Drawing.Point(257, 125);
+            this.txtp2.Location = new System.Drawing.Point(259, 125);
+            this.txtp2.MaxLength = 25;
             this.txtp2.Name = "txtp2";
             this.txtp2.Size = new System.Drawing.Size(197, 20);
             this.txtp2.TabIndex = 3;
@@ -80,6 +83,7 @@
             // txtp3
             // 
             this.txtp3.Location = new System.Drawing.Point(496, 125);
+            this.txtp3.MaxLength = 25;
             this.txtp3.Name = "txtp3";
             this.txtp3.Size = new System.Drawing.Size(212, 20);
             this.txtp3.TabIndex = 4;
@@ -159,9 +163,10 @@
             // 
             this.txtpass.Enabled = false;
             this.txtpass.Location = new System.Drawing.Point(258, 348);
+            this.txtpass.MaxLength = 20;
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(100, 20);
-            this.txtpass.TabIndex = 11;
+            this.txtpass.TabIndex = 6;
             this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             // 
@@ -206,7 +211,7 @@
             this.button2.Location = new System.Drawing.Point(557, 98);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(161, 23);
-            this.button2.TabIndex = 15;
+            this.button2.TabIndex = 8;
             this.button2.Text = "Regresar al inicio de sesion";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -219,7 +224,7 @@
             this.groupBox1.Location = new System.Drawing.Point(35, 283);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(724, 140);
-            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingreso de nueva contraseña";
             // 

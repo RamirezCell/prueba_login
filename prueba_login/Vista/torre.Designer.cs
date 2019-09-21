@@ -37,7 +37,6 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnre = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.PictureBox();
@@ -72,7 +71,7 @@
             this.btnCerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(23, 22);
-            this.btnCerrar.Text = "Cerrrar";
+            this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnMaximizar
@@ -93,7 +92,7 @@
             this.btnNormal.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNormal.Name = "btnNormal";
             this.btnNormal.Size = new System.Drawing.Size(23, 22);
-            this.btnNormal.Text = "toolStripButton3";
+            this.btnNormal.Text = "Restaurar";
             // 
             // btnMinimizar
             // 
@@ -103,7 +102,7 @@
             this.btnMinimizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(23, 22);
-            this.btnMinimizar.Text = "toolStripButton4";
+            this.btnMinimizar.Text = "Minimizar";
             // 
             // toolStripTextBox1
             // 
@@ -118,7 +117,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.bunifuFlatButton1);
-            this.panel1.Controls.Add(this.btnre);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnSalir);
@@ -163,41 +161,6 @@
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
-            // btnre
-            // 
-            this.btnre.Activecolor = System.Drawing.Color.Gold;
-            this.btnre.BackColor = System.Drawing.Color.Gold;
-            this.btnre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnre.BorderRadius = 0;
-            this.btnre.ButtonText = "     Detalle de factura";
-            this.btnre.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnre.DisabledColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btnre.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnre.Iconimage = global::prueba_login.Properties.Resources.bill__1_;
-            this.btnre.Iconimage_right = null;
-            this.btnre.Iconimage_right_Selected = null;
-            this.btnre.Iconimage_Selected = null;
-            this.btnre.IconMarginLeft = 0;
-            this.btnre.IconMarginRight = 0;
-            this.btnre.IconRightVisible = true;
-            this.btnre.IconRightZoom = 0D;
-            this.btnre.IconVisible = true;
-            this.btnre.IconZoom = 90D;
-            this.btnre.IsTab = false;
-            this.btnre.Location = new System.Drawing.Point(0, 245);
-            this.btnre.Name = "btnre";
-            this.btnre.Normalcolor = System.Drawing.Color.Gold;
-            this.btnre.OnHovercolor = System.Drawing.Color.Yellow;
-            this.btnre.OnHoverTextColor = System.Drawing.Color.Black;
-            this.btnre.selected = false;
-            this.btnre.Size = new System.Drawing.Size(264, 87);
-            this.btnre.TabIndex = 1;
-            this.btnre.Text = "     Detalle de factura";
-            this.btnre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnre.Textcolor = System.Drawing.Color.Black;
-            this.btnre.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnre.Click += new System.EventHandler(this.btnre_Click);
             // 
             // label2
             // 
@@ -289,7 +252,6 @@
         private System.Windows.Forms.ToolStripButton btnMinimizar;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.Panel panel1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox btnSalir;

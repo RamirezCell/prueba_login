@@ -93,7 +93,7 @@
             this.btnNormal.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnNormal.Name = "btnNormal";
             this.btnNormal.Size = new System.Drawing.Size(23, 22);
-            this.btnNormal.Text = "toolStripButton3";
+            this.btnNormal.Text = "Restaurar";
             this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
             // 
             // btnMinimizar
@@ -104,7 +104,7 @@
             this.btnMinimizar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(23, 22);
-            this.btnMinimizar.Text = "toolStripButton4";
+            this.btnMinimizar.Text = "Minimizar";
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // toolStripTextBox1

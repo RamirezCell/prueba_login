@@ -11,7 +11,7 @@ using prueba_login.Modelo;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
-
+using prueba_login.reportes;
 namespace prueba_login
 {
     public partial class ordentrabajo : Form
@@ -242,6 +242,11 @@ namespace prueba_login
         private void cmbtipocarro_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

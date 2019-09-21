@@ -54,7 +54,7 @@ namespace prueba_login
         public void agregar()
         {
             if (txtapellido.Text.Trim() == "" || txtdui.Text.Trim() == ""  || txtnombre.Text.Trim() == "" ||
-                txtnum.Text.Trim() == "" || txtuser.Text.Trim() == "" || txtDireccion.Text.Trim() == "" || txtcorreo.Text.Trim() == ""||pctlogo==null)
+                txtnum.Text.Trim() == "" || txtuser.Text.Trim() == "" || txtDireccion.Text.Trim() == "" || txtcorreo.Text.Trim() == "")
             {
                 MessageBox.Show("Hay campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -75,11 +75,7 @@ namespace prueba_login
                 add.nombre = txtnombre.Text;
                 add.apellido = txtapellido.Text;
                 add.telefono = txtnum.Text;
-                MemoryStream ms = new MemoryStream();
-                pctlogo.Image.Save(ms, ImageFormat.Jpeg);
-                byte[] abyte = ms.ToArray();
-                string encoded = Convert.ToBase64String(abyte);
-                add.foto = encoded;
+               
                 int datos = registrouser.registrar(add);
             }
         }
@@ -346,20 +342,7 @@ namespace prueba_login
 
         private void btnexaminar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                openFileDialog1.Filter = " Archivo de imagen(.jpg)|*.jpg|Archivo de imagen(.png)|*.png|Archivos de imagen(.jpeg)|*.jpeg|Todos los archivos (*.*)|*.*";
-                DialogResult resultado = openFileDialog1.ShowDialog();
-                if (resultado == DialogResult.OK)
-                {
-                    pctlogo.Image = Image.FromFile(openFileDialog1.FileName);
-                }
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("El peso de la imagen es mayor al soportado","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
+           
            
         }
 

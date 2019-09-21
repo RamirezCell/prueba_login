@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YourOwnWorkshop));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnprimeruso = new Bunifu.Framework.UI.BunifuTileButton();
             this.txtcifrado = new System.Windows.Forms.TextBox();
             this.btnrecuperar = new System.Windows.Forms.LinkLabel();
             this.btningresar = new System.Windows.Forms.Button();
@@ -40,15 +42,13 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btnprimeruso = new Bunifu.Framework.UI.BunifuTileButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.btnsalir = new System.Windows.Forms.ToolStripButton();
             this.btnminimizar = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,6 +60,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(214, 282);
             this.panel1.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::prueba_login.Properties.Resources.LogoSinFondo;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -78,6 +89,26 @@
             this.panel2.Size = new System.Drawing.Size(566, 282);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnprimeruso
+            // 
+            this.btnprimeruso.BackColor = System.Drawing.Color.Gold;
+            this.btnprimeruso.color = System.Drawing.Color.Gold;
+            this.btnprimeruso.colorActive = System.Drawing.Color.DimGray;
+            this.btnprimeruso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnprimeruso.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.btnprimeruso.ForeColor = System.Drawing.Color.Black;
+            this.btnprimeruso.Image = global::prueba_login.Properties.Resources.settings1;
+            this.btnprimeruso.ImagePosition = 20;
+            this.btnprimeruso.ImageZoom = 35;
+            this.btnprimeruso.LabelPosition = 41;
+            this.btnprimeruso.LabelText = "Bienvenido al primer uso de sistema";
+            this.btnprimeruso.Location = new System.Drawing.Point(91, 32);
+            this.btnprimeruso.Margin = new System.Windows.Forms.Padding(6);
+            this.btnprimeruso.Name = "btnprimeruso";
+            this.btnprimeruso.Size = new System.Drawing.Size(400, 210);
+            this.btnprimeruso.TabIndex = 5;
+            this.btnprimeruso.Click += new System.EventHandler(this.btnprimeruso_Click);
             // 
             // txtcifrado
             // 
@@ -127,6 +158,7 @@
             this.txtpass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.ForeColor = System.Drawing.Color.White;
             this.txtpass.Location = new System.Drawing.Point(101, 122);
+            this.txtpass.MaxLength = 20;
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(366, 16);
             this.txtpass.TabIndex = 2;
@@ -144,6 +176,7 @@
             this.txtuser.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.ForeColor = System.Drawing.Color.White;
             this.txtuser.Location = new System.Drawing.Point(101, 39);
+            this.txtuser.MaxLength = 20;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(366, 17);
             this.txtuser.TabIndex = 1;
@@ -206,37 +239,6 @@
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
-            // btnprimeruso
-            // 
-            this.btnprimeruso.BackColor = System.Drawing.Color.Gold;
-            this.btnprimeruso.color = System.Drawing.Color.Gold;
-            this.btnprimeruso.colorActive = System.Drawing.Color.DimGray;
-            this.btnprimeruso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnprimeruso.Font = new System.Drawing.Font("Century Gothic", 15.75F);
-            this.btnprimeruso.ForeColor = System.Drawing.Color.Black;
-            this.btnprimeruso.Image = global::prueba_login.Properties.Resources.settings1;
-            this.btnprimeruso.ImagePosition = 20;
-            this.btnprimeruso.ImageZoom = 35;
-            this.btnprimeruso.LabelPosition = 41;
-            this.btnprimeruso.LabelText = "Bienvenido al primer uso de sistema";
-            this.btnprimeruso.Location = new System.Drawing.Point(91, 32);
-            this.btnprimeruso.Margin = new System.Windows.Forms.Padding(6);
-            this.btnprimeruso.Name = "btnprimeruso";
-            this.btnprimeruso.Size = new System.Drawing.Size(400, 210);
-            this.btnprimeruso.TabIndex = 5;
-            this.btnprimeruso.Click += new System.EventHandler(this.btnprimeruso_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::prueba_login.Properties.Resources.LogoSinFondo;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -288,11 +290,11 @@
             this.Text = "YourOwnWorkshop";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

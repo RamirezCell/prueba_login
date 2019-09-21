@@ -78,15 +78,15 @@
     <Compile Include="recuinterno.Designer.cs">
       <DependentUpon>recuinterno.cs</DependentUpon>
     </Compile>
+    <Compile Include="reportes\DataSetaseguradora.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetaseguradora.xsd</DependentUpon>
+    </Compile>
     <Compile Include="reportes\DataSetcliente.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetcliente.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="reportes\DataSetorden.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSetorden.xsd</DependentUpon>
     </Compile>
     <Compile Include="reportes\DataSetusuarios.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -98,17 +98,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetvehiculo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="reportes\reporteaseguradora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\reporteaseguradora.Designer.cs">
+      <DependentUpon>reporteaseguradora.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportes\reporteclientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="reportes\reporteclientes.Designer.cs">
       <DependentUpon>reporteclientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="reportes\reporteordenes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="reportes\reporteordenes.Designer.cs">
-      <DependentUpon>reporteordenes.cs</DependentUpon>
     </Compile>
     <Compile Include="reportes\reporteusers.cs">
       <SubType>Form</SubType>
@@ -323,11 +323,11 @@
     <EmbeddedResource Include="reportes\Report2.rdlc" />
     <EmbeddedResource Include="reportes\Report3.rdlc" />
     <EmbeddedResource Include="reportes\Report4.rdlc" />
+    <EmbeddedResource Include="reportes\reporteaseguradora.resx">
+      <DependentUpon>reporteaseguradora.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportes\reporteclientes.resx">
       <DependentUpon>reporteclientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="reportes\reporteordenes.resx">
-      <DependentUpon>reporteordenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\reporteusers.resx">
       <DependentUpon>reporteusers.cs</DependentUpon>
@@ -434,6 +434,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="reportes\DataSetaseguradora.xsc">
+      <DependentUpon>DataSetaseguradora.xsd</DependentUpon>
+    </None>
+    <None Include="reportes\DataSetaseguradora.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetaseguradora.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="reportes\DataSetaseguradora.xss">
+      <DependentUpon>DataSetaseguradora.xsd</DependentUpon>
+    </None>
     <None Include="reportes\DataSetcliente.xsc">
       <DependentUpon>DataSetcliente.xsd</DependentUpon>
     </None>
@@ -444,17 +455,6 @@
     </None>
     <None Include="reportes\DataSetcliente.xss">
       <DependentUpon>DataSetcliente.xsd</DependentUpon>
-    </None>
-    <None Include="reportes\DataSetorden.xsc">
-      <DependentUpon>DataSetorden.xsd</DependentUpon>
-    </None>
-    <None Include="reportes\DataSetorden.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSetorden.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="reportes\DataSetorden.xss">
-      <DependentUpon>DataSetorden.xsd</DependentUpon>
     </None>
     <None Include="reportes\DataSetusuarios.xsc">
       <DependentUpon>DataSetusuarios.xsd</DependentUpon>

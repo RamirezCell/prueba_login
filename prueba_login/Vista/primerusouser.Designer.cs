@@ -101,7 +101,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "Salir";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripButton2
@@ -398,7 +398,7 @@
             this.btnex.Location = new System.Drawing.Point(695, 281);
             this.btnex.Name = "btnex";
             this.btnex.Size = new System.Drawing.Size(137, 29);
-            this.btnex.TabIndex = 27;
+            this.btnex.TabIndex = 13;
             this.btnex.Text = "Examinar";
             this.btnex.UseVisualStyleBackColor = false;
             this.btnex.Click += new System.EventHandler(this.btnex_Click);
@@ -451,7 +451,7 @@
             this.btnguadar.Location = new System.Drawing.Point(327, 199);
             this.btnguadar.Name = "btnguadar";
             this.btnguadar.Size = new System.Drawing.Size(137, 29);
-            this.btnguadar.TabIndex = 16;
+            this.btnguadar.TabIndex = 17;
             this.btnguadar.Text = "Guardar y continuar";
             this.btnguadar.UseVisualStyleBackColor = false;
             this.btnguadar.Click += new System.EventHandler(this.btnguadar_Click);
@@ -484,7 +484,7 @@
             this.txtp3.MaxLength = 20;
             this.txtp3.Name = "txtp3";
             this.txtp3.Size = new System.Drawing.Size(544, 21);
-            this.txtp3.TabIndex = 15;
+            this.txtp3.TabIndex = 16;
             // 
             // txtp2
             // 
@@ -492,7 +492,7 @@
             this.txtp2.MaxLength = 20;
             this.txtp2.Name = "txtp2";
             this.txtp2.Size = new System.Drawing.Size(544, 21);
-            this.txtp2.TabIndex = 14;
+            this.txtp2.TabIndex = 15;
             // 
             // label17
             // 
@@ -511,7 +511,7 @@
             this.txtp1.MaxLength = 20;
             this.txtp1.Name = "txtp1";
             this.txtp1.Size = new System.Drawing.Size(596, 21);
-            this.txtp1.TabIndex = 13;
+            this.txtp1.TabIndex = 14;
             // 
             // openFileDialog1
             // 

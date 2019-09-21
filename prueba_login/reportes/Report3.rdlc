@@ -467,7 +467,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetusuarios</DataSetName>
         <Height>0.5in</Height>
-        <Width>9.37697in</Width>
+        <Width>9.37694in</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -538,7 +538,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Reporte de datos de vehiculos</Value>
+                  <Value>Reporte de datos de usuarios</Value>
                   <Style>
                     <FontFamily>Yu Gothic</FontFamily>
                     <FontSize>15pt</FontSize>

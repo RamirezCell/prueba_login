@@ -8,7 +8,7 @@ namespace prueba_login.Controlador
 {
     class constructorvehiculo
     {
-        public int id_vehiculo { get; set; }
+        public static int id_vehiculo { get; set; }
         public int marca { get; set; }
         public int modelo { get; set; }
         public int linea { get; set; }

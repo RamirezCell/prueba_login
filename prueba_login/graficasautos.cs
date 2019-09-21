@@ -60,5 +60,10 @@ namespace prueba_login
             graficademarcas.Series["Series1"].YValueMembers = "numplaca";
             graficademarcas.DataSource = EnviarDatos("SELECT tv.numplaca,concat(tm.marca) as marca from marcas tm, vehiculos tv where tv.marca=tm.id_marca  ");
         }
+
+        private void graficademarcas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

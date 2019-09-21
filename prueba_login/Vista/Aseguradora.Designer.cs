@@ -52,6 +52,7 @@
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnlimp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -78,6 +79,7 @@
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(76, 113);
+            this.txtnombre.MaxLength = 25;
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(236, 20);
             this.txtnombre.TabIndex = 1;
@@ -90,7 +92,7 @@
             this.txttelefono.Mask = "0000-0000";
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(233, 20);
-            this.txttelefono.TabIndex = 4;
+            this.txttelefono.TabIndex = 3;
             this.txttelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             this.txttelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttelefono_KeyPress);
             // 
@@ -118,17 +120,20 @@
             // 
             this.txtcorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtcorreo.Location = new System.Drawing.Point(377, 113);
+            this.txtcorreo.MaxLength = 25;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(248, 20);
             this.txtcorreo.TabIndex = 2;
+            this.txtcorreo.TextChanged += new System.EventHandler(this.txtcorreo_TextChanged);
             // 
             // txtrepresentante
             // 
             this.txtrepresentante.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtrepresentante.Location = new System.Drawing.Point(377, 201);
+            this.txtrepresentante.MaxLength = 25;
             this.txtrepresentante.Name = "txtrepresentante";
             this.txtrepresentante.Size = new System.Drawing.Size(248, 20);
-            this.txtrepresentante.TabIndex = 3;
+            this.txtrepresentante.TabIndex = 4;
             this.txtrepresentante.TextChanged += new System.EventHandler(this.txtrepresentante_TextChanged);
             this.txtrepresentante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrepresentante_KeyPress);
             // 
@@ -275,7 +280,7 @@
             this.btnregistrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnregistrar.selected = false;
             this.btnregistrar.Size = new System.Drawing.Size(182, 56);
-            this.btnregistrar.TabIndex = 16;
+            this.btnregistrar.TabIndex = 7;
             this.btnregistrar.Text = "      Registrar";
             this.btnregistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnregistrar.Textcolor = System.Drawing.Color.Black;
@@ -311,7 +316,7 @@
             this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(182, 56);
-            this.btnmostrar.TabIndex = 17;
+            this.btnmostrar.TabIndex = 8;
             this.btnmostrar.Text = "      Mostrar";
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmostrar.Textcolor = System.Drawing.Color.Black;
@@ -347,7 +352,7 @@
             this.btnupdate.OnHoverTextColor = System.Drawing.Color.White;
             this.btnupdate.selected = false;
             this.btnupdate.Size = new System.Drawing.Size(182, 56);
-            this.btnupdate.TabIndex = 18;
+            this.btnupdate.TabIndex = 9;
             this.btnupdate.Text = "      Actualizar";
             this.btnupdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.Textcolor = System.Drawing.Color.Black;
@@ -383,7 +388,7 @@
             this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btneliminar.selected = false;
             this.btneliminar.Size = new System.Drawing.Size(182, 56);
-            this.btneliminar.TabIndex = 19;
+            this.btneliminar.TabIndex = 10;
             this.btneliminar.Text = "     Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneliminar.Textcolor = System.Drawing.Color.Black;
@@ -419,7 +424,7 @@
             this.btnlimp.OnHoverTextColor = System.Drawing.Color.White;
             this.btnlimp.selected = false;
             this.btnlimp.Size = new System.Drawing.Size(182, 56);
-            this.btnlimp.TabIndex = 21;
+            this.btnlimp.TabIndex = 11;
             this.btnlimp.Text = "  Limpiar campos";
             this.btnlimp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnlimp.Textcolor = System.Drawing.Color.Black;
@@ -430,12 +435,23 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(706, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Generar reporte";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Aseguradora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1016, 693);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnlimp);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnupdate);
@@ -494,5 +510,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnlimp;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button button1;
     }
 }

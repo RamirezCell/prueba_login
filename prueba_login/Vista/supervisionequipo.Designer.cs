@@ -75,7 +75,7 @@
             this.btnenviar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnenviar.selected = false;
             this.btnenviar.Size = new System.Drawing.Size(182, 56);
-            this.btnenviar.TabIndex = 15;
+            this.btnenviar.TabIndex = 1;
             this.btnenviar.Text = "          Ver";
             this.btnenviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnenviar.Textcolor = System.Drawing.Color.Black;

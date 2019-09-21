@@ -32,10 +32,10 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtcifrado = new System.Windows.Forms.TextBox();
             this.btnverificarusu = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txtusuario = new System.Windows.Forms.TextBox();
+            this.txtcifrado = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btnregresar = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
@@ -78,14 +78,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // txtcifrado
-            // 
-            this.txtcifrado.Location = new System.Drawing.Point(403, 291);
-            this.txtcifrado.Name = "txtcifrado";
-            this.txtcifrado.Size = new System.Drawing.Size(100, 20);
-            this.txtcifrado.TabIndex = 6;
-            this.txtcifrado.Visible = false;
-            // 
             // btnverificarusu
             // 
             this.btnverificarusu.BackColor = System.Drawing.Color.Goldenrod;
@@ -93,7 +85,7 @@
             this.btnverificarusu.Location = new System.Drawing.Point(175, 124);
             this.btnverificarusu.Name = "btnverificarusu";
             this.btnverificarusu.Size = new System.Drawing.Size(81, 26);
-            this.btnverificarusu.TabIndex = 5;
+            this.btnverificarusu.TabIndex = 2;
             this.btnverificarusu.Text = "Verificar";
             this.btnverificarusu.UseVisualStyleBackColor = false;
             this.btnverificarusu.Click += new System.EventHandler(this.btnverificarusu_Click);
@@ -113,10 +105,19 @@
             // txtusuario
             // 
             this.txtusuario.Location = new System.Drawing.Point(108, 81);
+            this.txtusuario.MaxLength = 20;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(215, 20);
-            this.txtusuario.TabIndex = 3;
+            this.txtusuario.TabIndex = 1;
             this.txtusuario.TextChanged += new System.EventHandler(this.txtusuario_TextChanged);
+            // 
+            // txtcifrado
+            // 
+            this.txtcifrado.Location = new System.Drawing.Point(403, 291);
+            this.txtcifrado.Name = "txtcifrado";
+            this.txtcifrado.Size = new System.Drawing.Size(100, 20);
+            this.txtcifrado.TabIndex = 6;
+            this.txtcifrado.Visible = false;
             // 
             // btnregresar
             // 
@@ -125,7 +126,7 @@
             this.btnregresar.Location = new System.Drawing.Point(171, 249);
             this.btnregresar.Name = "btnregresar";
             this.btnregresar.Size = new System.Drawing.Size(198, 38);
-            this.btnregresar.TabIndex = 7;
+            this.btnregresar.TabIndex = 3;
             this.btnregresar.Text = "Regresar al Registro de empleados";
             this.btnregresar.UseVisualStyleBackColor = false;
             this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);

@@ -36,7 +36,6 @@
             this.BtnMinizar2 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnVerOrden = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -119,7 +118,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.btnsalir);
-            this.panel1.Controls.Add(this.bunifuFlatButton1);
             this.panel1.Controls.Add(this.btnVerOrden);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -145,41 +143,6 @@
             this.btnsalir.Zoom = 10;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DarkGoldenrod;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "    Verificacion De Procesos";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::prueba_login.Properties.Resources.check3;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 400);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(264, 71);
-            this.bunifuFlatButton1.TabIndex = 2;
-            this.bunifuFlatButton1.Text = "    Verificacion De Procesos";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
-            // 
             // btnVerOrden
             // 
             this.btnVerOrden.Activecolor = System.Drawing.Color.DarkGoldenrod;
@@ -203,7 +166,7 @@
             this.btnVerOrden.IsTab = false;
             this.btnVerOrden.Location = new System.Drawing.Point(0, 252);
             this.btnVerOrden.Name = "btnVerOrden";
-            this.btnVerOrden.Normalcolor = System.Drawing.Color.Black;
+            this.btnVerOrden.Normalcolor = System.Drawing.Color.Gold;
             this.btnVerOrden.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnVerOrden.OnHoverTextColor = System.Drawing.Color.White;
             this.btnVerOrden.selected = false;
@@ -300,7 +263,6 @@
         private System.Windows.Forms.Label label2;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.ToolStripButton BtnRestaurar2;
         private System.Windows.Forms.ToolStripButton BtnMinizar2;
         private Bunifu.Framework.UI.BunifuFlatButton btnVerOrden;

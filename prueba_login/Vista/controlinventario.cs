@@ -226,5 +226,13 @@ namespace prueba_login
         {
             caracter(e);
         }
+
+        private void btnlimp_Click(object sender, EventArgs e)
+        {
+            limpiar();
+            btneliminar.Enabled = false;
+            btnupdate.Enabled = false;
+            btnregistrar.Enabled = true;
+        }
     }
 }

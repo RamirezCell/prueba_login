@@ -84,7 +84,7 @@
             this.btnverificar.Location = new System.Drawing.Point(175, 256);
             this.btnverificar.Name = "btnverificar";
             this.btnverificar.Size = new System.Drawing.Size(81, 26);
-            this.btnverificar.TabIndex = 4;
+            this.btnverificar.TabIndex = 6;
             this.btnverificar.Text = "Verificar";
             this.btnverificar.UseVisualStyleBackColor = false;
             this.btnverificar.Click += new System.EventHandler(this.btnverificar_Click);
@@ -107,7 +107,7 @@
             this.txtcontra.MaxLength = 20;
             this.txtcontra.Name = "txtcontra";
             this.txtcontra.Size = new System.Drawing.Size(215, 20);
-            this.txtcontra.TabIndex = 2;
+            this.txtcontra.TabIndex = 5;
             this.txtcontra.TextChanged += new System.EventHandler(this.txtcontra_TextChanged);
             this.txtcontra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcontra_KeyPress);
             // 
@@ -129,7 +129,7 @@
             this.txtadmin.MaxLength = 20;
             this.txtadmin.Name = "txtadmin";
             this.txtadmin.Size = new System.Drawing.Size(215, 20);
-            this.txtadmin.TabIndex = 1;
+            this.txtadmin.TabIndex = 4;
             this.txtadmin.TextChanged += new System.EventHandler(this.txtadmin_TextChanged);
             this.txtadmin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtadmin_KeyPress);
             // 
@@ -164,7 +164,7 @@
             this.btnverificarusu.Location = new System.Drawing.Point(175, 124);
             this.btnverificarusu.Name = "btnverificarusu";
             this.btnverificarusu.Size = new System.Drawing.Size(81, 26);
-            this.btnverificarusu.TabIndex = 5;
+            this.btnverificarusu.TabIndex = 2;
             this.btnverificarusu.Text = "Verificar";
             this.btnverificarusu.UseVisualStyleBackColor = false;
             this.btnverificarusu.Click += new System.EventHandler(this.btnverificarusu_Click);
@@ -177,7 +177,7 @@
             this.btnconfirmar.Location = new System.Drawing.Point(175, 256);
             this.btnconfirmar.Name = "btnconfirmar";
             this.btnconfirmar.Size = new System.Drawing.Size(81, 26);
-            this.btnconfirmar.TabIndex = 4;
+            this.btnconfirmar.TabIndex = 8;
             this.btnconfirmar.Text = "Confirmar";
             this.btnconfirmar.UseVisualStyleBackColor = false;
             this.btnconfirmar.Click += new System.EventHandler(this.btnconfirmar_Click);
@@ -201,7 +201,7 @@
             this.txtnuevacontra.MaxLength = 20;
             this.txtnuevacontra.Name = "txtnuevacontra";
             this.txtnuevacontra.Size = new System.Drawing.Size(215, 20);
-            this.txtnuevacontra.TabIndex = 4;
+            this.txtnuevacontra.TabIndex = 7;
             this.txtnuevacontra.TextChanged += new System.EventHandler(this.txtnuevacontra_TextChanged);
             this.txtnuevacontra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnuevacontra_KeyPress);
             // 
@@ -223,7 +223,7 @@
             this.txtusuario.MaxLength = 20;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(215, 20);
-            this.txtusuario.TabIndex = 3;
+            this.txtusuario.TabIndex = 1;
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             // 
             // toolStrip1
@@ -246,7 +246,7 @@
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "Salir";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             this.toolStripButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStripButton1_MouseDown);
             // 
@@ -269,7 +269,7 @@
             this.button1.Location = new System.Drawing.Point(345, 390);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(252, 35);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 10;
             this.button1.Text = "Volver a opciones";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);

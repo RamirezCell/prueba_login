@@ -119,6 +119,7 @@
             this.txtnamecliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnamecliente.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtnamecliente.Location = new System.Drawing.Point(128, 48);
+            this.txtnamecliente.MaxLength = 25;
             this.txtnamecliente.Name = "txtnamecliente";
             this.txtnamecliente.Size = new System.Drawing.Size(228, 19);
             this.txtnamecliente.TabIndex = 1;
@@ -135,6 +136,7 @@
             this.txtapelliocliente.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtapelliocliente.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtapelliocliente.Location = new System.Drawing.Point(400, 48);
+            this.txtapelliocliente.MaxLength = 25;
             this.txtapelliocliente.Name = "txtapelliocliente";
             this.txtapelliocliente.Size = new System.Drawing.Size(228, 19);
             this.txtapelliocliente.TabIndex = 2;
@@ -151,6 +153,7 @@
             this.txtcorreo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcorreo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtcorreo.Location = new System.Drawing.Point(131, 178);
+            this.txtcorreo.MaxLength = 25;
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(225, 19);
             this.txtcorreo.TabIndex = 5;
@@ -319,6 +322,7 @@
             this.txtDireccion.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDireccion.Location = new System.Drawing.Point(400, 159);
+            this.txtDireccion.MaxLength = 40;
             this.txtDireccion.Multiline = true;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(228, 62);
@@ -446,7 +450,7 @@
             this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btneliminar.selected = false;
             this.btneliminar.Size = new System.Drawing.Size(182, 56);
-            this.btneliminar.TabIndex = 8;
+            this.btneliminar.TabIndex = 11;
             this.btneliminar.Text = "     Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneliminar.Textcolor = System.Drawing.Color.Black;
@@ -482,7 +486,7 @@
             this.btnregistrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnregistrar.selected = false;
             this.btnregistrar.Size = new System.Drawing.Size(182, 56);
-            this.btnregistrar.TabIndex = 7;
+            this.btnregistrar.TabIndex = 8;
             this.btnregistrar.Text = "      Registrar";
             this.btnregistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnregistrar.Textcolor = System.Drawing.Color.Black;
@@ -518,7 +522,7 @@
             this.btnlimp.OnHoverTextColor = System.Drawing.Color.White;
             this.btnlimp.selected = false;
             this.btnlimp.Size = new System.Drawing.Size(182, 56);
-            this.btnlimp.TabIndex = 20;
+            this.btnlimp.TabIndex = 12;
             this.btnlimp.Text = "  Limpiar campos";
             this.btnlimp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnlimp.Textcolor = System.Drawing.Color.Black;

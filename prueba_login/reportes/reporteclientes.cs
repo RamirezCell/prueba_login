@@ -59,5 +59,10 @@ namespace prueba_login.reportes
         {
             cargar();
         }
+
+        private void cmbtipocliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

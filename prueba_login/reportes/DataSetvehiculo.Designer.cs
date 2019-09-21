@@ -1044,7 +1044,8 @@ namespace prueba_login.reportes.DataSetvehiculoTableAdapters {
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        tma.marca, tm.modelo, tl.linea, tp.tipo_placa, tv.numero_motor, tv.numplaca, tv.numero_chasis, tvp.tipo_vehiculo, ev.estado
 FROM            vehiculos tv, marcas tma, modelos tm, lineas tl, tipo_placas tp, tipo_vehiculo tvp, estado_vehiculo ev
-WHERE        tv.marca = tma.id_marca AND tv.modelo = tm.id_modelo AND tv.linea = tl.id_linea AND tv.tipo_placa = tp.id_placa AND tv.tipo_vehiculo = tvp.id_tipo_vehiculo AND tv.estado_vehiculo = ev.id_estado_vehiculo";
+WHERE        tv.marca = tma.id_marca AND tv.modelo = tm.id_modelo AND tv.linea = tl.id_linea AND tv.tipo_placa = tp.id_placa AND tv.tipo_vehiculo = tvp.id_tipo_vehiculo AND tv.estado_vehiculo = ev.id_estado_vehiculo
+                         ";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

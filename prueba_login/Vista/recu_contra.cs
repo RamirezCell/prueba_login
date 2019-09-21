@@ -154,12 +154,13 @@ namespace prueba_login
                 var user = new referenciarecover();
                 var result = user.recovery(txtusuario.Text);
                 lblresult.Text = result;
-                txtveri.Visible = true;
+                
               
 
 
 
             }
+            
             txtusuario.Clear();
            
         }

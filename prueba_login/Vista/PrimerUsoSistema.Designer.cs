@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrimerUsoSistema));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.Salir = new System.Windows.Forms.ToolStripButton();
             this.txtname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,23 +63,23 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
+            this.Salir});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(899, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // Salir
             // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::prueba_login.Properties.Resources.Close_Window__2_48px2;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Salir";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.Salir.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.Salir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.Salir.Image = global::prueba_login.Properties.Resources.Close_Window__2_48px2;
+            this.Salir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.Salir.Name = "Salir";
+            this.Salir.Size = new System.Drawing.Size(23, 22);
+            this.Salir.Text = "Salir";
+            this.Salir.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // txtname
             // 
@@ -186,6 +186,7 @@
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(237, 22);
             this.txtcorreo.TabIndex = 5;
+            this.txtcorreo.TextChanged += new System.EventHandler(this.txtcorreo_TextChanged);
             this.txtcorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcorreo_KeyPress);
             // 
             // label6
@@ -341,7 +342,7 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton Salir;
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

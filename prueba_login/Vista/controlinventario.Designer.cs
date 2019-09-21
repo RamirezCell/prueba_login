@@ -50,6 +50,7 @@
             this.txtname = new System.Windows.Forms.TextBox();
             this.btnupdate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnlimp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvmat)).BeginInit();
             this.grpregistro.SuspendLayout();
@@ -118,14 +119,14 @@
             this.btnmostrar.IconVisible = true;
             this.btnmostrar.IconZoom = 90D;
             this.btnmostrar.IsTab = false;
-            this.btnmostrar.Location = new System.Drawing.Point(318, 278);
+            this.btnmostrar.Location = new System.Drawing.Point(228, 271);
             this.btnmostrar.Name = "btnmostrar";
             this.btnmostrar.Normalcolor = System.Drawing.Color.Gold;
             this.btnmostrar.OnHovercolor = System.Drawing.Color.DimGray;
             this.btnmostrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnmostrar.selected = false;
             this.btnmostrar.Size = new System.Drawing.Size(182, 56);
-            this.btnmostrar.TabIndex = 13;
+            this.btnmostrar.TabIndex = 7;
             this.btnmostrar.Text = "      Mostrar";
             this.btnmostrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnmostrar.Textcolor = System.Drawing.Color.Black;
@@ -154,14 +155,14 @@
             this.btnregistrar.IconVisible = true;
             this.btnregistrar.IconZoom = 90D;
             this.btnregistrar.IsTab = false;
-            this.btnregistrar.Location = new System.Drawing.Point(119, 278);
+            this.btnregistrar.Location = new System.Drawing.Point(12, 271);
             this.btnregistrar.Name = "btnregistrar";
             this.btnregistrar.Normalcolor = System.Drawing.Color.Gold;
             this.btnregistrar.OnHovercolor = System.Drawing.Color.DimGray;
             this.btnregistrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnregistrar.selected = false;
             this.btnregistrar.Size = new System.Drawing.Size(182, 56);
-            this.btnregistrar.TabIndex = 12;
+            this.btnregistrar.TabIndex = 6;
             this.btnregistrar.Text = "      Registrar";
             this.btnregistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnregistrar.Textcolor = System.Drawing.Color.Black;
@@ -215,6 +216,7 @@
             this.txtprice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtprice.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtprice.Location = new System.Drawing.Point(493, 109);
+            this.txtprice.MaxLength = 6;
             this.txtprice.Name = "txtprice";
             this.txtprice.Size = new System.Drawing.Size(228, 19);
             this.txtprice.TabIndex = 4;
@@ -228,6 +230,7 @@
             this.txtmarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmarca.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtmarca.Location = new System.Drawing.Point(221, 109);
+            this.txtmarca.MaxLength = 25;
             this.txtmarca.Name = "txtmarca";
             this.txtmarca.Size = new System.Drawing.Size(228, 19);
             this.txtmarca.TabIndex = 3;
@@ -311,6 +314,7 @@
             this.txtcant.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcant.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtcant.Location = new System.Drawing.Point(368, 181);
+            this.txtcant.MaxLength = 11;
             this.txtcant.Name = "txtcant";
             this.txtcant.Size = new System.Drawing.Size(225, 19);
             this.txtcant.TabIndex = 5;
@@ -324,6 +328,7 @@
             this.txttipo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttipo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txttipo.Location = new System.Drawing.Point(493, 48);
+            this.txttipo.MaxLength = 25;
             this.txttipo.Name = "txttipo";
             this.txttipo.Size = new System.Drawing.Size(228, 19);
             this.txttipo.TabIndex = 2;
@@ -337,6 +342,7 @@
             this.txtname.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txtname.Location = new System.Drawing.Point(221, 48);
+            this.txtname.MaxLength = 25;
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(228, 19);
             this.txtname.TabIndex = 1;
@@ -364,14 +370,14 @@
             this.btnupdate.IconVisible = true;
             this.btnupdate.IconZoom = 90D;
             this.btnupdate.IsTab = false;
-            this.btnupdate.Location = new System.Drawing.Point(521, 278);
+            this.btnupdate.Location = new System.Drawing.Point(430, 271);
             this.btnupdate.Name = "btnupdate";
             this.btnupdate.Normalcolor = System.Drawing.Color.Gold;
             this.btnupdate.OnHovercolor = System.Drawing.Color.DimGray;
             this.btnupdate.OnHoverTextColor = System.Drawing.Color.White;
             this.btnupdate.selected = false;
             this.btnupdate.Size = new System.Drawing.Size(182, 56);
-            this.btnupdate.TabIndex = 15;
+            this.btnupdate.TabIndex = 8;
             this.btnupdate.Text = "      Actualizar";
             this.btnupdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnupdate.Textcolor = System.Drawing.Color.Black;
@@ -400,19 +406,55 @@
             this.btneliminar.IconVisible = true;
             this.btneliminar.IconZoom = 90D;
             this.btneliminar.IsTab = false;
-            this.btneliminar.Location = new System.Drawing.Point(720, 278);
+            this.btneliminar.Location = new System.Drawing.Point(622, 271);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Normalcolor = System.Drawing.Color.Gold;
             this.btneliminar.OnHovercolor = System.Drawing.Color.DimGray;
             this.btneliminar.OnHoverTextColor = System.Drawing.Color.White;
             this.btneliminar.selected = false;
             this.btneliminar.Size = new System.Drawing.Size(182, 56);
-            this.btneliminar.TabIndex = 14;
+            this.btneliminar.TabIndex = 9;
             this.btneliminar.Text = "     Eliminar";
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneliminar.Textcolor = System.Drawing.Color.Black;
             this.btneliminar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // btnlimp
+            // 
+            this.btnlimp.Activecolor = System.Drawing.Color.Gold;
+            this.btnlimp.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnlimp.BackColor = System.Drawing.Color.Gold;
+            this.btnlimp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnlimp.BorderRadius = 0;
+            this.btnlimp.ButtonText = "  Limpiar campos";
+            this.btnlimp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlimp.DisabledColor = System.Drawing.Color.Gray;
+            this.btnlimp.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnlimp.Iconimage = global::prueba_login.Properties.Resources.short_broom;
+            this.btnlimp.Iconimage_right = null;
+            this.btnlimp.Iconimage_right_Selected = null;
+            this.btnlimp.Iconimage_Selected = null;
+            this.btnlimp.IconMarginLeft = 0;
+            this.btnlimp.IconMarginRight = 0;
+            this.btnlimp.IconRightVisible = true;
+            this.btnlimp.IconRightZoom = 0D;
+            this.btnlimp.IconVisible = true;
+            this.btnlimp.IconZoom = 90D;
+            this.btnlimp.IsTab = false;
+            this.btnlimp.Location = new System.Drawing.Point(822, 271);
+            this.btnlimp.Name = "btnlimp";
+            this.btnlimp.Normalcolor = System.Drawing.Color.Gold;
+            this.btnlimp.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnlimp.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnlimp.selected = false;
+            this.btnlimp.Size = new System.Drawing.Size(182, 56);
+            this.btnlimp.TabIndex = 13;
+            this.btnlimp.Text = "  Limpiar campos";
+            this.btnlimp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnlimp.Textcolor = System.Drawing.Color.Black;
+            this.btnlimp.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlimp.Click += new System.EventHandler(this.btnlimp_Click);
             // 
             // controlinventario
             // 
@@ -420,6 +462,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1016, 693);
+            this.Controls.Add(this.btnlimp);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnmostrar);
@@ -463,5 +506,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btneliminar;
         private System.Windows.Forms.ToolStripTextBox txtfiltrar;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnlimp;
     }
 }

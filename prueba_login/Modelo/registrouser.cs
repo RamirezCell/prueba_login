@@ -296,7 +296,7 @@ namespace prueba_login.Modelo
                 }
                 else
                 {
-                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`,`nacimiento`, `pregunta1`, `pregunta2`, `pregunta3`,`foto`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}','{15}','{16}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, pass, estado, add.genero, add.ocupacion, intentos, add.correo,add.fecha, add.pregunta1, add.pregunta2, add.pregunta3,add.foto), conexion.obtenerconexion());
+                    MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `usuarios` (`id_usuario`, `nombre_user`, `apellido_user`, `dui_user`, `direccion`, `tel_user`, `usuario`, `clave`, `estado`, `genero`, `ocupacion`, `intentos`, `correo_electronico`,`nacimiento`, `pregunta1`, `pregunta2`, `pregunta3`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}','{15}')", add.nombre, add.apellido, add.dui, add.direccion, add.telefono, add.usuario, pass, estado, add.genero, add.ocupacion, intentos, add.correo,add.fecha, add.pregunta1, add.pregunta2, add.pregunta3), conexion.obtenerconexion());
                     retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());
                     if (retorno >= 1)
                     {

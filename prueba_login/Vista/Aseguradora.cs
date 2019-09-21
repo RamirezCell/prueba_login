@@ -11,6 +11,7 @@ using prueba_login.Controlador;
 using prueba_login.Modelo;
 using System.IO;
 using System.Drawing.Imaging;
+using prueba_login.reportes;
 
 namespace prueba_login
 {
@@ -187,6 +188,17 @@ namespace prueba_login
         private void txtnit_KeyPress(object sender, KeyPressEventArgs e)
         {
             caracter(e);
+        }
+
+        private void txtcorreo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            reporteaseguradora re = new reporteaseguradora();
+            re.Show();
         }
     }
 }

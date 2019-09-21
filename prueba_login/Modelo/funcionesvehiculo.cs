@@ -2152,7 +2152,7 @@ namespace prueba_login.Modelo
             bool retorno = false;
             try
             {
-                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE vehiculos set marca='{0}',modelo='{1}',linea='{2}',tipo_vehiculo='{3}',estado_vehiculo='{4}',tipo_placa='{5}',id_cliente='{6}',numero_motor='{7}',numplaca='{8}',numero_chasis='{9}' where id_vehiculo='{10}'", upd.marca, upd.modelo, upd.linea,upd.tipo_vehiculo,upd.estado_vehiculo,upd.tipo_placa,upd.id_cliente,upd.numero_motor,upd.numplaca,upd.numero_chasis,upd.id_vehiculo),conexion.obtenerconexion());
+                MySqlCommand cmdupd = new MySqlCommand(string.Format("UPDATE vehiculos set marca='{0}',modelo='{1}',linea='{2}',tipo_vehiculo='{3}',estado_vehiculo='{4}',tipo_placa='{5}',id_cliente='{6}',numero_motor='{7}',numplaca='{8}',numero_chasis='{9}' where id_vehiculo='{10}'", upd.marca, upd.modelo, upd.linea,upd.tipo_vehiculo,upd.estado_vehiculo,upd.tipo_placa,upd.id_cliente,upd.numero_motor,upd.numplaca,upd.numero_chasis,constructorvehiculo.id_vehiculo),conexion.obtenerconexion());
                 retorno = Convert.ToBoolean(cmdupd.ExecuteNonQuery());
                 if (retorno==true)
                 {
