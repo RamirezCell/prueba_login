@@ -179,7 +179,7 @@ namespace prueba_login
 
         private void txtdireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            caracter(e);
+            
         }
 
         private void txttel_KeyPress(object sender, KeyPressEventArgs e)
