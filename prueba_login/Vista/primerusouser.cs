@@ -34,7 +34,7 @@ namespace prueba_login
         }
         public void caracter(KeyPressEventArgs e)
         {
-            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
+            e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar );
 
         }
         public static bool Email_Valido(String email) // Método para validar el Email ingresado
@@ -213,6 +213,11 @@ namespace prueba_login
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtdireccion_TextChanged(object sender, EventArgs e)
         {
 
         }

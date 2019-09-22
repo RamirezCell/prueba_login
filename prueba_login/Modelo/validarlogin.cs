@@ -61,7 +61,7 @@ namespace prueba_login.Modelo
                             {
                                 if (constructotlogin.nivel==4)
                                 {
-                                    MessageBox.Show("Acceso concebido:" + constructotlogin.usuario, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Acceso concedido:" +  constructotlogin.usuario, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 }
                                 else
@@ -228,7 +228,7 @@ namespace prueba_login.Modelo
                             constructotlogin.nivel = reader.GetInt16(10);
                             if (reset >= 1)
                             {
-                                MessageBox.Show("Acceso concebido:" +constructotlogin.usuario, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Acceso concedido:"  +constructotlogin.usuario, "Bienvenido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                         

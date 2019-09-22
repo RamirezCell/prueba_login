@@ -185,12 +185,7 @@ namespace prueba_login
             cmbLinea.ValueMember = "id_linea";
         }
 
-        public void mazda6()
-        {
-            cmbLinea.DataSource = funcionesvehiculo.edicionmazda6();
-            cmbLinea.DisplayMember = "linea";
-            cmbLinea.ValueMember = "id_linea";
-        }
+        
 
         public void mazda323()
         {
@@ -916,10 +911,7 @@ namespace prueba_login
             {
                 mazda3();
             }
-            else if (modelo == "6")
-            {
-                mazda6();
-            }
+          
             else if (modelo == "323")
             {
                 mazda323();

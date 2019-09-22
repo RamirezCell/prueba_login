@@ -428,29 +428,7 @@ namespace prueba_login.Modelo
 
         }
 
-        public static DataTable edicionmazda6()
-        {
-
-            DataTable data;
-            try
-            {
-                string query = "SELECT * FROM  lineas where id_modelo='30'";
-                MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
-                data = new DataTable();
-
-                adapter.Fill(data);
-                return data;
-            }
-            catch (Exception e)
-            {
-
-                return data = new DataTable();
-
-            }
-
-
-        }
+        
 
         public static DataTable edicionmazda323()
         {
