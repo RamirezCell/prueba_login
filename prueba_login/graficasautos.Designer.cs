@@ -56,6 +56,7 @@
             this.graficademarcas.Legends.Add(legend1);
             this.graficademarcas.Location = new System.Drawing.Point(167, 180);
             this.graficademarcas.Name = "graficademarcas";
+            this.graficademarcas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
             series1.Color = System.Drawing.Color.Goldenrod;
