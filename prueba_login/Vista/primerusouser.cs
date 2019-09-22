@@ -179,7 +179,7 @@ namespace prueba_login
 
         private void txtdireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
-            caracter(e);
+            
         }
 
         private void txttel_KeyPress(object sender, KeyPressEventArgs e)
@@ -213,6 +213,11 @@ namespace prueba_login
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtdireccion_TextChanged(object sender, EventArgs e)
         {
 
         }

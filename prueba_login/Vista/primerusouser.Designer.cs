@@ -196,6 +196,7 @@
             this.txtdireccion.Name = "txtdireccion";
             this.txtdireccion.Size = new System.Drawing.Size(182, 102);
             this.txtdireccion.TabIndex = 5;
+            this.txtdireccion.TextChanged += new System.EventHandler(this.txtdireccion_TextChanged);
             this.txtdireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdireccion_KeyPress);
             // 
             // txttel

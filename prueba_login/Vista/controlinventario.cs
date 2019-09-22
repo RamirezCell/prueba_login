@@ -219,7 +219,7 @@ namespace prueba_login
 
         private void txtprice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            caracter(e);
+            
         }
 
         private void txtcant_KeyPress(object sender, KeyPressEventArgs e)
@@ -233,6 +233,11 @@ namespace prueba_login
             btneliminar.Enabled = false;
             btnupdate.Enabled = false;
             btnregistrar.Enabled = true;
+        }
+
+        private void txtprice_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

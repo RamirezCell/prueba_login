@@ -220,6 +220,7 @@
             this.txtprice.Name = "txtprice";
             this.txtprice.Size = new System.Drawing.Size(228, 19);
             this.txtprice.TabIndex = 4;
+            this.txtprice.TextChanged += new System.EventHandler(this.txtprice_TextChanged);
             this.txtprice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprice_KeyPress);
             // 
             // txtmarca

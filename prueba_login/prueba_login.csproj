@@ -496,12 +496,6 @@
     <None Include="Resources\eye2.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Sistema de facturacion YOW\Sistema de facturacion YOW\Sistema de facturacion YOW.csproj">
-      <Project>{ce574879-6688-4dba-8762-0e5e674e930a}</Project>
-      <Name>Sistema de facturacion YOW</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\004-mobile-phone.png" />
   </ItemGroup>
   <ItemGroup>
