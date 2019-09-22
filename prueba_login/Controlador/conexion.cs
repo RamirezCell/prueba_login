@@ -15,7 +15,7 @@ namespace prueba_login.Controlador
         {
             MySqlConnection connect;
             string server = "127.0.0.1";
-            string database = "yowfinal";
+            string database = "yowsystem";
             string user = "root";
             string pass = "";
 
