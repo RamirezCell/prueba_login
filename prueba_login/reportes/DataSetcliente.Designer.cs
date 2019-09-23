@@ -916,9 +916,9 @@ namespace prueba_login.reportes.DataSetclienteTableAdapters {
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = @"SELECT        tc.nombre_cliente, tc.apellido_cliente, tc.DUI_cliente, tc.correo_electronico, tc.numero_telefonico, tc.direccion, tt.tipo_cliente
 FROM            clientes tc, tipo_clientes tt
-WHERE        tc.id_tipo_cliente = tt.id_tipo_cliente AND (tt.id_tipo_cliente = ?)";
+WHERE        tc.id_tipo_cliente = tt.id_tipo_cliente AND (tc.id_cliente = ?)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id_tipo_cliente", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id_tipo_cliente", global::System.Data.DataRowVersion.Current, false, null));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id_cliente", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id_cliente", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -949,10 +949,10 @@ WHERE        tc.id_tipo_cliente = tt.id_tipo_cliente AND (tt.id_tipo_cliente = ?
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int consultaparam(DataSetcliente.tbclientesDataTable dataTable, global::System.Nullable<int> id_tipo_cliente) {
+        public virtual int consultaparam(DataSetcliente.tbclientesDataTable dataTable, global::System.Nullable<int> id_cliente) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((id_tipo_cliente.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_tipo_cliente.Value));
+            if ((id_cliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_cliente.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -968,10 +968,10 @@ WHERE        tc.id_tipo_cliente = tt.id_tipo_cliente AND (tt.id_tipo_cliente = ?
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSetcliente.tbclientesDataTable GetDataBy(global::System.Nullable<int> id_tipo_cliente) {
+        public virtual DataSetcliente.tbclientesDataTable GetDataBy(global::System.Nullable<int> id_cliente) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((id_tipo_cliente.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_tipo_cliente.Value));
+            if ((id_cliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_cliente.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;

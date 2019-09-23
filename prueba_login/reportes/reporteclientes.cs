@@ -17,28 +17,23 @@ namespace prueba_login.reportes
         {
             InitializeComponent();
         }
+        private int idcliente;
+        public int id_clienteconseguir
+        {
+            get { return idcliente; }
+            set { idcliente = value; }
+        }
         void cargar()
         {
             // TODO: This line of code loads data into the 'DataSetcliente.tbclientes' table. You can move, or remove it, as needed.
-            this.tbclientesTableAdapter.mostrarclientes(this.DataSetcliente.tbclientes);
+            this.tbclientesTableAdapter.consultaparam(this.DataSetcliente.tbclientes,idcliente);
 
             this.reportViewer1.RefreshReport();
         }
 
         private void reporteclientes_Load(object sender, EventArgs e)
         {
-            
-            try
-            {
-                cmbtipocliente.DataSource = funcionescliente.obtenertipocliente();
-                cmbtipocliente.DisplayMember = "tipo_cliente";
-                cmbtipocliente.ValueMember = "id_tipo_cliente";
-            }
-            catch (Exception)
-            {
 
-                throw;
-            }
             cargar();
         }
 
@@ -49,18 +44,19 @@ namespace prueba_login.reportes
 
         private void btnfiltrar_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DataSetcliente.tbclientes' table. You can move, or remove it, as needed.
-            this.tbclientesTableAdapter.consultaparam(this.DataSetcliente.tbclientes,Convert.ToInt16(cmbtipocliente.SelectedValue));
 
-            this.reportViewer1.RefreshReport();
         }
-
         private void btntodo_Click(object sender, EventArgs e)
         {
-            cargar();
+            
         }
 
         private void cmbtipocliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
         {
 
         }

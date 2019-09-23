@@ -363,6 +363,7 @@ namespace prueba_login
         private void button1_Click(object sender, EventArgs e)
         {
             reporteclientes repo = new reporteclientes();
+            repo.id_clienteconseguir = Convert.ToInt32(dgvcliente.CurrentRow.Cells["id_cliente"].Value);
             repo.Show();
         }
     }

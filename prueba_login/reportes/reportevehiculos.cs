@@ -33,8 +33,7 @@ namespace prueba_login.reportes
 
         private void reportevehiculos_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DataSetvehiculo.tbvehiculos' table. You can move, or remove it, as needed.
-            this.tbvehiculosTableAdapter.cargarvehiculos(this.DataSetvehiculo.tbvehiculos);
+           
 
             // TODO: This line of code loads data into the 'DataSetvehiculo.tbvehiculos' table. You can move, or remove it, as needed.
             this.tbvehiculosTableAdapter.parametro(this.DataSetvehiculo.tbvehiculos,id_vehiculo);
