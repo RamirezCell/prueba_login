@@ -1244,7 +1244,9 @@ namespace prueba_login
         {
             
             reportevehiculos repo = new reportevehiculos();
+            repo.conseguir_id_vehiculo = Convert.ToInt32(dgvvehiculos.CurrentRow.Cells["id_vehiculo"].Value);
             repo.Show();
+            
         }
     }
 }

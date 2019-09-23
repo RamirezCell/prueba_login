@@ -18,8 +18,14 @@ namespace prueba_login.reportes
         {
             InitializeComponent();
         }
+        private int id_vehiculo;
+        public int conseguir_id_vehiculo
+        {
+            get { return id_vehiculo; }
+            set { id_vehiculo = value; }
+        }
 
-        int idauto = constructorvehiculo.id_vehiculo;
+       
         void cargar() {
             
            
@@ -27,9 +33,11 @@ namespace prueba_login.reportes
 
         private void reportevehiculos_Load(object sender, EventArgs e)
         {
-
             // TODO: This line of code loads data into the 'DataSetvehiculo.tbvehiculos' table. You can move, or remove it, as needed.
             this.tbvehiculosTableAdapter.cargarvehiculos(this.DataSetvehiculo.tbvehiculos);
+
+            // TODO: This line of code loads data into the 'DataSetvehiculo.tbvehiculos' table. You can move, or remove it, as needed.
+            this.tbvehiculosTableAdapter.parametro(this.DataSetvehiculo.tbvehiculos,id_vehiculo);
 
             this.reportViewer1.RefreshReport();
         }
@@ -40,6 +48,11 @@ namespace prueba_login.reportes
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
         {
 
         }

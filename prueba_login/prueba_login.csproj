@@ -320,9 +320,9 @@
       <DependentUpon>recuinterno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\Report1.rdlc" />
-    <EmbeddedResource Include="reportes\Report2.rdlc" />
     <EmbeddedResource Include="reportes\Report3.rdlc" />
     <EmbeddedResource Include="reportes\Report4.rdlc" />
+    <EmbeddedResource Include="reportes\Report5.rdlc" />
     <EmbeddedResource Include="reportes\reporteaseguradora.resx">
       <DependentUpon>reporteaseguradora.cs</DependentUpon>
     </EmbeddedResource>

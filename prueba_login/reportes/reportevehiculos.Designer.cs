@@ -29,27 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.tbvehiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSetvehiculo = new prueba_login.reportes.DataSetvehiculo();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tbvehiculosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataSetvehiculo = new prueba_login.reportes.DataSetvehiculo();
             this.tbvehiculosTableAdapter = new prueba_login.reportes.DataSetvehiculoTableAdapters.tbvehiculosTableAdapter();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbvehiculosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetvehiculo)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tbvehiculosBindingSource
-            // 
-            this.tbvehiculosBindingSource.DataMember = "tbvehiculos";
-            this.tbvehiculosBindingSource.DataSource = this.DataSetvehiculo;
-            // 
-            // DataSetvehiculo
-            // 
-            this.DataSetvehiculo.DataSetName = "DataSetvehiculo";
-            this.DataSetvehiculo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // menuStrip1
             // 
@@ -72,14 +62,25 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource3.Name = "DataSetvehiculos";
-            reportDataSource3.Value = this.tbvehiculosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "prueba_login.reportes.Report2.rdlc";
+            reportDataSource1.Name = "DataSetvehiculo";
+            reportDataSource1.Value = this.tbvehiculosBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "prueba_login.reportes.Report5.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(782, 362);
             this.reportViewer1.TabIndex = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
+            // tbvehiculosBindingSource
+            // 
+            this.tbvehiculosBindingSource.DataMember = "tbvehiculos";
+            this.tbvehiculosBindingSource.DataSource = this.DataSetvehiculo;
+            // 
+            // DataSetvehiculo
+            // 
+            this.DataSetvehiculo.DataSetName = "DataSetvehiculo";
+            this.DataSetvehiculo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tbvehiculosTableAdapter
             // 
@@ -97,9 +98,9 @@
             this.Text = "reportevehiculos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.reportevehiculos_Load);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbvehiculosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetvehiculo)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

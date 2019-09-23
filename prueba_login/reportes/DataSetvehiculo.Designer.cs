@@ -297,6 +297,8 @@ namespace prueba_login.reportes {
             
             private global::System.Data.DataColumn columnestado;
             
+            private global::System.Data.DataColumn columnCliente;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public tbvehiculosDataTable() {
@@ -404,6 +406,14 @@ namespace prueba_login.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ClienteColumn {
+                get {
+                    return this.columnCliente;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -439,7 +449,7 @@ namespace prueba_login.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tbvehiculosRow AddtbvehiculosRow(string numero_motor, int numplaca, string numero_chasis, string marca, string modelo, string linea, string tipo_placa, string tipo_vehiculo, string estado) {
+            public tbvehiculosRow AddtbvehiculosRow(string numero_motor, int numplaca, string numero_chasis, string marca, string modelo, string linea, string tipo_placa, string tipo_vehiculo, string estado, string Cliente) {
                 tbvehiculosRow rowtbvehiculosRow = ((tbvehiculosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         numero_motor,
@@ -450,7 +460,8 @@ namespace prueba_login.reportes {
                         linea,
                         tipo_placa,
                         tipo_vehiculo,
-                        estado};
+                        estado,
+                        Cliente};
                 rowtbvehiculosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtbvehiculosRow);
                 return rowtbvehiculosRow;
@@ -482,6 +493,7 @@ namespace prueba_login.reportes {
                 this.columntipo_placa = base.Columns["tipo_placa"];
                 this.columntipo_vehiculo = base.Columns["tipo_vehiculo"];
                 this.columnestado = base.Columns["estado"];
+                this.columnCliente = base.Columns["Cliente"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -505,6 +517,8 @@ namespace prueba_login.reportes {
                 base.Columns.Add(this.columntipo_vehiculo);
                 this.columnestado = new global::System.Data.DataColumn("estado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestado);
+                this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCliente);
                 this.columnnumero_motor.AllowDBNull = false;
                 this.columnnumero_motor.MaxLength = 50;
                 this.columnnumplaca.AllowDBNull = false;
@@ -516,6 +530,8 @@ namespace prueba_login.reportes {
                 this.columntipo_placa.MaxLength = 50;
                 this.columntipo_vehiculo.MaxLength = 25;
                 this.columnestado.MaxLength = 50;
+                this.columnCliente.ReadOnly = true;
+                this.columnCliente.MaxLength = 51;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -787,6 +803,22 @@ namespace prueba_login.reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Cliente {
+                get {
+                    try {
+                        return ((string)(this[this.tabletbvehiculos.ClienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Cliente\' in table \'tbvehiculos\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletbvehiculos.ClienteColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsmarcaNull() {
                 return this.IsNull(this.tabletbvehiculos.marcaColumn);
             }
@@ -855,6 +887,18 @@ namespace prueba_login.reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetestadoNull() {
                 this[this.tabletbvehiculos.estadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsClienteNull() {
+                return this.IsNull(this.tabletbvehiculos.ClienteColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetClienteNull() {
+                this[this.tabletbvehiculos.ClienteColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1026,6 +1070,7 @@ namespace prueba_login.reportes.DataSetvehiculoTableAdapters {
             tableMapping.ColumnMappings.Add("tipo_placa", "tipo_placa");
             tableMapping.ColumnMappings.Add("tipo_vehiculo", "tipo_vehiculo");
             tableMapping.ColumnMappings.Add("estado", "estado");
+            tableMapping.ColumnMappings.Add("Cliente", "Cliente");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1039,14 +1084,22 @@ namespace prueba_login.reportes.DataSetvehiculoTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
+            this._commandCollection = new global::System.Data.Odbc.OdbcCommand[2];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        tma.marca, tm.modelo, tl.linea, tp.tipo_placa, tv.numero_motor, tv.numplaca, tv.numero_chasis, tvp.tipo_vehiculo, ev.estado
-FROM            vehiculos tv, marcas tma, modelos tm, lineas tl, tipo_placas tp, tipo_vehiculo tvp, estado_vehiculo ev
-WHERE        tv.marca = tma.id_marca AND tv.modelo = tm.id_modelo AND tv.linea = tl.id_linea AND tv.tipo_placa = tp.id_placa AND tv.tipo_vehiculo = tvp.id_tipo_vehiculo AND tv.estado_vehiculo = ev.id_estado_vehiculo
-                         ";
+            this._commandCollection[0].CommandText = @"SELECT        tma.marca, tm.modelo, tl.linea, tp.tipo_placa, CONCAT(tc.nombre_cliente, ' ', tc.apellido_cliente) AS Cliente, tv.numero_motor, tv.numplaca, tv.numero_chasis, tvp.tipo_vehiculo, ev.estado
+FROM            vehiculos tv, marcas tma, modelos tm, lineas tl, tipo_placas tp, tipo_vehiculo tvp, estado_vehiculo ev, clientes tc
+WHERE        tv.marca = tma.id_marca AND tv.modelo = tm.id_modelo AND tv.linea = tl.id_linea AND tv.tipo_placa = tp.id_placa AND tv.tipo_vehiculo = tvp.id_tipo_vehiculo AND tv.estado_vehiculo = ev.id_estado_vehiculo AND 
+                         tv.id_cliente = tc.id_cliente";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.Odbc.OdbcCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        tma.marca, tm.modelo, tl.linea, tp.tipo_placa, CONCAT(tc.nombre_cliente, ' ', tc.apellido_cliente) AS Cliente, tv.numero_motor, tv.numplaca, tv.numero_chasis, tvp.tipo_vehiculo, ev.estado
+FROM            vehiculos tv, marcas tma, modelos tm, lineas tl, tipo_placas tp, tipo_vehiculo tvp, estado_vehiculo ev, clientes tc
+WHERE        tv.marca = tma.id_marca AND tv.modelo = tm.id_modelo AND tv.linea = tl.id_linea AND tv.tipo_placa = tp.id_placa AND tv.tipo_vehiculo = tvp.id_tipo_vehiculo AND tv.estado_vehiculo = ev.id_estado_vehiculo AND 
+                         tv.id_cliente = tc.id_cliente AND (tv.id_vehiculo = ?)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id_vehiculo", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id_vehiculo", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1068,6 +1121,42 @@ WHERE        tv.marca = tma.id_marca AND tv.modelo = tm.id_modelo AND tv.linea =
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSetvehiculo.tbvehiculosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetvehiculo.tbvehiculosDataTable dataTable = new DataSetvehiculo.tbvehiculosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int parametro(DataSetvehiculo.tbvehiculosDataTable dataTable, global::System.Nullable<int> id_vehiculo) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((id_vehiculo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_vehiculo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetvehiculo.tbvehiculosDataTable GetDataBy(global::System.Nullable<int> id_vehiculo) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((id_vehiculo.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_vehiculo.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             DataSetvehiculo.tbvehiculosDataTable dataTable = new DataSetvehiculo.tbvehiculosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

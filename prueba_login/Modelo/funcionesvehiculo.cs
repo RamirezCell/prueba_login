@@ -64,7 +64,7 @@ namespace prueba_login.Modelo
             DataTable data;
             try
             {
-                string query = "select tv.id_vehiculo,CONCAT(tm.marca) as Marca,concat(tmo.modelo) as Modelo,concat(tl.linea) As linea,concat(ti.tipo_vehiculo) as tipo_vehiculo, concat(te.estado) As estado,concat(tp.tipo_placa) as tipo_placa,concat(tc.nombre_cliente,'',tc.apellido_cliente) as Cliente , tv.numero_motor,tv.numplaca,tv.numero_chasis FROM vehiculos tv,marcas tm,modelos tmo,lineas tl,tipo_vehiculo ti,estado_vehiculo te,tipo_placas tp,clientes tc WHERE tv.marca=tm.id_marca and tv.modelo=tmo.id_modelo and tv.linea=tl.id_linea and tv.tipo_vehiculo=ti.id_tipo_vehiculo and tv.estado_vehiculo=te.id_estado_vehiculo and tv.tipo_placa=tp.id_placa and tv.id_cliente=tc.id_cliente";
+                string query = "select tv.id_vehiculo,CONCAT(tm.marca) as Marca,concat(tmo.modelo) as Modelo,concat(tl.linea) As linea,concat(ti.tipo_vehiculo) as tipo_vehiculo, concat(te.estado) As estado,concat(tp.tipo_placa) as tipo_placa,concat(tc.nombre_cliente,' ',tc.apellido_cliente) as Cliente , tv.numero_motor,tv.numplaca,tv.numero_chasis FROM vehiculos tv,marcas tm,modelos tmo,lineas tl,tipo_vehiculo ti,estado_vehiculo te,tipo_placas tp,clientes tc WHERE tv.marca=tm.id_marca and tv.modelo=tmo.id_modelo and tv.linea=tl.id_linea and tv.tipo_vehiculo=ti.id_tipo_vehiculo and tv.estado_vehiculo=te.id_estado_vehiculo and tv.tipo_placa=tp.id_placa and tv.id_cliente=tc.id_cliente";
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();
