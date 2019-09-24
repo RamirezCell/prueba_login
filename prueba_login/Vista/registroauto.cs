@@ -846,6 +846,9 @@ namespace prueba_login
         private void btnlimp_Click(object sender, EventArgs e)
         {
             limpiarcampos();
+            btneliminar.Enabled = false;
+            btnregistrar.Enabled = true;
+            btnupdate.Enabled = false;
         }
         public void clasimarcas()
         {
