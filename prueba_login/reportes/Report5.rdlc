@@ -238,7 +238,7 @@
         <Top>3.41925cm</Top>
         <Left>1.42557cm</Left>
         <Height>1.2cm</Height>
-        <Width>10.94021cm</Width>
+        <Width>10.94022cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1026,6 +1026,7 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>White</BackgroundColor>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -1059,6 +1060,7 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>White</BackgroundColor>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>

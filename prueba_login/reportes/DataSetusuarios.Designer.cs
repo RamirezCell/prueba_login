@@ -897,16 +897,24 @@ namespace prueba_login.reportes.DataSetusuariosTableAdapters {
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        tu.nombre_user, tu.apellido_user, tu.tel_user, tg.genero, o.ocupaci" +
                 "on, tu.correo_electronico\r\nFROM            usuarios tu, generos tg, ocupaciones " +
-                "o\r\nWHERE        tu.genero = tg.id_genero AND tu.ocupacion = o.id_ocupacion";
+                "o\r\nWHERE        tu.genero = tg.id_genero AND tu.ocupacion = o.id_ocupacion and i" +
+                "d_usuario=?";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.Odbc.OdbcParameter("id_usuario", global::System.Data.Odbc.OdbcType.Int, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id_usuario", global::System.Data.DataRowVersion.Current, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int mostrarusuarios(DataSetusuarios.DataTableDataTable dataTable) {
+        public virtual int mostrarusuarios(DataSetusuarios.DataTableDataTable dataTable, global::System.Nullable<int> id_usuario) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((id_usuario.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_usuario.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -918,8 +926,14 @@ namespace prueba_login.reportes.DataSetusuariosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetusuarios.DataTableDataTable GetData() {
+        public virtual DataSetusuarios.DataTableDataTable GetData(global::System.Nullable<int> id_usuario) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((id_usuario.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(id_usuario.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             DataSetusuarios.DataTableDataTable dataTable = new DataSetusuarios.DataTableDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

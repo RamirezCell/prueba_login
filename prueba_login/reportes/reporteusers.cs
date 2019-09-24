@@ -20,7 +20,7 @@ namespace prueba_login.reportes
         private void reporteusers_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'DataSetusuarios.DataTable' table. You can move, or remove it, as needed.
-            this.DataTableTableAdapter.mostrarusuarios(this.DataSetusuarios.DataTable);
+            //this.DataTableTableAdapter.mostrarusuarios(this.DataSetusuarios.DataTable);
 
             this.reportViewer1.RefreshReport();
         }
