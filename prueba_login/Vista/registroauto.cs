@@ -813,7 +813,7 @@ namespace prueba_login
 
         private void grpregistro_Enter(object sender, EventArgs e)
         {
-
+            //hehe
         }
 
         private void txtmarca_KeyPress(object sender, KeyPressEventArgs e)

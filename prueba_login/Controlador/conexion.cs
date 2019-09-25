@@ -14,15 +14,17 @@ namespace prueba_login.Controlador
         public static MySqlConnection obtenerconexion()
         {
             MySqlConnection connect;
-            string server = "127.0.0.1";
+            string server = "192.168.1.100";
             string database = "yowsystem";
             string user = "root";
             string pass = "";
+            string port = "3306";
 
             try
             {
                 connect = new MySqlConnection("server=" + server +
                                                ";database=" + database +
+                                               ";port"+port+
                                                ";Uid=" + user +
                                                ";pwd=" + pass);
 
