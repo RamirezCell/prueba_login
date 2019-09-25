@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using prueba_login.Controlador;
 using prueba_login.Modelo;
-
+using prueba_login.reportes;
 namespace prueba_login
 {
     public partial class verordenes : Form
@@ -22,6 +22,8 @@ namespace prueba_login
         private void verordenes_Load(object sender, EventArgs e)
         {
            dgvorden.DataSource= funcionesordendetrabajo.mostrar();
+            this.dgvorden.Columns[0].Visible = false;
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -54,6 +56,20 @@ namespace prueba_login
             {
                 dgvorden.DataSource = funcionesordendetrabajo.mostrar();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            reporteorden repo = new reporteorden();
+            repo.id_ordenconseguir = Convert.ToInt32(dgvorden.CurrentRow.Cells["id_orden"].Value);
+            repo.Show();
+           
+        }
+
+        private void dgvorden_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

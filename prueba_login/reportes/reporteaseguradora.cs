@@ -16,11 +16,24 @@ namespace prueba_login.reportes
         {
             InitializeComponent();
         }
+        private int idaseguradora;
+        public int id_secureconseguir
+        {
+            get { return idaseguradora; }
+            set { idaseguradora = value; }
+        }
 
         private void reporteaseguradora_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'DataSetaseguradora.DataTable' table. You can move, or remove it, as needed.
+            this.DataTableTableAdapter.Fillasaeguradora(this.DataSetaseguradora.DataTable,idaseguradora);
 
             this.reportViewer1.RefreshReport();
+        }
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -368,6 +368,7 @@ namespace prueba_login
         private void button1_Click_1(object sender, EventArgs e)
         {
             reporteusers repo = new reporteusers();
+            repo.id_userconseguir = Convert.ToInt32(dgvuser.CurrentRow.Cells["id_usuario"].Value);
             repo.Show();
         }
     }

@@ -75,6 +75,7 @@
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(23, 22);
             this.btncerrar.Text = "Salir";
+            this.btncerrar.Click += new System.EventHandler(this.btncerrar_Click);
             this.btncerrar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btncerrar_MouseDown);
             // 
             // btnmaximizar

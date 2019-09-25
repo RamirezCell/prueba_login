@@ -14,6 +14,26 @@ namespace prueba_login.Modelo
 {
     class funciones_ordendetrabajo
     {
+        public static DataTable estadoorden()
+        {
+            DataTable data = new DataTable();
+            
+            string query = "select id_estadoorden,estadoorden from estadosorden";
+            try
+            {
+                MySqlCommand cmdselect = new MySqlCommand(query, conexion.obtenerconexion());
+                
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
+                adapter.Fill(data);
+                return data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error inesperado! Ocurrió un error al momento de cargar a los asesores, por favor consulte con el administrador " + ex.Message, "Error crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return data;
+            }
+        }
+
         public static DataTable asesor()
         {
             DataTable data = new DataTable();
@@ -79,7 +99,7 @@ namespace prueba_login.Modelo
         public static int agregarorden(constructor_ordentrabajo add)
         {
             int retorno = 0;
-            MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `orden_trabajo` (`id_orden`, `detalles`, `id_vehiculo`, `id_cliente`, `id_usuario`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')", add.detalles, add.vehiculo, add.cliente, add.usuario, add.foto1, add.foto2, add.foto3, add.foto4, add.foto5), conexion.obtenerconexion());
+            MySqlCommand cmdadd = new MySqlCommand(string.Format("INSERT INTO `orden_trabajo` (`id_orden`, `detalles`, `id_vehiculo`, `id_cliente`, `id_usuario`, `foto1`, `foto2`, `foto3`, `foto4`, `foto5`,estadoorden) VALUES (NULL, '{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}','{9}')", add.detalles, add.vehiculo, add.cliente, add.usuario, add.foto1, add.foto2, add.foto3, add.foto4, add.foto5,add.estadoorden), conexion.obtenerconexion());
             try
             {
                 retorno = Convert.ToInt32(cmdadd.ExecuteNonQuery());

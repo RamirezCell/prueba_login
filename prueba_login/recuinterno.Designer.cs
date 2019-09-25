@@ -57,7 +57,7 @@
             this.txtpassveri.MaxLength = 20;
             this.txtpassveri.Name = "txtpassveri";
             this.txtpassveri.Size = new System.Drawing.Size(231, 23);
-            this.txtpassveri.TabIndex = 32;
+            this.txtpassveri.TabIndex = 2;
             this.txtpassveri.TextChanged += new System.EventHandler(this.txtpassveri_TextChanged);
             this.txtpassveri.Enter += new System.EventHandler(this.txtpassveri_Enter);
             // 
@@ -81,7 +81,7 @@
             this.txtpass.MaxLength = 20;
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(231, 23);
-            this.txtpass.TabIndex = 30;
+            this.txtpass.TabIndex = 1;
             this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
             // 
@@ -134,7 +134,7 @@
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(249, 52);
-            this.bunifuFlatButton1.TabIndex = 38;
+            this.bunifuFlatButton1.TabIndex = 3;
             this.bunifuFlatButton1.Text = "          Guardar y salir";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;

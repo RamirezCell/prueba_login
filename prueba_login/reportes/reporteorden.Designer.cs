@@ -1,6 +1,6 @@
 ﻿namespace prueba_login.reportes
 {
-    partial class reporteusers
+    partial class reporteorden
     {
         /// <summary>
         /// Required designer variable.
@@ -31,54 +31,33 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.DataTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.DataSetusuarios = new prueba_login.reportes.DataSetusuarios();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.DataSetorden = new prueba_login.reportes.DataSetorden();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DataTableTableAdapter = new prueba_login.reportes.DataSetusuariosTableAdapters.DataTableTableAdapter();
+            this.DataTableTableAdapter = new prueba_login.reportes.DataSetordenTableAdapters.DataTableTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetusuarios)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetorden)).BeginInit();
             this.SuspendLayout();
             // 
             // DataTableBindingSource
             // 
             this.DataTableBindingSource.DataMember = "DataTable";
-            this.DataTableBindingSource.DataSource = this.DataSetusuarios;
+            this.DataTableBindingSource.DataSource = this.DataSetorden;
             // 
-            // DataSetusuarios
+            // DataSetorden
             // 
-            this.DataSetusuarios.DataSetName = "DataSetusuarios";
-            this.DataSetusuarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(795, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.reportViewer1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(795, 388);
-            this.panel1.TabIndex = 1;
+            this.DataSetorden.DataSetName = "DataSetorden";
+            this.DataSetorden.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSetusuarios";
+            reportDataSource1.Name = "DataSetorden";
             reportDataSource1.Value = this.DataTableBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "prueba_login.reportes.Report3.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "prueba_login.reportes.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(795, 388);
+            this.reportViewer1.Size = new System.Drawing.Size(677, 383);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
@@ -86,34 +65,27 @@
             // 
             this.DataTableTableAdapter.ClearBeforeFill = true;
             // 
-            // reporteusers
+            // reporteorden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 412);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "reporteusers";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "reporteusers";
+            this.ClientSize = new System.Drawing.Size(677, 383);
+            this.Controls.Add(this.reportViewer1);
+            this.Name = "reporteorden";
+            this.Text = "reporteorden";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.reporteusers_Load);
+            this.Load += new System.EventHandler(this.reporteorden_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DataSetusuarios)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetorden)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Panel panel1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource DataTableBindingSource;
-        private DataSetusuarios DataSetusuarios;
-        private DataSetusuariosTableAdapters.DataTableTableAdapter DataTableTableAdapter;
+        private DataSetorden DataSetorden;
+        private DataSetordenTableAdapters.DataTableTableAdapter DataTableTableAdapter;
     }
 }

@@ -34,6 +34,7 @@
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvorden)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +45,13 @@
             this.dgvorden.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvorden.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvorden.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvorden.Location = new System.Drawing.Point(60, 89);
+            this.dgvorden.Location = new System.Drawing.Point(12, 89);
             this.dgvorden.Name = "dgvorden";
-            this.dgvorden.Size = new System.Drawing.Size(883, 555);
+            this.dgvorden.Size = new System.Drawing.Size(992, 555);
             this.dgvorden.TabIndex = 0;
+            this.dgvorden.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvorden_CellClick);
             this.dgvorden.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtfiltrar
@@ -106,12 +109,26 @@
             this.lineShape1.Y1 = 27;
             this.lineShape1.Y2 = 27;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Yellow;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(671, 43);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Imprimir reporte";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // verordenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1016, 693);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtfiltrar);
             this.Controls.Add(this.dgvorden);
@@ -134,5 +151,6 @@
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape2;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -57,6 +57,8 @@
             this.btnexaminar4 = new System.Windows.Forms.Button();
             this.btnexaminar5 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.cmbestado = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctfrontal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctderecha)).BeginInit();
@@ -103,7 +105,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(228, 34);
+            this.label8.Location = new System.Drawing.Point(89, 34);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(123, 16);
             this.label8.TabIndex = 8;
@@ -115,7 +117,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(491, 34);
+            this.label9.Location = new System.Drawing.Point(352, 34);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(113, 16);
             this.label9.TabIndex = 9;
@@ -127,7 +129,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(726, 34);
+            this.label10.Location = new System.Drawing.Point(587, 34);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(114, 16);
             this.label10.TabIndex = 10;
@@ -199,7 +201,7 @@
             this.cmbcliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbcliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbcliente.FormattingEnabled = true;
-            this.cmbcliente.Location = new System.Drawing.Point(427, 65);
+            this.cmbcliente.Location = new System.Drawing.Point(288, 65);
             this.cmbcliente.Name = "cmbcliente";
             this.cmbcliente.Size = new System.Drawing.Size(217, 21);
             this.cmbcliente.TabIndex = 2;
@@ -210,7 +212,7 @@
             this.cmbusuario.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cmbusuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbusuario.FormattingEnabled = true;
-            this.cmbusuario.Location = new System.Drawing.Point(665, 65);
+            this.cmbusuario.Location = new System.Drawing.Point(526, 65);
             this.cmbusuario.Name = "cmbusuario";
             this.cmbusuario.Size = new System.Drawing.Size(217, 21);
             this.cmbusuario.TabIndex = 3;
@@ -221,7 +223,7 @@
             this.cmbvehiculo.BackColor = System.Drawing.Color.DarkGray;
             this.cmbvehiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbvehiculo.FormattingEnabled = true;
-            this.cmbvehiculo.Location = new System.Drawing.Point(169, 65);
+            this.cmbvehiculo.Location = new System.Drawing.Point(30, 65);
             this.cmbvehiculo.Name = "cmbvehiculo";
             this.cmbvehiculo.Size = new System.Drawing.Size(237, 21);
             this.cmbvehiculo.TabIndex = 1;
@@ -406,11 +408,36 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // cmbestado
+            // 
+            this.cmbestado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbestado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbestado.FormattingEnabled = true;
+            this.cmbestado.Location = new System.Drawing.Point(770, 65);
+            this.cmbestado.Name = "cmbestado";
+            this.cmbestado.Size = new System.Drawing.Size(217, 21);
+            this.cmbestado.TabIndex = 33;
+            this.cmbestado.SelectedIndexChanged += new System.EventHandler(this.cmbestado_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(831, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(98, 16);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Estado de orden";
+            // 
             // ordentrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 693);
+            this.Controls.Add(this.cmbestado);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnexaminar5);
             this.Controls.Add(this.btnexaminar4);
             this.Controls.Add(this.btnexaminar3);
@@ -483,5 +510,7 @@
         private System.Windows.Forms.Button btnexaminar4;
         private System.Windows.Forms.Button btnexaminar5;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ComboBox cmbestado;
+        private System.Windows.Forms.Label label1;
     }
 }

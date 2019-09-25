@@ -83,6 +83,7 @@
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(23, 22);
             this.btnMaximizar.Text = "Maximizar";
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
             // btnNormal
             // 
@@ -93,6 +94,7 @@
             this.btnNormal.Name = "btnNormal";
             this.btnNormal.Size = new System.Drawing.Size(23, 22);
             this.btnNormal.Text = "Restaurar";
+            this.btnNormal.Click += new System.EventHandler(this.btnNormal_Click);
             // 
             // btnMinimizar
             // 
@@ -103,6 +105,7 @@
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(23, 22);
             this.btnMinimizar.Text = "Minimizar";
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // toolStripTextBox1
             // 
@@ -148,7 +151,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 400);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 332);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Gold;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Yellow;
@@ -231,7 +234,9 @@
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1720, 728);
             this.Name = "torre";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "torre";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

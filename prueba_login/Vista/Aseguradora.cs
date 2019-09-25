@@ -99,6 +99,8 @@ namespace prueba_login
             txtrepresentante.Clear();
             txttelefono.Clear();
             btnregistrar.Enabled = true;
+            btneliminar.Enabled = false;
+            btnupdate.Enabled = false;
         }
         private void btnlimp_Click(object sender, EventArgs e)
         {
@@ -198,6 +200,7 @@ namespace prueba_login
         private void button1_Click(object sender, EventArgs e)
         {
             reporteaseguradora re = new reporteaseguradora();
+            re.id_secureconseguir = Convert.ToInt32(dataGridView1.CurrentRow.Cells["id_aseguradora"].Value);
             re.Show();
         }
     }

@@ -17,6 +17,7 @@ namespace prueba_login
         public torre()
         {
             InitializeComponent();
+            btnNormal.Visible = false;
         }
         Form currentForm;
 
@@ -82,6 +83,26 @@ namespace prueba_login
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Aseguradora>();
+        }
+
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            btnMaximizar.Visible = false;
+            btnNormal.Visible = true;
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnNormal_Click(object sender, EventArgs e)
+        {
+            btnMaximizar.Visible = true;
+            btnNormal.Visible = false;
+            this.WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
         }
     }
 }

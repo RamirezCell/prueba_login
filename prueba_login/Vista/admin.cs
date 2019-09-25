@@ -158,5 +158,10 @@ namespace prueba_login
             yow.Show();
             this.Hide();
         }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
