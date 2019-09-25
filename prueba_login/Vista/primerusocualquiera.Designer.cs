@@ -162,6 +162,7 @@
             this.txtp2.Name = "txtp2";
             this.txtp2.Size = new System.Drawing.Size(197, 20);
             this.txtp2.TabIndex = 4;
+            this.txtp2.TextChanged += new System.EventHandler(this.txtp2_TextChanged);
             // 
             // label4
             // 

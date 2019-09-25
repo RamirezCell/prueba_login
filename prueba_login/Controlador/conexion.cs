@@ -18,11 +18,12 @@ namespace prueba_login.Controlador
             string database = "yowsystem";
             string user = "root";
             string pass = "";
-
+            string port = "3306";
             try
             {
                 connect = new MySqlConnection("server=" + server +
                                                ";database=" + database +
+                                               
                                                ";Uid=" + user +
                                                ";pwd=" + pass);
 

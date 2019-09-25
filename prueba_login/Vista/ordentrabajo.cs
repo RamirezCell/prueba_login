@@ -53,6 +53,7 @@ namespace prueba_login
                 add.usuario = Convert.ToInt16(cmbusuario.SelectedValue);
                 add.vehiculo = Convert.ToInt16(cmbvehiculo.SelectedValue);
                 add.detalles = txtdetalles.Text;
+                add.estadoorden = Convert.ToInt16(cmbestado.SelectedValue);
                 MemoryStream ms1 = new MemoryStream();
                 pctfrontal.Image.Save(ms1, ImageFormat.Jpeg);
                 byte[] abyte = ms1.ToArray();
@@ -101,6 +102,9 @@ namespace prueba_login
             cmbvehiculo.DataSource = funciones_ordendetrabajo.vehiculos();
             cmbvehiculo.ValueMember = "id_vehiculo";
             cmbvehiculo.DisplayMember = "vehiculo";
+            cmbestado.DataSource = funciones_ordendetrabajo.estadoorden();
+            cmbestado.ValueMember = "id_estadoorden";
+            cmbestado.DisplayMember = "estadoorden";
 
 
            
@@ -247,6 +251,11 @@ namespace prueba_login
         private void button1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void cmbestado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

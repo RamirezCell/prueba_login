@@ -34,5 +34,10 @@ namespace prueba_login.reportes
         {
 
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

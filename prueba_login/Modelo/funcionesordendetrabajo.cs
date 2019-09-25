@@ -17,7 +17,8 @@ namespace prueba_login.Modelo
             DataTable data;
             try
             {
-                string query = "SELECT * FROM orden_trabajo";
+                string query = "select tor.id_orden, tor.detalles,concat(tm.marca,' ',tmo.modelo,' ',tl.linea) as Vehiculo,concat(tc.nombre_cliente,' ',tc.apellido_cliente) as cliente,concat(tu.nombre_user,' ',tu.apellido_user)as usuario , tes.estadoorden FROM orden_trabajo tor,vehiculos tv,clientes tc,usuarios tu, estadosorden tes,marcas tm,modelos tmo,lineas tl WHERE tor.id_vehiculo=tv.id_vehiculo and tor.id_cliente=tc.id_cliente and tor.id_usuario=tu.id_usuario and tor.estadoorden=tes.id_estadoorden and tor.estadoorden='1' and tv.marca=tm.id_marca and tv.modelo=tmo.id_modelo and tv.linea=tl.id_linea";
+
                 MySqlCommand cmdselect = new MySqlCommand(string.Format(query), conexion.obtenerconexion());
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmdselect);
                 data = new DataTable();

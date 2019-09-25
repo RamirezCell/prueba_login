@@ -15,7 +15,7 @@ namespace prueba_login.Controlador
         public int Placa { get; set; }
         public int chasis { get; set; }
         public int motor { get; set; }
-        public double kilometraje { get; set; }
+        public int estadoorden { get; set; }
         public int tipo_carro { get; set; }
         public string detalles { get; set; }
         public string foto1 { get; set; }
