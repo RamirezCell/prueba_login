@@ -175,9 +175,39 @@ namespace prueba_login
             }
            
         }
+        void traduccion()
+        {
+            btnregistrar.Text = "    Create";
+            btnmostrar.Text = "    Show";
+            btnupdate.Text = "    Update";
+            btneliminar.Text = "    Delete";
+            btnlimp.Text = "    Clear";
+            lblfilt.Text = "Filter";
+            btnreport.Text = "Generate report";
+            lblapellido.Text = "     Lastname";
+            lblcorreo.Text = "                Email";
+            lbldir.Text = "Direction";
+            lbldui.Text = "    Client ID";
+            lblname.Text = "          Names";
+            lblnum.Text = " Telephone number";
+            llbltipocli.Text = "Cliente Type";
+            btntspcliente.Text = "Client registration";
+        }
 
         private void registrocliente_Load(object sender, EventArgs e)
         {
+
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                traduccion();
+                //MessageBox.Show("INGLES");
+
+            }
             cmbTipoCliente.DataSource = funcionescliente.obtenertipocliente();
             cmbTipoCliente.DisplayMember = "tipo_cliente";
             cmbTipoCliente.ValueMember = "id_tipo_cliente";
@@ -264,9 +294,9 @@ namespace prueba_login
             Eliminar();
             mostrar();
             limpiar();
-            btneliminar.Enabled = true;
+            btneliminar.Enabled = false;
             btnregistrar.Enabled = true;
-            btnupdate.Enabled = true;
+            btnupdate.Enabled = false;
         }
         public void limpiar()
         {

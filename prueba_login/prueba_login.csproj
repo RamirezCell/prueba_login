@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\constructoridioma.cs" />
     <Compile Include="Controlador\constructorimagen.cs" />
     <Compile Include="Controlador\constructorrecuinterno.cs" />
     <Compile Include="graficasautos.cs">
@@ -71,6 +72,12 @@
     </Compile>
     <Compile Include="graficasclientes.Designer.cs">
       <DependentUpon>graficasclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\language.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\language.Designer.cs">
+      <DependentUpon>language.cs</DependentUpon>
     </Compile>
     <Compile Include="recuinterno.cs">
       <SubType>Form</SubType>
@@ -327,6 +334,9 @@
     <EmbeddedResource Include="graficasclientes.resx">
       <DependentUpon>graficasclientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\language.resx">
+      <DependentUpon>language.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="recuinterno.resx">
       <DependentUpon>recuinterno.cs</DependentUpon>
     </EmbeddedResource>
@@ -543,6 +553,7 @@
     <None Include="Resources\logoexpo4.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ilustracion-bandera-espana_53876-181681.jpg" />
     <None Include="Resources\ilustracion-bandera-espana_53876-18168.jpg" />
     <None Include="Resources\united-states.png" />
     <None Include="Resources\short-broom.png" />

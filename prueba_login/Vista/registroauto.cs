@@ -666,8 +666,45 @@ namespace prueba_login
             cmbLinea.DisplayMember = "linea";
             cmbLinea.ValueMember = "id_linea";
         }
+        public void traducir()
+        {
+            btnreg.Text = "Vehicle registration";
+            lblfilt.Text = "Filter";
+            btnreport.Text = "Generate report";
+            lblmarca.Text = "          Brand";
+            lblmodelo.Text ="       Car model";
+            lbllinea.Text = "       Car edition";
+            lblnummotor.Text = "Engine number";
+            lblestado.Text = "Vehicle condition";
+            lbltipovehiculo.Text = "Vehicle class";
+            lblplaca.Text = "Vehicle license plate";
+            lblnumchasis.Text = "     Chasis number";
+            lblpropetario.Text = "          Vehicle owner";
+            btnregistrar.Text = "    Create";
+            btnmostrar.Text = "    Show";
+            btnupdate.Text = "    Update";
+            btneliminar.Text = "    Delete";
+            btnlimp.Text = "    Clear";
+
+
+
+
+        }
+
         private void registroauto_Load(object sender, EventArgs e)
         {
+
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                traducir();
+                //MessageBox.Show("INGLES");
+
+            }
             mostrar();
 
 

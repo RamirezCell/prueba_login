@@ -33,17 +33,17 @@
             this.btncerrar = new System.Windows.Forms.ToolStripButton();
             this.btnmaximizar = new System.Windows.Forms.ToolStripButton();
             this.btnnormal = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.btnmin = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btncar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btncliente = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAdminProductos = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAdminEmpleados = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSupervision = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbllogout = new System.Windows.Forms.Label();
+            this.lblocup = new System.Windows.Forms.Label();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -57,7 +57,7 @@
             this.btncerrar,
             this.btnmaximizar,
             this.btnnormal,
-            this.toolStripButton4,
+            this.btnmin,
             this.toolStripLabel1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -100,16 +100,16 @@
             this.btnnormal.Text = "Restaurar";
             this.btnnormal.Click += new System.EventHandler(this.btnnormal_Click);
             // 
-            // toolStripButton4
+            // btnmin
             // 
-            this.toolStripButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::prueba_login.Properties.Resources.Minimize_Window_2_48px;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "Minimizar";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            this.btnmin.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnmin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnmin.Image = global::prueba_login.Properties.Resources.Minimize_Window_2_48px;
+            this.btnmin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnmin.Name = "btnmin";
+            this.btnmin.Size = new System.Drawing.Size(23, 22);
+            this.btnmin.Text = "Minimizar";
+            this.btnmin.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
             // toolStripLabel1
             // 
@@ -123,13 +123,13 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.bunifuImageButton1);
-            this.panel1.Controls.Add(this.bunifuFlatButton2);
-            this.panel1.Controls.Add(this.bunifuFlatButton1);
+            this.panel1.Controls.Add(this.btncar);
+            this.panel1.Controls.Add(this.btncliente);
             this.panel1.Controls.Add(this.btnAdminProductos);
             this.panel1.Controls.Add(this.btnAdminEmpleados);
             this.panel1.Controls.Add(this.btnSupervision);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lbllogout);
+            this.panel1.Controls.Add(this.lblocup);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
@@ -151,75 +151,75 @@
             this.bunifuImageButton1.Zoom = 10;
             this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
             // 
-            // bunifuFlatButton2
+            // btncar
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.DarkGoldenrod;
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "  Administracion de vehiculos";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = global::prueba_login.Properties.Resources.car_front;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(0, 455);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Yellow;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(264, 71);
-            this.bunifuFlatButton2.TabIndex = 5;
-            this.bunifuFlatButton2.Text = "  Administracion de vehiculos";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
+            this.btncar.Activecolor = System.Drawing.Color.DarkGoldenrod;
+            this.btncar.BackColor = System.Drawing.Color.Gold;
+            this.btncar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btncar.BorderRadius = 0;
+            this.btncar.ButtonText = "  Administracion de vehiculos";
+            this.btncar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncar.DisabledColor = System.Drawing.Color.Gray;
+            this.btncar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btncar.Iconimage = global::prueba_login.Properties.Resources.car_front;
+            this.btncar.Iconimage_right = null;
+            this.btncar.Iconimage_right_Selected = null;
+            this.btncar.Iconimage_Selected = null;
+            this.btncar.IconMarginLeft = 0;
+            this.btncar.IconMarginRight = 0;
+            this.btncar.IconRightVisible = true;
+            this.btncar.IconRightZoom = 0D;
+            this.btncar.IconVisible = true;
+            this.btncar.IconZoom = 90D;
+            this.btncar.IsTab = false;
+            this.btncar.Location = new System.Drawing.Point(0, 455);
+            this.btncar.Name = "btncar";
+            this.btncar.Normalcolor = System.Drawing.Color.Gold;
+            this.btncar.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btncar.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btncar.selected = false;
+            this.btncar.Size = new System.Drawing.Size(264, 71);
+            this.btncar.TabIndex = 5;
+            this.btncar.Text = "  Administracion de vehiculos";
+            this.btncar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btncar.Textcolor = System.Drawing.Color.Black;
+            this.btncar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncar.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
-            // bunifuFlatButton1
+            // btncliente
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.DarkGoldenrod;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "   Administracion de clientes";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::prueba_login.Properties.Resources.user_inside_bubble_speech;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 378);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Yellow;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(264, 71);
-            this.bunifuFlatButton1.TabIndex = 4;
-            this.bunifuFlatButton1.Text = "   Administracion de clientes";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btncliente.Activecolor = System.Drawing.Color.DarkGoldenrod;
+            this.btncliente.BackColor = System.Drawing.Color.Gold;
+            this.btncliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btncliente.BorderRadius = 0;
+            this.btncliente.ButtonText = "   Administracion de clientes";
+            this.btncliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncliente.DisabledColor = System.Drawing.Color.Gray;
+            this.btncliente.Iconcolor = System.Drawing.Color.Transparent;
+            this.btncliente.Iconimage = global::prueba_login.Properties.Resources.user_inside_bubble_speech;
+            this.btncliente.Iconimage_right = null;
+            this.btncliente.Iconimage_right_Selected = null;
+            this.btncliente.Iconimage_Selected = null;
+            this.btncliente.IconMarginLeft = 0;
+            this.btncliente.IconMarginRight = 0;
+            this.btncliente.IconRightVisible = true;
+            this.btncliente.IconRightZoom = 0D;
+            this.btncliente.IconVisible = true;
+            this.btncliente.IconZoom = 90D;
+            this.btncliente.IsTab = false;
+            this.btncliente.Location = new System.Drawing.Point(0, 378);
+            this.btncliente.Name = "btncliente";
+            this.btncliente.Normalcolor = System.Drawing.Color.Gold;
+            this.btncliente.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btncliente.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btncliente.selected = false;
+            this.btncliente.Size = new System.Drawing.Size(264, 71);
+            this.btncliente.TabIndex = 4;
+            this.btncliente.Text = "   Administracion de clientes";
+            this.btncliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btncliente.Textcolor = System.Drawing.Color.Black;
+            this.btncliente.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncliente.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // btnAdminProductos
             // 
@@ -321,30 +321,30 @@
             this.btnSupervision.Size = new System.Drawing.Size(264, 71);
             this.btnSupervision.TabIndex = 1;
             this.btnSupervision.Text = "   Supervision de equipamiento";
-            this.btnSupervision.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupervision.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSupervision.Textcolor = System.Drawing.Color.Black;
-            this.btnSupervision.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupervision.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupervision.Click += new System.EventHandler(this.btnSupervision_Click);
             // 
-            // label2
+            // lbllogout
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cerrar Sesion";
+            this.lbllogout.AutoSize = true;
+            this.lbllogout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllogout.Location = new System.Drawing.Point(13, 119);
+            this.lbllogout.Name = "lbllogout";
+            this.lbllogout.Size = new System.Drawing.Size(110, 21);
+            this.lbllogout.TabIndex = 2;
+            this.lbllogout.Text = "Cerrar Sesion";
             // 
-            // label1
+            // lblocup
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(137, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Admin";
+            this.lblocup.AutoSize = true;
+            this.lblocup.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblocup.Location = new System.Drawing.Point(137, 61);
+            this.lblocup.Name = "lblocup";
+            this.lblocup.Size = new System.Drawing.Size(62, 21);
+            this.lblocup.TabIndex = 1;
+            this.lblocup.Text = "Admin";
             // 
             // panelContenedor
             // 
@@ -370,6 +370,7 @@
             this.Name = "admin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "admin";
+            this.Load += new System.EventHandler(this.admin_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -386,17 +387,17 @@
         private System.Windows.Forms.ToolStripButton btncerrar;
         private System.Windows.Forms.ToolStripButton btnmaximizar;
         private System.Windows.Forms.ToolStripButton btnnormal;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton btnmin;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuFlatButton btnAdminEmpleados;
         private Bunifu.Framework.UI.BunifuFlatButton btnSupervision;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbllogout;
+        private System.Windows.Forms.Label lblocup;
         private System.Windows.Forms.Panel panelContenedor;
         private Bunifu.Framework.UI.BunifuFlatButton btnAdminProductos;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btncliente;
+        private Bunifu.Framework.UI.BunifuFlatButton btncar;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

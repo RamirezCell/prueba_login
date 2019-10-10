@@ -79,10 +79,45 @@ namespace prueba_login
                 int datos = registrouser.registrar(add);
             }
         }
+        public void ingles()
+        {
+            btnregistrar.Text = "    Create";
+            btnmostrar.Text = "    Show";
+            btnupdate.Text = "    Update";
+            btneliminar.Text = "    Delete";
+            btnlimp.Text = "    Clear";
+            btnre.Text = "Employee registration";
+            lblfilt.Text = "Filter";
+            btnreport.Text = "Generate report";
+            btnrecuperacion.Text = "Password recover";
+            lblname.Text = "   Names";
+            lblnum.Text = " Telephone number";
+            lbldui.Text = "Client ID";
+            lbluser.Text = "Username";
+            lblcorreo.Text = "             Email";
+            lblapellido.Text = "Lastnames";
+            lbloc.Text = "Ocupation";
+            lblgenero.Text = "Gender";
+            lblnac.Text = "Date of birth";
+            lbldireccion.Text = "Direction";
+            lbldui.Text = "User ID";
+
+
+        }
 
         private void registrotrabajador_Load(object sender, EventArgs e)
         {
-            
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                //MessageBox.Show("INGLES");
+                ingles();
+                
+            }
 
             cmboc.DataSource = registrouser.obtenerocupacion();
             cmbgender.DataSource = registrouser.generos();

@@ -58,7 +58,25 @@ namespace prueba_login
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                //MessageBox.Show("INGLES");
+                tsplogin.Text = "Log in";
+                btningresar.Text = "Log in";
+                btnrecuperar.Text = "Password recovery";
+               
+                btnlang.Text = "Language select";
+                lblpass.Text = "PASSWORD";
+                labeluser.Text = "USERNAME";
+                btnsalir.Text = "Exit";
+                btnminimizar.Text = "Mininimize";
+            }
+
 
             if (verificar.verificarempresa() == true)
             {
@@ -133,44 +151,27 @@ namespace prueba_login
 
         private void txtuser_Enter(object sender, EventArgs e)
         {
-            if (txtuser.Text=="USUARIO")
-            {
-                txtuser.Text = "";
-                txtuser.ForeColor = Color.White;
-            }
+            
+           
 
         }
 
         private void txtuser_Leave(object sender, EventArgs e)
         {
-            if (txtuser.Text == "")
-            {
-                txtuser.Text = "USUARIO";
-                txtuser.ForeColor = Color.LightGray;
-
-
-            }
+            
         }
 
         private void txtpass_Enter(object sender, EventArgs e)
         {
-            if (txtpass.Text == "CONTRASEÑA")
-            {
-                txtpass.Text = "";
-                txtpass.ForeColor = Color.White;
-                txtpass.UseSystemPasswordChar = true;
-            }
+            
 
         }
 
         private void txtpass_Leave(object sender, EventArgs e)
         {
-            if (txtpass.Text=="")
-            {
-                txtpass.Text = "CONTRASEÑA";
-                txtpass.ForeColor = Color.LightGray;
-                txtpass.UseSystemPasswordChar = false;
-            }
+            
+            
+             
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -385,6 +386,18 @@ namespace prueba_login
 
         private void btningresar_KeyPress(object sender, KeyPressEventArgs e)
         {
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form idioma = new language();
+            idioma.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

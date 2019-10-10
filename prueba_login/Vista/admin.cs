@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prueba_login.Controlador;
 using System.Runtime.InteropServices;
 
 
@@ -131,7 +132,21 @@ namespace prueba_login
         {
             AbrirFormulario<controlinventario>();
         }
+        void traducir()
+        {
+            btncerrar.Text = "Exit";
+            btnmaximizar.Text = "Maximize";
 
+            btnnormal.Text = "Restore Down";
+            btnmin.Text = "Minimize";
+            lbllogout.Text = "    Log out";
+            lblocup.Text = "Admin";
+            btnAdminEmpleados.Text = "  Employee Management";
+            btnAdminProductos.Text = "  Product Management";
+            btncar.Text = "  Vehicles Management";
+            btnSupervision.Text = " Equip Supervision";
+            btncliente.Text = "Client Management";
+        }
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -162,6 +177,21 @@ namespace prueba_login
         private void btncerrar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void admin_Load(object sender, EventArgs e)
+        {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                traducir();
+                //MessageBox.Show("INGLES");
+              
+            }
         }
     }
 }

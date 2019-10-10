@@ -42,9 +42,12 @@
             this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsplogin = new System.Windows.Forms.ToolStripButton();
             this.btnsalir = new System.Windows.Forms.ToolStripButton();
             this.btnminimizar = new System.Windows.Forms.ToolStripButton();
+            this.btnlang = new System.Windows.Forms.Button();
+            this.labeluser = new System.Windows.Forms.Label();
+            this.lblpass = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -54,18 +57,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.btnlang);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(214, 282);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::prueba_login.Properties.Resources.LogoSinFondo;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 69);
+            this.pictureBox1.Location = new System.Drawing.Point(31, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(149, 135);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -82,6 +87,8 @@
             this.panel2.Controls.Add(this.txtpass);
             this.panel2.Controls.Add(this.txtuser);
             this.panel2.Controls.Add(this.shapeContainer1);
+            this.panel2.Controls.Add(this.lblpass);
+            this.panel2.Controls.Add(this.labeluser);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.ForeColor = System.Drawing.Color.Yellow;
             this.panel2.Location = new System.Drawing.Point(214, 25);
@@ -103,7 +110,7 @@
             this.btnprimeruso.ImageZoom = 35;
             this.btnprimeruso.LabelPosition = 41;
             this.btnprimeruso.LabelText = "Bienvenido al primer uso de sistema";
-            this.btnprimeruso.Location = new System.Drawing.Point(91, 32);
+            this.btnprimeruso.Location = new System.Drawing.Point(85, 25);
             this.btnprimeruso.Margin = new System.Windows.Forms.Padding(6);
             this.btnprimeruso.Name = "btnprimeruso";
             this.btnprimeruso.Size = new System.Drawing.Size(400, 210);
@@ -124,7 +131,7 @@
             this.btnrecuperar.AutoSize = true;
             this.btnrecuperar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnrecuperar.LinkColor = System.Drawing.Color.Gray;
-            this.btnrecuperar.Location = new System.Drawing.Point(216, 248);
+            this.btnrecuperar.Location = new System.Drawing.Point(220, 248);
             this.btnrecuperar.Name = "btnrecuperar";
             this.btnrecuperar.Size = new System.Drawing.Size(132, 16);
             this.btnrecuperar.TabIndex = 0;
@@ -157,12 +164,12 @@
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.ForeColor = System.Drawing.Color.White;
-            this.txtpass.Location = new System.Drawing.Point(101, 122);
+            this.txtpass.Location = new System.Drawing.Point(101, 131);
             this.txtpass.MaxLength = 20;
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(366, 16);
             this.txtpass.TabIndex = 2;
-            this.txtpass.Text = "CONTRASEÑA";
+            this.txtpass.UseSystemPasswordChar = true;
             this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
             this.txtpass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpass_KeyDown);
@@ -175,12 +182,11 @@
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtuser.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.ForeColor = System.Drawing.Color.White;
-            this.txtuser.Location = new System.Drawing.Point(101, 39);
+            this.txtuser.Location = new System.Drawing.Point(102, 49);
             this.txtuser.MaxLength = 20;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(366, 17);
             this.txtuser.TabIndex = 1;
-            this.txtuser.Text = "USUARIO";
             this.txtuser.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtuser.Enter += new System.EventHandler(this.txtuser_Enter);
             this.txtuser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtuser_KeyDown);
@@ -207,8 +213,8 @@
             this.lineShape2.SelectionColor = System.Drawing.Color.White;
             this.lineShape2.X1 = 101;
             this.lineShape2.X2 = 466;
-            this.lineShape2.Y1 = 141;
-            this.lineShape2.Y2 = 141;
+            this.lineShape2.Y1 = 153;
+            this.lineShape2.Y2 = 153;
             // 
             // lineShape1
             // 
@@ -218,8 +224,8 @@
             this.lineShape1.SelectionColor = System.Drawing.Color.White;
             this.lineShape1.X1 = 101;
             this.lineShape1.X2 = 466;
-            this.lineShape1.Y1 = 59;
-            this.lineShape1.Y2 = 59;
+            this.lineShape1.Y1 = 71;
+            this.lineShape1.Y2 = 71;
             // 
             // toolStrip1
             // 
@@ -227,7 +233,7 @@
             this.toolStrip1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.tsplogin,
             this.btnsalir,
             this.btnminimizar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -239,17 +245,17 @@
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
-            // toolStripButton1
+            // tsplogin
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Enabled = false;
-            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(87, 22);
-            this.toolStripButton1.Text = "Iniciar sesion";
+            this.tsplogin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsplogin.Enabled = false;
+            this.tsplogin.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsplogin.ForeColor = System.Drawing.Color.White;
+            this.tsplogin.Image = ((System.Drawing.Image)(resources.GetObject("tsplogin.Image")));
+            this.tsplogin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsplogin.Name = "tsplogin";
+            this.tsplogin.Size = new System.Drawing.Size(87, 22);
+            this.tsplogin.Text = "Iniciar sesion";
             // 
             // btnsalir
             // 
@@ -273,6 +279,43 @@
             this.btnminimizar.Size = new System.Drawing.Size(23, 22);
             this.btnminimizar.Text = "Minimizar";
             this.btnminimizar.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // btnlang
+            // 
+            this.btnlang.BackColor = System.Drawing.Color.Black;
+            this.btnlang.FlatAppearance.BorderSize = 0;
+            this.btnlang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnlang.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlang.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnlang.Location = new System.Drawing.Point(32, 18);
+            this.btnlang.Name = "btnlang";
+            this.btnlang.Size = new System.Drawing.Size(149, 23);
+            this.btnlang.TabIndex = 5;
+            this.btnlang.Text = "Seleccionar idioma";
+            this.btnlang.UseVisualStyleBackColor = false;
+            this.btnlang.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // labeluser
+            // 
+            this.labeluser.AutoSize = true;
+            this.labeluser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeluser.ForeColor = System.Drawing.Color.White;
+            this.labeluser.Location = new System.Drawing.Point(101, 20);
+            this.labeluser.Name = "labeluser";
+            this.labeluser.Size = new System.Drawing.Size(57, 16);
+            this.labeluser.TabIndex = 6;
+            this.labeluser.Text = "USUARIO";
+            // 
+            // lblpass
+            // 
+            this.lblpass.AutoSize = true;
+            this.lblpass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpass.ForeColor = System.Drawing.Color.White;
+            this.lblpass.Location = new System.Drawing.Point(101, 105);
+            this.lblpass.Name = "lblpass";
+            this.lblpass.Size = new System.Drawing.Size(81, 16);
+            this.lblpass.TabIndex = 7;
+            this.lblpass.Text = "CONTRASEÑA";
             // 
             // YourOwnWorkshop
             // 
@@ -311,12 +354,15 @@
         private System.Windows.Forms.Button btningresar;
         private System.Windows.Forms.LinkLabel btnrecuperar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tsplogin;
         private System.Windows.Forms.ToolStripButton btnsalir;
         private System.Windows.Forms.ToolStripButton btnminimizar;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.TextBox txtcifrado;
         private Bunifu.Framework.UI.BunifuTileButton btnprimeruso;
+        private System.Windows.Forms.Button btnlang;
+        private System.Windows.Forms.Label lblpass;
+        private System.Windows.Forms.Label labeluser;
     }
 }
 

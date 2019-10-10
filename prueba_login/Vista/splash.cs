@@ -23,7 +23,7 @@ namespace prueba_login
             if (panel2.Width >= 562)
             {
                 timer1.Stop();
-                Form f2 = new YourOwnWorkshop();
+                Form f2 = new language();
                 f2.Show();
                 this.Hide();
             }
