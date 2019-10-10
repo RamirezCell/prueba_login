@@ -902,7 +902,7 @@ namespace prueba_login.reportes.DataSetordenTableAdapters {
             this._commandCollection = new global::System.Data.Odbc.OdbcCommand[1];
             this._commandCollection[0] = new global::System.Data.Odbc.OdbcCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        tor.detalles, CONCAT(tm.marca, '', tmo.modelo, tl.linea) AS vehiculo, CONCAT(tc.nombre_cliente, '', tc.apellido_cliente) AS cliente, CONCAT(tu.nombre_user, '', tu.apellido_user) AS usuario, tes.estadoorden
+            this._commandCollection[0].CommandText = @"SELECT        tor.detalles, CONCAT(tm.marca, ' ', tmo.modelo, ' ', tl.linea) AS vehiculo, CONCAT(tc.nombre_cliente, ' ', tc.apellido_cliente) AS cliente, CONCAT(tu.nombre_user, ' ', tu.apellido_user) AS usuario, tes.estadoorden
 FROM            orden_trabajo tor, vehiculos tv, clientes tc, usuarios tu, estadosorden tes, marcas tm, modelos tmo, lineas tl
 WHERE        tor.id_vehiculo = tv.id_vehiculo AND tor.id_cliente = tc.id_cliente AND tor.id_usuario = tu.id_usuario AND tor.estadoorden = tes.id_estadoorden AND tv.marca = tm.id_marca AND tv.modelo = tmo.id_modelo AND 
                          tv.linea = tl.id_linea AND (tor.estadoorden = '1') AND (tor.id_orden = ?)";

@@ -196,10 +196,13 @@ namespace prueba_login
         private void btnupdate_Click(object sender, EventArgs e)
         {
             update();
+            btnregistrar.Enabled = true;
+            btneliminar.Enabled = false;
             limpiar();
             dgvuser.DataSource = registrouser.usuarios();
+            txtuser.Enabled = true;
 
-            btnregistrar.Enabled = true;
+            
         }
         public void eliminarregistro()
         {
@@ -207,6 +210,7 @@ namespace prueba_login
             {
 
                 registrouser.eliminar(Convert.ToInt32(txtId.Text));
+                txtuser.Enabled = true;
             }
 
 
@@ -370,6 +374,11 @@ namespace prueba_login
             reporteusers repo = new reporteusers();
             repo.id_userconseguir = Convert.ToInt32(dgvuser.CurrentRow.Cells["id_usuario"].Value);
             repo.Show();
+        }
+
+        private void validar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

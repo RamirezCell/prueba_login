@@ -469,10 +469,10 @@
     <Height>10.58333cm</Height>
     <Style />
   </Body>
-  <Width>23.52422cm</Width>
+  <Width>23.84172cm</Width>
   <Page>
     <PageHeader>
-      <Height>3.86292cm</Height>
+      <Height>4.33917cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -515,7 +515,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Ficha de datos de clientes</Value>
+                  <Value>Ficha de orden de trabajo</Value>
                   <Style>
                     <FontFamily>Yu Gothic</FontFamily>
                     <FontSize>15pt</FontSize>
@@ -528,7 +528,7 @@
           <rd:DefaultName>Textbox15</rd:DefaultName>
           <Top>1.81475cm</Top>
           <Left>8.39178cm</Left>
-          <Height>0.75282cm</Height>
+          <Height>0.88511cm</Height>
           <Width>7.22063cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
@@ -558,10 +558,10 @@
         </Image>
         <Rectangle Name="Rectangle3">
           <KeepTogether>true</KeepTogether>
-          <Top>0cm</Top>
+          <Top>4.1275cm</Top>
           <Left>0cm</Left>
           <Height>0.21167cm</Height>
-          <Width>23.52422cm</Width>
+          <Width>23.84172cm</Width>
           <ZIndex>3</ZIndex>
           <Style>
             <Border>
@@ -613,10 +613,10 @@
         </Textbox>
         <Rectangle Name="Rectangle2">
           <KeepTogether>true</KeepTogether>
-          <Top>1.82577cm</Top>
+          <Top>0.16743cm</Top>
           <Left>0cm</Left>
           <Height>0.21167cm</Height>
-          <Width>23.52422cm</Width>
+          <Width>23.84172cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>

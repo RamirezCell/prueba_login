@@ -18,10 +18,9 @@ namespace prueba_login.Modelo
             int retorno = 0;
             try
             {
-                string query = "SELECT *FROM vehiculos WHERE id_cliente=?param1  AND numero_motor=?param2 AND numplaca=?param3 AND numero_chasis=?param4";
+                string query = "SELECT *FROM vehiculos WHERE  numero_motor=?param2 or numplaca=?param3 or numero_chasis=?param4";
                 MySqlCommand select = new MySqlCommand(query, conexion.obtenerconexion());
 
-                select.Parameters.Add(new MySqlParameter("param1", add.id_cliente));
                 select.Parameters.Add(new MySqlParameter("param2", add.numero_motor));
 
                 select.Parameters.Add(new MySqlParameter("param3", add.numplaca));

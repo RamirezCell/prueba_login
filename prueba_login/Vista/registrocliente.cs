@@ -156,10 +156,10 @@ namespace prueba_login
 
         {
 
-            if (txtapelliocliente.Text.Trim() == "" || txtnamecliente.Text.Trim() == "" || txtnum.Text.Trim() == ""||txtdui.Text.Trim()==""
+            if (txtapelliocliente.Text.Trim() == "" || txtnamecliente.Text.Trim() == "" || txtnum.Text.Trim() == ""
                 ||txtDireccion.Text.Trim()==""||txtcorreo.Text.Trim()=="")
             {
-                MessageBox.Show("Hay campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Existen campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -209,16 +209,26 @@ namespace prueba_login
         }
         public void Actualizar()
         {
-            constructorcliente actualizar = new constructorcliente();
-            actualizar.nombre_cliente = txtnamecliente.Text;
-            actualizar.id_cliente = int.Parse(txtId.Text);
-            actualizar.apellido_cliente = txtapelliocliente.Text;
-            actualizar.correo = txtcorreo.Text;
-            actualizar.telefono = txtnum.Text;
-            actualizar.dui = txtdui.Text;
-            actualizar.tipo_cliente = Convert.ToInt32(cmbTipoCliente.SelectedValue);
-            actualizar.direccion = txtDireccion.Text;
-            funcionescliente.actualizar(actualizar);
+
+            if (txtapelliocliente.Text.Trim() == "" || txtnamecliente.Text.Trim() == "" || txtnum.Text.Trim() == "" || txtdui.MaskFull==false
+                || txtDireccion.Text.Trim() == "" || txtcorreo.Text.Trim() == "" || string.IsNullOrEmpty(txtdui.Text))
+            {
+                MessageBox.Show("Existen campos vacios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                constructorcliente actualizar = new constructorcliente();
+                actualizar.nombre_cliente = txtnamecliente.Text;
+                actualizar.id_cliente = int.Parse(txtId.Text);
+                actualizar.apellido_cliente = txtapelliocliente.Text;
+                actualizar.correo = txtcorreo.Text;
+                actualizar.telefono = txtnum.Text;
+                actualizar.dui = txtdui.Text;
+                actualizar.tipo_cliente = Convert.ToInt32(cmbTipoCliente.SelectedValue);
+                actualizar.direccion = txtDireccion.Text;
+                funcionescliente.actualizar(actualizar);
+            }
+           
          
 
         }

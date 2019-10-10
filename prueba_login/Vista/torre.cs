@@ -104,5 +104,12 @@ namespace prueba_login
             this.WindowState = FormWindowState.Minimized;
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Form yow = new YourOwnWorkshop();
+            yow.Show();
+            this.Hide();
+        }
     }
 }

@@ -543,6 +543,8 @@
     <None Include="Resources\logoexpo4.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ilustracion-bandera-espana_53876-18168.jpg" />
+    <None Include="Resources\united-states.png" />
     <None Include="Resources\short-broom.png" />
     <None Include="Resources\splsh.jpg-11.png" />
     <None Include="Resources\splsh.jpg-1.png" />
@@ -628,6 +630,7 @@
     <None Include="Resources\check21.png" />
     <None Include="Resources\check22.png" />
     <None Include="Resources\eye %281%29.png" />
+    <None Include="Resources\bandera_eeuu.png" />
     <Content Include="Resources\Icon1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -194,6 +194,7 @@
             this.validar.TabIndex = 30;
             this.validar.TabStop = false;
             this.validar.Visible = false;
+            this.validar.Click += new System.EventHandler(this.validar_Click);
             // 
             // label12
             // 

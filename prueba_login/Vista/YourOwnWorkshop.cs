@@ -10,7 +10,9 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using prueba_login.Controlador;
 using prueba_login.Modelo;
-using System.Security.Cryptography;
+using System.Security.Cryptography
+    ;
+
 using MySql.Data.MySqlClient;
 
 
@@ -56,6 +58,7 @@ namespace prueba_login
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
 
             if (verificar.verificarempresa() == true)
             {
@@ -93,6 +96,10 @@ namespace prueba_login
 
 
         }
+
+        
+
+        
 
         
       

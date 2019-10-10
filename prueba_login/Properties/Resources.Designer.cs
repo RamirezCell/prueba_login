@@ -163,6 +163,16 @@ namespace prueba_login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bandera_eeuu {
+            get {
+                object obj = ResourceManager.GetObject("bandera_eeuu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bill__1_ {
             get {
                 object obj = ResourceManager.GetObject("bill (1)", resourceCulture);
@@ -593,6 +603,16 @@ namespace prueba_login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ilustracion_bandera_espana_53876_18168 {
+            get {
+                object obj = ResourceManager.GetObject("ilustracion-bandera-espana_53876-18168", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -987,6 +1007,16 @@ namespace prueba_login.Properties {
         internal static System.Drawing.Bitmap truck {
             get {
                 object obj = ResourceManager.GetObject("truck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap united_states {
+            get {
+                object obj = ResourceManager.GetObject("united-states", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
