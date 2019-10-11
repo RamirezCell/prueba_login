@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using prueba_login.Controlador;
 
 
 namespace prueba_login
@@ -161,6 +162,32 @@ namespace prueba_login
         private void btnorden_Click(object sender, EventArgs e)
         {
             AbrirFormulario<ordentrabajo>();
+        }
+        void ingles()
+        {
+            lblsup.Text = "Overseer";
+            logout.Text = "    Log out";
+            btnorden.Text = "  Order creation";
+            btnregistro.Text = "  Quality control";
+            BtnMaximizar3.Text = "Maximize";
+            BtnMinizar3.Text = "Minimize";
+            BtnRestaurar3.Text = "Restore down";
+            BtnSalir3.Text = "Exit";
+          
+        }
+        private void Mecanico_Load(object sender, EventArgs e)
+        {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                ingles();
+                //MessageBox.Show("INGLES");
+
+            }
         }
     }
 }

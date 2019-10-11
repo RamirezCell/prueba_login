@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ordentrabajo));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.comments = new System.Windows.Forms.Label();
+            this.vehiculo = new System.Windows.Forms.Label();
+            this.cliente = new System.Windows.Forms.Label();
+            this.user = new System.Windows.Forms.Label();
+            this.frontal = new System.Windows.Forms.Label();
+            this.trasera = new System.Windows.Forms.Label();
+            this.derecha = new System.Windows.Forms.Label();
+            this.izquierda = new System.Windows.Forms.Label();
+            this.vistaarriba = new System.Windows.Forms.Label();
             this.cmbcliente = new System.Windows.Forms.ComboBox();
             this.cmbusuario = new System.Windows.Forms.ComboBox();
             this.cmbvehiculo = new System.Windows.Forms.ComboBox();
@@ -58,8 +56,8 @@
             this.btnexaminar5 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.cmbestado = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.toolStrip1.SuspendLayout();
+            this.estado = new System.Windows.Forms.Label();
+            this.lblcreacion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctfrontal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctderecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctarriba)).BeginInit();
@@ -69,132 +67,120 @@
             // 
             // toolStrip1
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1016, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // comments
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(190, 22);
-            this.toolStripButton1.Text = "Creacion de orden de trabajo";
+            this.comments.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comments.AutoSize = true;
+            this.comments.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comments.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.comments.Location = new System.Drawing.Point(99, 122);
+            this.comments.Name = "comments";
+            this.comments.Size = new System.Drawing.Size(76, 16);
+            this.comments.TabIndex = 7;
+            this.comments.Text = "Comentarios";
             // 
-            // label7
+            // vehiculo
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(99, 122);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 16);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Comentarios";
+            this.vehiculo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.vehiculo.AutoSize = true;
+            this.vehiculo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vehiculo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.vehiculo.Location = new System.Drawing.Point(89, 34);
+            this.vehiculo.Name = "vehiculo";
+            this.vehiculo.Size = new System.Drawing.Size(123, 16);
+            this.vehiculo.TabIndex = 8;
+            this.vehiculo.Text = " Nombre del Vehiculo";
             // 
-            // label8
+            // cliente
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(89, 34);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 16);
-            this.label8.TabIndex = 8;
-            this.label8.Text = " Nombre del Vehiculo";
+            this.cliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cliente.AutoSize = true;
+            this.cliente.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cliente.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cliente.Location = new System.Drawing.Point(352, 34);
+            this.cliente.Name = "cliente";
+            this.cliente.Size = new System.Drawing.Size(113, 16);
+            this.cliente.TabIndex = 9;
+            this.cliente.Text = " Nombre de Cliente";
             // 
-            // label9
+            // user
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label9.Location = new System.Drawing.Point(352, 34);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 16);
-            this.label9.TabIndex = 9;
-            this.label9.Text = " Nombre de Cliente";
+            this.user.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.user.AutoSize = true;
+            this.user.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.user.Location = new System.Drawing.Point(587, 34);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(114, 16);
+            this.user.TabIndex = 10;
+            this.user.Text = " Nombre de Usuario";
             // 
-            // label10
+            // frontal
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(587, 34);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 16);
-            this.label10.TabIndex = 10;
-            this.label10.Text = " Nombre de Usuario";
+            this.frontal.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.frontal.AutoSize = true;
+            this.frontal.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frontal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.frontal.Location = new System.Drawing.Point(410, 126);
+            this.frontal.Name = "frontal";
+            this.frontal.Size = new System.Drawing.Size(74, 16);
+            this.frontal.TabIndex = 11;
+            this.frontal.Text = "Parte frontal";
             // 
-            // label11
+            // trasera
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(410, 126);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 16);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Parte frontal";
+            this.trasera.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.trasera.AutoSize = true;
+            this.trasera.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trasera.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.trasera.Location = new System.Drawing.Point(125, 391);
+            this.trasera.Name = "trasera";
+            this.trasera.Size = new System.Drawing.Size(78, 16);
+            this.trasera.TabIndex = 12;
+            this.trasera.Text = "Parte Trasera";
             // 
-            // label12
+            // derecha
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(125, 391);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 16);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Parte Trasera";
+            this.derecha.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.derecha.AutoSize = true;
+            this.derecha.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.derecha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.derecha.Location = new System.Drawing.Point(426, 400);
+            this.derecha.Name = "derecha";
+            this.derecha.Size = new System.Drawing.Size(87, 16);
+            this.derecha.TabIndex = 13;
+            this.derecha.Text = "Parte derecha";
+            this.derecha.Click += new System.EventHandler(this.label13_Click);
             // 
-            // label13
+            // izquierda
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(426, 400);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 16);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Parte derecha";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.izquierda.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.izquierda.AutoSize = true;
+            this.izquierda.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.izquierda.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.izquierda.Location = new System.Drawing.Point(780, 400);
+            this.izquierda.Name = "izquierda";
+            this.izquierda.Size = new System.Drawing.Size(90, 16);
+            this.izquierda.TabIndex = 14;
+            this.izquierda.Text = "Parte izquierda";
             // 
-            // label14
+            // vistaarriba
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(780, 400);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(90, 16);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "Parte izquierda";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(757, 125);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(105, 16);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "Vista desde arriba";
+            this.vistaarriba.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.vistaarriba.AutoSize = true;
+            this.vistaarriba.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vistaarriba.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.vistaarriba.Location = new System.Drawing.Point(757, 125);
+            this.vistaarriba.Name = "vistaarriba";
+            this.vistaarriba.Size = new System.Drawing.Size(105, 16);
+            this.vistaarriba.TabIndex = 15;
+            this.vistaarriba.Text = "Vista desde arriba";
             // 
             // cmbcliente
             // 
@@ -419,25 +405,36 @@
             this.cmbestado.TabIndex = 33;
             this.cmbestado.SelectedIndexChanged += new System.EventHandler(this.cmbestado_SelectedIndexChanged);
             // 
-            // label1
+            // estado
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(831, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 16);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Estado de orden";
+            this.estado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.estado.AutoSize = true;
+            this.estado.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estado.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.estado.Location = new System.Drawing.Point(831, 34);
+            this.estado.Name = "estado";
+            this.estado.Size = new System.Drawing.Size(98, 16);
+            this.estado.TabIndex = 34;
+            this.estado.Text = "Estado de orden";
+            // 
+            // lblcreacion
+            // 
+            this.lblcreacion.AutoSize = true;
+            this.lblcreacion.BackColor = System.Drawing.Color.Transparent;
+            this.lblcreacion.Location = new System.Drawing.Point(12, 7);
+            this.lblcreacion.Name = "lblcreacion";
+            this.lblcreacion.Size = new System.Drawing.Size(144, 13);
+            this.lblcreacion.TabIndex = 35;
+            this.lblcreacion.Text = "Creacion de orden de trabajo";
             // 
             // ordentrabajo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1016, 693);
+            this.Controls.Add(this.lblcreacion);
             this.Controls.Add(this.cmbestado);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.estado);
             this.Controls.Add(this.btnexaminar5);
             this.Controls.Add(this.btnexaminar4);
             this.Controls.Add(this.btnexaminar3);
@@ -454,22 +451,20 @@
             this.Controls.Add(this.cmbvehiculo);
             this.Controls.Add(this.cmbusuario);
             this.Controls.Add(this.cmbcliente);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.vistaarriba);
+            this.Controls.Add(this.izquierda);
+            this.Controls.Add(this.derecha);
+            this.Controls.Add(this.trasera);
+            this.Controls.Add(this.frontal);
+            this.Controls.Add(this.user);
+            this.Controls.Add(this.cliente);
+            this.Controls.Add(this.vehiculo);
+            this.Controls.Add(this.comments);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ordentrabajo";
             this.Text = "ordentrabajo";
             this.Load += new System.EventHandler(this.ordentrabajo_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctfrontal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctderecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctarriba)).EndInit();
@@ -483,16 +478,15 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label comments;
+        private System.Windows.Forms.Label vehiculo;
+        private System.Windows.Forms.Label cliente;
+        private System.Windows.Forms.Label user;
+        private System.Windows.Forms.Label frontal;
+        private System.Windows.Forms.Label trasera;
+        private System.Windows.Forms.Label derecha;
+        private System.Windows.Forms.Label izquierda;
+        private System.Windows.Forms.Label vistaarriba;
         private System.Windows.Forms.ComboBox cmbcliente;
         private System.Windows.Forms.ComboBox cmbusuario;
         private System.Windows.Forms.ComboBox cmbvehiculo;
@@ -511,6 +505,7 @@
         private System.Windows.Forms.Button btnexaminar5;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ComboBox cmbestado;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label estado;
+        private System.Windows.Forms.Label lblcreacion;
     }
 }

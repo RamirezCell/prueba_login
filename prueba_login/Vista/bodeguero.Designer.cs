@@ -36,8 +36,8 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnre = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.logout = new System.Windows.Forms.Label();
+            this.bodeguer = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.PictureBox();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -120,8 +120,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.btnre);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.logout);
+            this.panel1.Controls.Add(this.bodeguer);
             this.panel1.Controls.Add(this.btnSalir);
             this.panel1.Controls.Add(this.shapeContainer1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -165,30 +165,30 @@
             this.btnre.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnre.Click += new System.EventHandler(this.btnre_Click);
             // 
-            // label2
+            // logout
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 21);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Cerrar Sesion";
+            this.logout.AutoSize = true;
+            this.logout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.Location = new System.Drawing.Point(28, 126);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(110, 21);
+            this.logout.TabIndex = 8;
+            this.logout.Text = "Cerrar Sesion";
             // 
-            // label1
+            // bodeguer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(140, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 21);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Bodeguero";
+            this.bodeguer.AutoSize = true;
+            this.bodeguer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bodeguer.Location = new System.Drawing.Point(140, 72);
+            this.bodeguer.Name = "bodeguer";
+            this.bodeguer.Size = new System.Drawing.Size(96, 21);
+            this.bodeguer.TabIndex = 3;
+            this.bodeguer.Text = "Bodeguero";
             // 
             // btnSalir
             // 
             this.btnSalir.Image = global::prueba_login.Properties.Resources.boton_de_encendido;
-            this.btnSalir.Location = new System.Drawing.Point(32, 31);
+            this.btnSalir.Location = new System.Drawing.Point(39, 31);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(83, 83);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -238,6 +238,7 @@
             this.MaximumSize = new System.Drawing.Size(1720, 728);
             this.Name = "bodeguero";
             this.Text = "bodeguero";
+            this.Load += new System.EventHandler(this.bodeguero_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -258,8 +259,8 @@
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuFlatButton btnre;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label logout;
+        private System.Windows.Forms.Label bodeguer;
         private System.Windows.Forms.PictureBox btnSalir;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;

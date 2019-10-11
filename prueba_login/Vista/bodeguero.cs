@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using prueba_login.Controlador;
 
 namespace prueba_login
 {
@@ -132,6 +133,33 @@ namespace prueba_login
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
 
+        }
+        void ingles()
+        {
+            bodeguer.Text = "Keeper";
+            btnre.Text = " Inventory control";
+            logout.Text = "     Log out";
+            btnCerrar.Text = "Exit";
+            btnMaximizar.Text = "Maximize";
+
+            btnNormal.Text = "Restore Down";
+            btnMinimizar.Text = "Minimize";
+        }
+
+
+        private void bodeguero_Load(object sender, EventArgs e)
+        {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                //MessageBox.Show("INGLES");
+                ingles();
+
+            }
         }
     }
     

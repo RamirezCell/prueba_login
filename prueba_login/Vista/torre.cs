@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using prueba_login.Controlador;
 using System.Windows.Forms;
 //using Sistema_de_facturacion_YOW;
 
@@ -110,6 +111,31 @@ namespace prueba_login
             Form yow = new YourOwnWorkshop();
             yow.Show();
             this.Hide();
+        }
+        void ingles()
+        {
+            lbllog.Text = "   Log out";
+            btnasegu.Text = "   Insurance administration";
+            btnCerrar.Text = "Exit";
+            btnMaximizar.Text = "Maximize";
+            btnMinimizar.Text = "Minimize";
+            lbltorre.Text = "  Tower";
+            btnNormal.Text = "Restore down";
+        }
+
+        private void torre_Load(object sender, EventArgs e)
+        {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                ingles();
+                //MessageBox.Show("INGLES");
+
+            }
         }
     }
 }

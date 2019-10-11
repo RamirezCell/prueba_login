@@ -75,8 +75,35 @@ namespace prueba_login
         {
             dataGridView1.DataSource = funcionesaseguradora.mostrar();
         }
+        void ingles()
+        {
+            lblase.Text = "Insurer registration";
+            lblcorreo.Text = "Email";
+            lblname.Text = "Insurer name";
+            lblnum.Text = "Telephone number";
+            lblrep.Text = "Legal agent";
+            btnregistrar.Text = "    Create";
+            btnmostrar.Text = "    Show";
+            btnupdate.Text = "    Update";
+            btneliminar.Text = "    Delete";
+            btnlimp.Text = "    Clear";
+            btnreport.Text = "Generate report";
+            btnexaminar.Text = "Browse";
+        }
         private void Aseguradora_Load(object sender, EventArgs e)
         {
+
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                ingles();
+                //MessageBox.Show("INGLES");
+
+            }
             dataGridView1.DataSource = funcionesaseguradora.mostrar();
             this.dataGridView1.Columns[0].Visible = false;
 

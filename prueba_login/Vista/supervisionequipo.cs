@@ -21,13 +21,13 @@ namespace prueba_login
 
         private void supervisionequipo_Load(object sender, EventArgs e)
         {
+            dgtmaterial.DataSource = mostrarmaterial.mostrar();
 
         }
-       
+
 
         private void btnenviar_Click(object sender, EventArgs e)
         {
-            dgtmaterial.DataSource = mostrarmaterial.mostrar();
         }
     }
 }

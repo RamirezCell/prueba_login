@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prueba_login.Controlador;
 using System.Runtime.InteropServices;
 
 namespace prueba_login
@@ -121,6 +122,36 @@ namespace prueba_login
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        void ingles()
+        {
+            lbllog.Text = "   Log out";
+            lbltrabajo.Text = "  Worker";
+            btnVerOrden.Text = "  View orders";
+            BtnSalir2.Text = "Exit";
+            BtnRestaurar2.Text = "Restore down";
+            BtnMaximizar2.Text = "Maximize";
+            BtnMinizar2.Text = "Minimize";
+
+        }
+
+        private void Trabajador_Load(object sender, EventArgs e)
+        {
+            if(constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                //MessageBox.Show("INGLES");
+                ingles();
+            }
         }
 
         private void btnregistro_Click(object sender, EventArgs e)

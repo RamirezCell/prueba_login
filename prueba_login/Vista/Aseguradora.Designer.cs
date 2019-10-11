@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.lblase = new System.Windows.Forms.ToolStripLabel();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txttelefono = new System.Windows.Forms.MaskedTextBox();
             this.txtnit = new System.Windows.Forms.MaskedTextBox();
             this.pctlogo = new System.Windows.Forms.PictureBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.txtrepresentante = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
+            this.lblnum = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblcorreo = new System.Windows.Forms.Label();
+            this.lblrep = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -52,7 +52,7 @@
             this.btneliminar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnlimp = new Bunifu.Framework.UI.BunifuFlatButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnreport = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -63,18 +63,18 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1});
+            this.lblase});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1016, 25);
             this.toolStrip1.TabIndex = 1;
             // 
-            // toolStripLabel1
+            // lblase
             // 
-            this.toolStripLabel1.ForeColor = System.Drawing.Color.White;
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(134, 22);
-            this.toolStripLabel1.Text = "Registro de aseguradora";
+            this.lblase.ForeColor = System.Drawing.Color.White;
+            this.lblase.Name = "lblase";
+            this.lblase.Size = new System.Drawing.Size(134, 22);
+            this.lblase.Text = "Registro de aseguradora";
             // 
             // txtnombre
             // 
@@ -137,27 +137,27 @@
             this.txtrepresentante.TextChanged += new System.EventHandler(this.txtrepresentante_TextChanged);
             this.txtrepresentante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtrepresentante_KeyPress);
             // 
-            // label1
+            // lblname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(76, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Nombre de aseguradora";
+            this.lblname.AutoSize = true;
+            this.lblname.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.ForeColor = System.Drawing.Color.White;
+            this.lblname.Location = new System.Drawing.Point(76, 94);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(169, 17);
+            this.lblname.TabIndex = 8;
+            this.lblname.Text = "Nombre de aseguradora";
             // 
-            // label2
+            // lblnum
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(76, 181);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 17);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Numero de telefono";
+            this.lblnum.AutoSize = true;
+            this.lblnum.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnum.ForeColor = System.Drawing.Color.White;
+            this.lblnum.Location = new System.Drawing.Point(76, 181);
+            this.lblnum.Name = "lblnum";
+            this.lblnum.Size = new System.Drawing.Size(139, 17);
+            this.lblnum.TabIndex = 9;
+            this.lblnum.Text = "Numero de telefono";
             // 
             // label3
             // 
@@ -170,29 +170,29 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "NIT";
             // 
-            // label4
+            // lblcorreo
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(374, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Correo electronico";
+            this.lblcorreo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblcorreo.AutoSize = true;
+            this.lblcorreo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcorreo.ForeColor = System.Drawing.Color.White;
+            this.lblcorreo.Location = new System.Drawing.Point(374, 94);
+            this.lblcorreo.Name = "lblcorreo";
+            this.lblcorreo.Size = new System.Drawing.Size(130, 17);
+            this.lblcorreo.TabIndex = 11;
+            this.lblcorreo.Text = "Correo electronico";
             // 
-            // label5
+            // lblrep
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(374, 181);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 17);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Representante Legal";
+            this.lblrep.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblrep.AutoSize = true;
+            this.lblrep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblrep.ForeColor = System.Drawing.Color.White;
+            this.lblrep.Location = new System.Drawing.Point(374, 181);
+            this.lblrep.Name = "lblrep";
+            this.lblrep.Size = new System.Drawing.Size(140, 17);
+            this.lblrep.TabIndex = 12;
+            this.lblrep.Text = "Representante Legal";
             // 
             // label6
             // 
@@ -439,15 +439,15 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button1
+            // btnreport
             // 
-            this.button1.Location = new System.Drawing.Point(706, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Generar reporte";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnreport.Location = new System.Drawing.Point(706, 0);
+            this.btnreport.Name = "btnreport";
+            this.btnreport.Size = new System.Drawing.Size(108, 23);
+            this.btnreport.TabIndex = 16;
+            this.btnreport.Text = "Generar reporte";
+            this.btnreport.UseVisualStyleBackColor = true;
+            this.btnreport.Click += new System.EventHandler(this.button1_Click);
             // 
             // Aseguradora
             // 
@@ -455,18 +455,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1016, 693);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnreport);
             this.Controls.Add(this.btnlimp);
             this.Controls.Add(this.btneliminar);
             this.Controls.Add(this.btnupdate);
             this.Controls.Add(this.btnmostrar);
             this.Controls.Add(this.btnregistrar);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblrep);
+            this.Controls.Add(this.lblcorreo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblnum);
+            this.Controls.Add(this.lblname);
             this.Controls.Add(this.txtrepresentante);
             this.Controls.Add(this.txtcorreo);
             this.Controls.Add(this.txtnit);
@@ -491,18 +491,18 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripLabel lblase;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.MaskedTextBox txttelefono;
         private System.Windows.Forms.MaskedTextBox txtnit;
         private System.Windows.Forms.PictureBox pctlogo;
         private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.TextBox txtrepresentante;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.Label lblnum;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblcorreo;
+        private System.Windows.Forms.Label lblrep;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnexaminar;
@@ -514,6 +514,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnlimp;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnreport;
     }
 }

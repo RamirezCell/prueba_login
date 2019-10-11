@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using prueba_login.Controlador;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
@@ -169,10 +170,35 @@ namespace prueba_login
         {
 
         }
+        void traducir()
+        {
+            lblog.Text = "     Log out";
+            lablasesor.Text = "Adviser";
+            btnauti.Text = "    Vehicle registration";
+            btnexit.Text = "Exit";
+            btnregistro.Text = "   Client registration";
+            btngcli.Text = "  Client graphics";
+            btngfx.Text = "   Vehicle graphics";
+            btnmaximizar.Text = "Maximize";
+
+            btnnormal.Text = "Restore Down";
+            btnminimizar.Text = "Minimize";
+        }
 
         private void Secretaria_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
 
+            }
+            else
+            {
+                traducir();
+                
+                //MessageBox.Show("INGLES");
+
+            }
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -183,6 +209,11 @@ namespace prueba_login
         private void bunifuFlatButton2_Click(object sender, EventArgs e)
         {
             AbrirFormulario<graficasclientes>();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -28,7 +28,22 @@ namespace prueba_login
 
         private void controlcalidad_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
 
+            }
+            else
+            {
+                control.Text = "Quality control";
+                lbldes.Text = "Description of Finished";
+                lbldetalle.Text = "Finishing details";
+                rbsi.Text = "Yes";
+                Send.Text = "   Send";
+                aprobar.Text = "Approve";
+                //MessageBox.Show("INGLES");
+
+            }
         }
 
         private void btnenviar_Click(object sender, EventArgs e)

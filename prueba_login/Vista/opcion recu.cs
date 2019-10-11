@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prueba_login.Controlador;
 using System.Runtime.InteropServices;
 
 
@@ -41,7 +42,20 @@ namespace prueba_login
 
         private void opcion_recu_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
 
+            }
+            else
+            {
+                //MessageBox.Show("INGLES");
+                lblopcion.Text = "Choose an option";
+                btncodi.Text = "    Email";
+                btnlogin.Text = "Back to login";
+                bunifuFlatButton1.Text = "    Security questions";
+                bunifuFlatButton2.Text= "    Admin intervention";
+            }
         }
 
         private void opcion_recu_MouseDown(object sender, MouseEventArgs e)

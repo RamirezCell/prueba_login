@@ -90,9 +90,41 @@ namespace prueba_login
             }
         }
         
+        void ingles()
+        {
+            lblcreacion.Text = "Creation of work order";
+            vehiculo.Text = "Vehicle name";
+            cliente.Text = "Client name";
+            user.Text = "Username";
+            estado.Text = "Estate of the order";
+            comments.Text = "Comments";
+            frontal.Text = "Frontal part";
+            vistaarriba.Text = "View from the top";
+            trasera.Text = "Rear side";
+            derecha.Text = "Right side";
+            izquierda.Text = "Left side";
+            btnexaminar1.Text = "Browse";
+            btnexaminar2.Text = "Browse";
+            btnexaminar3.Text = "Browse";
+            btnexaminar4.Text = "Browse";
+            btnexaminar5.Text = "Browse";
+            btnregistrar.Text = "   Create";
 
+        }
         private void ordentrabajo_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+
+                //MessageBox.Show("INGLES");
+                ingles();
+
+            }
             cmbusuario.DataSource = funciones_ordendetrabajo.asesor();
             cmbusuario.ValueMember = "id_usuario";
             cmbusuario.DisplayMember = "Nombreuser";
@@ -254,6 +286,11 @@ namespace prueba_login
         }
 
         private void cmbestado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void creacion_Click(object sender, EventArgs e)
         {
 
         }

@@ -36,10 +36,36 @@ namespace prueba_login
             upd.usuario = txtuser.Text;
             validarpreguntas.cambiar(upd);
         }
+        void ingles()
+        {
+            lbluser.Text = "Username";
+            lblp1.Text = "Wich is your favorite animal?";
+            lblp2.Text = "Wich is your favorite car brand?";
+            lblp3.Text = "Wich is your favorite soccer team?";
+            btnverificar.Text = "Verify";
+            btnact.Text = "Update";
+            btnregresar.Text = "Back to the options";
+            lblpass.Text = "New password";
+            gpnew.Text = "New password entry";
+            gpvalidacion.Text = "User verification";
 
+            toolStripButton1.Text = "Retrieve password";
+
+        }
         private void frmprguntas_Load(object sender, EventArgs e)
         {
 
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                ingles();
+                //MessageBox.Show("INGLES");
+
+            }
         }
 
         public void comprobarpreguntas()
@@ -104,7 +130,7 @@ namespace prueba_login
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form log = new YourOwnWorkshop();
+            Form log = new opcion_recu();
             log.Show();
             this.Hide();
         }

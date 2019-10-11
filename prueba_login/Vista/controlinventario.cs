@@ -29,10 +29,36 @@ namespace prueba_login
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
 
         }
+        void ingles()
+        {
+            btnregistrar.Text = "    Create";
+            btnmostrar.Text = "    Show";
+            btnupdate.Text = "    Update";
+            btneliminar.Text = "    Delete";
+            btnlimp.Text = "    Clear";
+            lblflit.Text = "Filter";
+            lblmarca.Text = "Brand";
+            lblnombre.Text = "Name";
+            lblprice.Text = "Price";
+            lbltipo.Text = "Type"
+                ;
+            lblcant.Text = "Quantity";
+            btnequipo.Text = "Product registration";
+        }
 
         private void controlinventario_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
 
+            }
+            else
+            {
+                ingles();
+                //MessageBox.Show("INGLES");
+
+            }
             mostrar();
             btneliminar.Enabled = false;
             btnupdate.Enabled = false;

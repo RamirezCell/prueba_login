@@ -30,22 +30,22 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Secretaria));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnexit = new System.Windows.Forms.ToolStripButton();
+            this.btnmaximizar = new System.Windows.Forms.ToolStripButton();
+            this.btnnormal = new System.Windows.Forms.ToolStripButton();
+            this.btnminimizar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btngcli = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btngfx = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnauti = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lblog = new System.Windows.Forms.Label();
+            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnregistro = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lablasesor = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnauti = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnregistro = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.btnmaximizar = new System.Windows.Forms.ToolStripButton();
-            this.btnnormal = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnsalir)).BeginInit();
@@ -56,10 +56,10 @@
             this.toolStrip1.BackColor = System.Drawing.Color.Black;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.btnexit,
             this.btnmaximizar,
             this.btnnormal,
-            this.toolStripButton4,
+            this.btnminimizar,
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -69,108 +69,151 @@
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
+            // btnexit
+            // 
+            this.btnexit.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnexit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnexit.Image = global::prueba_login.Properties.Resources.Close_Window__2_48px;
+            this.btnexit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnexit.Name = "btnexit";
+            this.btnexit.Size = new System.Drawing.Size(23, 24);
+            this.btnexit.Text = "Salir";
+            this.btnexit.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.btnexit.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStripButton1_MouseDown);
+            // 
+            // btnmaximizar
+            // 
+            this.btnmaximizar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnmaximizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnmaximizar.Image = global::prueba_login.Properties.Resources.Maximize_Window_2_48px;
+            this.btnmaximizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnmaximizar.Name = "btnmaximizar";
+            this.btnmaximizar.Size = new System.Drawing.Size(23, 24);
+            this.btnmaximizar.Text = "Maximizar";
+            this.btnmaximizar.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // btnnormal
+            // 
+            this.btnnormal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnnormal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnnormal.Image = global::prueba_login.Properties.Resources.Restore_Window_2_48px;
+            this.btnnormal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnnormal.Name = "btnnormal";
+            this.btnnormal.Size = new System.Drawing.Size(23, 24);
+            this.btnnormal.Text = "Restaurar";
+            this.btnnormal.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // btnminimizar
+            // 
+            this.btnminimizar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnminimizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnminimizar.Image = global::prueba_login.Properties.Resources.Minimize_Window_2_48px;
+            this.btnminimizar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnminimizar.Name = "btnminimizar";
+            this.btnminimizar.Size = new System.Drawing.Size(23, 24);
+            this.btnminimizar.Text = "Minimizar";
+            this.btnminimizar.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton2.ForeColor = System.Drawing.Color.White;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(153, 24);
+            this.toolStripButton2.Text = "YourOwnWorkshop";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gold;
-            this.panel2.Controls.Add(this.bunifuFlatButton2);
-            this.panel2.Controls.Add(this.bunifuFlatButton1);
+            this.panel2.Controls.Add(this.btngcli);
+            this.panel2.Controls.Add(this.btngfx);
             this.panel2.Controls.Add(this.btnauti);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblog);
             this.panel2.Controls.Add(this.btnsalir);
             this.panel2.Controls.Add(this.btnregistro);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lablasesor);
             this.panel2.Controls.Add(this.shapeContainer1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 27);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(264, 693);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label2
+            // btngcli
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 126);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Cerrar Sesion";
+            this.btngcli.Activecolor = System.Drawing.Color.Gold;
+            this.btngcli.BackColor = System.Drawing.Color.Gold;
+            this.btngcli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btngcli.BorderRadius = 0;
+            this.btngcli.ButtonText = "     Grafica de clientes";
+            this.btngcli.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btngcli.DisabledColor = System.Drawing.Color.Gray;
+            this.btngcli.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btngcli.Iconcolor = System.Drawing.Color.Transparent;
+            this.btngcli.Iconimage = global::prueba_login.Properties.Resources.add_user_button;
+            this.btngcli.Iconimage_right = null;
+            this.btngcli.Iconimage_right_Selected = null;
+            this.btngcli.Iconimage_Selected = null;
+            this.btngcli.IconMarginLeft = 0;
+            this.btngcli.IconMarginRight = 0;
+            this.btngcli.IconRightVisible = true;
+            this.btngcli.IconRightZoom = 0D;
+            this.btngcli.IconVisible = true;
+            this.btngcli.IconZoom = 90D;
+            this.btngcli.IsTab = false;
+            this.btngcli.Location = new System.Drawing.Point(0, 311);
+            this.btngcli.Name = "btngcli";
+            this.btngcli.Normalcolor = System.Drawing.Color.Gold;
+            this.btngcli.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btngcli.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btngcli.selected = false;
+            this.btngcli.Size = new System.Drawing.Size(264, 71);
+            this.btngcli.TabIndex = 9;
+            this.btngcli.Text = "     Grafica de clientes";
+            this.btngcli.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btngcli.Textcolor = System.Drawing.Color.Black;
+            this.btngcli.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngcli.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
-            // label1
+            // btngfx
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(130, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Asesor";
-            // 
-            // shapeContainer1
-            // 
-            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
-            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.shapeContainer1.Name = "shapeContainer1";
-            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
-            this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(264, 693);
-            this.shapeContainer1.TabIndex = 6;
-            this.shapeContainer1.TabStop = false;
-            // 
-            // lineShape1
-            // 
-            this.lineShape1.Enabled = false;
-            this.lineShape1.Name = "lineShape1";
-            this.lineShape1.X1 = 20;
-            this.lineShape1.X2 = 232;
-            this.lineShape1.Y1 = 160;
-            this.lineShape1.Y2 = 160;
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(264, 27);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1016, 693);
-            this.panelContenedor.TabIndex = 1;
-            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "     Grafica de automoviles";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::prueba_login.Properties.Resources.sports_car;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 551);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Yellow;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(264, 71);
-            this.bunifuFlatButton1.TabIndex = 8;
-            this.bunifuFlatButton1.Text = "     Grafica de automoviles";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btngfx.Activecolor = System.Drawing.Color.Gold;
+            this.btngfx.BackColor = System.Drawing.Color.Gold;
+            this.btngfx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btngfx.BorderRadius = 0;
+            this.btngfx.ButtonText = "     Grafica de automoviles";
+            this.btngfx.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btngfx.DisabledColor = System.Drawing.Color.Gray;
+            this.btngfx.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btngfx.Iconcolor = System.Drawing.Color.Transparent;
+            this.btngfx.Iconimage = global::prueba_login.Properties.Resources.sports_car;
+            this.btngfx.Iconimage_right = null;
+            this.btngfx.Iconimage_right_Selected = null;
+            this.btngfx.Iconimage_Selected = null;
+            this.btngfx.IconMarginLeft = 0;
+            this.btngfx.IconMarginRight = 0;
+            this.btngfx.IconRightVisible = true;
+            this.btngfx.IconRightZoom = 0D;
+            this.btngfx.IconVisible = true;
+            this.btngfx.IconZoom = 90D;
+            this.btngfx.IsTab = false;
+            this.btngfx.Location = new System.Drawing.Point(0, 551);
+            this.btngfx.Name = "btngfx";
+            this.btngfx.Normalcolor = System.Drawing.Color.Gold;
+            this.btngfx.OnHovercolor = System.Drawing.Color.Yellow;
+            this.btngfx.OnHoverTextColor = System.Drawing.Color.Black;
+            this.btngfx.selected = false;
+            this.btngfx.Size = new System.Drawing.Size(264, 71);
+            this.btngfx.TabIndex = 8;
+            this.btngfx.Text = "     Grafica de automoviles";
+            this.btngfx.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btngfx.Textcolor = System.Drawing.Color.Black;
+            this.btngfx.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngfx.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // btnauti
             // 
@@ -207,6 +250,16 @@
             this.btnauti.Textcolor = System.Drawing.Color.Black;
             this.btnauti.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnauti.Click += new System.EventHandler(this.btnauti_Click);
+            // 
+            // lblog
+            // 
+            this.lblog.AutoSize = true;
+            this.lblog.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblog.Location = new System.Drawing.Point(10, 126);
+            this.lblog.Name = "lblog";
+            this.lblog.Size = new System.Drawing.Size(110, 21);
+            this.lblog.TabIndex = 7;
+            this.lblog.Text = "Cerrar Sesion";
             // 
             // btnsalir
             // 
@@ -258,97 +311,45 @@
             this.btnregistro.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnregistro.Click += new System.EventHandler(this.btnregistro_Click);
             // 
-            // toolStripButton1
+            // lablasesor
             // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::prueba_login.Properties.Resources.Close_Window__2_48px;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 24);
-            this.toolStripButton1.Text = "Salir";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            this.toolStripButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStripButton1_MouseDown);
+            this.lablasesor.AutoSize = true;
+            this.lablasesor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lablasesor.Location = new System.Drawing.Point(130, 67);
+            this.lablasesor.Name = "lablasesor";
+            this.lablasesor.Size = new System.Drawing.Size(60, 21);
+            this.lablasesor.TabIndex = 2;
+            this.lablasesor.Text = "Asesor";
             // 
-            // btnmaximizar
+            // shapeContainer1
             // 
-            this.btnmaximizar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnmaximizar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnmaximizar.Image = global::prueba_login.Properties.Resources.Maximize_Window_2_48px;
-            this.btnmaximizar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnmaximizar.Name = "btnmaximizar";
-            this.btnmaximizar.Size = new System.Drawing.Size(23, 24);
-            this.btnmaximizar.Text = "Maximizar";
-            this.btnmaximizar.Click += new System.EventHandler(this.toolStripButton2_Click);
+            this.shapeContainer1.Location = new System.Drawing.Point(0, 0);
+            this.shapeContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.shapeContainer1.Name = "shapeContainer1";
+            this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
+            this.lineShape1});
+            this.shapeContainer1.Size = new System.Drawing.Size(264, 693);
+            this.shapeContainer1.TabIndex = 6;
+            this.shapeContainer1.TabStop = false;
             // 
-            // btnnormal
+            // lineShape1
             // 
-            this.btnnormal.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnnormal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnnormal.Image = global::prueba_login.Properties.Resources.Restore_Window_2_48px;
-            this.btnnormal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnnormal.Name = "btnnormal";
-            this.btnnormal.Size = new System.Drawing.Size(23, 24);
-            this.btnnormal.Text = "Restaurar";
-            this.btnnormal.Click += new System.EventHandler(this.toolStripButton3_Click);
+            this.lineShape1.Enabled = false;
+            this.lineShape1.Name = "lineShape1";
+            this.lineShape1.X1 = 20;
+            this.lineShape1.X2 = 232;
+            this.lineShape1.Y1 = 160;
+            this.lineShape1.Y2 = 160;
             // 
-            // toolStripButton4
+            // panelContenedor
             // 
-            this.toolStripButton4.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = global::prueba_login.Properties.Resources.Minimize_Window_2_48px;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 24);
-            this.toolStripButton4.Text = "Minimizar";
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.ForeColor = System.Drawing.Color.White;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(153, 24);
-            this.toolStripButton2.Text = "YourOwnWorkshop";
-            // 
-            // bunifuFlatButton2
-            // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "     Grafica de clientes";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = global::prueba_login.Properties.Resources.add_user_button;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(0, 311);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Yellow;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(264, 71);
-            this.bunifuFlatButton2.TabIndex = 9;
-            this.bunifuFlatButton2.Text = "     Grafica de clientes";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
+            this.panelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(264, 27);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1016, 693);
+            this.panelContenedor.TabIndex = 1;
+            this.panelContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContenedor_Paint);
             // 
             // Secretaria
             // 
@@ -378,21 +379,21 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btnexit;
         private System.Windows.Forms.ToolStripButton btnmaximizar;
         private System.Windows.Forms.ToolStripButton btnnormal;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton btnminimizar;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblog;
         private Bunifu.Framework.UI.BunifuImageButton btnsalir;
         private Bunifu.Framework.UI.BunifuFlatButton btnregistro;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lablasesor;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.Panel panelContenedor;
         private Bunifu.Framework.UI.BunifuFlatButton btnauti;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btngfx;
+        private Bunifu.Framework.UI.BunifuFlatButton btngcli;
     }
 }

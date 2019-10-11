@@ -34,22 +34,22 @@
             this.txtp2 = new System.Windows.Forms.TextBox();
             this.txtp3 = new System.Windows.Forms.TextBox();
             this.btnverificar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbluser = new System.Windows.Forms.Label();
+            this.lblp1 = new System.Windows.Forms.Label();
+            this.lblp2 = new System.Windows.Forms.Label();
+            this.lblp3 = new System.Windows.Forms.Label();
+            this.lblpass = new System.Windows.Forms.Label();
             this.txtpass = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnact = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnregresar = new System.Windows.Forms.Button();
+            this.gpnew = new System.Windows.Forms.GroupBox();
             this.txtcifrado = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gpvalidacion = new System.Windows.Forms.GroupBox();
             this.toolStrip1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gpnew.SuspendLayout();
+            this.gpvalidacion.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtuser
@@ -102,62 +102,62 @@
             this.btnverificar.UseVisualStyleBackColor = false;
             this.btnverificar.Click += new System.EventHandler(this.btnverificar_Click);
             // 
-            // label1
+            // lbluser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(340, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Usuario";
+            this.lbluser.AutoSize = true;
+            this.lbluser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluser.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbluser.Location = new System.Drawing.Point(340, 26);
+            this.lbluser.Name = "lbluser";
+            this.lbluser.Size = new System.Drawing.Size(47, 16);
+            this.lbluser.TabIndex = 6;
+            this.lbluser.Text = "Usuario";
             // 
-            // label2
+            // lblp1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(38, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "¿Cual es su animal favorito?";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblp1.AutoSize = true;
+            this.lblp1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblp1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblp1.Location = new System.Drawing.Point(38, 95);
+            this.lblp1.Name = "lblp1";
+            this.lblp1.Size = new System.Drawing.Size(161, 16);
+            this.lblp1.TabIndex = 7;
+            this.lblp1.Text = "¿Cual es su animal favorito?";
+            this.lblp1.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label4
+            // lblp2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(256, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 16);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "¿Cual es su marca de auto favorito?";
+            this.lblp2.AutoSize = true;
+            this.lblp2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblp2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblp2.Location = new System.Drawing.Point(256, 96);
+            this.lblp2.Name = "lblp2";
+            this.lblp2.Size = new System.Drawing.Size(207, 16);
+            this.lblp2.TabIndex = 9;
+            this.lblp2.Text = "¿Cual es su marca de auto favorito?";
             // 
-            // label5
+            // lblp3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(493, 95);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(215, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "¿Cual es su equipo de futbol favorito?";
+            this.lblp3.AutoSize = true;
+            this.lblp3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblp3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblp3.Location = new System.Drawing.Point(493, 95);
+            this.lblp3.Name = "lblp3";
+            this.lblp3.Size = new System.Drawing.Size(215, 16);
+            this.lblp3.TabIndex = 10;
+            this.lblp3.Text = "¿Cual es su equipo de futbol favorito?";
             // 
-            // label3
+            // lblpass
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(257, 309);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Nueva contraseña";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.lblpass.AutoSize = true;
+            this.lblpass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpass.ForeColor = System.Drawing.Color.White;
+            this.lblpass.Location = new System.Drawing.Point(257, 309);
+            this.lblpass.Name = "lblpass";
+            this.lblpass.Size = new System.Drawing.Size(111, 16);
+            this.lblpass.TabIndex = 12;
+            this.lblpass.Text = "Nueva contraseña";
+            this.lblpass.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtpass
             // 
@@ -170,17 +170,17 @@
             this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             // 
-            // button1
+            // btnact
             // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(414, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnact.BackColor = System.Drawing.Color.Gold;
+            this.btnact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnact.Location = new System.Drawing.Point(414, 348);
+            this.btnact.Name = "btnact";
+            this.btnact.Size = new System.Drawing.Size(75, 23);
+            this.btnact.TabIndex = 13;
+            this.btnact.Text = "Actualizar";
+            this.btnact.UseVisualStyleBackColor = false;
+            this.btnact.Click += new System.EventHandler(this.button1_Click);
             // 
             // toolStrip1
             // 
@@ -203,30 +203,30 @@
             this.toolStripButton1.Size = new System.Drawing.Size(125, 22);
             this.toolStripButton1.Text = "Recuperar contraseña";
             // 
-            // button2
+            // btnregresar
             // 
-            this.button2.BackColor = System.Drawing.Color.Gold;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(557, 98);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Regresar al inicio de sesion";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnregresar.BackColor = System.Drawing.Color.Gold;
+            this.btnregresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnregresar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnregresar.Location = new System.Drawing.Point(557, 98);
+            this.btnregresar.Name = "btnregresar";
+            this.btnregresar.Size = new System.Drawing.Size(161, 23);
+            this.btnregresar.TabIndex = 8;
+            this.btnregresar.Text = "Regresar a las opciones";
+            this.btnregresar.UseVisualStyleBackColor = false;
+            this.btnregresar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // groupBox1
+            // gpnew
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.txtcifrado);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Location = new System.Drawing.Point(35, 283);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(724, 140);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ingreso de nueva contraseña";
+            this.gpnew.Controls.Add(this.btnregresar);
+            this.gpnew.Controls.Add(this.txtcifrado);
+            this.gpnew.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.gpnew.Location = new System.Drawing.Point(35, 283);
+            this.gpnew.Name = "gpnew";
+            this.gpnew.Size = new System.Drawing.Size(724, 140);
+            this.gpnew.TabIndex = 7;
+            this.gpnew.TabStop = false;
+            this.gpnew.Text = "Ingreso de nueva contraseña";
             // 
             // txtcifrado
             // 
@@ -237,25 +237,25 @@
             this.txtcifrado.TabIndex = 18;
             this.txtcifrado.Visible = false;
             // 
-            // groupBox2
+            // gpvalidacion
             // 
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.txtp3);
-            this.groupBox2.Controls.Add(this.txtp2);
-            this.groupBox2.Controls.Add(this.btnverificar);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.txtuser);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtp1);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox2.Location = new System.Drawing.Point(35, 41);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(724, 236);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Verificacion de usuario";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            this.gpvalidacion.Controls.Add(this.lblp3);
+            this.gpvalidacion.Controls.Add(this.lblp2);
+            this.gpvalidacion.Controls.Add(this.txtp3);
+            this.gpvalidacion.Controls.Add(this.txtp2);
+            this.gpvalidacion.Controls.Add(this.btnverificar);
+            this.gpvalidacion.Controls.Add(this.lblp1);
+            this.gpvalidacion.Controls.Add(this.txtuser);
+            this.gpvalidacion.Controls.Add(this.lbluser);
+            this.gpvalidacion.Controls.Add(this.txtp1);
+            this.gpvalidacion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.gpvalidacion.Location = new System.Drawing.Point(35, 41);
+            this.gpvalidacion.Name = "gpvalidacion";
+            this.gpvalidacion.Size = new System.Drawing.Size(724, 236);
+            this.gpvalidacion.TabIndex = 17;
+            this.gpvalidacion.TabStop = false;
+            this.gpvalidacion.Text = "Verificacion de usuario";
+            this.gpvalidacion.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // frmprguntas
             // 
@@ -264,23 +264,23 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnact);
+            this.Controls.Add(this.lblpass);
             this.Controls.Add(this.txtpass);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gpnew);
+            this.Controls.Add(this.gpvalidacion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmprguntas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmprguntas";
             this.Load += new System.EventHandler(this.frmprguntas_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gpnew.ResumeLayout(false);
+            this.gpnew.PerformLayout();
+            this.gpvalidacion.ResumeLayout(false);
+            this.gpvalidacion.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,18 +293,18 @@
         private System.Windows.Forms.TextBox txtp2;
         private System.Windows.Forms.TextBox txtp3;
         private System.Windows.Forms.Button btnverificar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbluser;
+        private System.Windows.Forms.Label lblp1;
+        private System.Windows.Forms.Label lblp2;
+        private System.Windows.Forms.Label lblp3;
+        private System.Windows.Forms.Label lblpass;
         private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnact;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnregresar;
+        private System.Windows.Forms.GroupBox gpnew;
+        private System.Windows.Forms.GroupBox gpvalidacion;
         private System.Windows.Forms.TextBox txtcifrado;
     }
 }

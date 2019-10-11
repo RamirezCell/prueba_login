@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(controlcalidad));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.control = new System.Windows.Forms.ToolStripButton();
             this.txtdes = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbldes = new System.Windows.Forms.Label();
+            this.lbldetalle = new System.Windows.Forms.Label();
             this.txtdet = new System.Windows.Forms.TextBox();
             this.rbno = new System.Windows.Forms.RadioButton();
             this.rbsi = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnenviar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.aprobar = new System.Windows.Forms.Label();
+            this.Send = new Bunifu.Framework.UI.BunifuFlatButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +47,7 @@
             this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
+            this.control});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -55,16 +55,16 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // control
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(136, 22);
-            this.toolStripButton1.Text = "Control de calidad";
+            this.control.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.control.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.control.ForeColor = System.Drawing.SystemColors.Control;
+            this.control.Image = ((System.Drawing.Image)(resources.GetObject("control.Image")));
+            this.control.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.control.Name = "control";
+            this.control.Size = new System.Drawing.Size(136, 22);
+            this.control.Text = "Control de calidad";
             // 
             // txtdes
             // 
@@ -80,29 +80,29 @@
             this.txtdes.TabIndex = 1;
             this.txtdes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdes_KeyPress);
             // 
-            // label1
+            // lbldes
             // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(225, 45);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Descripcion de finalizacion";
+            this.lbldes.AutoSize = true;
+            this.lbldes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbldes.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbldes.Location = new System.Drawing.Point(225, 45);
+            this.lbldes.Name = "lbldes";
+            this.lbldes.Size = new System.Drawing.Size(151, 16);
+            this.lbldes.TabIndex = 8;
+            this.lbldes.Text = "Descripcion de finalizacion";
             // 
-            // label2
+            // lbldetalle
             // 
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(240, 255);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 16);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Detalles en el acabado";
+            this.lbldetalle.AutoSize = true;
+            this.lbldetalle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbldetalle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldetalle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbldetalle.Location = new System.Drawing.Point(240, 255);
+            this.lbldetalle.Name = "lbldetalle";
+            this.lbldetalle.Size = new System.Drawing.Size(136, 16);
+            this.lbldetalle.TabIndex = 10;
+            this.lbldetalle.Text = "Detalles en el acabado";
             // 
             // txtdet
             // 
@@ -143,53 +143,53 @@
             this.rbsi.Text = "Si";
             this.rbsi.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // aprobar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(118, 451);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Aprobar";
+            this.aprobar.AutoSize = true;
+            this.aprobar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.aprobar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aprobar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.aprobar.Location = new System.Drawing.Point(118, 451);
+            this.aprobar.Name = "aprobar";
+            this.aprobar.Size = new System.Drawing.Size(52, 16);
+            this.aprobar.TabIndex = 13;
+            this.aprobar.Text = "Aprobar";
             // 
-            // btnenviar
+            // Send
             // 
-            this.btnenviar.Activecolor = System.Drawing.Color.Gold;
-            this.btnenviar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnenviar.BackColor = System.Drawing.Color.Gold;
-            this.btnenviar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnenviar.BorderRadius = 0;
-            this.btnenviar.ButtonText = "      Enviar";
-            this.btnenviar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnenviar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnenviar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnenviar.Iconimage = global::prueba_login.Properties.Resources.checked1;
-            this.btnenviar.Iconimage_right = null;
-            this.btnenviar.Iconimage_right_Selected = null;
-            this.btnenviar.Iconimage_Selected = null;
-            this.btnenviar.IconMarginLeft = 0;
-            this.btnenviar.IconMarginRight = 0;
-            this.btnenviar.IconRightVisible = true;
-            this.btnenviar.IconRightZoom = 0D;
-            this.btnenviar.IconVisible = true;
-            this.btnenviar.IconZoom = 90D;
-            this.btnenviar.IsTab = false;
-            this.btnenviar.Location = new System.Drawing.Point(629, 457);
-            this.btnenviar.Name = "btnenviar";
-            this.btnenviar.Normalcolor = System.Drawing.Color.Gold;
-            this.btnenviar.OnHovercolor = System.Drawing.Color.DimGray;
-            this.btnenviar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnenviar.selected = false;
-            this.btnenviar.Size = new System.Drawing.Size(182, 56);
-            this.btnenviar.TabIndex = 5;
-            this.btnenviar.Text = "      Enviar";
-            this.btnenviar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnenviar.Textcolor = System.Drawing.Color.Black;
-            this.btnenviar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnenviar.Click += new System.EventHandler(this.btnenviar_Click);
+            this.Send.Activecolor = System.Drawing.Color.Gold;
+            this.Send.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Send.BackColor = System.Drawing.Color.Gold;
+            this.Send.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Send.BorderRadius = 0;
+            this.Send.ButtonText = "      Enviar";
+            this.Send.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Send.DisabledColor = System.Drawing.Color.Gray;
+            this.Send.Iconcolor = System.Drawing.Color.Transparent;
+            this.Send.Iconimage = global::prueba_login.Properties.Resources.checked1;
+            this.Send.Iconimage_right = null;
+            this.Send.Iconimage_right_Selected = null;
+            this.Send.Iconimage_Selected = null;
+            this.Send.IconMarginLeft = 0;
+            this.Send.IconMarginRight = 0;
+            this.Send.IconRightVisible = true;
+            this.Send.IconRightZoom = 0D;
+            this.Send.IconVisible = true;
+            this.Send.IconZoom = 90D;
+            this.Send.IsTab = false;
+            this.Send.Location = new System.Drawing.Point(629, 457);
+            this.Send.Name = "Send";
+            this.Send.Normalcolor = System.Drawing.Color.Gold;
+            this.Send.OnHovercolor = System.Drawing.Color.DimGray;
+            this.Send.OnHoverTextColor = System.Drawing.Color.White;
+            this.Send.selected = false;
+            this.Send.Size = new System.Drawing.Size(182, 56);
+            this.Send.TabIndex = 5;
+            this.Send.Text = "      Enviar";
+            this.Send.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Send.Textcolor = System.Drawing.Color.Black;
+            this.Send.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Send.Click += new System.EventHandler(this.btnenviar_Click);
             // 
             // controlcalidad
             // 
@@ -197,13 +197,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1016, 693);
-            this.Controls.Add(this.btnenviar);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Send);
+            this.Controls.Add(this.aprobar);
             this.Controls.Add(this.rbsi);
             this.Controls.Add(this.rbno);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbldetalle);
             this.Controls.Add(this.txtdet);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbldes);
             this.Controls.Add(this.txtdes);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -220,14 +220,14 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton control;
         private System.Windows.Forms.TextBox txtdes;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbldes;
+        private System.Windows.Forms.Label lbldetalle;
         private System.Windows.Forms.TextBox txtdet;
         private System.Windows.Forms.RadioButton rbno;
         private System.Windows.Forms.RadioButton rbsi;
-        private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuFlatButton btnenviar;
+        private System.Windows.Forms.Label aprobar;
+        private Bunifu.Framework.UI.BunifuFlatButton Send;
     }
 }

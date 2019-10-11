@@ -37,8 +37,8 @@
             this.btnorden = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnregistro = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnsalir = new Bunifu.Framework.UI.BunifuImageButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.logout = new System.Windows.Forms.Label();
+            this.lblsup = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.panelContenedor2 = new System.Windows.Forms.Panel();
@@ -112,8 +112,8 @@
             this.panelSecundario.Controls.Add(this.btnorden);
             this.panelSecundario.Controls.Add(this.btnregistro);
             this.panelSecundario.Controls.Add(this.btnsalir);
-            this.panelSecundario.Controls.Add(this.label2);
-            this.panelSecundario.Controls.Add(this.label1);
+            this.panelSecundario.Controls.Add(this.logout);
+            this.panelSecundario.Controls.Add(this.lblsup);
             this.panelSecundario.Controls.Add(this.shapeContainer1);
             this.panelSecundario.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSecundario.Location = new System.Drawing.Point(0, 25);
@@ -199,7 +199,7 @@
             this.btnsalir.BackColor = System.Drawing.Color.Transparent;
             this.btnsalir.Image = global::prueba_login.Properties.Resources.boton_de_encendido;
             this.btnsalir.ImageActive = null;
-            this.btnsalir.Location = new System.Drawing.Point(25, 22);
+            this.btnsalir.Location = new System.Drawing.Point(34, 22);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(83, 83);
             this.btnsalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -208,27 +208,27 @@
             this.btnsalir.Zoom = 10;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
             // 
-            // label2
+            // logout
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(21, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Cerrar Sesion";
+            this.logout.AutoSize = true;
+            this.logout.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.ForeColor = System.Drawing.Color.Black;
+            this.logout.Location = new System.Drawing.Point(21, 119);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(110, 21);
+            this.logout.TabIndex = 7;
+            this.logout.Text = "Cerrar Sesion";
             // 
-            // label1
+            // lblsup
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(134, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Supervisor";
+            this.lblsup.AutoSize = true;
+            this.lblsup.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsup.ForeColor = System.Drawing.Color.Black;
+            this.lblsup.Location = new System.Drawing.Point(134, 64);
+            this.lblsup.Name = "lblsup";
+            this.lblsup.Size = new System.Drawing.Size(88, 21);
+            this.lblsup.TabIndex = 0;
+            this.lblsup.Text = "Supervisor";
             // 
             // shapeContainer1
             // 
@@ -274,6 +274,7 @@
             this.MaximumSize = new System.Drawing.Size(1720, 728);
             this.Name = "Mecanico";
             this.Text = "Mecanico";
+            this.Load += new System.EventHandler(this.Mecanico_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panelSecundario.ResumeLayout(false);
@@ -291,8 +292,8 @@
         private System.Windows.Forms.ToolStripButton BtnMaximizar3;
         private System.Windows.Forms.Panel panelSecundario;
         private System.Windows.Forms.Panel panelContenedor2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblsup;
+        private System.Windows.Forms.Label logout;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape1;
         private System.Windows.Forms.ToolStripButton BtnRestaurar3;
