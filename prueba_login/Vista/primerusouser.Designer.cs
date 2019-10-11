@@ -31,44 +31,44 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(primerusouser));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btncerrar = new System.Windows.Forms.ToolStripButton();
+            this.tpuser = new System.Windows.Forms.ToolStripButton();
             this.txtname = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
+            this.lblapellido = new System.Windows.Forms.Label();
             this.txtapellido = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbldui = new System.Windows.Forms.Label();
             this.txtdui = new System.Windows.Forms.MaskedTextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbldireccion = new System.Windows.Forms.Label();
             this.txtdireccion = new System.Windows.Forms.TextBox();
             this.txttel = new System.Windows.Forms.MaskedTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblnum = new System.Windows.Forms.Label();
+            this.lbluser = new System.Windows.Forms.Label();
             this.txtuser = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblpass = new System.Windows.Forms.Label();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.cmbestado = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblestate = new System.Windows.Forms.Label();
+            this.lblgenero = new System.Windows.Forms.Label();
             this.cmbgender = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblocu = new System.Windows.Forms.Label();
             this.cmbocupacion = new System.Windows.Forms.ComboBox();
-            this.lbl = new System.Windows.Forms.Label();
+            this.lblcorreo = new System.Windows.Forms.Label();
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblnac = new System.Windows.Forms.Label();
+            this.lblfoto = new System.Windows.Forms.Label();
             this.pctlogo = new System.Windows.Forms.PictureBox();
             this.btnex = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tip = new System.Windows.Forms.Label();
+            this.lblcam = new System.Windows.Forms.Label();
+            this.grppre = new System.Windows.Forms.GroupBox();
             this.btnguadar = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblp3 = new System.Windows.Forms.Label();
+            this.lblp2 = new System.Windows.Forms.Label();
             this.txtp3 = new System.Windows.Forms.TextBox();
             this.txtp2 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblp1 = new System.Windows.Forms.Label();
             this.txtp1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtxcifrado = new System.Windows.Forms.TextBox();
@@ -76,7 +76,7 @@
             this.validar = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.grppre.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.validar)).BeginInit();
             this.SuspendLayout();
@@ -85,35 +85,35 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
+            this.btncerrar,
+            this.tpuser});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(914, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // btncerrar
             // 
-            this.toolStripButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::prueba_login.Properties.Resources.Close_Window__2_48px2;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "Salir";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.btncerrar.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btncerrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btncerrar.Image = global::prueba_login.Properties.Resources.Close_Window__2_48px2;
+            this.btncerrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btncerrar.Name = "btncerrar";
+            this.btncerrar.Size = new System.Drawing.Size(23, 22);
+            this.btncerrar.Text = "Salir";
+            this.btncerrar.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // toolStripButton2
+            // tpuser
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(136, 22);
-            this.toolStripButton2.Text = "Primer uso de usuario";
+            this.tpuser.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tpuser.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tpuser.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.tpuser.Image = ((System.Drawing.Image)(resources.GetObject("tpuser.Image")));
+            this.tpuser.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tpuser.Name = "tpuser";
+            this.tpuser.Size = new System.Drawing.Size(136, 22);
+            this.tpuser.Text = "Primer uso de usuario";
             // 
             // txtname
             // 
@@ -125,27 +125,27 @@
             this.txtname.TabIndex = 1;
             this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
             // 
-            // label1
+            // lblname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(33, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nombre ";
+            this.lblname.AutoSize = true;
+            this.lblname.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblname.Location = new System.Drawing.Point(33, 42);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(54, 16);
+            this.lblname.TabIndex = 2;
+            this.lblname.Text = "Nombre ";
             // 
-            // label2
+            // lblapellido
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(33, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Apellido";
+            this.lblapellido.AutoSize = true;
+            this.lblapellido.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblapellido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblapellido.Location = new System.Drawing.Point(33, 110);
+            this.lblapellido.Name = "lblapellido";
+            this.lblapellido.Size = new System.Drawing.Size(51, 16);
+            this.lblapellido.TabIndex = 4;
+            this.lblapellido.Text = "Apellido";
             // 
             // txtapellido
             // 
@@ -157,16 +157,16 @@
             this.txtapellido.TabIndex = 2;
             this.txtapellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtapellido_KeyPress);
             // 
-            // label3
+            // lbldui
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(33, 187);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "DUI";
+            this.lbldui.AutoSize = true;
+            this.lbldui.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldui.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbldui.Location = new System.Drawing.Point(33, 187);
+            this.lbldui.Name = "lbldui";
+            this.lbldui.Size = new System.Drawing.Size(27, 16);
+            this.lbldui.TabIndex = 5;
+            this.lbldui.Text = "DUI";
             // 
             // txtdui
             // 
@@ -177,16 +177,16 @@
             this.txtdui.TabIndex = 3;
             this.txtdui.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtdui_KeyPress);
             // 
-            // label4
+            // lbldireccion
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(243, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Direccion";
+            this.lbldireccion.AutoSize = true;
+            this.lbldireccion.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldireccion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbldireccion.Location = new System.Drawing.Point(243, 42);
+            this.lbldireccion.Name = "lbldireccion";
+            this.lbldireccion.Size = new System.Drawing.Size(58, 16);
+            this.lbldireccion.TabIndex = 8;
+            this.lbldireccion.Text = "Direccion";
             // 
             // txtdireccion
             // 
@@ -208,27 +208,27 @@
             this.txttel.TabIndex = 6;
             this.txttel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txttel_KeyPress);
             // 
-            // label5
+            // lblnum
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(243, 191);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 16);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Numero telefonico";
+            this.lblnum.AutoSize = true;
+            this.lblnum.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnum.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblnum.Location = new System.Drawing.Point(243, 191);
+            this.lblnum.Name = "lblnum";
+            this.lblnum.Size = new System.Drawing.Size(106, 16);
+            this.lblnum.TabIndex = 9;
+            this.lblnum.Text = "Numero telefonico";
             // 
-            // label6
+            // lbluser
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(243, 260);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 16);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Nombre de usuario";
+            this.lbluser.AutoSize = true;
+            this.lbluser.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbluser.Location = new System.Drawing.Point(243, 260);
+            this.lbluser.Name = "lbluser";
+            this.lbluser.Size = new System.Drawing.Size(110, 16);
+            this.lbluser.TabIndex = 12;
+            this.lbluser.Text = "Nombre de usuario";
             // 
             // txtuser
             // 
@@ -240,16 +240,16 @@
             this.txtuser.TabIndex = 7;
             this.txtuser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtuser_KeyPress);
             // 
-            // label7
+            // lblpass
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(458, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 16);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Clave";
+            this.lblpass.AutoSize = true;
+            this.lblpass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpass.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblpass.Location = new System.Drawing.Point(458, 49);
+            this.lblpass.Name = "lblpass";
+            this.lblpass.Size = new System.Drawing.Size(42, 16);
+            this.lblpass.TabIndex = 14;
+            this.lblpass.Text = "Clave";
             // 
             // txtpass
             // 
@@ -272,27 +272,27 @@
             this.cmbestado.Size = new System.Drawing.Size(184, 21);
             this.cmbestado.TabIndex = 4;
             // 
-            // label8
+            // lblestate
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(33, 250);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 16);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "Estado";
+            this.lblestate.AutoSize = true;
+            this.lblestate.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblestate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblestate.Location = new System.Drawing.Point(33, 255);
+            this.lblestate.Name = "lblestate";
+            this.lblestate.Size = new System.Drawing.Size(45, 16);
+            this.lblestate.TabIndex = 16;
+            this.lblestate.Text = "Estado";
             // 
-            // label9
+            // lblgenero
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(677, 53);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 16);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Genero";
+            this.lblgenero.AutoSize = true;
+            this.lblgenero.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblgenero.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblgenero.Location = new System.Drawing.Point(677, 53);
+            this.lblgenero.Name = "lblgenero";
+            this.lblgenero.Size = new System.Drawing.Size(49, 16);
+            this.lblgenero.TabIndex = 18;
+            this.lblgenero.Text = "Genero";
             // 
             // cmbgender
             // 
@@ -303,16 +303,16 @@
             this.cmbgender.Size = new System.Drawing.Size(184, 21);
             this.cmbgender.TabIndex = 12;
             // 
-            // label10
+            // lblocu
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(458, 110);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 16);
-            this.label10.TabIndex = 20;
-            this.label10.Text = "Ocupacion";
+            this.lblocu.AutoSize = true;
+            this.lblocu.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblocu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblocu.Location = new System.Drawing.Point(458, 110);
+            this.lblocu.Name = "lblocu";
+            this.lblocu.Size = new System.Drawing.Size(71, 16);
+            this.lblocu.TabIndex = 20;
+            this.lblocu.Text = "Ocupacion";
             // 
             // cmbocupacion
             // 
@@ -323,16 +323,16 @@
             this.cmbocupacion.Size = new System.Drawing.Size(184, 21);
             this.cmbocupacion.TabIndex = 9;
             // 
-            // lbl
+            // lblcorreo
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl.Location = new System.Drawing.Point(460, 183);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(107, 16);
-            this.lbl.TabIndex = 22;
-            this.lbl.Text = "Correo electronico";
+            this.lblcorreo.AutoSize = true;
+            this.lblcorreo.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcorreo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblcorreo.Location = new System.Drawing.Point(460, 183);
+            this.lblcorreo.Name = "lblcorreo";
+            this.lblcorreo.Size = new System.Drawing.Size(107, 16);
+            this.lblcorreo.TabIndex = 22;
+            this.lblcorreo.Text = "Correo electronico";
             // 
             // txtcorreo
             // 
@@ -358,27 +358,27 @@
             this.dateTimePicker1.Value = new System.DateTime(1999, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // label11
+            // lblnac
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(460, 255);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 16);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Fecha de nacimiento";
+            this.lblnac.AutoSize = true;
+            this.lblnac.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnac.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblnac.Location = new System.Drawing.Point(460, 255);
+            this.lblnac.Name = "lblnac";
+            this.lblnac.Size = new System.Drawing.Size(124, 16);
+            this.lblnac.TabIndex = 24;
+            this.lblnac.Text = "Fecha de nacimiento";
             // 
-            // label12
+            // lblfoto
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(724, 118);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 16);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Foto de perfil";
+            this.lblfoto.AutoSize = true;
+            this.lblfoto.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfoto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblfoto.Location = new System.Drawing.Point(724, 118);
+            this.lblfoto.Name = "lblfoto";
+            this.lblfoto.Size = new System.Drawing.Size(77, 16);
+            this.lblfoto.TabIndex = 25;
+            this.lblfoto.Text = "Foto de perfil";
             // 
             // pctlogo
             // 
@@ -404,45 +404,45 @@
             this.btnex.UseVisualStyleBackColor = false;
             this.btnex.Click += new System.EventHandler(this.btnex_Click);
             // 
-            // label13
+            // tip
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Yellow;
-            this.label13.Location = new System.Drawing.Point(553, 336);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(334, 16);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Haz clic en examinar para cargar la foto de perfil del usuario";
+            this.tip.AutoSize = true;
+            this.tip.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tip.ForeColor = System.Drawing.Color.Yellow;
+            this.tip.Location = new System.Drawing.Point(553, 336);
+            this.tip.Name = "tip";
+            this.tip.Size = new System.Drawing.Size(334, 16);
+            this.tip.TabIndex = 28;
+            this.tip.Text = "Haz clic en examinar para cargar la foto de perfil del usuario";
             // 
-            // label14
+            // lblcam
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Yellow;
-            this.label14.Location = new System.Drawing.Point(333, 336);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(187, 16);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "Todos los campos son obligatorios";
+            this.lblcam.AutoSize = true;
+            this.lblcam.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcam.ForeColor = System.Drawing.Color.Yellow;
+            this.lblcam.Location = new System.Drawing.Point(333, 336);
+            this.lblcam.Name = "lblcam";
+            this.lblcam.Size = new System.Drawing.Size(187, 16);
+            this.lblcam.TabIndex = 29;
+            this.lblcam.Text = "Todos los campos son obligatorios";
             // 
-            // groupBox1
+            // grppre
             // 
-            this.groupBox1.Controls.Add(this.btnguadar);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.txtp3);
-            this.groupBox1.Controls.Add(this.txtp2);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.txtp1);
-            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Location = new System.Drawing.Point(36, 369);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(828, 243);
-            this.groupBox1.TabIndex = 30;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Preguntas de seguridad";
+            this.grppre.Controls.Add(this.btnguadar);
+            this.grppre.Controls.Add(this.lblp3);
+            this.grppre.Controls.Add(this.lblp2);
+            this.grppre.Controls.Add(this.txtp3);
+            this.grppre.Controls.Add(this.txtp2);
+            this.grppre.Controls.Add(this.lblp1);
+            this.grppre.Controls.Add(this.txtp1);
+            this.grppre.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grppre.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.grppre.Location = new System.Drawing.Point(36, 369);
+            this.grppre.Name = "grppre";
+            this.grppre.Size = new System.Drawing.Size(828, 243);
+            this.grppre.TabIndex = 30;
+            this.grppre.TabStop = false;
+            this.grppre.Text = "Preguntas de seguridad";
             // 
             // btnguadar
             // 
@@ -457,27 +457,27 @@
             this.btnguadar.UseVisualStyleBackColor = false;
             this.btnguadar.Click += new System.EventHandler(this.btnguadar_Click);
             // 
-            // label15
+            // lblp3
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label15.Location = new System.Drawing.Point(21, 165);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(215, 16);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "¿Cual es su equipo de futbol favorito?";
+            this.lblp3.AutoSize = true;
+            this.lblp3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblp3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblp3.Location = new System.Drawing.Point(21, 165);
+            this.lblp3.Name = "lblp3";
+            this.lblp3.Size = new System.Drawing.Size(215, 16);
+            this.lblp3.TabIndex = 16;
+            this.lblp3.Text = "¿Cual es su equipo de futbol favorito?";
             // 
-            // label16
+            // lblp2
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label16.Location = new System.Drawing.Point(21, 113);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(207, 16);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "¿Cual es su marca de auto favorito?";
+            this.lblp2.AutoSize = true;
+            this.lblp2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblp2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblp2.Location = new System.Drawing.Point(21, 113);
+            this.lblp2.Name = "lblp2";
+            this.lblp2.Size = new System.Drawing.Size(207, 16);
+            this.lblp2.TabIndex = 15;
+            this.lblp2.Text = "¿Cual es su marca de auto favorito?";
             // 
             // txtp3
             // 
@@ -495,16 +495,16 @@
             this.txtp2.Size = new System.Drawing.Size(544, 21);
             this.txtp2.TabIndex = 15;
             // 
-            // label17
+            // lblp1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label17.Location = new System.Drawing.Point(21, 61);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(161, 16);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "¿Cual es su animal favorito?";
+            this.lblp1.AutoSize = true;
+            this.lblp1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblp1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblp1.Location = new System.Drawing.Point(21, 61);
+            this.lblp1.Name = "lblp1";
+            this.lblp1.Size = new System.Drawing.Size(161, 16);
+            this.lblp1.TabIndex = 14;
+            this.lblp1.Text = "¿Cual es su animal favorito?";
             // 
             // txtp1
             // 
@@ -549,35 +549,35 @@
             this.ClientSize = new System.Drawing.Size(914, 693);
             this.Controls.Add(this.validar);
             this.Controls.Add(this.txtxcifrado);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.grppre);
+            this.Controls.Add(this.lblcam);
+            this.Controls.Add(this.tip);
             this.Controls.Add(this.btnex);
             this.Controls.Add(this.pctlogo);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblfoto);
+            this.Controls.Add(this.lblnac);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.lbl);
+            this.Controls.Add(this.lblcorreo);
             this.Controls.Add(this.txtcorreo);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblocu);
             this.Controls.Add(this.cmbocupacion);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.lblgenero);
             this.Controls.Add(this.cmbgender);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblestate);
             this.Controls.Add(this.cmbestado);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblpass);
             this.Controls.Add(this.txtpass);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbluser);
             this.Controls.Add(this.txtuser);
             this.Controls.Add(this.txttel);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblnum);
+            this.Controls.Add(this.lbldireccion);
             this.Controls.Add(this.txtdireccion);
             this.Controls.Add(this.txtdui);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbldui);
+            this.Controls.Add(this.lblapellido);
             this.Controls.Add(this.txtapellido);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblname);
             this.Controls.Add(this.txtname);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -589,8 +589,8 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctlogo)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grppre.ResumeLayout(false);
+            this.grppre.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.validar)).EndInit();
             this.ResumeLayout(false);
@@ -601,43 +601,43 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton btncerrar;
+        private System.Windows.Forms.ToolStripButton tpuser;
         private System.Windows.Forms.TextBox txtname;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblname;
+        private System.Windows.Forms.Label lblapellido;
         private System.Windows.Forms.TextBox txtapellido;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbldui;
         private System.Windows.Forms.MaskedTextBox txtdui;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbldireccion;
         private System.Windows.Forms.TextBox txtdireccion;
         private System.Windows.Forms.MaskedTextBox txttel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblnum;
+        private System.Windows.Forms.Label lbluser;
         private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblpass;
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.ComboBox cmbestado;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblestate;
+        private System.Windows.Forms.Label lblgenero;
         private System.Windows.Forms.ComboBox cmbgender;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblocu;
         private System.Windows.Forms.ComboBox cmbocupacion;
-        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label lblcorreo;
         private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblnac;
+        private System.Windows.Forms.Label lblfoto;
         private System.Windows.Forms.PictureBox pctlogo;
         private System.Windows.Forms.Button btnex;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label tip;
+        private System.Windows.Forms.Label lblcam;
+        private System.Windows.Forms.GroupBox grppre;
+        private System.Windows.Forms.Label lblp3;
+        private System.Windows.Forms.Label lblp2;
         private System.Windows.Forms.TextBox txtp3;
         private System.Windows.Forms.TextBox txtp2;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblp1;
         private System.Windows.Forms.TextBox txtp1;
         private System.Windows.Forms.Button btnguadar;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;

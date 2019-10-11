@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(recu_contra));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.btnrecu = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnregresar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btncod = new System.Windows.Forms.Button();
+            this.veri = new System.Windows.Forms.Label();
             this.txtcifrado = new System.Windows.Forms.TextBox();
             this.txtveri = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.user = new System.Windows.Forms.Label();
             this.lblresult = new System.Windows.Forms.Label();
             this.btnenviar = new System.Windows.Forms.Button();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblpass = new System.Windows.Forms.Label();
             this.txtt = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.veripass = new System.Windows.Forms.Label();
+            this.upd = new System.Windows.Forms.Button();
             this.txpass = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.newpass = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -60,7 +60,7 @@
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.btnrecu,
             this.toolStripButton2,
             this.toolStripButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
@@ -71,17 +71,17 @@
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
-            // toolStripButton1
+            // btnrecu
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.Enabled = false;
-            this.toolStripButton1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton1.ForeColor = System.Drawing.Color.White;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(200, 22);
-            this.toolStripButton1.Text = "Recuperacion de contraseña";
+            this.btnrecu.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnrecu.Enabled = false;
+            this.btnrecu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnrecu.ForeColor = System.Drawing.Color.White;
+            this.btnrecu.Image = ((System.Drawing.Image)(resources.GetObject("btnrecu.Image")));
+            this.btnrecu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnrecu.Name = "btnrecu";
+            this.btnrecu.Size = new System.Drawing.Size(200, 22);
+            this.btnrecu.Text = "Recuperacion de contraseña";
             // 
             // toolStripButton2
             // 
@@ -109,11 +109,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
             this.panel1.Controls.Add(this.btnregresar);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btncod);
+            this.panel1.Controls.Add(this.veri);
             this.panel1.Controls.Add(this.txtcifrado);
             this.panel1.Controls.Add(this.txtveri);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.user);
             this.panel1.Controls.Add(this.lblresult);
             this.panel1.Controls.Add(this.btnenviar);
             this.panel1.Controls.Add(this.txtusuario);
@@ -139,32 +139,32 @@
             this.btnregresar.UseVisualStyleBackColor = false;
             this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
             // 
-            // button1
+            // btncod
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(222, 323);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "VERIFICAR CODIGO";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btncod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btncod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btncod.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.btncod.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btncod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncod.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncod.ForeColor = System.Drawing.Color.White;
+            this.btncod.Location = new System.Drawing.Point(222, 323);
+            this.btncod.Name = "btncod";
+            this.btncod.Size = new System.Drawing.Size(156, 30);
+            this.btncod.TabIndex = 4;
+            this.btncod.Text = "VERIFICAR CODIGO";
+            this.btncod.UseVisualStyleBackColor = false;
+            this.btncod.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
+            // veri
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(144, 255);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 16);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Codigo de verificacion";
+            this.veri.AutoSize = true;
+            this.veri.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.veri.Location = new System.Drawing.Point(144, 255);
+            this.veri.Name = "veri";
+            this.veri.Size = new System.Drawing.Size(132, 16);
+            this.veri.TabIndex = 11;
+            this.veri.Text = "Codigo de verificacion";
             // 
             // txtcifrado
             // 
@@ -188,15 +188,15 @@
             this.txtveri.TabIndex = 3;
             this.txtveri.TextChanged += new System.EventHandler(this.txtveri_TextChanged_1);
             // 
-            // label1
+            // user
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(144, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 16);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Usuario";
+            this.user.AutoSize = true;
+            this.user.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user.Location = new System.Drawing.Point(144, 24);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(47, 16);
+            this.user.TabIndex = 7;
+            this.user.Text = "Usuario";
             // 
             // lblresult
             // 
@@ -247,10 +247,10 @@
             this.panel2.BackColor = System.Drawing.Color.Gold;
             this.panel2.Controls.Add(this.lblpass);
             this.panel2.Controls.Add(this.txtt);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.veripass);
+            this.panel2.Controls.Add(this.upd);
             this.panel2.Controls.Add(this.txpass);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.newpass);
             this.panel2.Enabled = false;
             this.panel2.Location = new System.Drawing.Point(628, 52);
             this.panel2.Name = "panel2";
@@ -282,32 +282,32 @@
             this.txtt.TabIndex = 5;
             this.txtt.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
-            // label4
+            // veripass
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(97, 167);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 16);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Verificar contraseña";
+            this.veripass.AutoSize = true;
+            this.veripass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.veripass.Location = new System.Drawing.Point(97, 167);
+            this.veripass.Name = "veripass";
+            this.veripass.Size = new System.Drawing.Size(115, 16);
+            this.veripass.TabIndex = 13;
+            this.veripass.Text = "Verificar contraseña";
             // 
-            // button2
+            // upd
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(104, 295);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(104, 30);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "ACTUALIZAR";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.upd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.upd.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.upd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gold;
+            this.upd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.upd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.upd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.upd.ForeColor = System.Drawing.Color.White;
+            this.upd.Location = new System.Drawing.Point(104, 295);
+            this.upd.Name = "upd";
+            this.upd.Size = new System.Drawing.Size(104, 30);
+            this.upd.TabIndex = 7;
+            this.upd.Text = "ACTUALIZAR";
+            this.upd.UseVisualStyleBackColor = false;
+            this.upd.Click += new System.EventHandler(this.button2_Click);
             // 
             // txpass
             // 
@@ -323,15 +323,15 @@
             this.txpass.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txpass.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
-            // label3
+            // newpass
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(97, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 16);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Nueva contraseña";
+            this.newpass.AutoSize = true;
+            this.newpass.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newpass.Location = new System.Drawing.Point(97, 80);
+            this.newpass.Name = "newpass";
+            this.newpass.Size = new System.Drawing.Size(111, 16);
+            this.newpass.TabIndex = 12;
+            this.newpass.Text = "Nueva contraseña";
             // 
             // recu_contra
             // 
@@ -364,23 +364,23 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btnrecu;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.Button btnenviar;
         private System.Windows.Forms.Button btnregresar;
         private System.Windows.Forms.Label lblresult;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label user;
         private System.Windows.Forms.TextBox txtcifrado;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label veri;
         private System.Windows.Forms.TextBox txtveri;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btncod;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button upd;
         private System.Windows.Forms.TextBox txpass;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label newpass;
+        private System.Windows.Forms.Label veripass;
         private System.Windows.Forms.TextBox txtt;
         private System.Windows.Forms.Label lblpass;
     }

@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recu));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.btnre = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnverificarusu = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.user = new System.Windows.Forms.Label();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.txtcifrado = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -46,7 +46,7 @@
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton2});
+            this.btnre});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(525, 25);
@@ -55,21 +55,21 @@
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
-            // toolStripButton2
+            // btnre
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripButton2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(299, 22);
-            this.toolStripButton2.Text = "Recuperacion de contraseña|Interna por admin";
+            this.btnre.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnre.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnre.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnre.Image = ((System.Drawing.Image)(resources.GetObject("btnre.Image")));
+            this.btnre.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnre.Name = "btnre";
+            this.btnre.Size = new System.Drawing.Size(299, 22);
+            this.btnre.Text = "Recuperacion de contraseña|Interna por admin";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnverificarusu);
-            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.user);
             this.groupBox2.Controls.Add(this.txtusuario);
             this.groupBox2.Location = new System.Drawing.Point(46, 45);
             this.groupBox2.Name = "groupBox2";
@@ -90,17 +90,17 @@
             this.btnverificarusu.UseVisualStyleBackColor = false;
             this.btnverificarusu.Click += new System.EventHandler(this.btnverificarusu_Click);
             // 
-            // label4
+            // user
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(186, 51);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 17);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Usuario";
+            this.user.AutoSize = true;
+            this.user.BackColor = System.Drawing.Color.Transparent;
+            this.user.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user.ForeColor = System.Drawing.Color.White;
+            this.user.Location = new System.Drawing.Point(186, 51);
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(54, 17);
+            this.user.TabIndex = 1;
+            this.user.Text = "Usuario";
             // 
             // txtusuario
             // 
@@ -158,11 +158,11 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton btnre;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtcifrado;
         private System.Windows.Forms.Button btnverificarusu;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label user;
         private System.Windows.Forms.TextBox txtusuario;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnregresar;

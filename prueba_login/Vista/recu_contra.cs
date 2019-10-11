@@ -164,10 +164,34 @@ namespace prueba_login
             txtusuario.Clear();
            
         }
+        void ingles()
+        {
+            btnrecu.Text = "Password recovery";
+            user.Text = "Username";
+            veri.Text = "Verification code";
+            newpass.Text = "New password";
+            veripass.Text = "Verify password";
+            btnenviar.Text = "Send";
+            btncod.Text = "Verify code";
+            upd.Text = "Update";
+            btnregresar.Text = "Back";
+            lblpass.Text = "The password don't match";
+
+        }
 
         private void recu_contra_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
 
+            }
+            else
+            {
+                ingles();
+                //MessageBox.Show("INGLES");
+
+            }
         }
 
         private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)

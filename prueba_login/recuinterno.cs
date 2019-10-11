@@ -27,10 +27,26 @@ namespace prueba_login
                 return Convert.ToBase64String(hash);
             }
         }
-
+        void ingles()
+        {
+            lblnew.Text = "New password";
+            lblcn.Text = "Confirm pass";
+            lblpass.Text = "Passwords don't match";
+            btnguardar.Text = "     Save and exit";
+        }
         private void recuinterno_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
 
+            }
+            else
+            {
+
+                //MessageBox.Show("INGLES");
+                ingles();
+            }
         }
 
         private void txtpassveri_TextChanged(object sender, EventArgs e)

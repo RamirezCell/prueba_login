@@ -115,10 +115,34 @@ namespace prueba_login
             txtnuevacontra.UseSystemPasswordChar = true;
             textBox1.Text = Hash(pass);
         }
+        void ingle()
+        {
+            btnrec.Text = "Password recovery|Administrator intervention";
+            lbluser.Text = "Username";
+            lblpass.Text = "Password";
+            lblnew.Text = "  New password";
+            btnverificarusu.Text = "Verify";
+            btnverificar.Text = "Verify";
+            btnconfirmar.Text = "Confirm";
+            btnsalir.Text = "Salir";
+            btnop.Text = "Back to options";
+
+
+        }
 
         private void recu_admin_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
 
+            }
+            else
+            {
+                ingle();
+                //MessageBox.Show("INGLES");
+
+            }
         }
 
         private void toolStripButton1_MouseDown(object sender, MouseEventArgs e)

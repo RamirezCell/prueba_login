@@ -18,12 +18,27 @@ namespace prueba_login
         {
             InitializeComponent();
         }
+      void traducrir()
+        {
+            label1.Text = "Filter";
+            button1.Text = "Generate report";
+        }
 
         private void verordenes_Load(object sender, EventArgs e)
         {
            dgvorden.DataSource= funcionesordendetrabajo.mostrar();
             this.dgvorden.Columns[0].Visible = false;
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+                traducrir();
+            }
+            else
+            {
+                ;
+                //MessageBox.Show("INGLES");
 
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

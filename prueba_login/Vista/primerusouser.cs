@@ -142,9 +142,46 @@ namespace prueba_login
 
             }
         }
+        void ingles()
+        {
+            lblname.Text = "Names";
+            lblnum.Text = "Telephone number";
+            lbldui.Text = "Client ID";
+            lbluser.Text = "Username";
+            lblcorreo.Text = "Email";
+            lblapellido.Text = "Lastnames";
+            lblocu.Text = "Ocupation";
+            lblgenero.Text = "Gender";
+            lblnac.Text = "Date of birth";
+            lbldireccion.Text = "Direction";
+            lbldui.Text = "User ID";
+            btnex.Text = "Browse";
+            lblpass.Text = "Password";
+            lblestate.Text = "Estate";
+            lblfoto.Text = "Profile photo";
+            btncerrar.Text = "Exit";
+            lblcam.Text = "All data are required";
+            tip.Text = "Click Browse to upload the user's profile picture";
+            grppre.Text = "Security questions";
+            lblp1.Text = "Wich is your favorite animal?";
+            lblp2.Text = "Wich is your favorite car brand?";
+            lblp3.Text = "Wich is your favorite soccer team?";
+            btnguadar.Text = "Save and exit";
+        }
 
         private void primerusouser_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                ingles();
+                //MessageBox.Show("INGLES");
+
+            }
             cmbestado.DataSource = registrouser.obtenerestado();
             cmbgender.DataSource = registrouser.generos();
             cmbocupacion.DataSource = registrouser.obtenerocupacion();

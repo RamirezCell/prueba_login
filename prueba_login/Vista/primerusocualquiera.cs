@@ -27,11 +27,32 @@ namespace prueba_login
                 return Convert.ToBase64String(hash);
             }
         }
+        void ingles()
+        {
+            lblnew.Text = "New password";
+            lblcn.Text = "Confirm pass";
+            lblpass.Text = "Passwords don't match";
+            btnguardar.Text = "     Save and exit";
+            grppre.Text = "Security questions";
+            lblp1.Text = "Wich is your favorite animal?";
+            lblp2.Text = "Wich is your favorite car brand?";
+            lblp3.Text = "Wich is your favorite soccer team?";
+        }
 
 
         private void primerusocualquiera_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
 
+            }
+            else
+            {
+                
+                //MessageBox.Show("INGLES");
+
+            }
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -96,6 +117,11 @@ namespace prueba_login
         }
 
         private void txtp2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(primerusocualquiera));
             this.txtpass = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblnew = new System.Windows.Forms.Label();
             this.txtpassveri = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblcn = new System.Windows.Forms.Label();
+            this.grppre = new System.Windows.Forms.GroupBox();
+            this.btnguardar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lblp3 = new System.Windows.Forms.Label();
             this.txtp2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblp2 = new System.Windows.Forms.Label();
             this.txtp1 = new System.Windows.Forms.TextBox();
             this.txtp3 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblp1 = new System.Windows.Forms.Label();
             this.lblpass = new System.Windows.Forms.Label();
             this.txtxcifrado = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
+            this.grppre.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtpass
@@ -57,17 +57,17 @@
             this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
             // 
-            // label11
+            // lblnew
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(85, 47);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(147, 20);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Nueva contraseña";
+            this.lblnew.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblnew.AutoSize = true;
+            this.lblnew.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnew.ForeColor = System.Drawing.Color.White;
+            this.lblnew.Location = new System.Drawing.Point(85, 47);
+            this.lblnew.Name = "lblnew";
+            this.lblnew.Size = new System.Drawing.Size(147, 20);
+            this.lblnew.TabIndex = 25;
+            this.lblnew.Text = "Nueva contraseña";
             // 
             // txtpassveri
             // 
@@ -80,81 +80,82 @@
             this.txtpassveri.TextChanged += new System.EventHandler(this.txtpassveri_TextChanged);
             this.txtpassveri.Enter += new System.EventHandler(this.txtpassveri_Enter);
             // 
-            // label1
+            // lblcn
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(436, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 20);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Confirmar contraseña";
+            this.lblcn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblcn.AutoSize = true;
+            this.lblcn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcn.ForeColor = System.Drawing.Color.White;
+            this.lblcn.Location = new System.Drawing.Point(436, 47);
+            this.lblcn.Name = "lblcn";
+            this.lblcn.Size = new System.Drawing.Size(169, 20);
+            this.lblcn.TabIndex = 27;
+            this.lblcn.Text = "Confirmar contraseña";
+            this.lblcn.Click += new System.EventHandler(this.label1_Click);
             // 
-            // groupBox1
+            // grppre
             // 
-            this.groupBox1.Controls.Add(this.bunifuFlatButton1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtp2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtp1);
-            this.groupBox1.Controls.Add(this.txtp3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Location = new System.Drawing.Point(41, 152);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(722, 205);
-            this.groupBox1.TabIndex = 28;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Preguntas de seguridad";
+            this.grppre.Controls.Add(this.btnguardar);
+            this.grppre.Controls.Add(this.lblp3);
+            this.grppre.Controls.Add(this.txtp2);
+            this.grppre.Controls.Add(this.lblp2);
+            this.grppre.Controls.Add(this.txtp1);
+            this.grppre.Controls.Add(this.txtp3);
+            this.grppre.Controls.Add(this.lblp1);
+            this.grppre.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.grppre.Location = new System.Drawing.Point(41, 152);
+            this.grppre.Name = "grppre";
+            this.grppre.Size = new System.Drawing.Size(722, 205);
+            this.grppre.TabIndex = 28;
+            this.grppre.TabStop = false;
+            this.grppre.Text = "Preguntas de seguridad";
             // 
-            // bunifuFlatButton1
+            // btnguardar
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Yellow;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "          Guardar y salir";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = global::prueba_login.Properties.Resources.add;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(224, 134);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Gold;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(249, 52);
-            this.bunifuFlatButton1.TabIndex = 6;
-            this.bunifuFlatButton1.Text = "          Guardar y salir";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btnguardar.Activecolor = System.Drawing.Color.Yellow;
+            this.btnguardar.BackColor = System.Drawing.Color.Gold;
+            this.btnguardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnguardar.BorderRadius = 0;
+            this.btnguardar.ButtonText = "          Guardar y salir";
+            this.btnguardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnguardar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnguardar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnguardar.Iconimage = global::prueba_login.Properties.Resources.add;
+            this.btnguardar.Iconimage_right = null;
+            this.btnguardar.Iconimage_right_Selected = null;
+            this.btnguardar.Iconimage_Selected = null;
+            this.btnguardar.IconMarginLeft = 0;
+            this.btnguardar.IconMarginRight = 0;
+            this.btnguardar.IconRightVisible = true;
+            this.btnguardar.IconRightZoom = 0D;
+            this.btnguardar.IconVisible = true;
+            this.btnguardar.IconZoom = 90D;
+            this.btnguardar.IsTab = false;
+            this.btnguardar.Location = new System.Drawing.Point(224, 134);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnguardar.Name = "btnguardar";
+            this.btnguardar.Normalcolor = System.Drawing.Color.Gold;
+            this.btnguardar.OnHovercolor = System.Drawing.Color.Gray;
+            this.btnguardar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnguardar.selected = false;
+            this.btnguardar.Size = new System.Drawing.Size(249, 52);
+            this.btnguardar.TabIndex = 6;
+            this.btnguardar.Text = "          Guardar y salir";
+            this.btnguardar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnguardar.Textcolor = System.Drawing.Color.Black;
+            this.btnguardar.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnguardar.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
-            // label5
+            // lblp3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(490, 52);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(215, 16);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "¿Cual es su equipo de futbol favorito?";
+            this.lblp3.AutoSize = true;
+            this.lblp3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblp3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblp3.Location = new System.Drawing.Point(490, 52);
+            this.lblp3.Name = "lblp3";
+            this.lblp3.Size = new System.Drawing.Size(215, 16);
+            this.lblp3.TabIndex = 34;
+            this.lblp3.Text = "¿Cual es su equipo de futbol favorito?";
             // 
             // txtp2
             // 
@@ -164,16 +165,16 @@
             this.txtp2.TabIndex = 4;
             this.txtp2.TextChanged += new System.EventHandler(this.txtp2_TextChanged);
             // 
-            // label4
+            // lblp2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(253, 53);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 16);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "¿Cual es su marca de auto favorito?";
+            this.lblp2.AutoSize = true;
+            this.lblp2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblp2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblp2.Location = new System.Drawing.Point(253, 53);
+            this.lblp2.Name = "lblp2";
+            this.lblp2.Size = new System.Drawing.Size(207, 16);
+            this.lblp2.TabIndex = 33;
+            this.lblp2.Text = "¿Cual es su marca de auto favorito?";
             // 
             // txtp1
             // 
@@ -189,16 +190,16 @@
             this.txtp3.Size = new System.Drawing.Size(212, 20);
             this.txtp3.TabIndex = 5;
             // 
-            // label2
+            // lblp1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(35, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 16);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "¿Cual es su animal favorito?";
+            this.lblp1.AutoSize = true;
+            this.lblp1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblp1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblp1.Location = new System.Drawing.Point(35, 52);
+            this.lblp1.Name = "lblp1";
+            this.lblp1.Size = new System.Drawing.Size(161, 16);
+            this.lblp1.TabIndex = 32;
+            this.lblp1.Text = "¿Cual es su animal favorito?";
             // 
             // lblpass
             // 
@@ -229,19 +230,19 @@
             this.ClientSize = new System.Drawing.Size(800, 410);
             this.Controls.Add(this.txtxcifrado);
             this.Controls.Add(this.lblpass);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grppre);
             this.Controls.Add(this.txtpassveri);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblcn);
             this.Controls.Add(this.txtpass);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblnew);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "primerusocualquiera";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "primerusocualquiera";
             this.Load += new System.EventHandler(this.primerusocualquiera_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grppre.ResumeLayout(false);
+            this.grppre.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,17 +251,17 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblnew;
         private System.Windows.Forms.TextBox txtpassveri;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblcn;
+        private System.Windows.Forms.GroupBox grppre;
+        private System.Windows.Forms.Label lblp3;
         private System.Windows.Forms.TextBox txtp2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblp2;
         private System.Windows.Forms.TextBox txtp1;
         private System.Windows.Forms.TextBox txtp3;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.Label lblp1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnguardar;
         private System.Windows.Forms.Label lblpass;
         private System.Windows.Forms.TextBox txtxcifrado;
     }

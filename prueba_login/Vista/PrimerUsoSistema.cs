@@ -58,9 +58,35 @@ namespace prueba_login
             e.Handled = e.KeyChar != (char)Keys.Back && !char.IsSeparator(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar);
 
         }
+        void ingles()
+        {
+            lblname.Text = "Enterprise name"  ;
+            lbldi.Text = "Direction";
+            lblcorreo.Text = "Email";
+            lblcam.Text = "All data are required";
+            tip.Text = "Click Browse to upload the user's profile picture";
+            btnguadar.Text = "Save and exit";
+            btnex.Text = "Browse";logo.Text = "Enterprise logo";
+            Salir.Text = "Exit";
+            rep.Text = "Legal agent";
+            cod.Text = "Postal code";
+
+
+        }
         private void PrimerUsoSistema_Load(object sender, EventArgs e)
         {
 
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
+
+            }
+            else
+            {
+                
+                //MessageBox.Show("INGLES");
+
+            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)

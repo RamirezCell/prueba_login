@@ -24,10 +24,27 @@ namespace prueba_login
         {
             confirmar_user();
         }
+        void ingles()
+        {
+            btnre.Text = "Password recovery|Restart by administrator";
+            user.Text = "Username";
+            btnverificarusu.Text = "Verify";
+            btnregresar.Text = "Back to employee registration";
+        }
 
         private void Recu_Load(object sender, EventArgs e)
         {
+            if (constructoridioma.Traducir == 1)
+            {
+                //MessageBox.Show("ESPAÑOL");
 
+            }
+            else
+            {
+                ingles();
+                //MessageBox.Show("INGLES");
+
+            }
         }
         public void contra() {
 
